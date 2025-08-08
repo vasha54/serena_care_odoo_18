@@ -1,0 +1,46 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Servicios -->
+        <record id="service_medical_24h" model="residence_service">
+            <field name="name">Atención Médica 24 horas</field>
+            <field name="description">Servicio médico disponible las 24 horas del día con médicos especializados en geriatría</field>
+            <field name="active">True</field>
+        </record>
+        <record id="service_nursing" model="residence_service">
+            <field name="name">Enfermería Especializada</field>
+            <field name="description">Personal de enfermería capacitado en cuidados geriátricos</field>
+            <field name="active">True</field>
+        </record>
+        <record id="service_physiotherapy" model="residence_service">
+            <field name="name">Fisioterapia</field>
+            <field name="description">Sesiones de fisioterapia para mantener y mejorar la movilidad</field>
+            <field name="active">True</field> 
+        </record>
+        <record id="service_nutrition" model="residence_service">
+            <field name="name">Nutrición Especializada</field>
+            <field name="description">Menús diseñados por nutriólogos según necesidades específicas</field>
+            <field name="active">True</field>
+        </record>
+        <record id="service_recreation" model="residence_service">
+            <field name="name">Actividades Recreativas</field>
+            <field name="description">Programa de actividades sociales y recreativas diarias</field>
+            <field name="active">True</field>
+        </record>
+        <record id="service_psychology" model="residence_service">
+            <field name="name">Apoyo Psicológico</field>
+            <field name="description">Atención psicológica individual y grupal</field>
+            <field name="active">True</field>
+        </record>
+        <record id="service_laundry" model="residence_service">
+            <field name="name">Lavandería</field>
+            <field name="description">Servicio completo de lavandería para ropa personal</field>
+            <field name="active">True</field>
+        </record>
+        <record id="service_transport" model="residence_service">
+            <field name="name">Transporte Médico</field>
+            <field name="description">Traslado a citas médicas y hospitales</field>
+            <field name="active">True</field>
+        </record>
+        
+    </data>
+</odoo> 

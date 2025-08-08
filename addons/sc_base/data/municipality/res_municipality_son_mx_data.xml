@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_son_municipality_0" model="res_municipality_mx">
+               <field name="name">Aconchi</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_1" model="res_municipality_mx">
+               <field name="name">Agua Prieta</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_2" model="res_municipality_mx">
+               <field name="name">Álamos</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_3" model="res_municipality_mx">
+               <field name="name">Altar</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_4" model="res_municipality_mx">
+               <field name="name">Arivechi</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_5" model="res_municipality_mx">
+               <field name="name">Arizpe</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_6" model="res_municipality_mx">
+               <field name="name">Atil</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_7" model="res_municipality_mx">
+               <field name="name">Bacadéhuachi</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_8" model="res_municipality_mx">
+               <field name="name">Bacanora</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_9" model="res_municipality_mx">
+               <field name="name">Bacerac</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_10" model="res_municipality_mx">
+               <field name="name">Bacoachi</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_11" model="res_municipality_mx">
+               <field name="name">Bácum</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_12" model="res_municipality_mx">
+               <field name="name">Banámichi</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_13" model="res_municipality_mx">
+               <field name="name">Baviácora</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_14" model="res_municipality_mx">
+               <field name="name">Bavispe</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_15" model="res_municipality_mx">
+               <field name="name">Benjamín Hill</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_16" model="res_municipality_mx">
+               <field name="name">Caborca</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_17" model="res_municipality_mx">
+               <field name="name">Cajeme</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_18" model="res_municipality_mx">
+               <field name="name">Cananea</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_19" model="res_municipality_mx">
+               <field name="name">Carbó</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_20" model="res_municipality_mx">
+               <field name="name">La Colorada</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_21" model="res_municipality_mx">
+               <field name="name">Cucurpe</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_22" model="res_municipality_mx">
+               <field name="name">Cumpas</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_23" model="res_municipality_mx">
+               <field name="name">Divisaderos</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_24" model="res_municipality_mx">
+               <field name="name">Empalme</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_25" model="res_municipality_mx">
+               <field name="name">Etchojoa</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_26" model="res_municipality_mx">
+               <field name="name">Fronteras</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_27" model="res_municipality_mx">
+               <field name="name">Granados</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_28" model="res_municipality_mx">
+               <field name="name">Guaymas</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_29" model="res_municipality_mx">
+               <field name="name">Hermosillo</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_30" model="res_municipality_mx">
+               <field name="name">Huachinera</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_31" model="res_municipality_mx">
+               <field name="name">Huásabas</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_32" model="res_municipality_mx">
+               <field name="name">Huatabampo</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_33" model="res_municipality_mx">
+               <field name="name">Huépac</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_34" model="res_municipality_mx">
+               <field name="name">Imuris</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_35" model="res_municipality_mx">
+               <field name="name">Magdalena</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_36" model="res_municipality_mx">
+               <field name="name">Mazatán</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_37" model="res_municipality_mx">
+               <field name="name">Moctezuma</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_38" model="res_municipality_mx">
+               <field name="name">Naco</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_39" model="res_municipality_mx">
+               <field name="name">Nácori Chico</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_40" model="res_municipality_mx">
+               <field name="name">Nacozari de García</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_41" model="res_municipality_mx">
+               <field name="name">Navojoa</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_42" model="res_municipality_mx">
+               <field name="name">Nogales</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_43" model="res_municipality_mx">
+               <field name="name">Ónavas</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_44" model="res_municipality_mx">
+               <field name="name">Opodepe</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_45" model="res_municipality_mx">
+               <field name="name">Oquitoa</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_46" model="res_municipality_mx">
+               <field name="name">Pitiquito</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_47" model="res_municipality_mx">
+               <field name="name">Puerto Peñasco</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_48" model="res_municipality_mx">
+               <field name="name">Quiriego</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_49" model="res_municipality_mx">
+               <field name="name">Rayón</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_50" model="res_municipality_mx">
+               <field name="name">Rosario</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_51" model="res_municipality_mx">
+               <field name="name">Sahuaripa</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_52" model="res_municipality_mx">
+               <field name="name">San Felipe de Jesús</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_53" model="res_municipality_mx">
+               <field name="name">San Javier</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_54" model="res_municipality_mx">
+               <field name="name">San Luis Río Colorado</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_55" model="res_municipality_mx">
+               <field name="name">San Miguel de Horcasitas</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_56" model="res_municipality_mx">
+               <field name="name">San Pedro de la Cueva</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_57" model="res_municipality_mx">
+               <field name="name">Santa Ana</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_58" model="res_municipality_mx">
+               <field name="name">Santa Cruz</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_59" model="res_municipality_mx">
+               <field name="name">Sáric</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_60" model="res_municipality_mx">
+               <field name="name">Soyopa</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_61" model="res_municipality_mx">
+               <field name="name">Suaqui Grande</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_62" model="res_municipality_mx">
+               <field name="name">Tepache</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_63" model="res_municipality_mx">
+               <field name="name">Trincheras</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_64" model="res_municipality_mx">
+               <field name="name">Tubutama</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_65" model="res_municipality_mx">
+               <field name="name">Ures</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_66" model="res_municipality_mx">
+               <field name="name">Villa Hidalgo</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_67" model="res_municipality_mx">
+               <field name="name">Villa Pesqueira</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_68" model="res_municipality_mx">
+               <field name="name">Yécora</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_69" model="res_municipality_mx">
+               <field name="name">General Plutarco Elías Calles</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_70" model="res_municipality_mx">
+               <field name="name">Benito Juárez</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+           <record id="state_mx_son_municipality_71" model="res_municipality_mx">
+               <field name="name">San Ignacio Río Muerto</field>
+               <field name="province_id" ref="state_mx_son" />
+           </record>
+                          
+    </data>
+</odoo>

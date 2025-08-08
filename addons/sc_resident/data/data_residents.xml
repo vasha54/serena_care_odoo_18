@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Registro 1 -->
+        <record id="resident_1" model="resident">
+            <field name="name">Juan García Hernández</field>
+            <field name="email">juan.garcia@example.com</field>
+            <field name="phone">+52 55 1234 5678</field>
+            <field name="vat">GAHJ450315ABC</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_cdmx_01"/>
+            <field name="birth_date">1945-03-15</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 2 -->
+        <record id="resident_2" model="resident">
+            <field name="name">María Rodríguez López</field>
+            <field name="email">maria.rodriguez@example.com</field>
+            <field name="phone">+52 55 2345 6789</field>
+            <field name="vat">ROLM500722DEF</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_gto_01"/>
+            <field name="birth_date">1950-07-22</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 3 -->
+        <record id="resident_3" model="resident">
+            <field name="name">José Martínez Sánchez</field>
+            <field name="email">jose.martinez@example.com</field>
+            <field name="phone">+52 55 3456 7890</field>
+            <field name="vat">MASJ381105GHI</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_jal_01"/>
+            <field name="birth_date">1938-11-05</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 4 -->
+        <record id="resident_4" model="resident">
+            <field name="name">Ana Flores Ramírez</field>
+            <field name="email">ana.flores@example.com</field>
+            <field name="phone">+52 55 4567 8901</field>
+            <field name="vat">FORA420930JKL</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_nl_01"/>
+            <field name="birth_date">1942-09-30</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 5 -->
+        <record id="resident_5" model="resident">
+            <field name="name">Francisco Pérez González</field>
+            <field name="email">francisco.perez@example.com</field>
+            <field name="phone">+52 55 5678 9012</field>
+            <field name="vat">PEGF550118MNO</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_qro_01"/>
+            <field name="birth_date">1955-01-18</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 6 -->
+        <record id="resident_6" model="resident">
+            <field name="name">Guadalupe Hernández Díaz</field>
+            <field name="email">guadalupe.hernandez@example.com</field>
+            <field name="phone">+52 55 6789 0123</field>
+            <field name="vat">HEDG481207PQR</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_cdmx_01"/>
+            <field name="birth_date">1948-12-07</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 7 -->
+        <record id="resident_7" model="resident">
+            <field name="name">Miguel Torres Reyes</field>
+            <field name="email">miguel.torres@example.com</field>
+            <field name="phone">+52 55 7890 1234</field>
+            <field name="vat">TERM350625STU</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_gto_01"/>
+            <field name="birth_date">1935-06-25</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 8 -->
+        <record id="resident_8" model="resident">
+            <field name="name">Laura Mendoza Vargas</field>
+            <field name="email">laura.mendoza@example.com</field>
+            <field name="phone">+52 55 8901 2345</field>
+            <field name="vat">MEVL520412VWX</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_jal_01"/>
+            <field name="birth_date">1952-04-12</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 9 -->
+        <record id="resident_9" model="resident">
+            <field name="name">Carlos Silva Ortega</field>
+            <field name="email">carlos.silva@example.com</field>
+            <field name="phone">+52 55 9012 3456</field>
+            <field name="vat">SIOC400819YZA</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_nl_01"/>
+            <field name="birth_date">1940-08-19</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 10 -->
+        <record id="resident_10" model="resident">
+            <field name="name">Patricia Navarro Jiménez</field>
+            <field name="email">patricia.navarro@example.com</field>
+            <field name="phone">+52 55 0123 4567</field>
+            <field name="vat">NAJP580228BCD</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_qro_01"/>
+            <field name="birth_date">1958-02-28</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 11 -->
+        <record id="resident_11" model="resident">
+            <field name="name">Jorge Morales Cortés</field>
+            <field name="email">jorge.morales@example.com</field>
+            <field name="phone">+52 55 1122 3344</field>
+            <field name="vat">MOCJ431015EFG</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_cdmx_01"/>
+            <field name="birth_date">1943-10-15</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 12 -->
+        <record id="resident_12" model="resident">
+            <field name="name">Verónica Castro Ruiz</field>
+            <field name="email">veronica.castro@example.com</field>
+            <field name="phone">+52 55 2233 4455</field>
+            <field name="vat">CARV510509HIJ</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_gto_01"/>
+            <field name="birth_date">1951-05-09</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 13 -->
+        <record id="resident_13" model="resident">
+            <field name="name">Ricardo Vega Mendoza</field>
+            <field name="email">ricardo.vega@example.com</field>
+            <field name="phone">+52 55 3344 5566</field>
+            <field name="vat">VEMR470723KLM</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_jal_01"/>
+            <field name="birth_date">1947-07-23</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 14 -->
+        <record id="resident_14" model="resident">
+            <field name="name">Isabel Ríos Guerrero</field>
+            <field name="email">isabel.rios@example.com</field>
+            <field name="phone">+52 55 4455 6677</field>
+            <field name="vat">RIGI391214NOP</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_nl_01"/>
+            <field name="birth_date">1939-12-14</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 15 -->
+        <record id="resident_15" model="resident">
+            <field name="name">Fernando Delgado Cruz</field>
+            <field name="email">fernando.delgado@example.com</field>
+            <field name="phone">+52 55 5566 7788</field>
+            <field name="vat">DECF530308QRS</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_qro_01"/>
+            <field name="birth_date">1953-03-08</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 16 -->
+        <record id="resident_16" model="resident">
+            <field name="name">Sofía Romero Pineda</field>
+            <field name="email">sofia.romero@example.com</field>
+            <field name="phone">+52 55 6677 8899</field>
+            <field name="vat">ROPS461121TUV</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_cdmx_01"/>
+            <field name="birth_date">1946-11-21</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 17 -->
+        <record id="resident_17" model="resident">
+            <field name="name">Roberto Medina Soto</field>
+            <field name="email">roberto.medina@example.com</field>
+            <field name="phone">+52 55 7788 9900</field>
+            <field name="vat">MESR570417WXY</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_gto_01"/>
+            <field name="birth_date">1957-04-17</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 18 -->
+        <record id="resident_18" model="resident">
+            <field name="name">Carmen Juárez Campos</field>
+            <field name="email">carmen.juarez@example.com</field>
+            <field name="phone">+52 55 8899 0011</field>
+            <field name="vat">JUCC410803ZAB</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_jal_01"/>
+            <field name="birth_date">1941-08-03</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 19 -->
+        <record id="resident_19" model="resident">
+            <field name="name">Luis Herrera Núñez</field>
+            <field name="email">luis.herrera@example.com</field>
+            <field name="phone">+52 55 9900 1122</field>
+            <field name="vat">HENL490226CDE</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_nl_01"/>
+            <field name="birth_date">1949-02-26</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 20 -->
+        <record id="resident_20" model="resident">
+            <field name="name">Teresa Castillo Rojas</field>
+            <field name="email">teresa.castillo@example.com</field>
+            <field name="phone">+52 55 0011 2233</field>
+            <field name="vat">CART540611FGH</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_qro_01"/>
+            <field name="birth_date">1954-06-11</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 21 -->
+        <record id="resident_21" model="resident">
+            <field name="name">Alberto Mendoza Castro</field>
+            <field name="email">alberto.mendoza@example.com</field>
+            <field name="phone">+52 55 1212 3434</field>
+            <field name="vat">MECA440519IJK</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_cdmx_01"/>
+            <field name="birth_date">1944-05-19</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 22 -->
+        <record id="resident_22" model="resident">
+            <field name="name">Lucía Vargas Herrera</field>
+            <field name="email">lucia.vargas@example.com</field>
+            <field name="phone">+52 55 2323 4545</field>
+            <field name="vat">VAHL560927LMN</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_gto_01"/>
+            <field name="birth_date">1956-09-27</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 23 -->
+        <record id="resident_23" model="resident">
+            <field name="name">Raúl Ortega Pineda</field>
+            <field name="email">raul.ortega@example.com</field>
+            <field name="phone">+52 55 3434 5656</field>
+            <field name="vat">ORPR370114OPQ</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_jal_01"/>
+            <field name="birth_date">1937-01-14</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 24 -->
+        <record id="resident_24" model="resident">
+            <field name="name">Adriana Soto Flores</field>
+            <field name="email">adriana.soto@example.com</field>
+            <field name="phone">+52 55 4545 6767</field>
+            <field name="vat">SOFA410322RST</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_nl_01"/>
+            <field name="birth_date">1941-03-22</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 25 -->
+        <record id="resident_25" model="resident">
+            <field name="name">Gerardo Reyes Ramírez</field>
+            <field name="email">gerardo.reyes@example.com</field>
+            <field name="phone">+52 55 5656 7878</field>
+            <field name="vat">RERG501205UVW</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_qro_01"/>
+            <field name="birth_date">1950-12-05</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 26 -->
+        <record id="resident_26" model="resident">
+            <field name="name">Silvia Núñez Díaz</field>
+            <field name="email">silvia.nunez@example.com</field>
+            <field name="phone">+52 55 6767 8989</field>
+            <field name="vat">NUDS470830XYZ</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_cdmx_01"/>
+            <field name="birth_date">1947-08-30</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 27 -->
+        <record id="resident_27" model="resident">
+            <field name="name">Arturo Jiménez Torres</field>
+            <field name="email">arturo.jimenez@example.com</field>
+            <field name="phone">+52 55 7878 9090</field>
+            <field name="vat">JITA401011ABC</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_gto_01"/>
+            <field name="birth_date">1940-10-11</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 28 -->
+        <record id="resident_28" model="resident">
+            <field name="name">Beatriz Cruz Mendoza</field>
+            <field name="email">beatriz.cruz@example.com</field>
+            <field name="phone">+52 55 8989 0101</field>
+            <field name="vat">CUMB530708DEF</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_jal_01"/>
+            <field name="birth_date">1953-07-08</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 29 -->
+        <record id="resident_29" model="resident">
+            <field name="name">Héctor Rojas Silva</field>
+            <field name="email">hector.rojas@example.com</field>
+            <field name="phone">+52 55 9090 1212</field>
+            <field name="vat">ROSH450425GHI</field>
+            <field name="sex_id" ref="sc_sex.gender_male"/>
+            <field name="residence_id" ref="sc_residence.residence_nl_01"/>
+            <field name="birth_date">1945-04-25</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+        <!-- Registro 30 -->
+        <record id="resident_30" model="resident">
+            <field name="name">Gabriela Morales Castro</field>
+            <field name="email">gabriela.morales@example.com</field>
+            <field name="phone">+52 55 0101 2323</field>
+            <field name="vat">MOCG511117JKL</field>
+            <field name="sex_id" ref="sc_sex.gender_female"/>
+            <field name="residence_id" ref="sc_residence.residence_qro_01"/>
+            <field name="birth_date">1951-11-17</field>
+            <field name="country_id" ref="base.mx"/>
+        </record>
+
+    </data>
+</odoo>

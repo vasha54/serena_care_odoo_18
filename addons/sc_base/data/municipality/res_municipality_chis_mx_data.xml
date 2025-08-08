@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_chis_municipality_0" model="res_municipality_mx">
+               <field name="name">Acacoyagua</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_1" model="res_municipality_mx">
+               <field name="name">Acala</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_2" model="res_municipality_mx">
+               <field name="name">Acapetahua</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_3" model="res_municipality_mx">
+               <field name="name">Altamirano</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_4" model="res_municipality_mx">
+               <field name="name">Amatán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_5" model="res_municipality_mx">
+               <field name="name">Amatenango de la Frontera</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_6" model="res_municipality_mx">
+               <field name="name">Amatenango del Valle</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_7" model="res_municipality_mx">
+               <field name="name">Ángel Albino Corzo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_8" model="res_municipality_mx">
+               <field name="name">Arriaga</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_9" model="res_municipality_mx">
+               <field name="name">Bejucal de Ocampo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_10" model="res_municipality_mx">
+               <field name="name">Bella Vista</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_11" model="res_municipality_mx">
+               <field name="name">Berriozábal</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_12" model="res_municipality_mx">
+               <field name="name">Bochil</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_13" model="res_municipality_mx">
+               <field name="name">El Bosque</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_14" model="res_municipality_mx">
+               <field name="name">Cacahoatán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_15" model="res_municipality_mx">
+               <field name="name">Catazajá</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_16" model="res_municipality_mx">
+               <field name="name">Cintalapa de Figueroa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_17" model="res_municipality_mx">
+               <field name="name">Coapilla</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_18" model="res_municipality_mx">
+               <field name="name">Comitán de Domínguez</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_19" model="res_municipality_mx">
+               <field name="name">La Concordia</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_20" model="res_municipality_mx">
+               <field name="name">Copainalá</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_21" model="res_municipality_mx">
+               <field name="name">Chalchihuitán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_22" model="res_municipality_mx">
+               <field name="name">Chamula</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_23" model="res_municipality_mx">
+               <field name="name">Chanal</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_24" model="res_municipality_mx">
+               <field name="name">Chapultenango</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_25" model="res_municipality_mx">
+               <field name="name">Chenalhó</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_26" model="res_municipality_mx">
+               <field name="name">Chiapa de Corzo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_27" model="res_municipality_mx">
+               <field name="name">Chiapilla</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_28" model="res_municipality_mx">
+               <field name="name">Chicoasén</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_29" model="res_municipality_mx">
+               <field name="name">Chicomuselo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_30" model="res_municipality_mx">
+               <field name="name">Chilón</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_31" model="res_municipality_mx">
+               <field name="name">Escuintla</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_32" model="res_municipality_mx">
+               <field name="name">Francisco León</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_33" model="res_municipality_mx">
+               <field name="name">Frontera Comalapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_34" model="res_municipality_mx">
+               <field name="name">Frontera Hidalgo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_35" model="res_municipality_mx">
+               <field name="name">La Grandeza</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_36" model="res_municipality_mx">
+               <field name="name">Huehuetán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_37" model="res_municipality_mx">
+               <field name="name">Huixtán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_38" model="res_municipality_mx">
+               <field name="name">Huitiupán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_39" model="res_municipality_mx">
+               <field name="name">Huixtla</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_40" model="res_municipality_mx">
+               <field name="name">La Independencia</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_41" model="res_municipality_mx">
+               <field name="name">Ixhuatán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_42" model="res_municipality_mx">
+               <field name="name">Ixtacomitán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_43" model="res_municipality_mx">
+               <field name="name">Ixtapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_44" model="res_municipality_mx">
+               <field name="name">Ixtapangajoya</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_45" model="res_municipality_mx">
+               <field name="name">Jiquipilas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_46" model="res_municipality_mx">
+               <field name="name">Jitotol</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_47" model="res_municipality_mx">
+               <field name="name">Juárez</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_48" model="res_municipality_mx">
+               <field name="name">Larráinzar</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_49" model="res_municipality_mx">
+               <field name="name">La Libertad</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_50" model="res_municipality_mx">
+               <field name="name">Mapastepec</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_51" model="res_municipality_mx">
+               <field name="name">Las Margaritas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_52" model="res_municipality_mx">
+               <field name="name">Mazapa de Madero</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_53" model="res_municipality_mx">
+               <field name="name">Mazatán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_54" model="res_municipality_mx">
+               <field name="name">Metapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_55" model="res_municipality_mx">
+               <field name="name">Mitontic</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_56" model="res_municipality_mx">
+               <field name="name">Motozintla</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_57" model="res_municipality_mx">
+               <field name="name">Nicolás Ruíz</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_58" model="res_municipality_mx">
+               <field name="name">Ocosingo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_59" model="res_municipality_mx">
+               <field name="name">Ocotepec</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_60" model="res_municipality_mx">
+               <field name="name">Ocozocoautla de Espinosa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_61" model="res_municipality_mx">
+               <field name="name">Ostuacán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_62" model="res_municipality_mx">
+               <field name="name">Osumacinta</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_63" model="res_municipality_mx">
+               <field name="name">Oxchuc</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_64" model="res_municipality_mx">
+               <field name="name">Palenque</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_65" model="res_municipality_mx">
+               <field name="name">Pantelhó</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_66" model="res_municipality_mx">
+               <field name="name">Pantepec</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_67" model="res_municipality_mx">
+               <field name="name">Pichucalco</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_68" model="res_municipality_mx">
+               <field name="name">Pijijiapan</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_69" model="res_municipality_mx">
+               <field name="name">El Porvenir</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_70" model="res_municipality_mx">
+               <field name="name">Villa Comaltitlán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_71" model="res_municipality_mx">
+               <field name="name">Pueblo Nuevo Solistahuacán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_72" model="res_municipality_mx">
+               <field name="name">Rayón</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_73" model="res_municipality_mx">
+               <field name="name">Reforma</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_74" model="res_municipality_mx">
+               <field name="name">Las Rosas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_75" model="res_municipality_mx">
+               <field name="name">Sabanilla</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_76" model="res_municipality_mx">
+               <field name="name">Salto de Agua</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_77" model="res_municipality_mx">
+               <field name="name">San Cristóbal de las Casas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_78" model="res_municipality_mx">
+               <field name="name">San Fernando</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_79" model="res_municipality_mx">
+               <field name="name">Siltepec</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_80" model="res_municipality_mx">
+               <field name="name">Simojovel</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_81" model="res_municipality_mx">
+               <field name="name">Sitalá</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_82" model="res_municipality_mx">
+               <field name="name">Socoltenango</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_83" model="res_municipality_mx">
+               <field name="name">Solosuchiapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_84" model="res_municipality_mx">
+               <field name="name">Soyaló</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_85" model="res_municipality_mx">
+               <field name="name">Suchiapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_86" model="res_municipality_mx">
+               <field name="name">Suchiate</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_87" model="res_municipality_mx">
+               <field name="name">Sunuapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_88" model="res_municipality_mx">
+               <field name="name">Tapachula</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_89" model="res_municipality_mx">
+               <field name="name">Tapalapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_90" model="res_municipality_mx">
+               <field name="name">Tapilula</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_91" model="res_municipality_mx">
+               <field name="name">Tecpatán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_92" model="res_municipality_mx">
+               <field name="name">Tenejapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_93" model="res_municipality_mx">
+               <field name="name">Teopisca</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_94" model="res_municipality_mx">
+               <field name="name">Tila</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_95" model="res_municipality_mx">
+               <field name="name">Tonalá</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_96" model="res_municipality_mx">
+               <field name="name">Totolapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_97" model="res_municipality_mx">
+               <field name="name">La Trinitaria</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_98" model="res_municipality_mx">
+               <field name="name">Tumbalá</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_99" model="res_municipality_mx">
+               <field name="name">Tuxtla Gutiérrez</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_100" model="res_municipality_mx">
+               <field name="name">Tuxtla Chico</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_101" model="res_municipality_mx">
+               <field name="name">Tuzantán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_102" model="res_municipality_mx">
+               <field name="name">Tzimol</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_103" model="res_municipality_mx">
+               <field name="name">Unión Juárez</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_104" model="res_municipality_mx">
+               <field name="name">Venustiano Carranza</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_105" model="res_municipality_mx">
+               <field name="name">Villa Corzo</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_106" model="res_municipality_mx">
+               <field name="name">Villaflores</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_107" model="res_municipality_mx">
+               <field name="name">Yajalón</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_108" model="res_municipality_mx">
+               <field name="name">San Lucas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_109" model="res_municipality_mx">
+               <field name="name">Zinacantán</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_110" model="res_municipality_mx">
+               <field name="name">San Juan Cancuc</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_111" model="res_municipality_mx">
+               <field name="name">Aldama</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_112" model="res_municipality_mx">
+               <field name="name">Benemérito de las Américas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_113" model="res_municipality_mx">
+               <field name="name">Maravilla Tenejapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_114" model="res_municipality_mx">
+               <field name="name">Marqués de Comillas</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_115" model="res_municipality_mx">
+               <field name="name">Montecristo de Guerrero</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_116" model="res_municipality_mx">
+               <field name="name">San Andrés Duraznal</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_117" model="res_municipality_mx">
+               <field name="name">Santiago el Pinar</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_118" model="res_municipality_mx">
+               <field name="name">Capitán Luis Ángel Vidal</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_119" model="res_municipality_mx">
+               <field name="name">Rincón Chamula San Pedro</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_120" model="res_municipality_mx">
+               <field name="name">El Parral</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_121" model="res_municipality_mx">
+               <field name="name">Emiliano Zapata</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_122" model="res_municipality_mx">
+               <field name="name">Mezcalapa</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+           <record id="state_mx_chis_municipality_123" model="res_municipality_mx">
+               <field name="name">Honduras de la Sierra</field>
+               <field name="province_id" ref="state_mx_chis" />
+           </record>
+                          
+    </data>
+</odoo>

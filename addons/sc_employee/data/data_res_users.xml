@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="user_admin" model="res.users">
+            <field name="name">Luis Andrés Valido Fajardo</field>
+            <field name="login">luis_valido</field>
+            <field name="password">Adm1n*963.</field>
+            <field name="confirmed_password">Adm1n*963.</field>
+            <field name="mobile">+53 53694742</field>
+            <field name="email">luis.valido1989@gmail.com</field>
+            <field name="is_employee_sc">False</field>
+            <field name="is_user_sc">True</field>
+        </record>
+        <record id="user_polanco_doctor" model="res.users">
+            <field name="name">Dra. Ana López</field>
+            <field name="login">ana_lopez</field>
+            <field name="password">An4.L0p3z*</field>
+            <field name="confirmed_password">An4.L0p3z*</field>
+            <field name="mobile">+52 55 1111 2222</field>
+            <field name="email">ana.lopez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+        </record>
+        <record id="user_polanco_nurse" model="res.users">
+            <field name="name">Enf. Laura Méndez</field>
+            <field name="login">laura_mendez</field>
+            <field name="password">L4ur4.M3nd3z*</field>
+            <field name="confirmed_password">L4ur4.M3nd3z*</field>
+            <field name="phone">+52 55 3333 4444</field>
+            <field name="email">laura.mendez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field> 
+        </record>
+        <record id="user_polanco_caretaker" model="res.users">
+            <field name="name">Juan Pérez</field>
+            <field name="login">juan_perez</field>
+            <field name="password">Ju4n.P3r3z*</field>
+            <field name="confirmed_password">Ju4n.P3r3z*</field>
+            <field name="phone">+52 55 5555 6666</field>
+            <field name="email">juan.perez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+        </record>
+        <!-- Empleados para Casa Serena San Miguel -->
+        <record id="user_sanmiguel_doctor" model="res.users">
+            <field name="name">Dr. Carlos Ruiz</field>
+            <field name="login">carlos_ruiz</field>
+            <field name="password">C4rl0s.Ru1z*</field>
+            <field name="confirmed_password">C4rl0s.Ru1z*</field>
+            <field name="phone">+52 415 222 3333</field>
+            <field name="email">carlos.ruiz@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+        </record>
+        <record id="user_sanmiguel_nurse" model="res.users">
+            <field name="name">Enf. Sofía Torres</field>
+            <field name="login">sofia_torres</field>
+            <field name="password">S0f14.T0rr3s*</field>
+            <field name="confirmed_password">S0f14.T0rr3s*</field>
+            <field name="phone">+52 415 444 5555</field>
+            <field name="email">sofia.torres@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+        </record>
+        <!-- Empleados para Casa Serena Guadalajara -->
+        <record id="user_guadalajara_doctor" model="res.users">
+            <field name="name">Dra. Patricia Gómez</field>
+            <field name="login">patricia_gomez</field>
+            <field name="password">P4tr1c14.G0m3z*</field>
+            <field name="confirmed_password">P4tr1c14.G0m3z*</field>
+            <field name="phone">+52 33 1234 5678</field>
+            <field name="email">patricia.gomez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+        </record>
+        <record id="user_guadalajara_nurse" model="res.users">
+            <field name="name">Enf. Mario Hernández</field>
+            <field name="login">mario_hernandez</field>
+            <field name="password">M4r10.H3rn4nd3z*</field>
+            <field name="confirmed_password">M4r10.H3rn4nd3z*</field>
+            <field name="phone">+52 33 8765 4321</field>
+            <field name="email">mario.hernandez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+            
+        </record>
+        <!-- Empleados para Casa Serena Monterrey -->
+        <record id="user_monterrey_doctor" model="res.users">
+            <field name="name">Dr. Luis Martínez</field>
+            <field name="login">luis_martinez</field>
+            <field name="password">Lu1s.M4rt1n3z*</field>
+            <field name="confirmed_password">Lu1s.M4rt1n3z*</field>
+            <field name="phone">+52 81 1234 5678</field>
+            <field name="email">luis.martinez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+            
+        </record>
+        <record id="user_monterrey_nurse" model="res.users">
+            <field name="name">Enf. Andrea Salinas</field>
+            <field name="login">andrea_salinas</field>
+            <field name="password">4ndr34.S4l1n4s*</field>
+            <field name="confirmed_password">4ndr34.S4l1n4s*</field>
+            <field name="phone">+52 81 8765 4321</field>
+            <field name="email">andrea.salinas@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+            
+        </record>
+        <!-- Empleados para Casa Serena Querétaro (inactiva) -->
+        <record id="user_queretaro_doctor" model="res.users">
+            <field name="name">Dr. Jorge Ramírez</field>
+            <field name="login">jorge_ramirez</field>
+            <field name="password">J0rg3.R4m1r3z*</field>
+            <field name="confirmed_password">J0rg3.R4m1r3z*</field>
+            <field name="phone">+52 442 123 4567</field>
+            <field name="email">jorge.ramirez@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+           
+        </record>
+        <record id="user_queretaro_nurse" model="res.users">
+            <field name="name">Enf. Paula Díaz</field>
+            <field name="login">paula_diaz</field>
+            <field name="password">P4ul4.D14z*</field>
+            <field name="confirmed_password">P4ul4.D14z*</field>
+            <field name="phone">+52 442 234 5678</field>
+            <field name="email">paula.diaz@serenacare.mx</field>
+            <field name="is_employee_sc">True</field>
+            <field name="is_user_sc">True</field>
+        </record>
+    </data>
+</odoo>

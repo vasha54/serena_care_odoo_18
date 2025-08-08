@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_pue_municipality_0" model="res_municipality_mx">
+               <field name="name">Acajete</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_1" model="res_municipality_mx">
+               <field name="name">Acateno</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_2" model="res_municipality_mx">
+               <field name="name">Acatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_3" model="res_municipality_mx">
+               <field name="name">Acatzingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_4" model="res_municipality_mx">
+               <field name="name">Acteopan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_5" model="res_municipality_mx">
+               <field name="name">Ahuacatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_6" model="res_municipality_mx">
+               <field name="name">Ahuatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_7" model="res_municipality_mx">
+               <field name="name">Ahuazotepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_8" model="res_municipality_mx">
+               <field name="name">Ahuehuetitla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_9" model="res_municipality_mx">
+               <field name="name">Ajalpan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_10" model="res_municipality_mx">
+               <field name="name">Albino Zertuche</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_11" model="res_municipality_mx">
+               <field name="name">Aljojuca</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_12" model="res_municipality_mx">
+               <field name="name">Altepexi</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_13" model="res_municipality_mx">
+               <field name="name">Amixtlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_14" model="res_municipality_mx">
+               <field name="name">Amozoc</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_15" model="res_municipality_mx">
+               <field name="name">Aquixtla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_16" model="res_municipality_mx">
+               <field name="name">Atempan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_17" model="res_municipality_mx">
+               <field name="name">Atexcal</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_18" model="res_municipality_mx">
+               <field name="name">Atlixco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_19" model="res_municipality_mx">
+               <field name="name">Atoyatempan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_20" model="res_municipality_mx">
+               <field name="name">Atzala</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_21" model="res_municipality_mx">
+               <field name="name">Atzitzihuacán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_22" model="res_municipality_mx">
+               <field name="name">Atzitzintla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_23" model="res_municipality_mx">
+               <field name="name">Axutla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_24" model="res_municipality_mx">
+               <field name="name">Ayotoxco de Guerrero</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_25" model="res_municipality_mx">
+               <field name="name">Calpan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_26" model="res_municipality_mx">
+               <field name="name">Caltepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_27" model="res_municipality_mx">
+               <field name="name">Camocuautla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_28" model="res_municipality_mx">
+               <field name="name">Caxhuacan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_29" model="res_municipality_mx">
+               <field name="name">Coatepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_30" model="res_municipality_mx">
+               <field name="name">Coatzingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_31" model="res_municipality_mx">
+               <field name="name">Cohetzala</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_32" model="res_municipality_mx">
+               <field name="name">Cohuecan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_33" model="res_municipality_mx">
+               <field name="name">Coronango</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_34" model="res_municipality_mx">
+               <field name="name">Coxcatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_35" model="res_municipality_mx">
+               <field name="name">Coyomeapan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_36" model="res_municipality_mx">
+               <field name="name">Coyotepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_37" model="res_municipality_mx">
+               <field name="name">Cuapiaxtla de Madero</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_38" model="res_municipality_mx">
+               <field name="name">Cuautempan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_39" model="res_municipality_mx">
+               <field name="name">Cuautinchán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_40" model="res_municipality_mx">
+               <field name="name">Cuautlancingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_41" model="res_municipality_mx">
+               <field name="name">Cuayuca de Andrade</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_42" model="res_municipality_mx">
+               <field name="name">Cuetzalan del Progreso</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_43" model="res_municipality_mx">
+               <field name="name">Cuyoaco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_44" model="res_municipality_mx">
+               <field name="name">Chalchicomula de Sesma</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_45" model="res_municipality_mx">
+               <field name="name">Chapulco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_46" model="res_municipality_mx">
+               <field name="name">Chiautla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_47" model="res_municipality_mx">
+               <field name="name">Chiautzingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_48" model="res_municipality_mx">
+               <field name="name">Chiconcuautla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_49" model="res_municipality_mx">
+               <field name="name">Chichiquila</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_50" model="res_municipality_mx">
+               <field name="name">Chietla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_51" model="res_municipality_mx">
+               <field name="name">Chigmecatitlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_52" model="res_municipality_mx">
+               <field name="name">Chignahuapan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_53" model="res_municipality_mx">
+               <field name="name">Chignautla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_54" model="res_municipality_mx">
+               <field name="name">Chila</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_55" model="res_municipality_mx">
+               <field name="name">Chila de la Sal</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_56" model="res_municipality_mx">
+               <field name="name">Honey</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_57" model="res_municipality_mx">
+               <field name="name">Chilchotla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_58" model="res_municipality_mx">
+               <field name="name">Chinantla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_59" model="res_municipality_mx">
+               <field name="name">Domingo Arenas</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_60" model="res_municipality_mx">
+               <field name="name">Eloxochitlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_61" model="res_municipality_mx">
+               <field name="name">Epatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_62" model="res_municipality_mx">
+               <field name="name">Esperanza</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_63" model="res_municipality_mx">
+               <field name="name">Francisco Z. Mena</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_64" model="res_municipality_mx">
+               <field name="name">General Felipe Ángeles</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_65" model="res_municipality_mx">
+               <field name="name">Guadalupe</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_66" model="res_municipality_mx">
+               <field name="name">Guadalupe Victoria</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_67" model="res_municipality_mx">
+               <field name="name">Hermenegildo Galeana</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_68" model="res_municipality_mx">
+               <field name="name">Huaquechula</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_69" model="res_municipality_mx">
+               <field name="name">Huatlatlauca</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_70" model="res_municipality_mx">
+               <field name="name">Huauchinango</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_71" model="res_municipality_mx">
+               <field name="name">Huehuetla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_72" model="res_municipality_mx">
+               <field name="name">Huehuetlán el Chico</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_73" model="res_municipality_mx">
+               <field name="name">Huejotzingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_74" model="res_municipality_mx">
+               <field name="name">Hueyapan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_75" model="res_municipality_mx">
+               <field name="name">Hueytamalco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_76" model="res_municipality_mx">
+               <field name="name">Hueytlalpan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_77" model="res_municipality_mx">
+               <field name="name">Huitzilan de Serdán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_78" model="res_municipality_mx">
+               <field name="name">Huitziltepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_79" model="res_municipality_mx">
+               <field name="name">Atlequizayan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_80" model="res_municipality_mx">
+               <field name="name">Ixcamilpa de Guerrero</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_81" model="res_municipality_mx">
+               <field name="name">Ixcaquixtla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_82" model="res_municipality_mx">
+               <field name="name">Ixtacamaxtitlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_83" model="res_municipality_mx">
+               <field name="name">Ixtepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_84" model="res_municipality_mx">
+               <field name="name">Izúcar de Matamoros</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_85" model="res_municipality_mx">
+               <field name="name">Jalpan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_86" model="res_municipality_mx">
+               <field name="name">Jolalpan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_87" model="res_municipality_mx">
+               <field name="name">Jonotla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_88" model="res_municipality_mx">
+               <field name="name">Jopala</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_89" model="res_municipality_mx">
+               <field name="name">Juan C. Bonilla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_90" model="res_municipality_mx">
+               <field name="name">Juan Galindo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_91" model="res_municipality_mx">
+               <field name="name">Juan N. Méndez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_92" model="res_municipality_mx">
+               <field name="name">Lafragua</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_93" model="res_municipality_mx">
+               <field name="name">Libres</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_94" model="res_municipality_mx">
+               <field name="name">La Magdalena Tlatlauquitepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_95" model="res_municipality_mx">
+               <field name="name">Mazapiltepec de Juárez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_96" model="res_municipality_mx">
+               <field name="name">Mixtla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_97" model="res_municipality_mx">
+               <field name="name">Molcaxac</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_98" model="res_municipality_mx">
+               <field name="name">Cañada Morelos</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_99" model="res_municipality_mx">
+               <field name="name">Naupan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_100" model="res_municipality_mx">
+               <field name="name">Nauzontla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_101" model="res_municipality_mx">
+               <field name="name">Nealtican</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_102" model="res_municipality_mx">
+               <field name="name">Nicolás Bravo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_103" model="res_municipality_mx">
+               <field name="name">Nopalucan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_104" model="res_municipality_mx">
+               <field name="name">Ocotepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_105" model="res_municipality_mx">
+               <field name="name">Ocoyucan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_106" model="res_municipality_mx">
+               <field name="name">Olintla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_107" model="res_municipality_mx">
+               <field name="name">Oriental</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_108" model="res_municipality_mx">
+               <field name="name">Pahuatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_109" model="res_municipality_mx">
+               <field name="name">Palmar de Bravo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_110" model="res_municipality_mx">
+               <field name="name">Pantepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_111" model="res_municipality_mx">
+               <field name="name">Petlalcingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_112" model="res_municipality_mx">
+               <field name="name">Piaxtla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_113" model="res_municipality_mx">
+               <field name="name">Puebla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_114" model="res_municipality_mx">
+               <field name="name">Quecholac</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_115" model="res_municipality_mx">
+               <field name="name">Quimixtlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_116" model="res_municipality_mx">
+               <field name="name">Rafael Lara Grajales</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_117" model="res_municipality_mx">
+               <field name="name">Los Reyes de Juárez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_118" model="res_municipality_mx">
+               <field name="name">San Andrés Cholula</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_119" model="res_municipality_mx">
+               <field name="name">San Antonio Cañada</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_120" model="res_municipality_mx">
+               <field name="name">San Diego la Mesa Tochimiltzingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_121" model="res_municipality_mx">
+               <field name="name">San Felipe Teotlalcingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_122" model="res_municipality_mx">
+               <field name="name">San Felipe Tepatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_123" model="res_municipality_mx">
+               <field name="name">San Gabriel Chilac</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_124" model="res_municipality_mx">
+               <field name="name">San Gregorio Atzompa</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_125" model="res_municipality_mx">
+               <field name="name">San Jerónimo Tecuanipan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_126" model="res_municipality_mx">
+               <field name="name">San Jerónimo Xayacatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_127" model="res_municipality_mx">
+               <field name="name">San José Chiapa</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_128" model="res_municipality_mx">
+               <field name="name">San José Miahuatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_129" model="res_municipality_mx">
+               <field name="name">San Juan Atenco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_130" model="res_municipality_mx">
+               <field name="name">San Juan Atzompa</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_131" model="res_municipality_mx">
+               <field name="name">San Martín Texmelucan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_132" model="res_municipality_mx">
+               <field name="name">San Martín Totoltepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_133" model="res_municipality_mx">
+               <field name="name">San Matías Tlalancaleca</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_134" model="res_municipality_mx">
+               <field name="name">San Miguel Ixitlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_135" model="res_municipality_mx">
+               <field name="name">San Miguel Xoxtla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_136" model="res_municipality_mx">
+               <field name="name">San Nicolás Buenos Aires</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_137" model="res_municipality_mx">
+               <field name="name">San Nicolás de los Ranchos</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_138" model="res_municipality_mx">
+               <field name="name">San Pablo Anicano</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_139" model="res_municipality_mx">
+               <field name="name">San Pedro Cholula</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_140" model="res_municipality_mx">
+               <field name="name">San Pedro Yeloixtlahuaca</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_141" model="res_municipality_mx">
+               <field name="name">San Salvador el Seco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_142" model="res_municipality_mx">
+               <field name="name">San Salvador el Verde</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_143" model="res_municipality_mx">
+               <field name="name">San Salvador Huixcolotla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_144" model="res_municipality_mx">
+               <field name="name">San Sebastián Tlacotepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_145" model="res_municipality_mx">
+               <field name="name">Santa Catarina Tlaltempan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_146" model="res_municipality_mx">
+               <field name="name">Santa Inés Ahuatempan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_147" model="res_municipality_mx">
+               <field name="name">Santa Isabel Cholula</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_148" model="res_municipality_mx">
+               <field name="name">Santiago Miahuatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_149" model="res_municipality_mx">
+               <field name="name">Huehuetlán el Grande</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_150" model="res_municipality_mx">
+               <field name="name">Santo Tomás Hueyotlipan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_151" model="res_municipality_mx">
+               <field name="name">Soltepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_152" model="res_municipality_mx">
+               <field name="name">Tecali de Herrera</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_153" model="res_municipality_mx">
+               <field name="name">Tecamachalco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_154" model="res_municipality_mx">
+               <field name="name">Tecomatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_155" model="res_municipality_mx">
+               <field name="name">Tehuacán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_156" model="res_municipality_mx">
+               <field name="name">Tehuitzingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_157" model="res_municipality_mx">
+               <field name="name">Tenampulco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_158" model="res_municipality_mx">
+               <field name="name">Teopantlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_159" model="res_municipality_mx">
+               <field name="name">Teotlalco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_160" model="res_municipality_mx">
+               <field name="name">Tepanco de López</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_161" model="res_municipality_mx">
+               <field name="name">Tepango de Rodríguez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_162" model="res_municipality_mx">
+               <field name="name">Tepatlaxco de Hidalgo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_163" model="res_municipality_mx">
+               <field name="name">Tepeaca</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_164" model="res_municipality_mx">
+               <field name="name">Tepemaxalco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_165" model="res_municipality_mx">
+               <field name="name">Tepeojuma</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_166" model="res_municipality_mx">
+               <field name="name">Tepetzintla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_167" model="res_municipality_mx">
+               <field name="name">Tepexco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_168" model="res_municipality_mx">
+               <field name="name">Tepexi de Rodríguez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_169" model="res_municipality_mx">
+               <field name="name">Tepeyahualco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_170" model="res_municipality_mx">
+               <field name="name">Tepeyahualco de Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_171" model="res_municipality_mx">
+               <field name="name">Tetela de Ocampo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_172" model="res_municipality_mx">
+               <field name="name">Teteles de Ávila Castillo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_173" model="res_municipality_mx">
+               <field name="name">Teziutlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_174" model="res_municipality_mx">
+               <field name="name">Tianguismanalco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_175" model="res_municipality_mx">
+               <field name="name">Tilapa</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_176" model="res_municipality_mx">
+               <field name="name">Tlacotepec de Benito Juárez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_177" model="res_municipality_mx">
+               <field name="name">Tlacuilotepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_178" model="res_municipality_mx">
+               <field name="name">Tlachichuca</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_179" model="res_municipality_mx">
+               <field name="name">Tlahuapan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_180" model="res_municipality_mx">
+               <field name="name">Tlaltenango</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_181" model="res_municipality_mx">
+               <field name="name">Tlanepantla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_182" model="res_municipality_mx">
+               <field name="name">Tlaola</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_183" model="res_municipality_mx">
+               <field name="name">Tlapacoya</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_184" model="res_municipality_mx">
+               <field name="name">Tlapanalá</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_185" model="res_municipality_mx">
+               <field name="name">Tlatlauquitepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_186" model="res_municipality_mx">
+               <field name="name">Tlaxco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_187" model="res_municipality_mx">
+               <field name="name">Tochimilco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_188" model="res_municipality_mx">
+               <field name="name">Tochtepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_189" model="res_municipality_mx">
+               <field name="name">Totoltepec de Guerrero</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_190" model="res_municipality_mx">
+               <field name="name">Tulcingo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_191" model="res_municipality_mx">
+               <field name="name">Tuzamapan de Galeana</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_192" model="res_municipality_mx">
+               <field name="name">Tzicatlacoyan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_193" model="res_municipality_mx">
+               <field name="name">Venustiano Carranza</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_194" model="res_municipality_mx">
+               <field name="name">Vicente Guerrero</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_195" model="res_municipality_mx">
+               <field name="name">Xayacatlán de Bravo</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_196" model="res_municipality_mx">
+               <field name="name">Xicotepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_197" model="res_municipality_mx">
+               <field name="name">Xicotlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_198" model="res_municipality_mx">
+               <field name="name">Xiutetelco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_199" model="res_municipality_mx">
+               <field name="name">Xochiapulco</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_200" model="res_municipality_mx">
+               <field name="name">Xochiltepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_201" model="res_municipality_mx">
+               <field name="name">Xochitlán de Vicente Suárez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_202" model="res_municipality_mx">
+               <field name="name">Xochitlán Todos Santos</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_203" model="res_municipality_mx">
+               <field name="name">Yaonáhuac</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_204" model="res_municipality_mx">
+               <field name="name">Yehualtepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_205" model="res_municipality_mx">
+               <field name="name">Zacapala</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_206" model="res_municipality_mx">
+               <field name="name">Zacapoaxtla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_207" model="res_municipality_mx">
+               <field name="name">Zacatlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_208" model="res_municipality_mx">
+               <field name="name">Zapotitlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_209" model="res_municipality_mx">
+               <field name="name">Zapotitlán de Méndez</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_210" model="res_municipality_mx">
+               <field name="name">Zaragoza</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_211" model="res_municipality_mx">
+               <field name="name">Zautla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_212" model="res_municipality_mx">
+               <field name="name">Zihuateutla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_213" model="res_municipality_mx">
+               <field name="name">Zinacatepec</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_214" model="res_municipality_mx">
+               <field name="name">Zongozotla</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_215" model="res_municipality_mx">
+               <field name="name">Zoquiapan</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+           <record id="state_mx_pue_municipality_216" model="res_municipality_mx">
+               <field name="name">Zoquitlán</field>
+               <field name="province_id" ref="state_mx_pue" />
+           </record>
+                          
+    </data>
+</odoo>

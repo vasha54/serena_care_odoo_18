@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_chih_municipality_0" model="res_municipality_mx">
+               <field name="name">Ahumada</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_1" model="res_municipality_mx">
+               <field name="name">Aldama</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_2" model="res_municipality_mx">
+               <field name="name">Allende</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_3" model="res_municipality_mx">
+               <field name="name">Aquiles Serdán</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_4" model="res_municipality_mx">
+               <field name="name">Ascensión</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_5" model="res_municipality_mx">
+               <field name="name">Bachíniva</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_6" model="res_municipality_mx">
+               <field name="name">Balleza</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_7" model="res_municipality_mx">
+               <field name="name">Batopilas de Manuel Gómez Morín</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_8" model="res_municipality_mx">
+               <field name="name">Bocoyna</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_9" model="res_municipality_mx">
+               <field name="name">Buenaventura</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_10" model="res_municipality_mx">
+               <field name="name">Camargo</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_11" model="res_municipality_mx">
+               <field name="name">Carichí</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_12" model="res_municipality_mx">
+               <field name="name">Casas Grandes</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_13" model="res_municipality_mx">
+               <field name="name">Coronado</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_14" model="res_municipality_mx">
+               <field name="name">Coyame del Sotol</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_15" model="res_municipality_mx">
+               <field name="name">La Cruz</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_16" model="res_municipality_mx">
+               <field name="name">Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_17" model="res_municipality_mx">
+               <field name="name">Cusihuiriachi</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_18" model="res_municipality_mx">
+               <field name="name">Chihuahua</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_19" model="res_municipality_mx">
+               <field name="name">Chínipas</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_20" model="res_municipality_mx">
+               <field name="name">Delicias</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_21" model="res_municipality_mx">
+               <field name="name">Dr. Belisario Domínguez</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_22" model="res_municipality_mx">
+               <field name="name">Galeana</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_23" model="res_municipality_mx">
+               <field name="name">Santa Isabel</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_24" model="res_municipality_mx">
+               <field name="name">Gómez Farías</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_25" model="res_municipality_mx">
+               <field name="name">Gran Morelos</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_26" model="res_municipality_mx">
+               <field name="name">Guachochi</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_27" model="res_municipality_mx">
+               <field name="name">Guadalupe</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_28" model="res_municipality_mx">
+               <field name="name">Guadalupe y Calvo</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_29" model="res_municipality_mx">
+               <field name="name">Guazapares</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_30" model="res_municipality_mx">
+               <field name="name">Guerrero</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_31" model="res_municipality_mx">
+               <field name="name">Hidalgo del Parral</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_32" model="res_municipality_mx">
+               <field name="name">Huejotitán</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_33" model="res_municipality_mx">
+               <field name="name">Ignacio Zaragoza</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_34" model="res_municipality_mx">
+               <field name="name">Janos</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_35" model="res_municipality_mx">
+               <field name="name">Jiménez</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_36" model="res_municipality_mx">
+               <field name="name">Juárez</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_37" model="res_municipality_mx">
+               <field name="name">Julimes</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_38" model="res_municipality_mx">
+               <field name="name">López</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_39" model="res_municipality_mx">
+               <field name="name">Madera</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_40" model="res_municipality_mx">
+               <field name="name">Maguarichi</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_41" model="res_municipality_mx">
+               <field name="name">Manuel Benavides</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_42" model="res_municipality_mx">
+               <field name="name">Matachí</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_43" model="res_municipality_mx">
+               <field name="name">Matamoros</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_44" model="res_municipality_mx">
+               <field name="name">Meoqui</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_45" model="res_municipality_mx">
+               <field name="name">Morelos</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_46" model="res_municipality_mx">
+               <field name="name">Moris</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_47" model="res_municipality_mx">
+               <field name="name">Namiquipa</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_48" model="res_municipality_mx">
+               <field name="name">Nonoava</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_49" model="res_municipality_mx">
+               <field name="name">Nuevo Casas Grandes</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_50" model="res_municipality_mx">
+               <field name="name">Ocampo</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_51" model="res_municipality_mx">
+               <field name="name">Ojinaga</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_52" model="res_municipality_mx">
+               <field name="name">Praxedis G. Guerrero</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_53" model="res_municipality_mx">
+               <field name="name">Riva Palacio</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_54" model="res_municipality_mx">
+               <field name="name">Rosales</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_55" model="res_municipality_mx">
+               <field name="name">Rosario</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_56" model="res_municipality_mx">
+               <field name="name">San Francisco de Borja</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_57" model="res_municipality_mx">
+               <field name="name">San Francisco de Conchos</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_58" model="res_municipality_mx">
+               <field name="name">San Francisco del Oro</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_59" model="res_municipality_mx">
+               <field name="name">Santa Bárbara</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_60" model="res_municipality_mx">
+               <field name="name">Satevó</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_61" model="res_municipality_mx">
+               <field name="name">Saucillo</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_62" model="res_municipality_mx">
+               <field name="name">Temósachic</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_63" model="res_municipality_mx">
+               <field name="name">El Tule</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_64" model="res_municipality_mx">
+               <field name="name">Urique</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_65" model="res_municipality_mx">
+               <field name="name">Uruachi</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+           <record id="state_mx_chih_municipality_66" model="res_municipality_mx">
+               <field name="name">Valle de Zaragoza</field>
+               <field name="province_id" ref="state_mx_chih" />
+           </record>
+                          
+    </data>
+</odoo>

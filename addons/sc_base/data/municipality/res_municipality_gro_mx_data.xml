@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_gro_municipality_0" model="res_municipality_mx">
+               <field name="name">Acapulco de Juárez</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_1" model="res_municipality_mx">
+               <field name="name">Ahuacuotzingo</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_2" model="res_municipality_mx">
+               <field name="name">Ajuchitlán del Progreso</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_3" model="res_municipality_mx">
+               <field name="name">Alcozauca de Guerrero</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_4" model="res_municipality_mx">
+               <field name="name">Alpoyeca</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_5" model="res_municipality_mx">
+               <field name="name">Apaxtla de Castrejón</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_6" model="res_municipality_mx">
+               <field name="name">Arcelia</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_7" model="res_municipality_mx">
+               <field name="name">Atenango del Río</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_8" model="res_municipality_mx">
+               <field name="name">Atlamajalcingo del Monte</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_9" model="res_municipality_mx">
+               <field name="name">Atlixtac</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_10" model="res_municipality_mx">
+               <field name="name">Atoyac de Álvarez</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_11" model="res_municipality_mx">
+               <field name="name">Ayutla de los Libres</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_12" model="res_municipality_mx">
+               <field name="name">Azoyú</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_13" model="res_municipality_mx">
+               <field name="name">Benito Juárez</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_14" model="res_municipality_mx">
+               <field name="name">Buenavista de Cuéllar</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_15" model="res_municipality_mx">
+               <field name="name">Coahuayutla de José María Izazaga</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_16" model="res_municipality_mx">
+               <field name="name">Cocula</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_17" model="res_municipality_mx">
+               <field name="name">Copala</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_18" model="res_municipality_mx">
+               <field name="name">Copalillo</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_19" model="res_municipality_mx">
+               <field name="name">Copanatoyac</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_20" model="res_municipality_mx">
+               <field name="name">Coyuca de Benítez</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_21" model="res_municipality_mx">
+               <field name="name">Coyuca de Catalán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_22" model="res_municipality_mx">
+               <field name="name">Cuajinicuilapa</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_23" model="res_municipality_mx">
+               <field name="name">Cualác</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_24" model="res_municipality_mx">
+               <field name="name">Cuautepec</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_25" model="res_municipality_mx">
+               <field name="name">Cuetzala del Progreso</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_26" model="res_municipality_mx">
+               <field name="name">Cutzamala de Pinzón</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_27" model="res_municipality_mx">
+               <field name="name">Chilapa de Álvarez</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_28" model="res_municipality_mx">
+               <field name="name">Chilpancingo de los Bravo</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_29" model="res_municipality_mx">
+               <field name="name">Florencio Villarreal</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_30" model="res_municipality_mx">
+               <field name="name">General Canuto A. Neri</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_31" model="res_municipality_mx">
+               <field name="name">General Heliodoro Castillo</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_32" model="res_municipality_mx">
+               <field name="name">Huamuxtitlán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_33" model="res_municipality_mx">
+               <field name="name">Huitzuco de los Figueroa</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_34" model="res_municipality_mx">
+               <field name="name">Iguala de la Independencia</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_35" model="res_municipality_mx">
+               <field name="name">Igualapa</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_36" model="res_municipality_mx">
+               <field name="name">Ixcateopan de Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_37" model="res_municipality_mx">
+               <field name="name">Zihuatanejo de Azueta</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_38" model="res_municipality_mx">
+               <field name="name">Juan R. Escudero</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_39" model="res_municipality_mx">
+               <field name="name">Leonardo Bravo</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_40" model="res_municipality_mx">
+               <field name="name">Malinaltepec</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_41" model="res_municipality_mx">
+               <field name="name">Mártir de Cuilapan</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_42" model="res_municipality_mx">
+               <field name="name">Metlatónoc</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_43" model="res_municipality_mx">
+               <field name="name">Mochitlán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_44" model="res_municipality_mx">
+               <field name="name">Olinalá</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_45" model="res_municipality_mx">
+               <field name="name">Ometepec</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_46" model="res_municipality_mx">
+               <field name="name">Pedro Ascencio Alquisiras</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_47" model="res_municipality_mx">
+               <field name="name">Petatlán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_48" model="res_municipality_mx">
+               <field name="name">Pilcaya</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_49" model="res_municipality_mx">
+               <field name="name">Pungarabato</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_50" model="res_municipality_mx">
+               <field name="name">Quechultenango</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_51" model="res_municipality_mx">
+               <field name="name">San Luis Acatlán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_52" model="res_municipality_mx">
+               <field name="name">San Marcos</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_53" model="res_municipality_mx">
+               <field name="name">San Miguel Totolapan</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_54" model="res_municipality_mx">
+               <field name="name">Taxco de Alarcón</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_55" model="res_municipality_mx">
+               <field name="name">Tecoanapa</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_56" model="res_municipality_mx">
+               <field name="name">Técpan de Galeana</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_57" model="res_municipality_mx">
+               <field name="name">Teloloapan</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_58" model="res_municipality_mx">
+               <field name="name">Tepecoacuilco de Trujano</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_59" model="res_municipality_mx">
+               <field name="name">Tetipac</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_60" model="res_municipality_mx">
+               <field name="name">Tixtla de Guerrero</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_61" model="res_municipality_mx">
+               <field name="name">Tlacoachistlahuaca</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_62" model="res_municipality_mx">
+               <field name="name">Tlacoapa</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_63" model="res_municipality_mx">
+               <field name="name">Tlalchapa</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_64" model="res_municipality_mx">
+               <field name="name">Tlalixtaquilla de Maldonado</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_65" model="res_municipality_mx">
+               <field name="name">Tlapa de Comonfort</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_66" model="res_municipality_mx">
+               <field name="name">Tlapehuala</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_67" model="res_municipality_mx">
+               <field name="name">La Unión de Isidoro Montes de Oca</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_68" model="res_municipality_mx">
+               <field name="name">Xalpatláhuac</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_69" model="res_municipality_mx">
+               <field name="name">Xochihuehuetlán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_70" model="res_municipality_mx">
+               <field name="name">Xochistlahuaca</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_71" model="res_municipality_mx">
+               <field name="name">Zapotitlán Tablas</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_72" model="res_municipality_mx">
+               <field name="name">Zirándaro</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_73" model="res_municipality_mx">
+               <field name="name">Zitlala</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_74" model="res_municipality_mx">
+               <field name="name">Eduardo Neri</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_75" model="res_municipality_mx">
+               <field name="name">Acatepec</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_76" model="res_municipality_mx">
+               <field name="name">Marquelia</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_77" model="res_municipality_mx">
+               <field name="name">Cochoapa el Grande</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_78" model="res_municipality_mx">
+               <field name="name">José Joaquín de Herrera</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_79" model="res_municipality_mx">
+               <field name="name">Juchitán</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_80" model="res_municipality_mx">
+               <field name="name">Iliatenco</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_81" model="res_municipality_mx">
+               <field name="name">Las Vigas</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_82" model="res_municipality_mx">
+               <field name="name">Ñuu Savi</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_83" model="res_municipality_mx">
+               <field name="name">Santa Cruz del Rincón</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+           <record id="state_mx_gro_municipality_84" model="res_municipality_mx">
+               <field name="name">San Nicolás</field>
+               <field name="province_id" ref="state_mx_gro" />
+           </record>
+                          
+    </data>
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_bcs_municipality_0" model="res_municipality_mx">
+               <field name="name">Comondú</field>
+               <field name="province_id" ref="state_mx_bcs" />
+           </record>
+                          
+           <record id="state_mx_bcs_municipality_1" model="res_municipality_mx">
+               <field name="name">Mulegé</field>
+               <field name="province_id" ref="state_mx_bcs" />
+           </record>
+                          
+           <record id="state_mx_bcs_municipality_2" model="res_municipality_mx">
+               <field name="name">La Paz</field>
+               <field name="province_id" ref="state_mx_bcs" />
+           </record>
+                          
+           <record id="state_mx_bcs_municipality_3" model="res_municipality_mx">
+               <field name="name">Los Cabos</field>
+               <field name="province_id" ref="state_mx_bcs" />
+           </record>
+                          
+           <record id="state_mx_bcs_municipality_4" model="res_municipality_mx">
+               <field name="name">Loreto</field>
+               <field name="province_id" ref="state_mx_bcs" />
+           </record>
+                          
+    </data>
+</odoo>

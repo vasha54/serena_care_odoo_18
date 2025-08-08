@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View residence_house View List -->
+    <record id="view_residence_house_list" model="ir.ui.view">
+        <field name="name">view.residence_house.list</field>
+        <field name="model">residence_house</field>
+        <field name="arch" type="xml">
+            <list default_order="active desc, name asc">
+                <field name="active" widget="boolean_toggle" />
+                <field name="name" />
+                <field name="email" />
+                <field name="phone" />
+                <field name="province_id" />
+                <field name="municipality_id" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View residence_house form -->
+    <record id="view_residence_house_form" model="ir.ui.view">
+        <field name="name">view.residence_house.form</field>
+        <field name="model">residence_house</field>
+        <field name="arch" type="xml">
+            <form string="Residence_house">
+                <header>
+                    <button string="Restaurar residencia" invisible="not is_deleted" name="action_restore" type="object" class="oe_highlight"/>
+                    
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="Nombre ..." />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Teléfono" name="phone" />
+                            <field string="Correo electrónico" name="email" />
+                            <field string="Activa" name="active" />
+                            <field name="schedule"
+                                string="Horario de Atención"
+                                placeholder="..." />
+                        </group>
+                        <group>
+                            <field name="image_1920" widget="image" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="address" string="Dirección">
+                            <group>
+                                <group>
+                                    <group>
+                                        <field name="street" placeholder="Calle principal" />
+                                        <field name="street2" placeholder="Entre calle 1" />
+                                        <field name="street3" placeholder="Entre calle 2" />
+                                        <field name="street_number" placeholder="Número" />
+                                    </group>
+                                    <field name="contact_address"
+                                        string="Dirección Completa"
+                                        readonly="1"
+                                        placeholder="Se genera automáticamente" />
+                                </group>
+                                <group>
+                                    <field string="Estado" name="province_id" placeholder="Estado"
+                                        class="o_address_country" />
+                                    <field string="Municipio" name="municipality_id"
+                                        class="o_address_state"
+                                        placeholder="Municipio"
+                                        domain="[('province_id','=',province_id)]" />
+                                    <field string="Ciudad" name="city" placeholder="Ciudad"
+                                        class="o_address_city" />
+                                </group>
+                            </group>
+                        </page>
+                        <page name="services" string="Servicios">
+                            <field name="services_ids" domain="[('active', '=', True)]">
+                                <list>
+                                    <field name="name" />
+                                    <field name="description" />
+                                </list>
+                            </field>
+                        </page>
+                        <page name="description" string="Descripción">
+                            <field name="description" widget="html" class="oe_inline"
+                                placeholder="Detalles de la residencia..." />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View residence_house search -->
+    <record id="view_residence_house_search" model="ir.ui.view">
+        <field name="name">view.residence_house.search</field>
+        <field name="model">residence_house</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo" name="active" domain="[]" context="{'group_by':'active'}"/>
+                    <filter string="Estado" name="province_id" domain="[]" context="{'group_by':'province_id'}"/>
+                    <filter string="Municipio" name="municipality_id" domain="[]" context="{'group_by':'municipality_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action residence_house -->
+    <record id="action_residence_house" model="ir.actions.act_window">
+        <field name="name">Listado de Residencia/Casa</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">residence_house</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_deleted','=',False)]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nueva Residencia/Casa.
+            </p>
+        </field>
+    </record>
+    
+    <record id="action_residence_house_deleted" model="ir.actions.act_window">
+        <field name="name">Listado de Residencia/Casa eliminadas</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">residence_house</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_deleted','=',True)]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros 
+            </p>
+        </field>
+    </record>
+</odoo>

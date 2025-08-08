@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_ags_municipality_0" model="res_municipality_mx">
+               <field name="name">Asientos</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_1" model="res_municipality_mx">
+               <field name="name">Calvillo</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_2" model="res_municipality_mx">
+               <field name="name">Cosío</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_3" model="res_municipality_mx">
+               <field name="name">Jesús María</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_4" model="res_municipality_mx">
+               <field name="name">Pabellón de Arteaga</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_5" model="res_municipality_mx">
+               <field name="name">Rincón de Romos</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_6" model="res_municipality_mx">
+               <field name="name">San José de Gracia</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_7" model="res_municipality_mx">
+               <field name="name">Tepezalá</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_8" model="res_municipality_mx">
+               <field name="name">El Llano</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+           <record id="state_mx_ags_municipality_9" model="res_municipality_mx">
+               <field name="name">San Francisco de los Romo</field>
+               <field name="province_id" ref="state_mx_ags" />
+           </record>
+                          
+    </data>
+</odoo>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_resident"
+        name="Residentes"
+        action="action_resident"
+        sequence="-4"
+        web_icon="sc_resident,static/description/icon.png"/>
+</odoo>

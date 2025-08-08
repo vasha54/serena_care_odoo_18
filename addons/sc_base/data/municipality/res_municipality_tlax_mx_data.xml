@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_tlax_municipality_0" model="res_municipality_mx">
+               <field name="name">Amaxac de Guerrero</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_1" model="res_municipality_mx">
+               <field name="name">Apetatitlán de Antonio Carvajal</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_2" model="res_municipality_mx">
+               <field name="name">Atlangatepec</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_3" model="res_municipality_mx">
+               <field name="name">Atltzayanca</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_4" model="res_municipality_mx">
+               <field name="name">Apizaco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_5" model="res_municipality_mx">
+               <field name="name">Calpulalpan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_6" model="res_municipality_mx">
+               <field name="name">El Carmen Tequexquitla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_7" model="res_municipality_mx">
+               <field name="name">Cuapiaxtla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_8" model="res_municipality_mx">
+               <field name="name">Cuaxomulco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_9" model="res_municipality_mx">
+               <field name="name">Chiautempan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_10" model="res_municipality_mx">
+               <field name="name">Muñoz de Domingo Arenas</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_11" model="res_municipality_mx">
+               <field name="name">Españita</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_12" model="res_municipality_mx">
+               <field name="name">Huamantla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_13" model="res_municipality_mx">
+               <field name="name">Hueyotlipan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_14" model="res_municipality_mx">
+               <field name="name">Ixtacuixtla de Mariano Matamoros</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_15" model="res_municipality_mx">
+               <field name="name">Ixtenco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_16" model="res_municipality_mx">
+               <field name="name">Mazatecochco de José María Morelos</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_17" model="res_municipality_mx">
+               <field name="name">Contla de Juan Cuamatzi</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_18" model="res_municipality_mx">
+               <field name="name">Tepetitla de Lardizábal</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_19" model="res_municipality_mx">
+               <field name="name">Sanctórum de Lázaro Cárdenas</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_20" model="res_municipality_mx">
+               <field name="name">Nanacamilpa de Mariano Arista</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_21" model="res_municipality_mx">
+               <field name="name">Acuamanala de Miguel Hidalgo</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_22" model="res_municipality_mx">
+               <field name="name">Natívitas</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_23" model="res_municipality_mx">
+               <field name="name">Panotla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_24" model="res_municipality_mx">
+               <field name="name">San Pablo del Monte</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_25" model="res_municipality_mx">
+               <field name="name">Santa Cruz Tlaxcala</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_26" model="res_municipality_mx">
+               <field name="name">Tenancingo</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_27" model="res_municipality_mx">
+               <field name="name">Teolocholco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_28" model="res_municipality_mx">
+               <field name="name">Tepeyanco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_29" model="res_municipality_mx">
+               <field name="name">Terrenate</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_30" model="res_municipality_mx">
+               <field name="name">Tetla de la Solidaridad</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_31" model="res_municipality_mx">
+               <field name="name">Tetlatlahuca</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_32" model="res_municipality_mx">
+               <field name="name">Tlaxcala</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_33" model="res_municipality_mx">
+               <field name="name">Tlaxco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_34" model="res_municipality_mx">
+               <field name="name">Tocatlán</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_35" model="res_municipality_mx">
+               <field name="name">Totolac</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_36" model="res_municipality_mx">
+               <field name="name">Ziltlaltépec de Trinidad Sánchez Santos</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_37" model="res_municipality_mx">
+               <field name="name">Tzompantepec</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_38" model="res_municipality_mx">
+               <field name="name">Xaloztoc</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_39" model="res_municipality_mx">
+               <field name="name">Xaltocan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_40" model="res_municipality_mx">
+               <field name="name">Papalotla de Xicohténcatl</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_41" model="res_municipality_mx">
+               <field name="name">Xicohtzinco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_42" model="res_municipality_mx">
+               <field name="name">Yauhquemehcan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_43" model="res_municipality_mx">
+               <field name="name">Zacatelco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_44" model="res_municipality_mx">
+               <field name="name">Benito Juárez</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_45" model="res_municipality_mx">
+               <field name="name">Emiliano Zapata</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_46" model="res_municipality_mx">
+               <field name="name">Lázaro Cárdenas</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_47" model="res_municipality_mx">
+               <field name="name">La Magdalena Tlaltelulco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_48" model="res_municipality_mx">
+               <field name="name">San Damián Texóloc</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_49" model="res_municipality_mx">
+               <field name="name">San Francisco Tetlanohcan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_50" model="res_municipality_mx">
+               <field name="name">San Jerónimo Zacualpan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_51" model="res_municipality_mx">
+               <field name="name">San José Teacalco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_52" model="res_municipality_mx">
+               <field name="name">San Juan Huactzinco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_53" model="res_municipality_mx">
+               <field name="name">San Lorenzo Axocomanitla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_54" model="res_municipality_mx">
+               <field name="name">San Lucas Tecopilco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_55" model="res_municipality_mx">
+               <field name="name">Santa Ana Nopalucan</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_56" model="res_municipality_mx">
+               <field name="name">Santa Apolonia Teacalco</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_57" model="res_municipality_mx">
+               <field name="name">Santa Catarina Ayometla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_58" model="res_municipality_mx">
+               <field name="name">Santa Cruz Quilehtla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+           <record id="state_mx_tlax_municipality_59" model="res_municipality_mx">
+               <field name="name">Santa Isabel Xiloxoxtla</field>
+               <field name="province_id" ref="state_mx_tlax" />
+           </record>
+                          
+    </data>
+</odoo>

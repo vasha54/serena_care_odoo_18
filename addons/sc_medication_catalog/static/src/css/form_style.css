@@ -1,0 +1,10 @@
+/* Convierte texto a mayúsculas mientras se escribe */
+.text-uppercase input {
+    text-transform: uppercase !important;
+    text-align: left;
+}
+
+/* Opcional: Para campos de solo lectura */
+.text-uppercase .o_readonly input {
+    text-transform: uppercase !important;
+}

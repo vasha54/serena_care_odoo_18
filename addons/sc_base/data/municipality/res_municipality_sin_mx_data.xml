@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_sin_municipality_0" model="res_municipality_mx">
+               <field name="name">Ahome</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_1" model="res_municipality_mx">
+               <field name="name">Angostura</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_2" model="res_municipality_mx">
+               <field name="name">Badiraguato</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_3" model="res_municipality_mx">
+               <field name="name">Concordia</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_4" model="res_municipality_mx">
+               <field name="name">Cosalá</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_5" model="res_municipality_mx">
+               <field name="name">Culiacán</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_6" model="res_municipality_mx">
+               <field name="name">Choix</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_7" model="res_municipality_mx">
+               <field name="name">Elota</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_8" model="res_municipality_mx">
+               <field name="name">Escuinapa</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_9" model="res_municipality_mx">
+               <field name="name">El Fuerte</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_10" model="res_municipality_mx">
+               <field name="name">Guasave</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_11" model="res_municipality_mx">
+               <field name="name">Mazatlán</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_12" model="res_municipality_mx">
+               <field name="name">Mocorito</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_13" model="res_municipality_mx">
+               <field name="name">Rosario</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_14" model="res_municipality_mx">
+               <field name="name">Salvador Alvarado</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_15" model="res_municipality_mx">
+               <field name="name">San Ignacio</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_16" model="res_municipality_mx">
+               <field name="name">Sinaloa</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_17" model="res_municipality_mx">
+               <field name="name">Navolato</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_18" model="res_municipality_mx">
+               <field name="name">Eldorado</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+           <record id="state_mx_sin_municipality_19" model="res_municipality_mx">
+               <field name="name">Juan José Ríos</field>
+               <field name="province_id" ref="state_mx_sin" />
+           </record>
+                          
+    </data>
+</odoo>

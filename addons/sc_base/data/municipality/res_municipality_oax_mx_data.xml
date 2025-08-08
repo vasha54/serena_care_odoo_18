@@ -1,0 +1,2846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_oax_municipality_0" model="res_municipality_mx">
+               <field name="name">Abejones</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_1" model="res_municipality_mx">
+               <field name="name">Acatlán de Pérez Figueroa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_2" model="res_municipality_mx">
+               <field name="name">Asunción Cacalotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_3" model="res_municipality_mx">
+               <field name="name">Asunción Cuyotepeji</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_4" model="res_municipality_mx">
+               <field name="name">Asunción Ixtaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_5" model="res_municipality_mx">
+               <field name="name">Asunción Nochixtlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_6" model="res_municipality_mx">
+               <field name="name">Asunción Ocotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_7" model="res_municipality_mx">
+               <field name="name">Asunción Tlacolulita</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_8" model="res_municipality_mx">
+               <field name="name">Ayotzintepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_9" model="res_municipality_mx">
+               <field name="name">El Barrio de la Soledad</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_10" model="res_municipality_mx">
+               <field name="name">Calihualá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_11" model="res_municipality_mx">
+               <field name="name">Candelaria Loxicha</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_12" model="res_municipality_mx">
+               <field name="name">Ciénega de Zimatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_13" model="res_municipality_mx">
+               <field name="name">Ciudad Ixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_14" model="res_municipality_mx">
+               <field name="name">Coatecas Altas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_15" model="res_municipality_mx">
+               <field name="name">Coicoyán de las Flores</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_16" model="res_municipality_mx">
+               <field name="name">La Compañía</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_17" model="res_municipality_mx">
+               <field name="name">Concepción Buenavista</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_18" model="res_municipality_mx">
+               <field name="name">Concepción Pápalo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_19" model="res_municipality_mx">
+               <field name="name">Constancia del Rosario</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_20" model="res_municipality_mx">
+               <field name="name">Cosolapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_21" model="res_municipality_mx">
+               <field name="name">Cosoltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_22" model="res_municipality_mx">
+               <field name="name">Cuilápam de Guerrero</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_23" model="res_municipality_mx">
+               <field name="name">Cuyamecalco Villa de Zaragoza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_24" model="res_municipality_mx">
+               <field name="name">Chahuites</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_25" model="res_municipality_mx">
+               <field name="name">Chalcatongo de Hidalgo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_26" model="res_municipality_mx">
+               <field name="name">Chiquihuitlán de Benito Juárez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_27" model="res_municipality_mx">
+               <field name="name">Heroica Ciudad de Ejutla de Crespo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_28" model="res_municipality_mx">
+               <field name="name">Eloxochitlán de Flores Magón</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_29" model="res_municipality_mx">
+               <field name="name">El Espinal</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_30" model="res_municipality_mx">
+               <field name="name">Tamazulápam del Espíritu Santo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_31" model="res_municipality_mx">
+               <field name="name">Fresnillo de Trujano</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_32" model="res_municipality_mx">
+               <field name="name">Guadalupe Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_33" model="res_municipality_mx">
+               <field name="name">Guadalupe de Ramírez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_34" model="res_municipality_mx">
+               <field name="name">Guelatao de Juárez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_35" model="res_municipality_mx">
+               <field name="name">Guevea de Humboldt</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_36" model="res_municipality_mx">
+               <field name="name">Mesones Hidalgo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_37" model="res_municipality_mx">
+               <field name="name">Villa Hidalgo Yalálag</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_38" model="res_municipality_mx">
+               <field name="name">Heroica Ciudad de Huajuapan de León</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_39" model="res_municipality_mx">
+               <field name="name">Huautepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_40" model="res_municipality_mx">
+               <field name="name">Huautla de Jiménez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_41" model="res_municipality_mx">
+               <field name="name">Ixtlán de Juárez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_42" model="res_municipality_mx">
+               <field name="name">Heroica Ciudad de Juchitán de Zaragoza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_43" model="res_municipality_mx">
+               <field name="name">Loma Bonita</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_44" model="res_municipality_mx">
+               <field name="name">Magdalena Apasco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_45" model="res_municipality_mx">
+               <field name="name">Magdalena Jaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_46" model="res_municipality_mx">
+               <field name="name">Santa Magdalena Jicotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_47" model="res_municipality_mx">
+               <field name="name">Magdalena Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_48" model="res_municipality_mx">
+               <field name="name">Magdalena Ocotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_49" model="res_municipality_mx">
+               <field name="name">Magdalena Peñasco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_50" model="res_municipality_mx">
+               <field name="name">Magdalena Teitipac</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_51" model="res_municipality_mx">
+               <field name="name">Magdalena Tequisistlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_52" model="res_municipality_mx">
+               <field name="name">Magdalena Tlacotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_53" model="res_municipality_mx">
+               <field name="name">Magdalena Zahuatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_54" model="res_municipality_mx">
+               <field name="name">Mariscala de Juárez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_55" model="res_municipality_mx">
+               <field name="name">Mártires de Tacubaya</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_56" model="res_municipality_mx">
+               <field name="name">Matías Romero Avendaño</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_57" model="res_municipality_mx">
+               <field name="name">Mazatlán Villa de Flores</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_58" model="res_municipality_mx">
+               <field name="name">Miahuatlán de Porfirio Díaz</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_59" model="res_municipality_mx">
+               <field name="name">Mixistlán de la Reforma</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_60" model="res_municipality_mx">
+               <field name="name">Monjas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_61" model="res_municipality_mx">
+               <field name="name">Natividad</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_62" model="res_municipality_mx">
+               <field name="name">Nazareno Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_63" model="res_municipality_mx">
+               <field name="name">Nejapa de Madero</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_64" model="res_municipality_mx">
+               <field name="name">Ixpantepec Nieves</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_65" model="res_municipality_mx">
+               <field name="name">Santiago Niltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_66" model="res_municipality_mx">
+               <field name="name">Oaxaca de Juárez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_67" model="res_municipality_mx">
+               <field name="name">Ocotlán de Morelos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_68" model="res_municipality_mx">
+               <field name="name">La Pe</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_69" model="res_municipality_mx">
+               <field name="name">Pinotepa de Don Luis</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_70" model="res_municipality_mx">
+               <field name="name">Pluma Hidalgo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_71" model="res_municipality_mx">
+               <field name="name">San José del Progreso</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_72" model="res_municipality_mx">
+               <field name="name">Putla Villa de Guerrero</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_73" model="res_municipality_mx">
+               <field name="name">Santa Catarina Quioquitani</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_74" model="res_municipality_mx">
+               <field name="name">Reforma de Pineda</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_75" model="res_municipality_mx">
+               <field name="name">La Reforma</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_76" model="res_municipality_mx">
+               <field name="name">Reyes Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_77" model="res_municipality_mx">
+               <field name="name">Rojas de Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_78" model="res_municipality_mx">
+               <field name="name">Salina Cruz</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_79" model="res_municipality_mx">
+               <field name="name">San Agustín Amatengo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_80" model="res_municipality_mx">
+               <field name="name">San Agustín Atenango</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_81" model="res_municipality_mx">
+               <field name="name">San Agustín Chayuco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_82" model="res_municipality_mx">
+               <field name="name">San Agustín de las Juntas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_83" model="res_municipality_mx">
+               <field name="name">San Agustín Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_84" model="res_municipality_mx">
+               <field name="name">San Agustín Loxicha</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_85" model="res_municipality_mx">
+               <field name="name">San Agustín Tlacotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_86" model="res_municipality_mx">
+               <field name="name">San Agustín Yatareni</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_87" model="res_municipality_mx">
+               <field name="name">San Andrés Cabecera Nueva</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_88" model="res_municipality_mx">
+               <field name="name">San Andrés Dinicuiti</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_89" model="res_municipality_mx">
+               <field name="name">San Andrés Huaxpaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_90" model="res_municipality_mx">
+               <field name="name">San Andrés Huayápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_91" model="res_municipality_mx">
+               <field name="name">San Andrés Ixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_92" model="res_municipality_mx">
+               <field name="name">San Andrés Lagunas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_93" model="res_municipality_mx">
+               <field name="name">San Andrés Nuxiño</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_94" model="res_municipality_mx">
+               <field name="name">San Andrés Paxtlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_95" model="res_municipality_mx">
+               <field name="name">San Andrés Sinaxtla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_96" model="res_municipality_mx">
+               <field name="name">San Andrés Solaga</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_97" model="res_municipality_mx">
+               <field name="name">San Andrés Teotilálpam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_98" model="res_municipality_mx">
+               <field name="name">San Andrés Tepetlapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_99" model="res_municipality_mx">
+               <field name="name">San Andrés Yaá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_100" model="res_municipality_mx">
+               <field name="name">San Andrés Zabache</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_101" model="res_municipality_mx">
+               <field name="name">San Andrés Zautla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_102" model="res_municipality_mx">
+               <field name="name">San Antonino Castillo Velasco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_103" model="res_municipality_mx">
+               <field name="name">San Antonino el Alto</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_104" model="res_municipality_mx">
+               <field name="name">San Antonino Monte Verde</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_105" model="res_municipality_mx">
+               <field name="name">San Antonio Acutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_106" model="res_municipality_mx">
+               <field name="name">San Antonio de la Cal</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_107" model="res_municipality_mx">
+               <field name="name">San Antonio Huitepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_108" model="res_municipality_mx">
+               <field name="name">San Antonio Nanahuatípam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_109" model="res_municipality_mx">
+               <field name="name">San Antonio Sinicahua</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_110" model="res_municipality_mx">
+               <field name="name">San Antonio Tepetlapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_111" model="res_municipality_mx">
+               <field name="name">San Baltazar Chichicápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_112" model="res_municipality_mx">
+               <field name="name">San Baltazar Loxicha</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_113" model="res_municipality_mx">
+               <field name="name">San Baltazar Yatzachi el Bajo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_114" model="res_municipality_mx">
+               <field name="name">San Bartolo Coyotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_115" model="res_municipality_mx">
+               <field name="name">San Bartolomé Ayautla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_116" model="res_municipality_mx">
+               <field name="name">San Bartolomé Loxicha</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_117" model="res_municipality_mx">
+               <field name="name">San Bartolomé Quialana</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_118" model="res_municipality_mx">
+               <field name="name">San Bartolomé Yucuañe</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_119" model="res_municipality_mx">
+               <field name="name">San Bartolomé Zoogocho</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_120" model="res_municipality_mx">
+               <field name="name">San Bartolo Soyaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_121" model="res_municipality_mx">
+               <field name="name">San Bartolo Yautepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_122" model="res_municipality_mx">
+               <field name="name">San Bernardo Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_123" model="res_municipality_mx">
+               <field name="name">Heroica Villa de San Blas Atempa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_124" model="res_municipality_mx">
+               <field name="name">San Carlos Yautepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_125" model="res_municipality_mx">
+               <field name="name">San Cristóbal Amatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_126" model="res_municipality_mx">
+               <field name="name">San Cristóbal Amoltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_127" model="res_municipality_mx">
+               <field name="name">San Cristóbal Lachirioag</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_128" model="res_municipality_mx">
+               <field name="name">San Cristóbal Suchixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_129" model="res_municipality_mx">
+               <field name="name">San Dionisio del Mar</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_130" model="res_municipality_mx">
+               <field name="name">San Dionisio Ocotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_131" model="res_municipality_mx">
+               <field name="name">San Dionisio Ocotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_132" model="res_municipality_mx">
+               <field name="name">San Esteban Atatlahuca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_133" model="res_municipality_mx">
+               <field name="name">San Felipe Jalapa de Díaz</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_134" model="res_municipality_mx">
+               <field name="name">San Felipe Tejalápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_135" model="res_municipality_mx">
+               <field name="name">San Felipe Usila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_136" model="res_municipality_mx">
+               <field name="name">San Francisco Cahuacuá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_137" model="res_municipality_mx">
+               <field name="name">San Francisco Cajonos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_138" model="res_municipality_mx">
+               <field name="name">San Francisco Chapulapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_139" model="res_municipality_mx">
+               <field name="name">San Francisco Chindúa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_140" model="res_municipality_mx">
+               <field name="name">San Francisco del Mar</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_141" model="res_municipality_mx">
+               <field name="name">San Francisco Huehuetlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_142" model="res_municipality_mx">
+               <field name="name">San Francisco Ixhuatán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_143" model="res_municipality_mx">
+               <field name="name">San Francisco Jaltepetongo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_144" model="res_municipality_mx">
+               <field name="name">San Francisco Lachigoló</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_145" model="res_municipality_mx">
+               <field name="name">San Francisco Logueche</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_146" model="res_municipality_mx">
+               <field name="name">San Francisco Nuxaño</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_147" model="res_municipality_mx">
+               <field name="name">San Francisco Ozolotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_148" model="res_municipality_mx">
+               <field name="name">San Francisco Sola</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_149" model="res_municipality_mx">
+               <field name="name">San Francisco Telixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_150" model="res_municipality_mx">
+               <field name="name">San Francisco Teopan</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_151" model="res_municipality_mx">
+               <field name="name">San Francisco Tlapancingo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_152" model="res_municipality_mx">
+               <field name="name">San Gabriel Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_153" model="res_municipality_mx">
+               <field name="name">San Ildefonso Amatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_154" model="res_municipality_mx">
+               <field name="name">San Ildefonso Sola</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_155" model="res_municipality_mx">
+               <field name="name">San Ildefonso Villa Alta</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_156" model="res_municipality_mx">
+               <field name="name">San Jacinto Amilpas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_157" model="res_municipality_mx">
+               <field name="name">San Jacinto Tlacotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_158" model="res_municipality_mx">
+               <field name="name">San Jerónimo Coatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_159" model="res_municipality_mx">
+               <field name="name">San Jerónimo Silacayoapilla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_160" model="res_municipality_mx">
+               <field name="name">San Jerónimo Sosola</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_161" model="res_municipality_mx">
+               <field name="name">San Jerónimo Taviche</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_162" model="res_municipality_mx">
+               <field name="name">San Jerónimo Tecóatl</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_163" model="res_municipality_mx">
+               <field name="name">San Jorge Nuchita</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_164" model="res_municipality_mx">
+               <field name="name">San José Ayuquila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_165" model="res_municipality_mx">
+               <field name="name">San José Chiltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_166" model="res_municipality_mx">
+               <field name="name">San José del Peñasco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_167" model="res_municipality_mx">
+               <field name="name">San José Estancia Grande</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_168" model="res_municipality_mx">
+               <field name="name">San José Independencia</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_169" model="res_municipality_mx">
+               <field name="name">San José Lachiguiri</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_170" model="res_municipality_mx">
+               <field name="name">San José Tenango</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_171" model="res_municipality_mx">
+               <field name="name">San Juan Achiutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_172" model="res_municipality_mx">
+               <field name="name">San Juan Atepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_173" model="res_municipality_mx">
+               <field name="name">Ánimas Trujano</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_174" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Atatlahuca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_175" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Coixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_176" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Cuicatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_177" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Guelache</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_178" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Jayacatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_179" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Lo de Soto</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_180" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Suchitepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_181" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Tlacoatzintepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_182" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Tlachichilco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_183" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Tuxtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_184" model="res_municipality_mx">
+               <field name="name">San Juan Cacahuatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_185" model="res_municipality_mx">
+               <field name="name">San Juan Cieneguilla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_186" model="res_municipality_mx">
+               <field name="name">San Juan Coatzóspam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_187" model="res_municipality_mx">
+               <field name="name">San Juan Colorado</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_188" model="res_municipality_mx">
+               <field name="name">San Juan Comaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_189" model="res_municipality_mx">
+               <field name="name">San Juan Cotzocón</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_190" model="res_municipality_mx">
+               <field name="name">San Juan Chicomezúchil</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_191" model="res_municipality_mx">
+               <field name="name">San Juan Chilateca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_192" model="res_municipality_mx">
+               <field name="name">San Juan del Estado</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_193" model="res_municipality_mx">
+               <field name="name">San Juan del Río</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_194" model="res_municipality_mx">
+               <field name="name">San Juan Diuxi</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_195" model="res_municipality_mx">
+               <field name="name">San Juan Evangelista Analco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_196" model="res_municipality_mx">
+               <field name="name">San Juan Guelavía</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_197" model="res_municipality_mx">
+               <field name="name">San Juan Guichicovi</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_198" model="res_municipality_mx">
+               <field name="name">San Juan Ihualtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_199" model="res_municipality_mx">
+               <field name="name">San Juan Juquila Mixes</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_200" model="res_municipality_mx">
+               <field name="name">San Juan Juquila Vijanos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_201" model="res_municipality_mx">
+               <field name="name">San Juan Lachao</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_202" model="res_municipality_mx">
+               <field name="name">San Juan Lachigalla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_203" model="res_municipality_mx">
+               <field name="name">San Juan Lajarcia</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_204" model="res_municipality_mx">
+               <field name="name">San Juan Lalana</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_205" model="res_municipality_mx">
+               <field name="name">San Juan de los Cués</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_206" model="res_municipality_mx">
+               <field name="name">San Juan Mazatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_207" model="res_municipality_mx">
+               <field name="name">San Juan Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_209" model="res_municipality_mx">
+               <field name="name">San Juan Ñumí</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_210" model="res_municipality_mx">
+               <field name="name">San Juan Ozolotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_211" model="res_municipality_mx">
+               <field name="name">San Juan Petlapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_212" model="res_municipality_mx">
+               <field name="name">San Juan Quiahije</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_213" model="res_municipality_mx">
+               <field name="name">San Juan Quiotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_214" model="res_municipality_mx">
+               <field name="name">San Juan Sayultepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_215" model="res_municipality_mx">
+               <field name="name">San Juan Tabaá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_216" model="res_municipality_mx">
+               <field name="name">San Juan Tamazola</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_217" model="res_municipality_mx">
+               <field name="name">San Juan Teita</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_218" model="res_municipality_mx">
+               <field name="name">San Juan Teitipac</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_219" model="res_municipality_mx">
+               <field name="name">San Juan Tepeuxila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_220" model="res_municipality_mx">
+               <field name="name">San Juan Teposcolula</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_221" model="res_municipality_mx">
+               <field name="name">San Juan Yaeé</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_222" model="res_municipality_mx">
+               <field name="name">San Juan Yatzona</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_223" model="res_municipality_mx">
+               <field name="name">San Juan Yucuita</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_224" model="res_municipality_mx">
+               <field name="name">San Lorenzo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_225" model="res_municipality_mx">
+               <field name="name">San Lorenzo Albarradas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_226" model="res_municipality_mx">
+               <field name="name">San Lorenzo Cacaotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_227" model="res_municipality_mx">
+               <field name="name">San Lorenzo Cuaunecuiltitla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_228" model="res_municipality_mx">
+               <field name="name">San Lorenzo Texmelúcan</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_229" model="res_municipality_mx">
+               <field name="name">San Lorenzo Victoria</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_230" model="res_municipality_mx">
+               <field name="name">San Lucas Camotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_231" model="res_municipality_mx">
+               <field name="name">San Lucas Ojitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_232" model="res_municipality_mx">
+               <field name="name">San Lucas Quiaviní</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_233" model="res_municipality_mx">
+               <field name="name">San Lucas Zoquiápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_234" model="res_municipality_mx">
+               <field name="name">San Luis Amatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_235" model="res_municipality_mx">
+               <field name="name">San Marcial Ozolotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_236" model="res_municipality_mx">
+               <field name="name">San Marcos Arteaga</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_237" model="res_municipality_mx">
+               <field name="name">Heroico San Martín de los Cansecos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_238" model="res_municipality_mx">
+               <field name="name">San Martín Huamelúlpam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_239" model="res_municipality_mx">
+               <field name="name">San Martín Itunyoso</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_240" model="res_municipality_mx">
+               <field name="name">San Martín Lachilá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_241" model="res_municipality_mx">
+               <field name="name">San Martín Peras</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_242" model="res_municipality_mx">
+               <field name="name">San Martín Tilcajete</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_243" model="res_municipality_mx">
+               <field name="name">San Martín Toxpalan</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_244" model="res_municipality_mx">
+               <field name="name">San Martín Zacatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_245" model="res_municipality_mx">
+               <field name="name">San Mateo Cajonos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_246" model="res_municipality_mx">
+               <field name="name">Capulálpam de Méndez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_247" model="res_municipality_mx">
+               <field name="name">San Mateo del Mar</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_248" model="res_municipality_mx">
+               <field name="name">San Mateo Yoloxochitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_249" model="res_municipality_mx">
+               <field name="name">San Mateo Etlatongo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_250" model="res_municipality_mx">
+               <field name="name">San Mateo Nejápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_251" model="res_municipality_mx">
+               <field name="name">San Mateo Peñasco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_252" model="res_municipality_mx">
+               <field name="name">San Mateo Piñas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_253" model="res_municipality_mx">
+               <field name="name">San Mateo Río Hondo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_254" model="res_municipality_mx">
+               <field name="name">San Mateo Sindihui</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_255" model="res_municipality_mx">
+               <field name="name">San Mateo Tlapiltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_256" model="res_municipality_mx">
+               <field name="name">San Melchor Betaza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_257" model="res_municipality_mx">
+               <field name="name">San Miguel Achiutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_258" model="res_municipality_mx">
+               <field name="name">San Miguel Ahuehuetitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_259" model="res_municipality_mx">
+               <field name="name">San Miguel Aloápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_260" model="res_municipality_mx">
+               <field name="name">San Miguel Amatitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_261" model="res_municipality_mx">
+               <field name="name">San Miguel Amatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_262" model="res_municipality_mx">
+               <field name="name">San Miguel Coatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_263" model="res_municipality_mx">
+               <field name="name">San Miguel Chicahua</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_264" model="res_municipality_mx">
+               <field name="name">San Miguel Chimalapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_265" model="res_municipality_mx">
+               <field name="name">San Miguel del Puerto</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_266" model="res_municipality_mx">
+               <field name="name">San Miguel del Río</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_267" model="res_municipality_mx">
+               <field name="name">San Miguel Ejutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_268" model="res_municipality_mx">
+               <field name="name">San Miguel el Grande</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_269" model="res_municipality_mx">
+               <field name="name">San Miguel Huautla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_270" model="res_municipality_mx">
+               <field name="name">San Miguel Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_271" model="res_municipality_mx">
+               <field name="name">San Miguel Panixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_272" model="res_municipality_mx">
+               <field name="name">San Miguel Peras</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_273" model="res_municipality_mx">
+               <field name="name">San Miguel Piedras</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_274" model="res_municipality_mx">
+               <field name="name">San Miguel Quetzaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_275" model="res_municipality_mx">
+               <field name="name">San Miguel Santa Flor</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_276" model="res_municipality_mx">
+               <field name="name">Villa Sola de Vega</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_277" model="res_municipality_mx">
+               <field name="name">San Miguel Soyaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_278" model="res_municipality_mx">
+               <field name="name">San Miguel Suchixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_279" model="res_municipality_mx">
+               <field name="name">Villa Talea de Castro</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_280" model="res_municipality_mx">
+               <field name="name">San Miguel Tecomatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_281" model="res_municipality_mx">
+               <field name="name">San Miguel Tenango</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_282" model="res_municipality_mx">
+               <field name="name">San Miguel Tequixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_283" model="res_municipality_mx">
+               <field name="name">San Miguel Tilquiápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_284" model="res_municipality_mx">
+               <field name="name">San Miguel Tlacamama</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_285" model="res_municipality_mx">
+               <field name="name">San Miguel Tlacotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_286" model="res_municipality_mx">
+               <field name="name">San Miguel Tulancingo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_287" model="res_municipality_mx">
+               <field name="name">San Miguel Yotao</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_288" model="res_municipality_mx">
+               <field name="name">San Nicolás</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_289" model="res_municipality_mx">
+               <field name="name">San Nicolás Hidalgo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_290" model="res_municipality_mx">
+               <field name="name">San Pablo Coatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_291" model="res_municipality_mx">
+               <field name="name">San Pablo Cuatro Venados</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_292" model="res_municipality_mx">
+               <field name="name">San Pablo Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_293" model="res_municipality_mx">
+               <field name="name">San Pablo Huitzo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_294" model="res_municipality_mx">
+               <field name="name">San Pablo Huixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_295" model="res_municipality_mx">
+               <field name="name">San Pablo Macuiltianguis</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_296" model="res_municipality_mx">
+               <field name="name">San Pablo Tijaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_297" model="res_municipality_mx">
+               <field name="name">San Pablo Villa de Mitla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_298" model="res_municipality_mx">
+               <field name="name">San Pablo Yaganiza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_299" model="res_municipality_mx">
+               <field name="name">San Pedro Amuzgos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_300" model="res_municipality_mx">
+               <field name="name">San Pedro Apóstol</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_301" model="res_municipality_mx">
+               <field name="name">San Pedro Atoyac</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_302" model="res_municipality_mx">
+               <field name="name">San Pedro Cajonos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_303" model="res_municipality_mx">
+               <field name="name">San Pedro Coxcaltepec Cántaros</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_304" model="res_municipality_mx">
+               <field name="name">San Pedro Comitancillo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_305" model="res_municipality_mx">
+               <field name="name">San Pedro el Alto</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_306" model="res_municipality_mx">
+               <field name="name">San Pedro Huamelula</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_307" model="res_municipality_mx">
+               <field name="name">San Pedro Huilotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_308" model="res_municipality_mx">
+               <field name="name">San Pedro Ixcatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_309" model="res_municipality_mx">
+               <field name="name">San Pedro Ixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_310" model="res_municipality_mx">
+               <field name="name">San Pedro Jaltepetongo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_311" model="res_municipality_mx">
+               <field name="name">San Pedro Jicayán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_312" model="res_municipality_mx">
+               <field name="name">San Pedro Jocotipac</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_313" model="res_municipality_mx">
+               <field name="name">San Pedro Juchatengo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_314" model="res_municipality_mx">
+               <field name="name">San Pedro Mártir</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_315" model="res_municipality_mx">
+               <field name="name">San Pedro Mártir Quiechapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_316" model="res_municipality_mx">
+               <field name="name">San Pedro Mártir Yucuxaco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_317" model="res_municipality_mx">
+               <field name="name">San Pedro Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_319" model="res_municipality_mx">
+               <field name="name">San Pedro Molinos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_320" model="res_municipality_mx">
+               <field name="name">San Pedro Nopala</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_321" model="res_municipality_mx">
+               <field name="name">San Pedro Ocopetatillo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_322" model="res_municipality_mx">
+               <field name="name">San Pedro Ocotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_323" model="res_municipality_mx">
+               <field name="name">San Pedro Pochutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_324" model="res_municipality_mx">
+               <field name="name">San Pedro Quiatoni</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_325" model="res_municipality_mx">
+               <field name="name">San Pedro Sochiápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_326" model="res_municipality_mx">
+               <field name="name">San Pedro Tapanatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_327" model="res_municipality_mx">
+               <field name="name">San Pedro Taviche</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_328" model="res_municipality_mx">
+               <field name="name">San Pedro Teozacoalco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_329" model="res_municipality_mx">
+               <field name="name">San Pedro Teutila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_330" model="res_municipality_mx">
+               <field name="name">San Pedro Tidaá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_331" model="res_municipality_mx">
+               <field name="name">San Pedro Topiltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_332" model="res_municipality_mx">
+               <field name="name">San Pedro Totolápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_333" model="res_municipality_mx">
+               <field name="name">Villa de Tututepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_334" model="res_municipality_mx">
+               <field name="name">San Pedro Yaneri</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_335" model="res_municipality_mx">
+               <field name="name">San Pedro Yólox</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_336" model="res_municipality_mx">
+               <field name="name">San Pedro y San Pablo Ayutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_337" model="res_municipality_mx">
+               <field name="name">Villa de Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_338" model="res_municipality_mx">
+               <field name="name">San Pedro y San Pablo Teposcolula</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_339" model="res_municipality_mx">
+               <field name="name">San Pedro y San Pablo Tequixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_340" model="res_municipality_mx">
+               <field name="name">San Pedro Yucunama</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_341" model="res_municipality_mx">
+               <field name="name">San Raymundo Jalpan</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_342" model="res_municipality_mx">
+               <field name="name">San Sebastián Abasolo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_343" model="res_municipality_mx">
+               <field name="name">San Sebastián Coatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_344" model="res_municipality_mx">
+               <field name="name">San Sebastián Ixcapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_345" model="res_municipality_mx">
+               <field name="name">San Sebastián Nicananduta</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_346" model="res_municipality_mx">
+               <field name="name">San Sebastián Río Hondo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_347" model="res_municipality_mx">
+               <field name="name">San Sebastián Tecomaxtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_348" model="res_municipality_mx">
+               <field name="name">San Sebastián Teitipac</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_349" model="res_municipality_mx">
+               <field name="name">San Sebastián Tutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_350" model="res_municipality_mx">
+               <field name="name">San Simón Almolongas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_351" model="res_municipality_mx">
+               <field name="name">San Simón Zahuatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_352" model="res_municipality_mx">
+               <field name="name">Santa Ana</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_353" model="res_municipality_mx">
+               <field name="name">Santa Ana Ateixtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_354" model="res_municipality_mx">
+               <field name="name">Santa Ana Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_355" model="res_municipality_mx">
+               <field name="name">Santa Ana del Valle</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_356" model="res_municipality_mx">
+               <field name="name">Santa Ana Tavela</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_357" model="res_municipality_mx">
+               <field name="name">Santa Ana Tlapacoyan</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_358" model="res_municipality_mx">
+               <field name="name">Santa Ana Yareni</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_359" model="res_municipality_mx">
+               <field name="name">Santa Ana Zegache</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_360" model="res_municipality_mx">
+               <field name="name">Santa Catalina Quierí</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_361" model="res_municipality_mx">
+               <field name="name">Santa Catarina Cuixtla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_362" model="res_municipality_mx">
+               <field name="name">Santa Catarina Ixtepeji</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_363" model="res_municipality_mx">
+               <field name="name">Santa Catarina Juquila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_364" model="res_municipality_mx">
+               <field name="name">Santa Catarina Lachatao</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_365" model="res_municipality_mx">
+               <field name="name">Santa Catarina Loxicha</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_366" model="res_municipality_mx">
+               <field name="name">Santa Catarina Mechoacán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_367" model="res_municipality_mx">
+               <field name="name">Santa Catarina Minas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_368" model="res_municipality_mx">
+               <field name="name">Santa Catarina Quiané</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_369" model="res_municipality_mx">
+               <field name="name">Santa Catarina Tayata</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_370" model="res_municipality_mx">
+               <field name="name">Santa Catarina Ticuá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_371" model="res_municipality_mx">
+               <field name="name">Santa Catarina Yosonotú</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_372" model="res_municipality_mx">
+               <field name="name">Santa Catarina Zapoquila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_373" model="res_municipality_mx">
+               <field name="name">Santa Cruz Acatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_374" model="res_municipality_mx">
+               <field name="name">Santa Cruz Amilpas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_375" model="res_municipality_mx">
+               <field name="name">Santa Cruz de Bravo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_376" model="res_municipality_mx">
+               <field name="name">Santa Cruz Itundujia</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_377" model="res_municipality_mx">
+               <field name="name">Santa Cruz Mixtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_378" model="res_municipality_mx">
+               <field name="name">Santa Cruz Nundaco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_379" model="res_municipality_mx">
+               <field name="name">Santa Cruz Papalutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_380" model="res_municipality_mx">
+               <field name="name">Santa Cruz Tacache de Mina</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_381" model="res_municipality_mx">
+               <field name="name">Santa Cruz Tacahua</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_382" model="res_municipality_mx">
+               <field name="name">Santa Cruz Tayata</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_383" model="res_municipality_mx">
+               <field name="name">Santa Cruz Xitla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_384" model="res_municipality_mx">
+               <field name="name">Santa Cruz Xoxocotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_385" model="res_municipality_mx">
+               <field name="name">Santa Cruz Zenzontepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_386" model="res_municipality_mx">
+               <field name="name">Santa Gertrudis</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_387" model="res_municipality_mx">
+               <field name="name">Santa Inés del Monte</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_388" model="res_municipality_mx">
+               <field name="name">Santa Inés Yatzeche</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_389" model="res_municipality_mx">
+               <field name="name">Santa Lucía del Camino</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_390" model="res_municipality_mx">
+               <field name="name">Santa Lucía Miahuatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_391" model="res_municipality_mx">
+               <field name="name">Santa Lucía Monteverde</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_392" model="res_municipality_mx">
+               <field name="name">Santa Lucía Ocotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_393" model="res_municipality_mx">
+               <field name="name">Santa María Alotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_394" model="res_municipality_mx">
+               <field name="name">Santa María Apazco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_395" model="res_municipality_mx">
+               <field name="name">Santa María la Asunción</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_396" model="res_municipality_mx">
+               <field name="name">Heroica Ciudad de Tlaxiaco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_397" model="res_municipality_mx">
+               <field name="name">Ayoquezco de Aldama</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_398" model="res_municipality_mx">
+               <field name="name">Santa María Atzompa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_399" model="res_municipality_mx">
+               <field name="name">Santa María Camotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_400" model="res_municipality_mx">
+               <field name="name">Santa María Colotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_401" model="res_municipality_mx">
+               <field name="name">Santa María Cortijo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_402" model="res_municipality_mx">
+               <field name="name">Santa María Coyotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_403" model="res_municipality_mx">
+               <field name="name">Santa María Chachoápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_404" model="res_municipality_mx">
+               <field name="name">Villa de Chilapa de Díaz</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_405" model="res_municipality_mx">
+               <field name="name">Santa María Chilchotla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_406" model="res_municipality_mx">
+               <field name="name">Santa María Chimalapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_407" model="res_municipality_mx">
+               <field name="name">Santa María del Rosario</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_408" model="res_municipality_mx">
+               <field name="name">Santa María del Tule</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_409" model="res_municipality_mx">
+               <field name="name">Santa María Ecatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_410" model="res_municipality_mx">
+               <field name="name">Santa María Guelacé</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_411" model="res_municipality_mx">
+               <field name="name">Santa María Guienagati</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_412" model="res_municipality_mx">
+               <field name="name">Santa María Huatulco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_413" model="res_municipality_mx">
+               <field name="name">Santa María Huazolotitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_414" model="res_municipality_mx">
+               <field name="name">Santa María Ipalapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_415" model="res_municipality_mx">
+               <field name="name">Santa María Ixcatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_416" model="res_municipality_mx">
+               <field name="name">Santa María Jacatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_417" model="res_municipality_mx">
+               <field name="name">Santa María Jalapa del Marqués</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_418" model="res_municipality_mx">
+               <field name="name">Santa María Jaltianguis</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_419" model="res_municipality_mx">
+               <field name="name">Santa María Lachixío</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_420" model="res_municipality_mx">
+               <field name="name">Santa María Mixtequilla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_421" model="res_municipality_mx">
+               <field name="name">Santa María Nativitas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_422" model="res_municipality_mx">
+               <field name="name">Santa María Nduayaco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_423" model="res_municipality_mx">
+               <field name="name">Santa María Ozolotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_424" model="res_municipality_mx">
+               <field name="name">Santa María Pápalo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_425" model="res_municipality_mx">
+               <field name="name">Santa María Peñoles</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_426" model="res_municipality_mx">
+               <field name="name">Santa María Petapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_427" model="res_municipality_mx">
+               <field name="name">Santa María Quiegolani</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_428" model="res_municipality_mx">
+               <field name="name">Santa María Sola</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_429" model="res_municipality_mx">
+               <field name="name">Santa María Tataltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_430" model="res_municipality_mx">
+               <field name="name">Santa María Tecomavaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_431" model="res_municipality_mx">
+               <field name="name">Santa María Temaxcalapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_432" model="res_municipality_mx">
+               <field name="name">Santa María Temaxcaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_433" model="res_municipality_mx">
+               <field name="name">Santa María Teopoxco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_434" model="res_municipality_mx">
+               <field name="name">Santa María Tepantlali</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_435" model="res_municipality_mx">
+               <field name="name">Santa María Texcatitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_436" model="res_municipality_mx">
+               <field name="name">Santa María Tlahuitoltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_437" model="res_municipality_mx">
+               <field name="name">Santa María Tlalixtac</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_438" model="res_municipality_mx">
+               <field name="name">Santa María Tonameca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_439" model="res_municipality_mx">
+               <field name="name">Santa María Totolapilla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_440" model="res_municipality_mx">
+               <field name="name">Santa María Xadani</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_441" model="res_municipality_mx">
+               <field name="name">Santa María Yalina</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_442" model="res_municipality_mx">
+               <field name="name">Santa María Yavesía</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_443" model="res_municipality_mx">
+               <field name="name">Santa María Yolotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_444" model="res_municipality_mx">
+               <field name="name">Santa María Yosoyúa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_445" model="res_municipality_mx">
+               <field name="name">Santa María Yucuhiti</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_446" model="res_municipality_mx">
+               <field name="name">Santa María Zacatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_447" model="res_municipality_mx">
+               <field name="name">Santa María Zaniza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_448" model="res_municipality_mx">
+               <field name="name">Santa María Zoquitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_449" model="res_municipality_mx">
+               <field name="name">Santiago Amoltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_450" model="res_municipality_mx">
+               <field name="name">Santiago Apoala</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_451" model="res_municipality_mx">
+               <field name="name">Santiago Apóstol</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_452" model="res_municipality_mx">
+               <field name="name">Santiago Astata</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_453" model="res_municipality_mx">
+               <field name="name">Santiago Atitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_454" model="res_municipality_mx">
+               <field name="name">Santiago Ayuquililla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_455" model="res_municipality_mx">
+               <field name="name">Santiago Cacaloxtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_456" model="res_municipality_mx">
+               <field name="name">Santiago Camotlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_457" model="res_municipality_mx">
+               <field name="name">Santiago Comaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_458" model="res_municipality_mx">
+               <field name="name">Villa de Santiago Chazumba</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_459" model="res_municipality_mx">
+               <field name="name">Santiago Choápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_460" model="res_municipality_mx">
+               <field name="name">Santiago del Río</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_461" model="res_municipality_mx">
+               <field name="name">Santiago Huajolotitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_462" model="res_municipality_mx">
+               <field name="name">Santiago Huauclilla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_463" model="res_municipality_mx">
+               <field name="name">Santiago Ihuitlán Plumas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_464" model="res_municipality_mx">
+               <field name="name">Santiago Ixcuintepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_465" model="res_municipality_mx">
+               <field name="name">Santiago Ixtayutla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_466" model="res_municipality_mx">
+               <field name="name">Santiago Jamiltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_467" model="res_municipality_mx">
+               <field name="name">Santiago Jocotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_468" model="res_municipality_mx">
+               <field name="name">Santiago Juxtlahuaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_469" model="res_municipality_mx">
+               <field name="name">Santiago Lachiguiri</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_470" model="res_municipality_mx">
+               <field name="name">Santiago Lalopa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_471" model="res_municipality_mx">
+               <field name="name">Santiago Laollaga</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_472" model="res_municipality_mx">
+               <field name="name">Santiago Laxopa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_473" model="res_municipality_mx">
+               <field name="name">Santiago Llano Grande</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_474" model="res_municipality_mx">
+               <field name="name">Santiago Matatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_475" model="res_municipality_mx">
+               <field name="name">Santiago Miltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_476" model="res_municipality_mx">
+               <field name="name">Santiago Minas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_477" model="res_municipality_mx">
+               <field name="name">Santiago Nacaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_478" model="res_municipality_mx">
+               <field name="name">Santiago Nejapilla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_479" model="res_municipality_mx">
+               <field name="name">Santiago Nundiche</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_480" model="res_municipality_mx">
+               <field name="name">Santiago Nuyoó</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_481" model="res_municipality_mx">
+               <field name="name">Santiago Pinotepa Nacional</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_482" model="res_municipality_mx">
+               <field name="name">Santiago Suchilquitongo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_483" model="res_municipality_mx">
+               <field name="name">Santiago Tamazola</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_484" model="res_municipality_mx">
+               <field name="name">Santiago Tapextla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_485" model="res_municipality_mx">
+               <field name="name">Villa Tejúpam de la Unión</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_486" model="res_municipality_mx">
+               <field name="name">Santiago Tenango</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_487" model="res_municipality_mx">
+               <field name="name">Santiago Tepetlapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_488" model="res_municipality_mx">
+               <field name="name">Santiago Tetepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_489" model="res_municipality_mx">
+               <field name="name">Santiago Texcalcingo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_490" model="res_municipality_mx">
+               <field name="name">Santiago Textitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_491" model="res_municipality_mx">
+               <field name="name">Santiago Tilantongo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_492" model="res_municipality_mx">
+               <field name="name">Santiago Tillo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_493" model="res_municipality_mx">
+               <field name="name">Santiago Tlazoyaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_494" model="res_municipality_mx">
+               <field name="name">Santiago Xanica</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_495" model="res_municipality_mx">
+               <field name="name">Santiago Xiacuí</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_496" model="res_municipality_mx">
+               <field name="name">Santiago Yaitepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_497" model="res_municipality_mx">
+               <field name="name">Santiago Yaveo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_498" model="res_municipality_mx">
+               <field name="name">Santiago Yolomécatl</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_499" model="res_municipality_mx">
+               <field name="name">Santiago Yosondúa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_500" model="res_municipality_mx">
+               <field name="name">Santiago Yucuyachi</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_501" model="res_municipality_mx">
+               <field name="name">Santiago Zacatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_502" model="res_municipality_mx">
+               <field name="name">Santiago Zoochila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_503" model="res_municipality_mx">
+               <field name="name">Nuevo Zoquiápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_504" model="res_municipality_mx">
+               <field name="name">Santo Domingo Ingenio</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_505" model="res_municipality_mx">
+               <field name="name">Santo Domingo Albarradas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_506" model="res_municipality_mx">
+               <field name="name">Santo Domingo Armenta</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_507" model="res_municipality_mx">
+               <field name="name">Santo Domingo Chihuitán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_508" model="res_municipality_mx">
+               <field name="name">Santo Domingo de Morelos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_509" model="res_municipality_mx">
+               <field name="name">Santo Domingo Ixcatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_510" model="res_municipality_mx">
+               <field name="name">Santo Domingo Nuxaá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_511" model="res_municipality_mx">
+               <field name="name">Santo Domingo Ozolotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_512" model="res_municipality_mx">
+               <field name="name">Santo Domingo Petapa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_513" model="res_municipality_mx">
+               <field name="name">Santo Domingo Roayaga</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_514" model="res_municipality_mx">
+               <field name="name">Santo Domingo Tehuantepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_515" model="res_municipality_mx">
+               <field name="name">Santo Domingo Teojomulco</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_516" model="res_municipality_mx">
+               <field name="name">Santo Domingo Tepuxtepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_517" model="res_municipality_mx">
+               <field name="name">Santo Domingo Tlatayápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_518" model="res_municipality_mx">
+               <field name="name">Santo Domingo Tomaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_519" model="res_municipality_mx">
+               <field name="name">Santo Domingo Tonalá</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_520" model="res_municipality_mx">
+               <field name="name">Santo Domingo Tonaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_521" model="res_municipality_mx">
+               <field name="name">Santo Domingo Xagacía</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_522" model="res_municipality_mx">
+               <field name="name">Santo Domingo Yanhuitlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_523" model="res_municipality_mx">
+               <field name="name">Santo Domingo Yodohino</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_524" model="res_municipality_mx">
+               <field name="name">Santo Domingo Zanatepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_525" model="res_municipality_mx">
+               <field name="name">Santos Reyes Nopala</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_526" model="res_municipality_mx">
+               <field name="name">Santos Reyes Pápalo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_527" model="res_municipality_mx">
+               <field name="name">Santos Reyes Tepejillo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_528" model="res_municipality_mx">
+               <field name="name">Santos Reyes Yucuná</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_529" model="res_municipality_mx">
+               <field name="name">Santo Tomás Jalieza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_530" model="res_municipality_mx">
+               <field name="name">Santo Tomás Mazaltepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_531" model="res_municipality_mx">
+               <field name="name">Santo Tomás Ocotepec</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_532" model="res_municipality_mx">
+               <field name="name">Santo Tomás Tamazulapan</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_533" model="res_municipality_mx">
+               <field name="name">San Vicente Coatlán</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_534" model="res_municipality_mx">
+               <field name="name">San Vicente Lachixío</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_535" model="res_municipality_mx">
+               <field name="name">San Vicente Nuñú</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_536" model="res_municipality_mx">
+               <field name="name">Silacayoápam</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_537" model="res_municipality_mx">
+               <field name="name">Sitio de Xitlapehua</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_538" model="res_municipality_mx">
+               <field name="name">Soledad Etla</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_539" model="res_municipality_mx">
+               <field name="name">Villa de Tamazulápam del Progreso</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_540" model="res_municipality_mx">
+               <field name="name">Tanetze de Zaragoza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_541" model="res_municipality_mx">
+               <field name="name">Taniche</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_542" model="res_municipality_mx">
+               <field name="name">Tataltepec de Valdés</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_543" model="res_municipality_mx">
+               <field name="name">Teococuilco de Marcos Pérez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_544" model="res_municipality_mx">
+               <field name="name">Teotitlán de Flores Magón</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_545" model="res_municipality_mx">
+               <field name="name">Teotitlán del Valle</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_546" model="res_municipality_mx">
+               <field name="name">Teotongo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_547" model="res_municipality_mx">
+               <field name="name">Tepelmeme Villa de Morelos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_548" model="res_municipality_mx">
+               <field name="name">Heroica Villa Tezoatlán de Segura y Luna, Cuna de la Independencia de Oaxaca</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_549" model="res_municipality_mx">
+               <field name="name">San Jerónimo Tlacochahuaya</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_550" model="res_municipality_mx">
+               <field name="name">Tlacolula de Matamoros</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_551" model="res_municipality_mx">
+               <field name="name">Tlacotepec Plumas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_552" model="res_municipality_mx">
+               <field name="name">Tlalixtac de Cabrera</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_553" model="res_municipality_mx">
+               <field name="name">Totontepec Villa de Morelos</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_554" model="res_municipality_mx">
+               <field name="name">Trinidad Zaachila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_555" model="res_municipality_mx">
+               <field name="name">La Trinidad Vista Hermosa</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_556" model="res_municipality_mx">
+               <field name="name">Unión Hidalgo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_557" model="res_municipality_mx">
+               <field name="name">Valerio Trujano</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_558" model="res_municipality_mx">
+               <field name="name">San Juan Bautista Valle Nacional</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_559" model="res_municipality_mx">
+               <field name="name">Villa Díaz Ordaz</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_560" model="res_municipality_mx">
+               <field name="name">Yaxe</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_561" model="res_municipality_mx">
+               <field name="name">Magdalena Yodocono de Porfirio Díaz</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_562" model="res_municipality_mx">
+               <field name="name">Yogana</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_563" model="res_municipality_mx">
+               <field name="name">Yutanduchi de Guerrero</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_564" model="res_municipality_mx">
+               <field name="name">Villa de Zaachila</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_565" model="res_municipality_mx">
+               <field name="name">San Mateo Yucutindoo</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_566" model="res_municipality_mx">
+               <field name="name">Zapotitlán Lagunas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_567" model="res_municipality_mx">
+               <field name="name">Zapotitlán Palmas</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_568" model="res_municipality_mx">
+               <field name="name">Santa Inés de Zaragoza</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+           <record id="state_mx_oax_municipality_569" model="res_municipality_mx">
+               <field name="name">Zimatlán de Álvarez</field>
+               <field name="province_id" ref="state_mx_oax" />
+           </record>
+                          
+    </data>
+</odoo>

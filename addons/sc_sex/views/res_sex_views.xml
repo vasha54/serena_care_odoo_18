@@ -1,0 +1,48 @@
+<odoo>
+    <!-- Form View -->
+    <record id="view_res_sex_form" model="ir.ui.view">
+        <field name="name">res.sex.form</field>
+        <field name="model">res.sex</field>
+        <field name="arch" type="xml">
+            <form string="Sexo">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" placeholder="Nombre ..."/>
+                        </group>
+                        <group>
+                            <field name="acronym" class="text-uppercase" required="1" placeholder="Abreviatura ..."/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View -->
+    <record id="view_res_sex_tree" model="ir.ui.view">
+        <field name="name">res.sex.tree</field>
+        <field name="model">res.sex</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="acronym" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Action and Menuitem -->
+    <record id="action_res_sex" model="ir.actions.act_window">
+        <field name="name">Listados de Sexos</field>
+        <field name="res_model">res.sex</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar un nuevo Sexo.
+            </p>
+        </field>
+    </record>
+
+</odoo>

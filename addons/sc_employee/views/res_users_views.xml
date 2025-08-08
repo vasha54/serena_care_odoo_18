@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View residence_res_user View List -->
+    <record id="view_residence_res_user_list" model="ir.ui.view">
+        <field name="name">view.residence_res_user.list</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <list default_order="name asc">
+                <field string="Activo" name="active" widget="boolean_toggle" />
+                <field string="Nombre" name="name" readonly="1"/>
+                <field string="Usuario" name="login" readonly="1"/>
+                <field string="Última autenticación" name="login_date" readonly="1"/>
+                <field string="Estado" name="state" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+
+    <record id="view_residence_res_user_list_delete" model="ir.ui.view">
+        <field name="name">view.residence_res_user.list</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <list default_order="name asc" create="false" edit="false" delete="false">
+                <field name="active" />
+                <field string="Nombre" name="name" readonly="1"/>
+                <field string="Usuario" name="login" readonly="1"/>
+                <field string="Última autenticación" name="login_date" readonly="1"/>
+                <field string="Estado" name="state" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View residence_res_user form -->
+    <record id="view_residence_res_user_form" model="ir.ui.view">
+        <field name="name">view.residence_res_user.form</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <form string="Res user" context="{'user_serena_care':True}">
+                <header><field name="share" invisible="1"/>
+                    <field name="employee_id" invisible="1"/>
+                        <button 
+                            name="toggle_active_state" 
+                            type="object"
+                            class="oe_highlight btn-danger"
+                            invisible="not active" 
+                            string="Desactivar usuario"
+                        />                    
+                        <button 
+                            name="toggle_active_state" 
+                            type="object"
+                            class="oe_highlight btn-success"
+                            invisible="active" 
+                            string="Activar usuario"
+                        />
+
+                    <button context="{'employee_serena_care':True ,'user_serena_care':True }" string="Crear un empleado de residencia asociado a este usuario" type="object" name="action_create_employee" invisible="not id or share or employee_id"/>
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="alert alert-info text-center o_form_header" invisible="active and active_partner or not active and not active_partner or active and not active_partner" role="alert">
+                        <a class="close" data-bs-dismiss="alert" href="#">x</a>
+                        <div>
+                            <strong>The contact linked to this user is still active</strong>
+                        </div>
+                        <div>You can archive the contact
+                            <field name="partner_id" required="0" readonly="1"/>
+                        </div>
+                    </div>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g. John Doe" required="1"/></h1>
+                        <label for="login" string="Usuario"/>
+                        <h2><field name="login" placeholder="e.g. email@yourcompany.com" readonly="id"/></h2>
+                    </div>
+                    <group col="3" colspan="3">
+                        <group name="credential" string="Credenciales">
+                            <field string="Contraseña" name="password" widget="password"/>
+                            <field string="Confirmar contraseña" name="confirmed_password" widget="password"/>
+                        </group>
+                        <group name="group_roles" string="Grupos de Accesos">
+                            <field  string="Grupos de accesos" name="groups_id" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>    
+                        </group>
+                        <group name="info" string="Información Básica">
+                            <field name="email" string="Correo electrónico" required="1"/>
+                            <field name="mobile" string="Teléfono móvil"/>
+                            <field name="phone" string="Teléfono"/>
+                            <field name="is_employee_sc" />
+                        </group>
+                    </group>    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_residence_res_user_form_delete" model="ir.ui.view">
+        <field name="name">view.residence_res_user.form</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <form string="Res user"  create="false" edit="false" delete="false">
+                <header><field name="share" invisible="1"/>
+                    <field name="employee_id" invisible="1"/>
+                    <button string="Restaurar usuario" invisible="not is_deleted" name="action_restore" type="object" class="oe_highlight"/>
+                    
+                </header>
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="alert alert-info text-center o_form_header" invisible="active and active_partner or not active and not active_partner or active and not active_partner" role="alert">
+                        <a class="close" data-bs-dismiss="alert" href="#">x</a>
+                        <div>
+                            <strong>The contact linked to this user is still active</strong>
+                        </div>
+                        <div>You can archive the contact
+                            <field name="partner_id" required="0" readonly="1"/>
+                        </div>
+                    </div>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g. John Doe" required="1"/></h1>
+                        <label for="login" string="Usuario"/>
+                        <h2><field name="login" placeholder="e.g. email@yourcompany.com" readonly="id"/></h2>
+                    </div>
+                    <group col="3" colspan="3">
+                        <group name="credential" string="Credenciales">
+                            <field string="Contraseña" name="password" widget="password"/>
+                            <field string="Confirmar contraseña" name="confirmed_password" widget="password"/>
+                        </group>
+                        <group name="group_roles" string="Grupos de Accesos">
+                            <field  string="Grupos de accesos" name="groups_id" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>    
+                        </group>
+                        <group name="info" string="Información Básica">
+                            <field name="email" string="Correo electrónico" required="1"/>
+                            <field name="mobile" string="Teléfono móvil"/>
+                            <field name="phone" string="Teléfono"/>
+                            <field name="is_employee_sc" />
+                        </group>
+                    </group>    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View residence_res_user search -->
+    <record id="view_residence_res_user_search" model="ir.ui.view">
+        <field name="name">view.residence_res_user.search</field>
+        <field name="model">res.users</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="login" />
+                <filter name="inactive" string="Usuarios inactivos" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+        
+    <!-- Action residence_res_user -->
+    <record id="action_residence_res_user" model="ir.actions.act_window">
+        <field name="name">Listado de los usuarios</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.users</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[("is_user_sc","=",True),("is_deleted","=",False)]</field>
+        <field name="context"></field>
+        <field name="search_view_id" ref="view_residence_res_user_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_residence_res_user_list')}), 
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_residence_res_user_form')})]"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent">
+                No hay registros.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_residence_res_user_delete" model="ir.actions.act_window">
+        <field name="name">Listado de los usuarios eliminados</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.users</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[("is_user_sc","=",True),("is_deleted","=",True)]</field>
+        <field name="context"></field>
+        <field name="search_view_id" ref="view_residence_res_user_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_residence_res_user_list_delete')}), 
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_residence_res_user_form_delete')})]"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent">
+                No hay registros.
+            </p>
+        </field>
+    </record>
+    
+</odoo>

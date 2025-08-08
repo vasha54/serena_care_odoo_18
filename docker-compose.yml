@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  odoo:
+    image: odoo:18.0
+    build: .  # Usa el Dockerfile personalizado
+    container_name: serena-care-odoo18  # Nombre actualizado
+    command: odoo --dev=reload --db_host=db --db_user=odoo --db_password=odoo
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+      - "8012:8012"  # Puerto para desarrollo
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - ./config:/etc/odoo
+      - odoo-data:/var/lib/odoo
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo
+    
+  db:
+    image: postgres:17-alpine
+    container_name: serena-care_odoo_18_bd_17
+    environment:
+      - POSTGRES_DB=postgres  # Nombre actualizado
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      
+volumes:
+  postgres-data:
+  odoo-data:

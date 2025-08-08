@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View resident View List -->
+    <record id="view_resident_list" model="ir.ui.view">
+        <field name="name">view.resident.list</field>
+        <field name="model">resident</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="vat" string="DNI/NIE"/>
+                <field string="Nombre" name="name"/>
+                <field string="Sexo" name="sex_id" />
+                <field name="birth_date"/>
+                <field name="residence_id"/>
+                <field name="phone"/>
+                <field name="email"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View resident form -->
+    <record id="view_resident_form" model="ir.ui.view">
+        <field name="name">view.resident.form</field>
+        <field name="model">resident</field>
+        <field name="arch" type="xml">
+            <form string="Resident">
+                <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar" options='{"preview_image": "image_128"}'/>
+                    <div class="oe_title">
+                        <h1>
+                            <field string="Nombre" name="name" required="1"
+                                   placeholder="Nombre del residente" class="mb-0"/>
+                        </h1>
+                    </div>
+
+                    <group col="2">
+                        <group string="Información Personal">
+                            <field name="birth_date"/>
+                            <field name="vat" string="DNI/NIE"/>
+                            <field string="Sexo" name="sex_id" />
+                            <field name="residence_id"/>
+                        </group>
+                        <group string="Contacto">
+                            <field name="phone" widget="phone"/>
+                            <field name="mobile" widget="phone"/>
+                            <field name="email" widget="email"/>
+                        </group>
+                    </group>
+
+                    <group col="2">
+                        <group string="Dirección">
+                            <group col="2">
+                                <field name="country_id" placeholder="País"/>
+                                <field string="Estado" name="province_id" placeholder="Estado"
+                                        class="o_address_country" 
+                                         domain="[('country_id','=',country_id)]"/>
+                                <field string="Municipio" name="municipality_id"
+                                        class="o_address_state"
+                                        placeholder="Municipio"
+                                        domain="[('province_id','=',province_id)]" />
+                                <field string="Ciudad" name="city" placeholder="Ciudad"
+                                        class="o_address_city" />
+                                <field string="Código Postal" name="zip" placeholder="C.P."/>
+                            </group>
+                            <group col="2">
+                                <field string="Calle principal" name="street" placeholder="Calle principal" />
+                                <field string="Entre Calle #1" name="street2" placeholder="Entre calle 1" />
+                                <field name="street3" placeholder="Entre calle 2" />
+                                <field name="street_number" placeholder="Número" />
+                            </group>
+                                  
+                        </group>
+                        <group string="Información Adicional">
+                            <field string="Notas" name="comment" placeholder="Notas adicionales..."/>
+                            <field name="partner_id" invisible="1"/>
+                        </group>
+                    </group> 
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View resident search -->
+    <record id="view_resident_search" model="ir.ui.view">
+        <field name="name">view.resident.search</field>
+        <field name="model">resident</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo" name="active" domain="[]" context="{'group_by':'active'}"/>
+                    <filter string="Estado" name="province_id" domain="[]" context="{'group_by':'province_id'}"/>
+                    <filter string="Municipio" name="municipality_id" domain="[]" context="{'group_by':'municipality_id'}"/>
+                    <filter string="Residencia" name="residence_id" domain="[]" context="{'group_by':'residence_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action resident -->
+    <record id="action_resident" model="ir.actions.act_window">
+        <field name="name">Listado de residentes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">resident</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar un nuevo Residente.
+            </p>
+        </field>
+    </record>
+
+</odoo>

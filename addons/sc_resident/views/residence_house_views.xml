@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View residence_house form -->
+    <record id="view_residence_house_form_resident" model="ir.ui.view">
+        <field name="name">view.residence_house.form</field>
+        <field name="model">residence_house</field>
+        <field name="inherit_id" ref="sc_residence.view_residence_house_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button 
+                    name="open_reassignment_resident_wizard" 
+                    string="Reasignar residentes" 
+                    type="object"
+                    class="btn-primary"
+                    invisible="is_deleted or not resident_ids"/>
+            </xpath>
+            <xpath expr="//page[@name='services']" position="after">
+                <page name="residents" string="Residentes">
+                    <field name="resident_ids" options="{'create':false, 'edit':false, 'delete':false}">
+                        <list default_order="name asc">
+                            <field name="vat" string="DNI/NIE"/>
+                            <field string="Nombre" name="name"/>
+                            <field string="Sexo" name="sex_id" />
+                            <field name="birth_date"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+    <!-- View residence_house list -->
+    <record id="view_residence_house_list_resident" model="ir.ui.view">
+        <field name="name">view.residence_house.list</field>
+        <field name="model">residence_house</field>
+        <field name="inherit_id" ref="sc_residence.view_residence_house_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field string="Cant. Residentes" name="resident_count" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View medicament.category View List -->
+    <record id="view_medicament_category_list" model="ir.ui.view">
+        <field name="name">view.medicament.category.list</field>
+        <field name="model">medicament.category</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Nombre" name="display_name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View medicament.category form -->
+    <record id="view_medicament_category_form" model="ir.ui.view">
+        <field name="name">view.medicament.category.form</field>
+        <field name="model">medicament.category</field>
+        <field name="arch" type="xml">
+            <form string="Medicament Category">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="parent_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View medicament.category search -->
+    <record id="view_medicament_category_search" model="ir.ui.view">
+        <field name="name">view.medicament.category.search</field>
+        <field name="model">medicament.category</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action medicament.category -->
+    <record id="action_medicament_category" model="ir.actions.act_window">
+        <field name="name">Listado de los Grupos de Medicamentos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medicament.category</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nuevo Grupo de Medicamento
+            </p>
+        </field>
+    </record>
+
+</odoo>

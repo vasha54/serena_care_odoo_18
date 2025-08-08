@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <!-- Initial data for gender model -->
+        <record id="gender_male" model="res.sex">
+            <field name="name">Masculino</field>
+            <field name="acronym">M</field>
+        </record>
+
+        <record id="gender_female" model="res.sex">
+            <field name="name">Femenino</field>
+            <field name="acronym">F</field>
+        </record>
+
+        <record id="gender_other" model="res.sex">
+            <field name="name">Otro</field>
+            <field name="acronym">O</field>
+        </record>
+
+        <record id="gender_non_binary" model="res.sex">
+            <field name="name">No binario</field>
+            <field name="acronym">NB</field>
+        </record>
+
+        <record id="gender_prefer_not_to_say" model="res.sex">
+            <field name="name">Prefiero no decirlo</field>
+            <field name="acronym">PND</field>
+        </record>
+
+        <record id="gender_unspecified" model="res.sex">
+            <field name="name">No especificado</field>
+            <field name="acronym">NE</field>
+        </record>
+    </data>
+</odoo>

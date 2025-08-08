@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View route.administration View List -->
+    <record id="view_route_administration_list" model="ir.ui.view">
+        <field name="name">view.route.administration.list</field>
+        <field name="model">route.administration</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View route.administration form -->
+    <record id="view_route_administration_form" model="ir.ui.view">
+        <field name="name">view.route.administration.form</field>
+        <field name="model">route.administration</field>
+        <field name="arch" type="xml">
+            <form string="Route Administration">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View route.administration search -->
+    <record id="view_route_administration_search" model="ir.ui.view">
+        <field name="name">view.route.administration.search</field>
+        <field name="model">route.administration</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action route.administration -->
+    <record id="action_route_administration" model="ir.actions.act_window">
+        <field name="name">Listado de las Vías de administración</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">route.administration</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nueva Vía de Administración.
+            </p>
+        </field>
+    </record>
+
+</odoo>

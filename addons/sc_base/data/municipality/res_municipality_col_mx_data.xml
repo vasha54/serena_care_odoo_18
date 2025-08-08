@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_col_municipality_0" model="res_municipality_mx">
+               <field name="name">Armería</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_1" model="res_municipality_mx">
+               <field name="name">Colima</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_2" model="res_municipality_mx">
+               <field name="name">Comala</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_3" model="res_municipality_mx">
+               <field name="name">Coquimatlán</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_4" model="res_municipality_mx">
+               <field name="name">Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_5" model="res_municipality_mx">
+               <field name="name">Ixtlahuacán</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_6" model="res_municipality_mx">
+               <field name="name">Manzanillo</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_7" model="res_municipality_mx">
+               <field name="name">Minatitlán</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_8" model="res_municipality_mx">
+               <field name="name">Tecomán</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+           <record id="state_mx_col_municipality_9" model="res_municipality_mx">
+               <field name="name">Villa de Álvarez</field>
+               <field name="province_id" ref="state_mx_col" />
+           </record>
+                          
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_serena_care_root_residence_res_user"
+        name="Usuarios"
+        action="action_residence_res_user"
+        sequence="-4"
+        web_icon="sc_residence,static/description/icon.png"/>
+
+    <menuitem id="menu_residence_res_user_deleted"
+        name="Usuarios eliminados"
+        action="action_residence_res_user_delete"
+        sequence="-4"
+        parent="menu_serena_care_root_residence_res_user"/>
+
+    <menuitem id="menu_serena_care_root_residence_employee"
+        name="Empleados"
+        sequence="-4"
+        web_icon="sc_residence,static/description/icon.png"/>
+
+    <menuitem id="menu_residence_employee"
+        name="Empleados"
+        action="action_residence_employee"
+        sequence="0"
+        parent="menu_serena_care_root_residence_employee"/>
+
+    <menuitem id="menu_residence_employee_departament"
+        name="Departamentos"
+        action="action_residence_employee_departament"
+        sequence="1"
+        parent="menu_serena_care_root_residence_employee"/>
+
+    <menuitem id="menu_residence_employee_job"
+        name="Ocupaciones"
+        action="action_residence_employee_job"
+        sequence="2"
+        parent="menu_serena_care_root_residence_employee"/>
+</odoo>

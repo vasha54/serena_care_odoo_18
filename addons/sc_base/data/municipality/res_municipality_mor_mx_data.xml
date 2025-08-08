@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_mor_municipality_0" model="res_municipality_mx">
+               <field name="name">Amacuzac</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_1" model="res_municipality_mx">
+               <field name="name">Atlatlahucan</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_2" model="res_municipality_mx">
+               <field name="name">Axochiapan</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_3" model="res_municipality_mx">
+               <field name="name">Ayala</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_4" model="res_municipality_mx">
+               <field name="name">Coatlán del Río</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_5" model="res_municipality_mx">
+               <field name="name">Cuautla</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_6" model="res_municipality_mx">
+               <field name="name">Cuernavaca</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_7" model="res_municipality_mx">
+               <field name="name">Emiliano Zapata</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_8" model="res_municipality_mx">
+               <field name="name">Huitzilac</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_9" model="res_municipality_mx">
+               <field name="name">Jantetelco</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_10" model="res_municipality_mx">
+               <field name="name">Jiutepec</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_11" model="res_municipality_mx">
+               <field name="name">Jojutla</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_12" model="res_municipality_mx">
+               <field name="name">Jonacatepec de Leandro Valle</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_13" model="res_municipality_mx">
+               <field name="name">Mazatepec</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_14" model="res_municipality_mx">
+               <field name="name">Miacatlán</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_15" model="res_municipality_mx">
+               <field name="name">Ocuituco</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_16" model="res_municipality_mx">
+               <field name="name">Puente de Ixtla</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_17" model="res_municipality_mx">
+               <field name="name">Temixco</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_18" model="res_municipality_mx">
+               <field name="name">Tepalcingo</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_19" model="res_municipality_mx">
+               <field name="name">Tepoztlán</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_20" model="res_municipality_mx">
+               <field name="name">Tetecala</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_21" model="res_municipality_mx">
+               <field name="name">Tetela del Volcán</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_22" model="res_municipality_mx">
+               <field name="name">Tlalnepantla</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_23" model="res_municipality_mx">
+               <field name="name">Tlaltizapán de Zapata</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_24" model="res_municipality_mx">
+               <field name="name">Tlaquiltenango</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_25" model="res_municipality_mx">
+               <field name="name">Tlayacapan</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_26" model="res_municipality_mx">
+               <field name="name">Totolapan</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_27" model="res_municipality_mx">
+               <field name="name">Xochitepec</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_28" model="res_municipality_mx">
+               <field name="name">Yautepec</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_29" model="res_municipality_mx">
+               <field name="name">Yecapixtla</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_30" model="res_municipality_mx">
+               <field name="name">Zacatepec</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_31" model="res_municipality_mx">
+               <field name="name">Zacualpan de Amilpas</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_32" model="res_municipality_mx">
+               <field name="name">Temoac</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_33" model="res_municipality_mx">
+               <field name="name">Coatetelco</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_34" model="res_municipality_mx">
+               <field name="name">Xoxocotla</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+           <record id="state_mx_mor_municipality_35" model="res_municipality_mx">
+               <field name="name">Hueyapan</field>
+               <field name="province_id" ref="state_mx_mor" />
+           </record>
+                          
+    </data>
+</odoo>

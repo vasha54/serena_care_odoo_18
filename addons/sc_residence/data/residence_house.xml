@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="residence_cdmx_01" model="residence_house">
+            <field name="name">Casa Serena Polanco</field>
+            <field name="description">Residencia de lujo ubicada en el corazón de Polanco, con instalaciones de primera clase y atención personalizada.</field>
+            <field name="schedule">Atención 24/7
+Visitas: Lun-Dom 9:00-20:00</field>
+            <field name="street">Av. Presidente Masaryk 123</field>
+            <field name="street2">Col. Polanco</field>
+            <field name="city">Ciudad de México</field>
+            <field name="email">polanco@serenacare.mx</field>
+            <field name="phone">+52 55 1234 5678</field>
+            <field name="active">True</field>
+            <field name="province_id" ref="sc_base.state_mx_cdmx"/>
+            <field name="services_ids" eval="[(6, 0, [ref('service_medical_24h'), ref('service_nursing'), ref('service_physiotherapy'), ref('service_nutrition'), ref('service_recreation'), ref('service_psychology'), ref('service_laundry'), ref('service_transport')])]"/>
+        </record>
+        <record id="residence_gto_01" model="residence_house">
+            <field name="name">Casa Serena San Miguel</field>
+            <field name="description">Hermosa residencia en San Miguel de Allende, combinando arquitectura colonial con comodidades modernas.</field>
+            <field name="schedule">Lun-Vie: 8:00-20:00
+Sáb-Dom: 9:00-18:00</field>
+            <field name="street">Calzada de la Aurora 45</field>
+            <field name="street2">Col. Aurora</field>
+            <field name="city">San Miguel de Allende</field>
+            <field name="email">sanmiguel@serenacare.mx</field>
+            <field name="phone">+52 443 123 4567</field>
+            <field name="active">True</field>
+            <field name="province_id" ref="sc_base.state_mx_gto"/>
+            <field name="services_ids" eval="[(6, 0, [ref('service_medical_24h'), ref('service_nursing'), ref('service_nutrition'), ref('service_recreation'), ref('service_laundry')])]"/>
+        </record>
+        <record id="residence_jal_01" model="residence_house">
+            <field name="name">Casa Serena Guadalajara</field>
+            <field name="description">Moderna residencia en zona residencial de Guadalajara con amplios jardines y áreas verdes.</field>
+            <field name="schedule">24 horas, 7 días a la semana</field>
+            <field name="street">Av. López Mateos Sur 2000</field>
+            <field name="street2">Col. Chapalita</field>
+            <field name="city">Zapopan</field>
+            <field name="email">guadalajara@serenacare.mx</field>
+            <field name="phone">+52 33 3123 4567</field>
+            <field name="active">True</field>
+            <field name="province_id" ref="sc_base.state_mx_jal"/>
+            <field name="services_ids" eval="[(6, 0, [ref('service_nursing'), ref('service_physiotherapy'), ref('service_nutrition'), ref('service_recreation'), ref('service_psychology')])]"/>
+        </record>
+        <record id="residence_nl_01" model="residence_house">
+            <field name="name">Casa Serena Monterrey</field>
+            <field name="description">Residencia premium en San Pedro Garza García con vista a la Sierra Madre.</field>
+            <field name="schedule">Atención continua 24/7</field>
+            <field name="street">Av. Vasconcelos 300</field>
+            <field name="street2">Col. Del Valle</field>
+            <field name="city">San Pedro Garza García</field>
+            <field name="email">monterrey@serenacare.mx</field>
+            <field name="phone">+52 81 8123 4567</field>
+            <field name="active">True</field>
+            <field name="province_id" ref="sc_base.state_mx_nl"/>
+            <field name="services_ids" eval="[(6, 0, [ref('service_medical_24h'), ref('service_nursing'), ref('service_physiotherapy'), ref('service_nutrition'), ref('service_recreation'), ref('service_psychology'), ref('service_transport')])]"/>
+        </record>
+        <record id="residence_qro_01" model="residence_house">
+            <field name="name">Casa Serena Querétaro</field>
+            <field name="description">Acogedora residencia en Juriquilla con ambiente familiar y atención personalizada.</field>
+            <field name="schedule">Lun-Dom: 7:00-21:00</field>
+            <field name="street">Blvd. Juriquilla 100</field>
+            <field name="street2">Fracc. Juriquilla</field>
+            <field name="city">Querétaro</field>
+            <field name="email">queretaro@serenacare.mx</field>
+            <field name="phone">+52 443 234 5678</field>
+            <field name="active">True</field>
+            <field name="province_id" ref="sc_base.state_mx_qro"/>
+            <field name="services_ids" eval="[(6, 0, [ref('service_nursing'), ref('service_nutrition'), ref('service_recreation'), ref('service_laundry')])]"/>
+        </record>
+    </data>
+</odoo> 

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_tamps_municipality_0" model="res_municipality_mx">
+               <field name="name">Abasolo</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_1" model="res_municipality_mx">
+               <field name="name">Aldama</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_2" model="res_municipality_mx">
+               <field name="name">Altamira</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_3" model="res_municipality_mx">
+               <field name="name">Antiguo Morelos</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_4" model="res_municipality_mx">
+               <field name="name">Burgos</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_5" model="res_municipality_mx">
+               <field name="name">Bustamante</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_6" model="res_municipality_mx">
+               <field name="name">Camargo</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_7" model="res_municipality_mx">
+               <field name="name">Casas</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_8" model="res_municipality_mx">
+               <field name="name">Ciudad Madero</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_9" model="res_municipality_mx">
+               <field name="name">Cruillas</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_10" model="res_municipality_mx">
+               <field name="name">Gómez Farías</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_11" model="res_municipality_mx">
+               <field name="name">González</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_12" model="res_municipality_mx">
+               <field name="name">Güémez</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_13" model="res_municipality_mx">
+               <field name="name">Guerrero</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_14" model="res_municipality_mx">
+               <field name="name">Gustavo Díaz Ordaz</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_15" model="res_municipality_mx">
+               <field name="name">Hidalgo</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_16" model="res_municipality_mx">
+               <field name="name">Jaumave</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_17" model="res_municipality_mx">
+               <field name="name">Jiménez</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_18" model="res_municipality_mx">
+               <field name="name">Llera</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_19" model="res_municipality_mx">
+               <field name="name">Mainero</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_20" model="res_municipality_mx">
+               <field name="name">El Mante</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_21" model="res_municipality_mx">
+               <field name="name">Matamoros</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_22" model="res_municipality_mx">
+               <field name="name">Méndez</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_23" model="res_municipality_mx">
+               <field name="name">Mier</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_24" model="res_municipality_mx">
+               <field name="name">Miguel Alemán</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_25" model="res_municipality_mx">
+               <field name="name">Miquihuana</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_26" model="res_municipality_mx">
+               <field name="name">Nuevo Laredo</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_27" model="res_municipality_mx">
+               <field name="name">Nuevo Morelos</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_28" model="res_municipality_mx">
+               <field name="name">Ocampo</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_29" model="res_municipality_mx">
+               <field name="name">Padilla</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_30" model="res_municipality_mx">
+               <field name="name">Palmillas</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_31" model="res_municipality_mx">
+               <field name="name">Reynosa</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_32" model="res_municipality_mx">
+               <field name="name">Río Bravo</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_33" model="res_municipality_mx">
+               <field name="name">San Carlos</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_34" model="res_municipality_mx">
+               <field name="name">San Fernando</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_35" model="res_municipality_mx">
+               <field name="name">San Nicolás</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_36" model="res_municipality_mx">
+               <field name="name">Soto la Marina</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_37" model="res_municipality_mx">
+               <field name="name">Tampico</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_38" model="res_municipality_mx">
+               <field name="name">Tula</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_39" model="res_municipality_mx">
+               <field name="name">Valle Hermoso</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_40" model="res_municipality_mx">
+               <field name="name">Victoria</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_41" model="res_municipality_mx">
+               <field name="name">Villagrán</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+           <record id="state_mx_tamps_municipality_42" model="res_municipality_mx">
+               <field name="name">Xicoténcatl</field>
+               <field name="province_id" ref="state_mx_tamps" />
+           </record>
+                          
+    </data>
+</odoo>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_coah_municipality_0" model="res_municipality_mx">
+               <field name="name">Abasolo</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_1" model="res_municipality_mx">
+               <field name="name">Acuña</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_2" model="res_municipality_mx">
+               <field name="name">Allende</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_3" model="res_municipality_mx">
+               <field name="name">Arteaga</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_4" model="res_municipality_mx">
+               <field name="name">Candela</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_5" model="res_municipality_mx">
+               <field name="name">Castaños</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_6" model="res_municipality_mx">
+               <field name="name">Cuatro Ciénegas</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_7" model="res_municipality_mx">
+               <field name="name">Escobedo</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_8" model="res_municipality_mx">
+               <field name="name">Francisco I. Madero</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_9" model="res_municipality_mx">
+               <field name="name">Frontera</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_10" model="res_municipality_mx">
+               <field name="name">General Cepeda</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_11" model="res_municipality_mx">
+               <field name="name">Guerrero</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_12" model="res_municipality_mx">
+               <field name="name">Hidalgo</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_13" model="res_municipality_mx">
+               <field name="name">Jiménez</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_14" model="res_municipality_mx">
+               <field name="name">Juárez</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_15" model="res_municipality_mx">
+               <field name="name">Lamadrid</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_16" model="res_municipality_mx">
+               <field name="name">Matamoros</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_17" model="res_municipality_mx">
+               <field name="name">Monclova</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_18" model="res_municipality_mx">
+               <field name="name">Morelos</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_19" model="res_municipality_mx">
+               <field name="name">Múzquiz</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_20" model="res_municipality_mx">
+               <field name="name">Nadadores</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_21" model="res_municipality_mx">
+               <field name="name">Nava</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_22" model="res_municipality_mx">
+               <field name="name">Ocampo</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_23" model="res_municipality_mx">
+               <field name="name">Parras</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_24" model="res_municipality_mx">
+               <field name="name">Piedras Negras</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_25" model="res_municipality_mx">
+               <field name="name">Progreso</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_26" model="res_municipality_mx">
+               <field name="name">Ramos Arizpe</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_27" model="res_municipality_mx">
+               <field name="name">Sabinas</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_28" model="res_municipality_mx">
+               <field name="name">Sacramento</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_29" model="res_municipality_mx">
+               <field name="name">Saltillo</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_30" model="res_municipality_mx">
+               <field name="name">San Buenaventura</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_31" model="res_municipality_mx">
+               <field name="name">San Juan de Sabinas</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_32" model="res_municipality_mx">
+               <field name="name">San Pedro</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_33" model="res_municipality_mx">
+               <field name="name">Sierra Mojada</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_34" model="res_municipality_mx">
+               <field name="name">Torreón</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_35" model="res_municipality_mx">
+               <field name="name">Viesca</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_36" model="res_municipality_mx">
+               <field name="name">Villa Unión</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+           <record id="state_mx_coah_municipality_37" model="res_municipality_mx">
+               <field name="name">Zaragoza</field>
+               <field name="province_id" ref="state_mx_coah" />
+           </record>
+                          
+    </data>
+</odoo>

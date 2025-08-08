@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View residency_service View List -->
+    <record id="view_residency_service_list" model="ir.ui.view">
+        <field name="name">view.residency_service.list</field>
+        <field name="model">residence_service</field>
+        <field name="arch" type="xml">
+            <list default_order="active desc, name asc">
+                <field name="active"/>
+                <field name="name"/>
+                <field name="description" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View residency_service form -->
+    <record id="view_residency_service_form" model="ir.ui.view">
+        <field name="name">view.residency_service.form</field>
+        <field name="model">residence_service</field>
+        <field name="arch" type="xml">
+            <form string="Residency_service">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active"/>
+                        <field string="Descripción" name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View residency_service search -->
+    <record id="view_residency_service_search" model="ir.ui.view">
+        <field name="name">view.residency_service.search</field>
+        <field name="model">residence_service</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="description" />
+                <group expand="1" string="Agruar por">
+                    <filter string="Activo" name="active" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        
+    <!-- Action residence_service -->
+    <record id="action_residence_service" model="ir.actions.act_window">
+        <field name="name">Listado de los servicios de las residencias</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">residence_service</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nuevo Servicio.
+            </p>
+        </field>
+    </record>
+
+</odoo>

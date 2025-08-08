@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="module_category_sc_residency" model="ir.module.category">
+        <field name="name">Serena Care - Residencias</field>
+        <field name="description">Gestión de Residencias de Adultos Mayores</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <!-- Grupo Padre: Base -->
+    <record id="group_residence_user" model="res.groups">
+        <field name="name">Usuario de Residencias</field>
+        <field name="category_id" ref="module_category_sc_residency"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Acceso de lectura a información de residencias</field>
+    </record>
+
+    <!-- Grupo Padre: Administradores -->
+    <record id="group_residence_manager" model="res.groups">
+        <field name="name">Administrador de Residencias</field>
+        <field name="category_id" ref="module_category_sc_residency"/>
+        <field name="implied_ids" eval="[(4, ref('group_residence_user'))]"/>
+        <field name="comment">Acceso completo para gestionar residencias</field>
+    </record>
+
+    <!-- Grupo Padre: Cuidadores -->
+    <record id="group_carer" model="res.groups">
+        <field name="name">Cuidador</field>
+        <field name="category_id" ref="module_category_sc_residency"/>
+        <field name="implied_ids" eval="[(4, ref('group_residence_user'))]"/>
+        <field name="comment">Acceso a las funcionalidades de Cuidadores</field>
+    </record>
+
+    <!-- Grupo Médico -->
+    <record id="group_doctor" model="res.groups">
+        <field name="name">Medico</field>
+        <field name="category_id" ref="module_category_sc_residency"/>
+        <field name="implied_ids" eval="[(4, ref('group_carer'))]"/>
+        <field name="comment">Acceso a las funcionalidades de Doctores</field>
+    </record>
+
+    <!-- Grupo Enfermera -->
+    <record id="group_nurse" model="res.groups">
+        <field name="name">Enfermera</field>
+        <field name="category_id" ref="module_category_sc_residency"/>
+        <field name="implied_ids" eval="[(4, ref('group_carer'))]"/>
+        <field name="comment">Acceso a las funcionalidades de Enfermera</field>
+    </record>
+</odoo>

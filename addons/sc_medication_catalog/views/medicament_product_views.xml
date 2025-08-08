@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View medicament.product View List -->
+    <record id="view_medicament_product_list" model="ir.ui.view">
+        <field name="name">view.medicament.product.list</field>
+        <field name="model">medicament.product</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Clave" name="code"/>
+                <field string="Nombre" name="name"/>
+                <field string="Grupo" name="categ_id"/> 
+                <field string="Forma Farmacéutica" name="pharmaceutical_form_id" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View medicament.product form -->
+    <record id="view_medicament_product_form" model="ir.ui.view">
+    <field name="name">view.medicament.product.form</field>
+    <field name="model">medicament.product</field>
+    <field name="arch" type="xml">
+        <form string="Medicament Product">
+            <sheet>
+                <field name="image_1920" widget="image" class="oe_avatar" options="{&quot;preview_image&quot;: &quot;avatar_128&quot;}"/>
+                <div class="oe_title">
+                    <label string="Nombre" for="name"/>
+                    <h1><field name="name" placeholder="e.g. Insulina" required="1"/></h1>
+                    <label for="categ_id" string="Grupo"/>
+                    <h2><field name="categ_id" required="1"/></h2>
+                </div>
+                <group>
+                    <field name="code" string="Clave" placeholder="XXX.XXX.XXXX.XX "/>
+                </group>
+                <group col="3" colspan="3">
+                    <group string="Presentación del Medicamento">
+                        <field name="pharmaceutical_form_id" /> 
+                        <field name="composition" rows="7" widget="textarea" placeholder="Composición del medicamento"/>
+                    </group>
+                    <group string="Indicaciones">
+                        <field name="indications" rows="9" widget="textarea" placeholder="Indicaciones del medicamento" nolabel="1"/>
+                    </group>
+                    <group string="Vías de administración y Dosis">
+                        <field name="route_dosage" rows="9" widget="textarea" nolabel="1" placeholder="Via de adminsitración y dosis para los diferentes grupos hetarios"/>
+                    </group>
+                </group>
+                
+            </sheet>
+        </form>
+    </field>
+</record>
+
+    <!-- View medicament.product search -->
+    <record id="view_medicament_product_search" model="ir.ui.view">
+        <field name="name">view.medicament.product.search</field>
+        <field name="model">medicament.product</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="name"/>
+                <group expand="0" string="Agrupar por:">
+                    <filter string="Grupo" name="categ_id" domain="[]" context="{'group_by':'categ_id'}"/>
+                    <filter string="Forma Farmacéutica" name="pharmaceutical_form_id" domain="[]" context="{'group_by':'pharmaceutical_form_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action medicament.product -->
+    <record id="action_medicament_product" model="ir.actions.act_window">
+        <field name="name">Listado de medicamentos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medicament.product</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nuevo Medicamento
+            </p>
+        </field>
+    </record>
+
+</odoo>

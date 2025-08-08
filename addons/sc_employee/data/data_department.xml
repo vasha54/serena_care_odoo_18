@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="dep_health" model="hr.department">
+            <field name="name">Salud</field>
+        </record>
+        <record id="dep_services" model="hr.department">
+            <field name="name">Servicios Generales</field>
+        </record>
+    </data>
+</odoo> 

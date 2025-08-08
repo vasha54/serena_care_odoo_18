@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_tab_municipality_0" model="res_municipality_mx">
+               <field name="name">Balancán</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_1" model="res_municipality_mx">
+               <field name="name">Cárdenas</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_2" model="res_municipality_mx">
+               <field name="name">Centla</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_3" model="res_municipality_mx">
+               <field name="name">Centro</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_4" model="res_municipality_mx">
+               <field name="name">Comalcalco</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_5" model="res_municipality_mx">
+               <field name="name">Cunduacán</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_6" model="res_municipality_mx">
+               <field name="name">Emiliano Zapata</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_7" model="res_municipality_mx">
+               <field name="name">Huimanguillo</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_8" model="res_municipality_mx">
+               <field name="name">Jalapa</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_9" model="res_municipality_mx">
+               <field name="name">Jalpa de Méndez</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_10" model="res_municipality_mx">
+               <field name="name">Jonuta</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_11" model="res_municipality_mx">
+               <field name="name">Macuspana</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_12" model="res_municipality_mx">
+               <field name="name">Nacajuca</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_13" model="res_municipality_mx">
+               <field name="name">Paraíso</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_14" model="res_municipality_mx">
+               <field name="name">Tacotalpa</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_15" model="res_municipality_mx">
+               <field name="name">Teapa</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+           <record id="state_mx_tab_municipality_16" model="res_municipality_mx">
+               <field name="name">Tenosique</field>
+               <field name="province_id" ref="state_mx_tab" />
+           </record>
+                          
+    </data>
+</odoo>

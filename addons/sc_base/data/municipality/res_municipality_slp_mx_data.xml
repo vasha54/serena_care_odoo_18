@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_slp_municipality_0" model="res_municipality_mx">
+               <field name="name">Ahualulco del Sonido 13</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_1" model="res_municipality_mx">
+               <field name="name">Alaquines</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_2" model="res_municipality_mx">
+               <field name="name">Aquismón</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_3" model="res_municipality_mx">
+               <field name="name">Armadillo de los Infante</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_4" model="res_municipality_mx">
+               <field name="name">Cárdenas</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_5" model="res_municipality_mx">
+               <field name="name">Catorce</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_6" model="res_municipality_mx">
+               <field name="name">Cedral</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_7" model="res_municipality_mx">
+               <field name="name">Cerritos</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_8" model="res_municipality_mx">
+               <field name="name">Cerro de San Pedro</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_9" model="res_municipality_mx">
+               <field name="name">Ciudad del Maíz</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_10" model="res_municipality_mx">
+               <field name="name">Ciudad Fernández</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_11" model="res_municipality_mx">
+               <field name="name">Tancanhuitz</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_12" model="res_municipality_mx">
+               <field name="name">Ciudad Valles</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_13" model="res_municipality_mx">
+               <field name="name">Coxcatlán</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_14" model="res_municipality_mx">
+               <field name="name">Charcas</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_15" model="res_municipality_mx">
+               <field name="name">Ebano</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_16" model="res_municipality_mx">
+               <field name="name">Guadalcázar</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_17" model="res_municipality_mx">
+               <field name="name">Huehuetlán</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_18" model="res_municipality_mx">
+               <field name="name">Lagunillas</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_19" model="res_municipality_mx">
+               <field name="name">Matehuala</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_20" model="res_municipality_mx">
+               <field name="name">Mexquitic de Carmona</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_21" model="res_municipality_mx">
+               <field name="name">Moctezuma</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_22" model="res_municipality_mx">
+               <field name="name">Rayón</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_23" model="res_municipality_mx">
+               <field name="name">Rioverde</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_24" model="res_municipality_mx">
+               <field name="name">Salinas</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_25" model="res_municipality_mx">
+               <field name="name">San Antonio</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_26" model="res_municipality_mx">
+               <field name="name">San Ciro de Acosta</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_27" model="res_municipality_mx">
+               <field name="name">San Luis Potosí</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_28" model="res_municipality_mx">
+               <field name="name">San Martín Chalchicuautla</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_29" model="res_municipality_mx">
+               <field name="name">San Nicolás Tolentino</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_30" model="res_municipality_mx">
+               <field name="name">Santa Catarina</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_31" model="res_municipality_mx">
+               <field name="name">Santa María del Río</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_32" model="res_municipality_mx">
+               <field name="name">Santo Domingo</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_33" model="res_municipality_mx">
+               <field name="name">San Vicente Tancuayalab</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_34" model="res_municipality_mx">
+               <field name="name">Soledad de Graciano Sánchez</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_35" model="res_municipality_mx">
+               <field name="name">Tamasopo</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_36" model="res_municipality_mx">
+               <field name="name">Tamazunchale</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_37" model="res_municipality_mx">
+               <field name="name">Tampacán</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_38" model="res_municipality_mx">
+               <field name="name">Tampamolón Corona</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_39" model="res_municipality_mx">
+               <field name="name">Tamuín</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_40" model="res_municipality_mx">
+               <field name="name">Tanlajás</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_41" model="res_municipality_mx">
+               <field name="name">Tanquián de Escobedo</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_42" model="res_municipality_mx">
+               <field name="name">Tierra Nueva</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_43" model="res_municipality_mx">
+               <field name="name">Vanegas</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_44" model="res_municipality_mx">
+               <field name="name">Venado</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_45" model="res_municipality_mx">
+               <field name="name">Villa de Arriaga</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_46" model="res_municipality_mx">
+               <field name="name">Villa de Guadalupe</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_47" model="res_municipality_mx">
+               <field name="name">Villa de la Paz</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_48" model="res_municipality_mx">
+               <field name="name">Villa de Ramos</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_49" model="res_municipality_mx">
+               <field name="name">Villa de Reyes</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_50" model="res_municipality_mx">
+               <field name="name">Villa Hidalgo</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_51" model="res_municipality_mx">
+               <field name="name">Villa Juárez</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_52" model="res_municipality_mx">
+               <field name="name">Axtla de Terrazas</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_53" model="res_municipality_mx">
+               <field name="name">Xilitla</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_54" model="res_municipality_mx">
+               <field name="name">Zaragoza</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_55" model="res_municipality_mx">
+               <field name="name">Villa de Arista</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_56" model="res_municipality_mx">
+               <field name="name">Matlapa</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_57" model="res_municipality_mx">
+               <field name="name">El Naranjo</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+           <record id="state_mx_slp_municipality_58" model="res_municipality_mx">
+               <field name="name">Villa de Pozos</field>
+               <field name="province_id" ref="state_mx_slp" />
+           </record>
+                          
+    </data>
+</odoo>

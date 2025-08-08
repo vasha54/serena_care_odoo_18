@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_cdmx_municipality_0" model="res_municipality_mx">
+               <field name="name">Azcapotzalco</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_1" model="res_municipality_mx">
+               <field name="name">Coyoacán</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_2" model="res_municipality_mx">
+               <field name="name">Cuajimalpa de Morelos</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_3" model="res_municipality_mx">
+               <field name="name">Gustavo A. Madero</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_4" model="res_municipality_mx">
+               <field name="name">Iztacalco</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_5" model="res_municipality_mx">
+               <field name="name">Iztapalapa</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_6" model="res_municipality_mx">
+               <field name="name">La Magdalena Contreras</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_7" model="res_municipality_mx">
+               <field name="name">Milpa Alta</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_8" model="res_municipality_mx">
+               <field name="name">Álvaro Obregón</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_9" model="res_municipality_mx">
+               <field name="name">Tláhuac</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_10" model="res_municipality_mx">
+               <field name="name">Tlalpan</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_11" model="res_municipality_mx">
+               <field name="name">Xochimilco</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_12" model="res_municipality_mx">
+               <field name="name">Benito Juárez</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_13" model="res_municipality_mx">
+               <field name="name">Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_14" model="res_municipality_mx">
+               <field name="name">Miguel Hidalgo</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+           <record id="state_mx_cdmx_municipality_15" model="res_municipality_mx">
+               <field name="name">Venustiano Carranza</field>
+               <field name="province_id" ref="state_mx_cdmx" />
+           </record>
+                          
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_municipality"
+        name="Municipios"
+        action="action_res_municipality_mx"
+        sequence="-1"
+        web_icon="sc_residence,static/description/icon.png"/>
+
+    <menuitem id="menu_serena_care_root_province"
+        name="Estados"
+        action="action_res_province_mx"
+        sequence="-2"
+        web_icon="sc_residence,static/description/icon.png"/>
+
+</odoo>

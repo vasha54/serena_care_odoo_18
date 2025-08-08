@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_residence_house"
+        name="Residencias/Casas"
+        action="action_residence_house"
+        sequence="-5"
+        web_icon="sc_residence,static/description/icon.png"/>
+
+    <menuitem id="menu_residence_service"
+        name="Servicios de residencia"
+        action="action_residence_service"
+        sequence="1"
+        parent="menu_serena_care_root_residence_house"/>
+
+    <menuitem id="menu_residence_house_deleted"
+        name="Residencias/Casas eliminadas"
+        action="action_residence_house_deleted"
+        sequence="100"
+        parent="menu_serena_care_root_residence_house"/>
+</odoo>

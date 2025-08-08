@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <data>   
+
+           <record id="state_mx_zac_municipality_0" model="res_municipality_mx">
+               <field name="name">Apozol</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_1" model="res_municipality_mx">
+               <field name="name">Apulco</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_2" model="res_municipality_mx">
+               <field name="name">Atolinga</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_3" model="res_municipality_mx">
+               <field name="name">Benito Juárez</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_4" model="res_municipality_mx">
+               <field name="name">Calera</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_5" model="res_municipality_mx">
+               <field name="name">Cañitas de Felipe Pescador</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_6" model="res_municipality_mx">
+               <field name="name">Concepción del Oro</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_7" model="res_municipality_mx">
+               <field name="name">Cuauhtémoc</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_8" model="res_municipality_mx">
+               <field name="name">Chalchihuites</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_9" model="res_municipality_mx">
+               <field name="name">Fresnillo</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_10" model="res_municipality_mx">
+               <field name="name">Trinidad García de la Cadena</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_11" model="res_municipality_mx">
+               <field name="name">Genaro Codina</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_12" model="res_municipality_mx">
+               <field name="name">General Enrique Estrada</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_13" model="res_municipality_mx">
+               <field name="name">General Francisco R. Murguía</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_14" model="res_municipality_mx">
+               <field name="name">El Plateado de Joaquín Amaro</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_15" model="res_municipality_mx">
+               <field name="name">General Pánfilo Natera</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_16" model="res_municipality_mx">
+               <field name="name">Guadalupe</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_17" model="res_municipality_mx">
+               <field name="name">Huanusco</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_18" model="res_municipality_mx">
+               <field name="name">Jalpa</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_19" model="res_municipality_mx">
+               <field name="name">Jerez</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_20" model="res_municipality_mx">
+               <field name="name">Jiménez del Teul</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_21" model="res_municipality_mx">
+               <field name="name">Juan Aldama</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_22" model="res_municipality_mx">
+               <field name="name">Juchipila</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_23" model="res_municipality_mx">
+               <field name="name">Loreto</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_24" model="res_municipality_mx">
+               <field name="name">Luis Moya</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_25" model="res_municipality_mx">
+               <field name="name">Mazapil</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_26" model="res_municipality_mx">
+               <field name="name">Melchor Ocampo</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_27" model="res_municipality_mx">
+               <field name="name">Mezquital del Oro</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_28" model="res_municipality_mx">
+               <field name="name">Miguel Auza</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_29" model="res_municipality_mx">
+               <field name="name">Momax</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_30" model="res_municipality_mx">
+               <field name="name">Monte Escobedo</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_31" model="res_municipality_mx">
+               <field name="name">Morelos</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_32" model="res_municipality_mx">
+               <field name="name">Moyahua de Estrada</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_33" model="res_municipality_mx">
+               <field name="name">Nochistlán de Mejía</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_34" model="res_municipality_mx">
+               <field name="name">Noria de Ángeles</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_35" model="res_municipality_mx">
+               <field name="name">Ojocaliente</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_36" model="res_municipality_mx">
+               <field name="name">Pánuco</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_37" model="res_municipality_mx">
+               <field name="name">Pinos</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_38" model="res_municipality_mx">
+               <field name="name">Río Grande</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_39" model="res_municipality_mx">
+               <field name="name">Sain Alto</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_40" model="res_municipality_mx">
+               <field name="name">El Salvador</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_41" model="res_municipality_mx">
+               <field name="name">Sombrerete</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_42" model="res_municipality_mx">
+               <field name="name">Susticacán</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_43" model="res_municipality_mx">
+               <field name="name">Tabasco</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_44" model="res_municipality_mx">
+               <field name="name">Tepechitlán</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_45" model="res_municipality_mx">
+               <field name="name">Tepetongo</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_46" model="res_municipality_mx">
+               <field name="name">Teúl de González Ortega</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_47" model="res_municipality_mx">
+               <field name="name">Tlaltenango de Sánchez Román</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_48" model="res_municipality_mx">
+               <field name="name">Valparaíso</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_49" model="res_municipality_mx">
+               <field name="name">Vetagrande</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_50" model="res_municipality_mx">
+               <field name="name">Villa de Cos</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_51" model="res_municipality_mx">
+               <field name="name">Villa García</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_52" model="res_municipality_mx">
+               <field name="name">Villa González Ortega</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_53" model="res_municipality_mx">
+               <field name="name">Villa Hidalgo</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_54" model="res_municipality_mx">
+               <field name="name">Villanueva</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_55" model="res_municipality_mx">
+               <field name="name">Zacatecas</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_56" model="res_municipality_mx">
+               <field name="name">Trancoso</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+           <record id="state_mx_zac_municipality_57" model="res_municipality_mx">
+               <field name="name">Santa María de la Paz</field>
+               <field name="province_id" ref="state_mx_zac" />
+           </record>
+                          
+    </data>
+</odoo>

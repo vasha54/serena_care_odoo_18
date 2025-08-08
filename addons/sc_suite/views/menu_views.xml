@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_sc_residency_root" name="Serena Care" web_icon="sc_suite,static/description/icon.png" sequence="10"/>
+    <!-- Submenús y acciones se agregarán posteriormente -->
+</odoo> 

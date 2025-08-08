@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_medication_catalog"
+        name="Medicamentos"
+        sequence="-4"
+        web_icon="sc_medication_catalog,static/description/icon.png"/>
+
+    
+    <menuitem id="menu_medication_catalog"
+        name="Medicamentos"
+        action="action_medicament_product"
+        sequence="0"
+        parent="menu_serena_care_root_medication_catalog"/>
+
+    <menuitem id="menu_product_category_medicament"
+        name="Grupos de medicamentos"
+        action="action_medicament_category"
+        sequence="1"
+        parent="menu_serena_care_root_medication_catalog"/>
+
+    <menuitem id="menu_pharmaceutical_form"
+        name="Formas Farmacéuticas"
+        action="action_pharmaceutical_form"
+        sequence="2"
+        parent="menu_serena_care_root_medication_catalog"/>
+    
+    <!-- <menuitem id="menu_route_administration"
+        name="Vías de Administración"
+        action="action_route_administration"
+        sequence="2"
+        parent="menu_root_medication_catalog"/> -->
+</odoo>
