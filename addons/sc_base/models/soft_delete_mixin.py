@@ -22,3 +22,5 @@ class SoftDeleteMixin(models.AbstractModel):
             'type':'ir.actions.client',
              'tag':'reload',
         }
+    
+    

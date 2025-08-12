@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View audit.log View List -->
+    <record id="view_audit_log_list" model="ir.ui.view">
+        <field name="name">view.audit.log.list</field>
+        <field name="model">audit.log</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" delete="false">
+                <field string="Momento" name="create_date"/>
+                <field name="action_type"/>
+                <field name="user_name" />
+                <field name="name" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View audit.log form -->
+    <record id="view_audit_log_form" model="ir.ui.view">
+        <field name="name">view.audit.log.form</field>
+        <field name="model">audit.log</field>
+        <field name="arch" type="xml">
+            <form string="Audit Log" create="false" edit="false" delete="false">
+                <sheet>
+                    <group col="3" colspan="3">
+                        <group name="name" string="Información">
+                            <field name="record_id" />
+                            <field name="action_type" />
+                            <field string="Momento" name="create_date" />
+                            <field name="model_name" />
+                            <field name="user_name" />
+                        </group>
+                        <group name="description" string="Descripción">
+                            <field name="name" widget="textarea" nolabel="1" />
+                        </group>
+                        <group name="description" string="Detalles Adicionales">
+                            <field name="details" widget="textarea" nolabel="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View audit.log search -->
+    <record id="view_audit_log_search" model="ir.ui.view">
+        <field name="name">view.audit.log.search</field>
+        <field name="model">audit.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="model_name" />
+                <group expand="0" string="Agrupar por">
+                    <filter string="Modelo" name="model_id" domain="[]" context="{'group_by':'model_id'}"/>
+                    <filter string="Tipo de acción" name="action_type" domain="[]" context="{'group_by':'action_type'}"/>
+                    <filter string="Usuario" name="user_id" domain="[]" context="{'group_by':'user_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action audit.log -->
+    <record id="action_audit_log" model="ir.actions.act_window">
+        <field name="name">Registros auditables</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">audit.log</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No existen registros para auditar
+            </p>
+        </field>
+    </record>
+
+</odoo>

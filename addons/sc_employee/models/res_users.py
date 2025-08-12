@@ -1,11 +1,13 @@
+import logging
+
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError, AccessDenied
 
+_logger = logging.getLogger(__name__)
 
 class ResUser(models.Model):
     _inherit = 'res.users'  # Solo hereda de res.users
-    
-    
+        
     is_user_sc = fields.Boolean(
         string="Es usuario de Serena Care", 
         default=False,
@@ -15,6 +17,34 @@ class ResUser(models.Model):
         default=False,
         transient=True,
     )
+    group_names = fields.Char(
+        string='Nombres de grupo',
+        compute='_compute_group_names',
+        store=True,
+        index=True
+    )
+    residence_name = fields.Char(
+        string='Residencia asignada',
+        compute='_compute_residence_name',
+        store=False
+    ) 
+
+    @api.depends('groups_id.name')
+    def _compute_group_names(self):
+        for user in self:
+            names = user.groups_id.mapped('name')
+            user.group_names = ', '.join(names) if names else ''
+
+    @api.depends('employee_id','employee_id.residence_id')
+    def _compute_residence_name(self):
+        for user in self:
+            if user.employee_id:
+                if user.employee_id.residence_id:
+                    user.residence_name = user.employee_id.residence_id.name
+                else:
+                    user.residence_name = 'Sin residencia asignada'
+            else:
+                user.residence_name = 'No es empledado'
 
     @api.model
     def create(self, vals):
@@ -74,22 +104,104 @@ class ResUser(models.Model):
         if 'password' in values:
             password = values['password']
             confirmed_password = values.pop('confirmed_password', None)
-            
+    
             if not password:
                 raise ValidationError(_("La contraseña no puede estar vacía"))
-                
+        
             if not confirmed_password or confirmed_password != password:
                 raise ValidationError(_("Las contraseñas no coinciden"))
+
+        old_values = {}
+        fields_to_check = list(values.keys())
+    
+        for record in self:
+            old_values[record.id] = {}
+            for field in fields_to_check:
+                if field in record._fields and record._fields[field].store:
+                    field_type = record._fields[field].type
+                    try:
+                        # Para campos relacionales, guardar solo los IDs
+                        if field_type in ['many2many', 'one2many']:
+                            old_values[record.id][field] = record[field].ids
+                        elif field_type == 'many2one':
+                            old_values[record.id][field] = record[field].id if record[field] else False
+                        else:
+                            old_values[record.id][field] = record[field]
+                    except (AccessDenied, ValueError):
+                        old_values[record.id][field] = "****** (Acceso denegado)"
+
+        res = super(ResUser, self).write(values)
+
+        model_id = self.env['ir.model']._get('res.users').id
+        AuditLog = self.env['audit.log'].sudo()
+
+        for record in self:
+            changes = []
+            rid = record.id
+    
+            for field, new_value in values.items():
+                if field not in record._fields or not record._fields[field].store:
+                    continue
+            
+                old_val = old_values.get(rid, {}).get(field)
+                current_val = new_value
+                field_type = record._fields[field].type
+
+                # Manejo especial para campos relacionales
+                if field_type in ['many2many', 'one2many']:
+                    # Convertir nuevo valor a lista de IDs
+                    new_ids = set()
+                    for command in new_value:
+                        if command[0] == 6:
+                            new_ids = set(command[2])
+                        elif command[0] == 4:
+                            new_ids.add(command[1])
+                        elif command[0] == 3:
+                            if command[1] in new_ids:
+                                new_ids.remove(command[1])
+                        # Agregar otros comandos si son necesarios
                 
-        return super(ResUser, self).write(values)
+                    # Comparar conjuntos de IDs
+                    if set(old_val) != new_ids:
+                        changes.append(
+                            f"Campo: {field}\n"
+                            f"Valor anterior: {old_val}\n"
+                            f"Nuevo valor: {list(new_ids)}"
+                        )
+                    continue
+                    
+                # Manejo especial para campos sensibles
+                if field == 'password':
+                    old_val = "********" if old_val else ""
+                    current_val = "********"
+                elif record._fields[field].type == 'binary':
+                    old_val = "** BINARY DATA **" if old_val else ""
+                    current_val = "** BINARY DATA **"
+        
+                # Solo registrar si hubo cambio real
+                if old_val != current_val:
+                    changes.append(
+                        f"Campo: {field}\n"
+                        f"Valor anterior: {old_val}\n"
+                        f"Nuevo valor: {current_val}"
+                      )
+    
+            if changes:
+                AuditLog.create({
+                    'name': f"Modificación de usuario {record.login}",
+                    'user_id': self.env.user.id,
+                    'model_id': model_id,
+                    'record_id': rid,
+                    'action_type': 'write',
+                    'details': "\n\n".join(changes),
+                })
+
+        return res
 
     def unlink(self):
         return self.action_soft_delete()
 
-    def toggle_active_state(self):
-        for user in self:
-            user.active = not user.active
-        return True
+     
 
     
     

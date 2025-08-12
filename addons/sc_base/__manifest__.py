@@ -21,8 +21,7 @@ Long description of module's purpose
     'depends': ['base'],
 
     # always loaded
-    'data': [
-        "data/res_province_mx_data.xml",
+    "data": [
         "data/municipality/res_municipality_ags_mx_data.xml",
         "data/municipality/res_municipality_bc_mx_data.xml",
         "data/municipality/res_municipality_bcs_mx_data.xml",
@@ -55,12 +54,15 @@ Long description of module's purpose
         "data/municipality/res_municipality_ver_mx_data.xml",
         "data/municipality/res_municipality_yuc_mx_data.xml",
         "data/municipality/res_municipality_zac_mx_data.xml",
-        'security/ir.model.access.csv',
-        "views/res_province_mx_views.xml",
+        "data/res_province_mx_data.xml",
+        "security/ir.model.access.csv",
+        "views/audit_log_views.xml",
         "views/res_municipality_mx_views.xml",
+        "views/res_province_mx_views.xml",
         "views/view_menu.xml",
     ],
-    'demo':[],
+    'demo':[], 
+    
     'installable': True,
     'auto_install': False,
     'application': True,

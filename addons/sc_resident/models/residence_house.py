@@ -25,7 +25,7 @@ class ResidenceHouse(models.Model):
     @api.depends('resident_ids')
     def _compute_resident_count(self):
         for rec in self:
-            rec.resident_count = len(rec.resident_ids)
+            rec.resident_count = len(rec.resident_ids.filtered(lambda resident: not resident.is_deleted))
 
     def open_reassignment_resident_wizard(self):
         return {

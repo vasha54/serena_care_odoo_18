@@ -7,6 +7,7 @@
         <field name="model">resident</field>
         <field name="arch" type="xml">
             <list>
+                <field string="Estado" name="active" widget="boolean_toggle"/>
                 <field name="vat" string="DNI/NIE"/>
                 <field string="Nombre" name="name"/>
                 <field string="Sexo" name="sex_id" />
@@ -18,65 +19,115 @@
         </field>
     </record>
 
+    
+    <record id="view_resident_list_delete" model="ir.ui.view">
+        <field name="name">view.resident.list.delete</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="view_resident_list" /> 
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+                <attribute name="delete">0</attribute>
+            </xpath>
+        </field>
+    </record>
+
     <!-- View resident form -->
     <record id="view_resident_form" model="ir.ui.view">
         <field name="name">view.resident.form</field>
         <field name="model">resident</field>
         <field name="arch" type="xml">
-            <form string="Resident">
+            <form string="Resident" create="not is_deleted and active" edit="not is_deleted and active" delete="not is_deleted and active">
+                <header>
+                    <button 
+                        name="toggle_active" 
+                        type="object"
+                        class="oe_highlight btn-danger"
+                        invisible="not active" 
+                        string="Desactivar residente"
+                    />                    
+                    <button 
+                        name="toggle_active" 
+                        type="object"
+                        class="oe_highlight btn-success"
+                        invisible="active" 
+                        string="Activar residente"
+                    />
+
+                </header>
                 <sheet>
-                    <field name="image_1920" widget="image" class="oe_avatar" options='{"preview_image": "image_128"}'/>
+                    <field name="active" invisible="1" />
+                    <field name="image_1920" widget="image" class="oe_avatar" 
+                           options='{"preview_image": "image_128"}' readonly="not active"/>
                     <div class="oe_title">
                         <h1>
                             <field string="Nombre" name="name" required="1"
-                                   placeholder="Nombre del residente" class="mb-0"/>
+                                   placeholder="Nombre del residente" class="mb-0" 
+                                   readonly="not active"
+                                   />
                         </h1>
                     </div>
 
                     <group col="2">
                         <group string="Información Personal">
-                            <field name="birth_date"/>
-                            <field name="vat" string="DNI/NIE"/>
-                            <field string="Sexo" name="sex_id" />
-                            <field name="residence_id"/>
+                            <field name="birth_date" readonly="not active"/>
+                            <field name="vat" string="DNI/NIE" readonly="not active"/>
+                            <field string="Sexo" name="sex_id" readonly="not active"/>
+                            <field name="residence_id" readonly="not active"/>
                         </group>
                         <group string="Contacto">
-                            <field name="phone" widget="phone"/>
-                            <field name="mobile" widget="phone"/>
-                            <field name="email" widget="email"/>
+                            <field name="phone" widget="phone" readonly="not active"/>
+                            <field name="mobile" widget="phone" readonly="not active"/>
+                            <field name="email" widget="email" readonly="not active"/>
                         </group>
                     </group>
 
                     <group col="2">
                         <group string="Dirección">
                             <group col="2">
-                                <field name="country_id" placeholder="País"/>
+                                <field name="country_id" placeholder="País" readonly="not active"/>
                                 <field string="Estado" name="province_id" placeholder="Estado"
                                         class="o_address_country" 
-                                         domain="[('country_id','=',country_id)]"/>
+                                         domain="[('country_id','=',country_id)]" readonly="not active"/>
                                 <field string="Municipio" name="municipality_id"
                                         class="o_address_state"
                                         placeholder="Municipio"
-                                        domain="[('province_id','=',province_id)]" />
+                                        domain="[('province_id','=',province_id)]" readonly="not active"/>
                                 <field string="Ciudad" name="city" placeholder="Ciudad"
-                                        class="o_address_city" />
-                                <field string="Código Postal" name="zip" placeholder="C.P."/>
+                                        class="o_address_city" readonly="not active"/>
+                                <field string="Código Postal" name="zip" placeholder="C.P." readonly="not active"/>
                             </group>
                             <group col="2">
-                                <field string="Calle principal" name="street" placeholder="Calle principal" />
-                                <field string="Entre Calle #1" name="street2" placeholder="Entre calle 1" />
-                                <field name="street3" placeholder="Entre calle 2" />
-                                <field name="street_number" placeholder="Número" />
+                                <field string="Calle principal" name="street" placeholder="Calle principal" readonly="not active"/>
+                                <field string="Entre Calle #1" name="street2" placeholder="Entre calle 1" readonly="not active"/>
+                                <field name="street3" placeholder="Entre calle 2" readonly="not active"/>
+                                <field name="street_number" placeholder="Número" readonly="not active"/>
                             </group>
                                   
                         </group>
                         <group string="Información Adicional">
-                            <field string="Notas" name="comment" placeholder="Notas adicionales..."/>
+                            <field string="Notas" name="comment" placeholder="Notas adicionales..." readonly="not active"/>
                             <field name="partner_id" invisible="1"/>
                         </group>
                     </group> 
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="view_resident_form_delete" model="ir.ui.view">
+        <field name="name">view.resident.list.delete</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="view_resident_form" />
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="create">0</attribute>
+                <attribute name="edit">0</attribute>
+                <attribute name="delete">0</attribute>
+            </xpath>
         </field>
     </record>
 
@@ -93,6 +144,7 @@
                     <filter string="Municipio" name="municipality_id" domain="[]" context="{'group_by':'municipality_id'}"/>
                     <filter string="Residencia" name="residence_id" domain="[]" context="{'group_by':'residence_id'}"/>
                 </group>
+                <filter name="inactive" string="Residentes inactivos" domain="[('active','=',False)]"/>
             </search>
         </field>
     </record>
@@ -103,11 +155,33 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">resident</field>
         <field name="view_mode">list,form</field>
-        <field name="domain">[]</field>
+        <field name="domain">[("is_deleted","=",False)]</field>
         <field name="context">{}</field>
+        <field name="search_view_id" ref="view_resident_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_resident_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_resident_form')})]"/>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 No hay registros haga clic aquí para agregar un nuevo Residente.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_resident_delete" model="ir.actions.act_window">
+        <field name="name">Listado de residentes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">resident</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[("is_deleted","=",True)]</field>
+        <field name="context">{}</field>
+        <field name="search_view_id" ref="view_resident_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_resident_list_delete')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_resident_form_delete')})]"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de Residentes eliminados.
             </p>
         </field>
     </record>

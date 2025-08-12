@@ -5,4 +5,10 @@
         action="action_resident"
         sequence="-4"
         web_icon="sc_resident,static/description/icon.png"/>
+
+    <menuitem id="menu_resident_deleted"
+        name="Residentes eliminados"
+        action="action_resident_delete"
+        parent="menu_serena_care_root_resident"
+        sequence="1"/>
 </odoo>

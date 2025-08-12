@@ -5,12 +5,13 @@
         <field name="name">view.residence_res_user.list</field>
         <field name="model">res.users</field>
         <field name="arch" type="xml">
-            <list default_order="name asc">
-                <field string="Activo" name="active" widget="boolean_toggle" />
-                <field string="Nombre" name="name" readonly="1"/>
-                <field string="Usuario" name="login" readonly="1"/>
-                <field string="Última autenticación" name="login_date" readonly="1"/>
-                <field string="Estado" name="state" readonly="1"/>
+            <list default_order="name asc" decoration-muted="active == False">
+                <field string="Estado" name="active" widget="boolean_toggle"/>
+                <field string="Nombre" name="name" />
+                <field string="Correo" name="email"/>
+                <field string="Roles" name="groups_id" widget="many2many_tags" options="{'color_field': 'color', 'no_open': True}"/>
+                <field string="Residencia" name="residence_name"/>
+                <field name="create_date"  string="Creado" />
             </list>
         </field>
     </record>
@@ -21,11 +22,12 @@
         <field name="model">res.users</field>
         <field name="arch" type="xml">
             <list default_order="name asc" create="false" edit="false" delete="false">
-                <field name="active" />
-                <field string="Nombre" name="name" readonly="1"/>
-                <field string="Usuario" name="login" readonly="1"/>
-                <field string="Última autenticación" name="login_date" readonly="1"/>
-                <field string="Estado" name="state" readonly="1"/>
+                <field string="Estado" name="active" widget="boolean_toggle"/>
+                <field string="Nombre" name="name" />
+                <field string="Correo" name="email"/>
+                <field string="Roles" name="groups_id" widget="many2many_tags" options="{'color_field': 'color', 'no_open': True}"/>
+                <field string="Residencia" name="residence_name"/>
+                <field name="create_date"  string="Creado" />
             </list>
         </field>
     </record>
@@ -39,14 +41,14 @@
                 <header><field name="share" invisible="1"/>
                     <field name="employee_id" invisible="1"/>
                         <button 
-                            name="toggle_active_state" 
+                            name="toggle_active" 
                             type="object"
                             class="oe_highlight btn-danger"
                             invisible="not active" 
                             string="Desactivar usuario"
                         />                    
                         <button 
-                            name="toggle_active_state" 
+                            name="toggle_active" 
                             type="object"
                             class="oe_highlight btn-success"
                             invisible="active" 
@@ -60,9 +62,9 @@
                     <div class="alert alert-info text-center o_form_header" invisible="active and active_partner or not active and not active_partner or active and not active_partner" role="alert">
                         <a class="close" data-bs-dismiss="alert" href="#">x</a>
                         <div>
-                            <strong>The contact linked to this user is still active</strong>
+                            <strong>El contacto vinculado a este usuario sigue activo</strong>
                         </div>
-                        <div>You can archive the contact
+                        <div>Puedes archivar el contacto
                             <field name="partner_id" required="0" readonly="1"/>
                         </div>
                     </div>
@@ -79,13 +81,17 @@
                             <field string="Confirmar contraseña" name="confirmed_password" widget="password"/>
                         </group>
                         <group name="group_roles" string="Grupos de Accesos">
-                            <field  string="Grupos de accesos" name="groups_id" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>    
+                            <field nolabel="1"  string="Grupos de accesos" name="groups_id" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>    
                         </group>
                         <group name="info" string="Información Básica">
                             <field name="email" string="Correo electrónico" required="1"/>
                             <field name="mobile" string="Teléfono móvil"/>
                             <field name="phone" string="Teléfono"/>
-                            <field name="is_employee_sc" />
+                            <field name="residence_name" readonly="1" />
+                            <field name="create_date"  string="Creado" readonly="1"/>
+                            <field name="write_date"  string="Última modificación" readonly="1"/>
+                            <field name="login_date" string="Último acceso" readonly="1"/>
+                            <field name="state" widget="badge" decoration-info="state == 'new'" decoration-success="state == 'active'"/>
                         </group>
                     </group>    
                 </sheet>
@@ -109,9 +115,9 @@
                     <div class="alert alert-info text-center o_form_header" invisible="active and active_partner or not active and not active_partner or active and not active_partner" role="alert">
                         <a class="close" data-bs-dismiss="alert" href="#">x</a>
                         <div>
-                            <strong>The contact linked to this user is still active</strong>
+                            <strong>El contacto vinculado a este usuario sigue activo</strong>
                         </div>
-                        <div>You can archive the contact
+                        <div>Puedes archivar el contacto
                             <field name="partner_id" required="0" readonly="1"/>
                         </div>
                     </div>
@@ -128,13 +134,17 @@
                             <field string="Confirmar contraseña" name="confirmed_password" widget="password"/>
                         </group>
                         <group name="group_roles" string="Grupos de Accesos">
-                            <field  string="Grupos de accesos" name="groups_id" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>    
+                            <field  nolabel="1" string="Grupos de accesos" name="groups_id" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>    
                         </group>
                         <group name="info" string="Información Básica">
                             <field name="email" string="Correo electrónico" required="1"/>
                             <field name="mobile" string="Teléfono móvil"/>
                             <field name="phone" string="Teléfono"/>
-                            <field name="is_employee_sc" />
+                            <field name="residence_name" readonly="1" />
+                            <field name="create_date"  string="Creado" readonly="1"/>
+                            <field name="write_date"  string="Última modificación" readonly="1"/>
+                            <field name="login_date" string="Último acceso" readonly="1"/>
+                            <field name="state" widget="badge" decoration-info="state == 'new'" decoration-success="state == 'active'"/>
                         </group>
                     </group>    
                 </sheet>
@@ -148,8 +158,10 @@
         <field name="model">res.users</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name" />
-                <field name="login" />
+                <field name="create_date" string="Creado"/> 
+                <field name="group_names" string="Grupo"/>
+                <field name="name"  string="Nombre" />
+                <field name="email" string="Correo" />
                 <filter name="inactive" string="Usuarios inactivos" domain="[('active','=',False)]"/>
             </search>
         </field>
@@ -163,14 +175,14 @@
         <field name="res_model">res.users</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[("is_user_sc","=",True),("is_deleted","=",False)]</field>
-        <field name="context"></field>
+        <field name="context">{'active_test': False}</field>
         <field name="search_view_id" ref="view_residence_res_user_search" />
         <field name="view_ids" eval="[ (5, 0, 0), 
             (0, 0, {'view_mode': 'list', 'view_id': ref('view_residence_res_user_list')}), 
             (0, 0, {'view_mode': 'form', 'view_id': ref('view_residence_res_user_form')})]"/>
         <field name="help" type="html">
             <p class="oe_view_nocontent">
-                No hay registros.
+                No se encontraron usuarios con esos criterios.
             </p>
         </field>
     </record>
@@ -181,14 +193,14 @@
         <field name="res_model">res.users</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[("is_user_sc","=",True),("is_deleted","=",True)]</field>
-        <field name="context"></field>
+        <field name="context">{'active_test': False}</field>
         <field name="search_view_id" ref="view_residence_res_user_search" />
         <field name="view_ids" eval="[ (5, 0, 0), 
             (0, 0, {'view_mode': 'list', 'view_id': ref('view_residence_res_user_list_delete')}), 
             (0, 0, {'view_mode': 'form', 'view_id': ref('view_residence_res_user_form_delete')})]"/>
         <field name="help" type="html">
             <p class="oe_view_nocontent">
-                No hay registros.
+                No se encontraron usuarios con esos criterios.
             </p>
         </field>
     </record>

@@ -2,3 +2,4 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_res_country_mx_manager,res_country_mx_manager,model_res_country_mx,base.group_user,1,1,1,1
 access_res_province_mx_manager,res_province_mx_manager,model_res_province_mx,base.group_user,1,1,1,1
 access_res_municipality_mx_manager,res_municipality_mx_manager,model_res_municipality_mx,base.group_user,1,1,1,1
+access_audit_log_manager,audit_log_manager,model_audit_log,base.group_system,1,0,0,0

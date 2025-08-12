@@ -4,12 +4,18 @@
         name="Municipios"
         action="action_res_municipality_mx"
         sequence="-1"
-        web_icon="sc_residence,static/description/icon.png"/>
+        web_icon="sc_base,static/description/icon.png"/>
 
     <menuitem id="menu_serena_care_root_province"
         name="Estados"
         action="action_res_province_mx"
         sequence="-2"
-        web_icon="sc_residence,static/description/icon.png"/>
+        web_icon="sc_base,static/description/icon.png"/>
+
+    <menuitem id="menu_serena_care_root_audit_log"
+        name="Registros auditables"
+        action="action_audit_log"
+        sequence="0"
+        web_icon="sc_base,static/description/icon.png"/>
 
 </odoo>
