@@ -22,12 +22,20 @@ Long description of module's purpose
 
     # always loaded
     "data": [
+        "data/data_auth_level.xml",
+        "data/data_kinship.xml",
         "data/data_residents.xml",
         "security/ir.model.access.csv",
-        "views/reassign_resident_residence_wizard_views.xml",
+        "views/auth_level_views.xml",
+        "views/family_kinship_views.xml",
+        "views/relationship_resident_family_views.xml",
         "views/residence_house_views.xml",
+        "views/resident_family_views.xml",
         "views/resident_views.xml",
-        "views/view_menu.xml"
+        "views/view_menu.xml",
+        "views/wizard/reassign_resident_residence_wizard_views.xml",
+        "views/wizard/register_new_family_resident_wizard_views.xml",
+        "views/wizard/search_new_family_resident_wizard_views.xml",
     ],
     # only loaded in demonstration mode
     'demo': [],

@@ -45,73 +45,109 @@
                         name="toggle_active" 
                         type="object"
                         class="oe_highlight btn-danger"
-                        invisible="not active" 
+                        invisible="not active or not id" 
                         string="Desactivar residente"
                     />                    
                     <button 
                         name="toggle_active" 
                         type="object"
                         class="oe_highlight btn-success"
-                        invisible="active" 
+                        invisible="active or not id" 
                         string="Activar residente"
                     />
 
                 </header>
                 <sheet>
-                    <field name="active" invisible="1" />
-                    <field name="image_1920" widget="image" class="oe_avatar" 
-                           options='{"preview_image": "image_128"}' readonly="not active"/>
-                    <div class="oe_title">
-                        <h1>
-                            <field string="Nombre" name="name" required="1"
-                                   placeholder="Nombre del residente" class="mb-0" 
-                                   readonly="not active"
-                                   />
-                        </h1>
-                    </div>
+                    <notebook>
+                        <page name="general" string="General">
+                            <field name="active" invisible="1" />
+                            <field name="id" invisible="1" />
+                            <field name="image_1920" widget="image" class="oe_avatar" 
+                                options='{"preview_image": "image_128"}' readonly="not active"/>
+                            <div class="oe_title">
+                                <h1>
+                                    <field string="Nombre" name="name" required="1"
+                                        placeholder="Nombre del residente" class="mb-0" 
+                                        readonly="not active"
+                                        />
+                                </h1>
+                            </div>
 
-                    <group col="2">
-                        <group string="Información Personal">
-                            <field name="birth_date" readonly="not active"/>
-                            <field name="vat" string="DNI/NIE" readonly="not active"/>
-                            <field string="Sexo" name="sex_id" readonly="not active"/>
-                            <field name="residence_id" readonly="not active"/>
-                        </group>
-                        <group string="Contacto">
-                            <field name="phone" widget="phone" readonly="not active"/>
-                            <field name="mobile" widget="phone" readonly="not active"/>
-                            <field name="email" widget="email" readonly="not active"/>
-                        </group>
-                    </group>
+                            <group col="2">
+                                <group string="Información Personal">
+                                    <field name="birth_date" readonly="not active"/>
+                                    <field name="vat" string="DNI/NIE" readonly="not active"/>
+                                    <field string="Sexo" name="sex_id" readonly="not active"/>
+                                    <field name="residence_id" readonly="not active"/>
+                                </group>
+                                <group string="Contacto">
+                                    <field name="phone" widget="phone" readonly="not active"/>
+                                    <field name="mobile" widget="phone" readonly="not active"/>
+                                    <field name="email" widget="email" readonly="not active"/>
+                                </group>
+                            </group>
 
-                    <group col="2">
-                        <group string="Dirección">
                             <group col="2">
-                                <field name="country_id" placeholder="País" readonly="not active"/>
-                                <field string="Estado" name="province_id" placeholder="Estado"
-                                        class="o_address_country" 
-                                         domain="[('country_id','=',country_id)]" readonly="not active"/>
-                                <field string="Municipio" name="municipality_id"
-                                        class="o_address_state"
-                                        placeholder="Municipio"
-                                        domain="[('province_id','=',province_id)]" readonly="not active"/>
-                                <field string="Ciudad" name="city" placeholder="Ciudad"
-                                        class="o_address_city" readonly="not active"/>
-                                <field string="Código Postal" name="zip" placeholder="C.P." readonly="not active"/>
+                                <group string="Dirección">
+                                    <group col="2">
+                                        <field name="country_id" placeholder="País" readonly="not active"/>
+                                        <field string="Estado" name="province_id" placeholder="Estado"
+                                                class="o_address_country" 
+                                                domain="[('country_id','=',country_id)]" readonly="not active"/>
+                                        <field string="Municipio" name="municipality_id"
+                                                class="o_address_state"
+                                                placeholder="Municipio"
+                                                domain="[('province_id','=',province_id)]" readonly="not active"/>
+                                        <field string="Ciudad" name="city" placeholder="Ciudad"
+                                                class="o_address_city" readonly="not active"/>
+                                        <field string="Código Postal" name="zip" placeholder="C.P." readonly="not active"/>
+                                    </group>
+                                    <group col="2">
+                                        <field string="Calle principal" name="street" placeholder="Calle principal" readonly="not active"/>
+                                        <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" readonly="not active"/>
+                                        <field name="street3" placeholder="Entre calle 2" readonly="not active"/>
+                                        <field name="street_number" placeholder="Número" readonly="not active"/>
+                                    </group>
+                                        
+                                </group>
+                                <group string="Información Adicional">
+                                    <field string="Notas" name="comment" placeholder="Notas adicionales..." readonly="not active"/>
+                                    <field name="partner_id" invisible="1"/>
+                                </group>
                             </group>
-                            <group col="2">
-                                <field string="Calle principal" name="street" placeholder="Calle principal" readonly="not active"/>
-                                <field string="Entre Calle #1" name="street2" placeholder="Entre calle 1" readonly="not active"/>
-                                <field name="street3" placeholder="Entre calle 2" readonly="not active"/>
-                                <field name="street_number" placeholder="Número" readonly="not active"/>
+                        </page>
+                        <page name="family" string="Familiares" invisible="not id">
+                            <group colspan="4" col="4">
+                                <group name="name" string="Registrar familiar" col="2" colspan="2">
+                                   <group>
+                                        <button 
+                                        name="open_register_new_family_for_resident_wizard" 
+                                        string="Nuevo en el sistema" 
+                                        type="object"
+                                        class="btn-primary"
+                                        invisible="not id"/>
+                                   </group>
+                                   <group>
+                                        <button 
+                                        name="open_search_new_family_for_resident_wizard" 
+                                        string="Buscar en el sistema" 
+                                        type="object"
+                                        class="btn-primary"
+                                        invisible="not id"/>
+                                   </group>
+                                </group>
                             </group>
-                                  
-                        </group>
-                        <group string="Información Adicional">
-                            <field string="Notas" name="comment" placeholder="Notas adicionales..." readonly="not active"/>
-                            <field name="partner_id" invisible="1"/>
-                        </group>
-                    </group> 
+                            <group colspan="4" col="4" string="Familiares">
+                                <field name="family_ids" widget="one2many" nolabel="1">
+                                    <list create="False">
+                                        <field name="family_id"/>
+                                        <field name="kinship_id" />
+                                        <field name="auth_level_ids" widget="many2many_tags" />
+                                    </list>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook> 
                 </sheet>
             </form>
         </field>

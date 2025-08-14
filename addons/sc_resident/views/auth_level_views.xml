@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View auth.level View List -->
+    <record id="view_auth_level_list" model="ir.ui.view">
+        <field name="name">view.auth.level.list</field>
+        <field name="model">auth.level</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View auth.level form -->
+    <record id="view_auth_level_form" model="ir.ui.view">
+        <field name="name">view.auth.level.form</field>
+        <field name="model">auth.level</field>
+        <field name="arch" type="xml">
+            <form string="Auth Level">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre del nivel ..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View auth.level search -->
+    <record id="view_auth_level_search" model="ir.ui.view">
+        <field name="name">view.auth.level.search</field>
+        <field name="model">auth.level</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action auth.level -->
+    <record id="action_auth_level" model="ir.actions.act_window">
+        <field name="name">Niveles de autorización</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">auth.level</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar un nuevo Nivel de Autorización.
+            </p>
+        </field>
+    </record>
+
+</odoo>

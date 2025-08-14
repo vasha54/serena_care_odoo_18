@@ -1,0 +1,14 @@
+*.pyc
+*/*.pyc
+*/*/*.pyc
+*/*/*/*.pyc
+*/*/*/*/*.pyc
+
+*/__pycache__/*
+*/*/__pycache__/*
+
+*.cpython-312.pyc
+*/*.cpython-312.pyc
+*/*/*.cpython-312.pyc
+*/*/*/*.cpython-312.pyc
+*/*/*/*/*.cpython-312.pyc

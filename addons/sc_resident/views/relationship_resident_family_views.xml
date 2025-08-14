@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View relationship.resident.family View List -->
+    <record id="view_relationship_resident_family_list" model="ir.ui.view">
+        <field name="name">view.relationship.resident.family.list</field>
+        <field name="model">relationship.resident.family</field>
+        <field name="arch" type="xml">
+            <list>
+                
+            </list>
+        </field>
+    </record>
+
+    <!-- View relationship.resident.family form -->
+    <record id="view_relationship_resident_family_form" model="ir.ui.view">
+        <field name="name">view.relationship.resident.family.form</field>
+        <field name="model">relationship.resident.family</field>
+        <field name="arch" type="xml">
+            <form string="Relationship Resident Family">
+                <sheet>
+                    <field name="family_id" invisible="1" />
+                    <field name="resident_id" readonly="1" invisible="1"/> 
+                    <field name="family_image_1920" widget="image" class="oe_avatar" 
+                        options='{"preview_image": "image_128"}' />
+                    <div class="oe_title">
+                        <h1>
+                            <field string="Nombre" name="family_name" required="1"
+                                placeholder="Nombre del familiar" class="mb-0"/>
+                        </h1>
+                    </div>
+                    <group col="2">
+                        <group string="Contacto">
+                            <field name="family_phone" widget="phone" />
+                            <field name="family_mobile" widget="phone" />
+                            <field name="family_email" widget="email" />
+                            <field name="kinship_id" />
+                        </group>
+                        <group string="Dirección" >
+                            <group col="2">
+                                <field name="family_country_id" placeholder="País" />
+                                 <field string="Estado" name="family_province_id" placeholder="Estado"
+                                       class="o_address_country" domain="[('country_id','=',family_country_id)]"/>
+                                <field string="Municipio" name="family_municipality_id"
+                                       class="o_address_state" placeholder="Municipio"
+                                       domain="[('province_id','=',family_province_id)]" />
+                                <field string="Ciudad" name="family_city" placeholder="Ciudad"
+                                       class="o_address_city"/>
+                                <field string="Código Postal" name="family_zip" placeholder="C.P."/> 
+                            </group>
+                            <group col="2">
+                                <field string="Calle principal" name="family_street" placeholder="Calle principal" />
+                                <field string="Entre calle #1" name="family_street2" placeholder="Entre calle 1" />
+                                <field name="family_street3" placeholder="Entre calle 2" />
+                                <field name="family_street_number" placeholder="Número" />
+                            </group>
+                        </group>
+                    </group>
+                    <group col="2" colspan="2" string="Niveles de autorización">
+                        <field name="auth_level_ids" nolabel="1"  widget="many2many_tags" 
+                        required="1"
+                        />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View relationship.resident.family search -->
+    <record id="view_relationship_resident_family_search" model="ir.ui.view">
+        <field name="name">view.relationship.resident.family.search</field>
+        <field name="model">relationship.resident.family</field>
+        <field name="arch" type="xml">
+            <search>
+                
+            </search>
+        </field>
+    </record>
+
+    <!-- Action relationship.resident.family -->
+    <record id="action_relationship_resident_family" model="ir.actions.act_window">
+        <field name="name">Relationship Resident Family</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">relationship.resident.family</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Relationship Resident Family.
+            </p>
+        </field>
+    </record>
+
+</odoo>

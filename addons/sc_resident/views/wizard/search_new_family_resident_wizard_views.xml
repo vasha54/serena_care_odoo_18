@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+
+    <!-- View search.new.family.resident.wizard form -->
+    <record id="view_search_new_family_resident_wizard_form" model="ir.ui.view">
+        <field name="name">view.search.new.family.resident.wizard.form</field>
+        <field name="model">search.new.family.resident.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Search New Family Resident Wizard">
+                <sheet>
+                   <group col="2">
+                        <group name="label_family" string="Persona">
+                            <field name="family_id" nolabel="1" required="1"/>
+                        </group>
+                        <group name="label_kinship" string="Parentesco" >
+                            <field name="kinship_id" nolabel="1" required="1"/>
+                        </group>
+                   </group>
+                    <group col="2" colspan="2" string="Niveles de autorización">
+                        <field name="auth_level_ids" nolabel="1"  widget="many2many_tags" 
+                        required="1"
+                        />
+                    </group>
+                </sheet>
+                <footer>
+                    <button 
+                        name="action_create_family" 
+                        string="Registrar familiar" 
+                        type="object" 
+                        class="btn-primary"/>
+                    <button 
+                        string="Cancelar" 
+                        special="cancel" 
+                        class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

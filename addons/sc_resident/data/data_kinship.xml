@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Direct Relationships -->
+        <record id="kinship_father" model="family.kinship">
+            <field name="name">Padre</field>
+            <field name="inverse_relation">Hija/Hijo</field>
+            <field name="degree">direct</field>
+            <field name="description">Progenitor masculino</field>
+        </record>
+    
+        <record id="kinship_mother" model="family.kinship">
+            <field name="name">Madre</field>
+            <field name="inverse_relation">Hija/Hijo</field>
+            <field name="degree">direct</field>
+            <field name="description">Progenitor femenino</field>
+        </record>
+    
+        <!-- Extended Family -->
+        <record id="kinship_grandfather" model="family.kinship">
+            <field name="name">Abuelo</field>
+            <field name="inverse_relation">Nieto/Nieta</field>
+            <field name="degree">extended</field>
+            <field name="description">Padre de los padres</field>
+        </record>
+
+        <record id="kinship_grandmother" model="family.kinship">
+            <field name="name">Abuela</field>
+            <field name="inverse_relation">Nieto/Nieta</field>
+            <field name="degree">extended</field>
+            <field name="description">Madre de los padres</field>
+        </record>
+        
+        <record id="kinship_uncle" model="family.kinship">
+            <field name="name">Tío</field>
+            <field name="inverse_relation">Sobrina/Sobrino</field>
+            <field name="degree">extended</field>
+            <field name="description">Hermano de los padres</field>
+        </record>
+        
+        <!-- In-law Relationships -->
+        <record id="kinship_father_in_law" model="family.kinship">
+            <field name="name">Suegro</field>
+            <field name="inverse_relation">Yerno/Nuera</field>
+            <field name="degree">in_law</field>
+            <field name="description">Padre del cónyuge</field>
+        </record>
+
+        <record id="kinship_mother_in_law" model="family.kinship">
+            <field name="name">Suegra</field>
+            <field name="inverse_relation">Yerno/Nuera</field>
+            <field name="degree">in_law</field>
+            <field name="description">Madre del cónyuge</field>
+        </record>
+        
+        <record id="kinship_brother_in_law" model="family.kinship">
+            <field name="name">Cuñado</field>
+            <field name="inverse_relation">Cuñado/Cuñada</field>
+            <field name="degree">in_law</field>
+            <field name="description">Hermano de la o del conyuge</field>
+        </record>
+        
+        <record id="kinship_sister_in_law" model="family.kinship">
+            <field name="name">Cuñada</field>
+            <field name="inverse_relation">Cuñado/Cuñada</field>
+            <field name="degree">in_law</field>
+            <field name="description">Hermana de la o del conyuge</field>
+        </record>
+        <!-- Step Relationships -->
+        <record id="kinship_stepfather" model="family.kinship">
+            <field name="name">Padrasto</field>
+            <field name="inverse_relation">Hijastro/Hijastra</field>
+            <field name="degree">other</field>
+            <field name="description">Esposo de la madre que no es el padre biológico</field>
+        </record>
+
+        <record id="kinship_stepmother" model="family.kinship">
+            <field name="name">Madrasta</field>
+            <field name="inverse_relation">Hijastro/Hijastra</field>
+            <field name="degree">other</field>
+            <field name="description">Esposa del padre que no es la madre biológica</field>
+        </record>
+        
+        <!-- Special Relationships -->
+        <record id="kinship_godfather" model="family.kinship">
+            <field name="name">Padrino</field>
+            <field name="inverse_relation">Ahijado/Ahijada</field>
+            <field name="degree">other</field>
+            <field name="description">Padrino en ceremonias religiosas</field>
+        </record>
+
+        <record id="kinship_godmother" model="family.kinship">
+            <field name="name">Madrina</field>
+            <field name="inverse_relation">Ahijado/Ahijada</field>
+            <field name="degree">other</field>
+            <field name="description">Madrina en ceremonias religiosas</field>
+        </record>
+        
+        <!-- Additional relationships -->
+        <record id="kinship_cousin" model="family.kinship">
+            <field name="name">Primo/a</field>
+            <field name="inverse_relation">Primo/a</field>
+            <field name="degree">extended</field>
+            <field name="description">Hijo/a del hermano/a del padre/madre</field>
+        </record>
+        
+        <record id="kinship_great_grandmother" model="family.kinship">
+            <field name="name">Bisabuela</field>
+            <field name="inverse_relation">Bisnieto/a</field>
+            <field name="degree">extended</field>
+            <field name="description">Madre de los abuelos</field>
+        </record>
+
+        <record id="kinship_great_grandfather" model="family.kinship">
+            <field name="name">Bisabuelo</field>
+            <field name="inverse_relation">Bisnieto/a</field>
+            <field name="degree">extended</field>
+            <field name="description">Padre de los abuelos</field>
+        </record>
+        
+        <record id="kinship_adopted_son" model="family.kinship">
+            <field name="name">Hijo adoptado</field>
+            <field name="inverse_relation">Padre adoptivo</field>
+            <field name="degree">direct</field>
+            <field name="description">Hijo varón legalmente adoptado</field>
+        </record>
+        
+        <record id="kinship_foster_daughter" model="family.kinship">
+            <field name="name">Hija de acogida</field>
+            <field name="inverse_relation">Padre o madre de acogida</field>
+            <field name="degree">other</field>
+            <field name="description">Niña bajo tutela temporal</field>
+        </record>
+        
+        <record id="kinship_half_brother" model="family.kinship">
+            <field name="name">Medio hermano</field>
+            <field name="inverse_relation">Medio hermano</field>
+            <field name="degree">direct</field>
+            <field name="description">Hermano que comparte un progenitor biológico</field>
+        </record>
+        
+        <record id="kinship_ex_spouse" model="family.kinship">
+            <field name="name">Excónyuge</field>
+            <field name="inverse_relation">Excónyuge</field>
+            <field name="degree">other</field>
+            <field name="description">Exesposo o exesposa después del divorcio</field>
+        </record>
+        
+        <record id="kinship_betrothed" model="family.kinship">
+            <field name="name">Prometido</field>
+            <field name="inverse_relation">Prometido</field>
+            <field name="degree">other</field>
+            <field name="description">Comprometido para casarse</field>
+        </record>
+    
+        <record id="kinship_legal_guardian" model="family.kinship">
+            <field name="name">Tutor legal</field>
+            <field name="inverse_relation">Tutelado</field>
+            <field name="degree">other</field>
+            <field name="description">Persona con responsabilidad legal sobre otra persona</field>
+        </record>
+
+<!-- Nietos (inversa de abuelo/abuela) -->
+        <record id="kinship_grandson" model="family.kinship">
+            <field name="name">Nieto</field>
+            <field name="inverse_relation">Abuelo/Abuela</field>
+            <field name="degree">extended</field>
+            <field name="description">Hijo del hijo o hija</field>
+        </record>
+        
+        <record id="kinship_granddaughter" model="family.kinship">
+            <field name="name">Nieta</field>
+            <field name="inverse_relation">Abuelo/Abuela</field>
+            <field name="degree">extended</field>
+            <field name="description">Hija del hijo o hija</field>
+        </record>
+
+        <!-- Bisnietos (inversa de bisabuelo/bisabuela) -->
+        <record id="kinship_great_grandson" model="family.kinship">
+            <field name="name">Bisnieto</field>
+            <field name="inverse_relation">Bisabuelo/Bisabuela</field>
+            <field name="degree">extended</field>
+            <field name="description">Hijo del nieto o nieta</field>
+        </record>
+        
+        <record id="kinship_great_granddaughter" model="family.kinship">
+            <field name="name">Bisnieta</field>
+            <field name="inverse_relation">Bisabuelo/Bisabuela</field>
+            <field name="degree">extended</field>
+            <field name="description">Hija del nieto o nieta</field>
+        </record>
+
+        <!-- Tataranietos (nueva generación) -->
+        <record id="kinship_great_great_grandson" model="family.kinship">
+            <field name="name">Tataranieto</field>
+            <field name="inverse_relation">Tatarabuelo/Tatarabuela</field>
+            <field name="degree">extended</field>
+            <field name="description">Hijo del bisnieto o bisnieta</field>
+        </record>
+        
+        <record id="kinship_great_great_granddaughter" model="family.kinship">
+            <field name="name">Tataranieta</field>
+            <field name="inverse_relation">Tatarabuelo/Tatarabuela</field>
+            <field name="degree">extended</field>
+            <field name="description">Hija del bisnieto o bisnieta</field>
+        </record>
+
+        <!-- Hijos (inversa de padre/madre) -->
+        <record id="kinship_son" model="family.kinship">
+            <field name="name">Hijo</field>
+            <field name="inverse_relation">Padre/Madre</field>
+            <field name="degree">direct</field>
+            <field name="description">Descendiente masculino directo</field>
+        </record>
+        
+        <record id="kinship_daughter" model="family.kinship">
+            <field name="name">Hija</field>
+            <field name="inverse_relation">Padre/Madre</field>
+            <field name="degree">direct</field>
+            <field name="description">Descendiente femenino directo</field>
+        </record>
+
+        <!-- Sobrinos (inversa de tío/tía) -->
+        <record id="kinship_nephew" model="family.kinship">
+            <field name="name">Sobrino</field>
+            <field name="inverse_relation">Tío/Tía</field>
+            <field name="degree">extended</field>
+            <field name="description">Hijo del hermano o hermana</field>
+        </record>
+        
+        <record id="kinship_niece" model="family.kinship">
+            <field name="name">Sobrina</field>
+            <field name="inverse_relation">Tío/Tía</field>
+            <field name="degree">extended</field>
+            <field name="description">Hija del hermano o hermana</field>
+        </record>
+
+    </data>
+</odoo>

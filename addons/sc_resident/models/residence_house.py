@@ -27,14 +27,3 @@ class ResidenceHouse(models.Model):
         for rec in self:
             rec.resident_count = len(rec.resident_ids.filtered(lambda resident: not resident.is_deleted))
 
-    def open_reassignment_resident_wizard(self):
-        return {
-            'name': "Reasignar Residentes",
-            'type': 'ir.actions.act_window',
-            'res_model': 'reassign.resident.residence.wizard',
-            'view_mode': 'form',
-            'target': 'new',
-            'context': {
-                'default_current_residence_id': self.id,
-            }
-        }

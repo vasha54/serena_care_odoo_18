@@ -1,0 +1,68 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Niveles básicos de acceso -->
+        <record id="auth_level_view" model="auth.level">
+            <field name="name">Solo Visualización</field>
+        </record>
+        
+        <record id="auth_level_talk" model="auth.level">
+            <field name="name">Comunicación Básica</field>
+        </record>
+        
+        <record id="auth_level_outings" model="auth.level">
+            <field name="name">Autorización para Salidas</field>
+        </record>
+
+        <!-- Niveles combinados -->
+        <record id="auth_level_view_talk" model="auth.level">
+            <field name="name">Ver y Comunicar</field>
+        </record>
+        
+        <record id="auth_level_view_outings" model="auth.level">
+            <field name="name">Ver y Sacar</field>
+        </record>
+        
+        <record id="auth_level_talk_outings" model="auth.level">
+            <field name="name">Comunicar y Sacar</field>
+        </record>
+        
+        <record id="auth_level_full" model="auth.level">
+            <field name="name">Acceso Completo</field>
+        </record>
+
+        <!-- Niveles especializados -->
+        <record id="auth_level_medical" model="auth.level">
+            <field name="name">Acceso Médico</field>
+        </record>
+        
+        <record id="auth_level_financial" model="auth.level">
+            <field name="name">Gestión Financiera</field>
+        </record>
+        
+        <record id="auth_level_emergency" model="auth.level">
+            <field name="name">Contacto de Emergencia</field>
+        </record>
+
+        <!-- Niveles con restricciones -->
+        <record id="auth_level_supervised" model="auth.level">
+            <field name="name">Visita Supervisada</field>
+        </record>
+        
+        <record id="auth_level_daytime" model="auth.level">
+            <field name="name">Acceso Diurno</field>
+        </record>
+        
+        <record id="auth_level_weekend" model="auth.level">
+            <field name="name">Acceso Fin de Semana</field>
+        </record>
+
+        <!-- Niveles administrativos -->
+        <record id="auth_level_legal" model="auth.level">
+            <field name="name">Representante Legal</field>
+        </record>
+        
+        <record id="auth_level_limited" model="auth.level">
+            <field name="name">Acceso Limitado</field>
+        </record>
+    </data>
+</odoo>

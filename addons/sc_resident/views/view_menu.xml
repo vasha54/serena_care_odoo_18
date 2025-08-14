@@ -11,4 +11,19 @@
         action="action_resident_delete"
         parent="menu_serena_care_root_resident"
         sequence="1"/>
+
+    <menuitem 
+        id="menu_kinship" 
+        name="Parentesco" 
+        parent="menu_serena_care_root_resident" 
+        action="action_family_kinship" 
+        sequence="2"/>
+
+    <menuitem 
+        id="menu_auth_level" 
+        name="Nivel de autorización" 
+        parent="menu_serena_care_root_resident" 
+        action="action_auth_level" 
+        sequence="3"/>
+
 </odoo>

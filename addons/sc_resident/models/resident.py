@@ -42,6 +42,12 @@ class Resident(models.Model):
         default=lambda self: self.env.ref('base.mx',False),
         help='País de origen del residente'
     )
+    family_ids = fields.One2many(
+        'relationship.resident.family', 
+        'resident_id',
+        string='Familiares',
+        help="Familiares asociados a este residente"
+    )
 
     _sql_constraints = [
         ('name_resident_unique', 'UNIQUE(name)', 'El nombre del residente debe ser único!'),

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View family.kinship View List -->
+    <record id="view_family_kinship_list" model="ir.ui.view">
+        <field name="name">view.family.kinship.list</field>
+        <field name="model">family.kinship</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" string="Parentesco"/>
+                <field name="inverse_relation" string="Relación inversa"/>
+                <field name="degree"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View family.kinship form -->
+    <record id="view_family_kinship_form" model="ir.ui.view">
+        <field name="name">view.family.kinship.form</field>
+        <field name="model">family.kinship</field>
+        <field name="arch" type="xml">
+            <form string="Family Kinship">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="inverse_relation"/>
+                            <field name="degree"/>
+                        </group>
+                        <group>
+                            <field name="description" placeholder="Enter relationship details..."/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View family.kinship search -->
+    <record id="view_family_kinship_search" model="ir.ui.view">
+        <field name="name">view.family.kinship.search</field>
+        <field name="model">family.kinship</field>
+        <field name="arch" type="xml">
+            <search>
+                <group expand="0" string="Agrupar por">
+                    <filter string="Grado de parentesco" name="degree" domain="[]" context="{'group_by':'degree'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action family.kinship -->
+    <record id="action_family_kinship" model="ir.actions.act_window">
+        <field name="name">Parentescos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">family.kinship</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar un nuevo Parentesco.
+            </p>
+        </field>
+    </record>
+
+</odoo>
