@@ -1,0 +1,63 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Common routes from catalog updates :cite[1]:cite[3] -->
+        <record id="route_oral" model="administration.route">
+            <field name="name">Oral</field>
+        </record>
+        <record id="route_intravenosa" model="administration.route">
+            <field name="name">Intravenosa</field>
+        </record>
+        <record id="route_intramuscular" model="administration.route">
+            <field name="name">Intramuscular</field>
+        </record>
+        <record id="route_subcutanea" model="administration.route">
+            <field name="name">Subcutánea</field>
+        </record>
+        <record id="route_intratecal" model="administration.route">
+            <field name="name">Intratecal</field>
+        </record>
+        
+        <!-- Specialized routes from clinical guidelines :cite[2] -->
+        <record id="route_sublingual" model="administration.route">
+            <field name="name">Sublingual</field>
+        </record>
+        <record id="route_bucal" model="administration.route">
+            <field name="name">Bucal</field>
+        </record>
+        <record id="route_rectal" model="administration.route">
+            <field name="name">Rectal</field>
+        </record>
+        <record id="route_vaginal" model="administration.route">
+            <field name="name">Vaginal</field>
+        </record>
+        <record id="route_oftalmica" model="administration.route">
+            <field name="name">Oftálmica</field>
+        </record>
+        <record id="route_otica" model="administration.route">
+            <field name="name">Ótica</field>
+        </record>
+        <record id="route_nasal" model="administration.route">
+            <field name="name">Nasal</field>
+        </record>
+        <record id="route_inhalacion" model="administration.route">
+            <field name="name">Inhalación</field>
+        </record>
+        <record id="route_nebulizacion" model="administration.route">
+            <field name="name">Nebulización</field>
+        </record>
+        <record id="route_topica" model="administration.route">
+            <field name="name">Tópica</field>
+        </record>
+        <record id="route_transdermica" model="administration.route">
+            <field name="name">Transdérmica</field>
+        </record>
+        
+        <!-- Additional routes from oncology specifications :cite[1]:cite[3] -->
+        <record id="route_infusion" model="administration.route">
+            <field name="name">Infusión intravenosa</field>
+        </record>
+        <record id="route_venoclisis" model="administration.route">
+            <field name="name">Venoclisis</field>
+        </record>
+    </data>
+</odoo>

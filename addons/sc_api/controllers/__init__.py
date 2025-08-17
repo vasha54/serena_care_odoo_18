@@ -4,3 +4,4 @@ from . import controllers_base
 from . import auth
 from . import residence
 from . import resident
+from . import vital_signs

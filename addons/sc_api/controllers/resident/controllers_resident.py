@@ -66,7 +66,11 @@ class ResidentController(BaseAPIController):
             _logger.info(f"Response: {answer}")
  
             return Response(
-                json.dumps({"status": "success", "data": answer}),
+                json.dumps({
+                                "status": "success", 
+                                "message": "Datos obtenidos correctamente",  
+                                "data": answer
+                            }),
                 headers={"Content-Type": "application/json"},
             )
         except Exception as e:

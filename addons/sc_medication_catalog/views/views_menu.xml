@@ -3,6 +3,7 @@
     <menuitem id="menu_serena_care_root_medication_catalog"
         name="Medicamentos"
         sequence="-4"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
         web_icon="sc_medication_catalog,static/description/icon.png"/>
 
     
@@ -10,23 +11,48 @@
         name="Medicamentos"
         action="action_medicament_product"
         sequence="0"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
         parent="menu_serena_care_root_medication_catalog"/>
 
     <menuitem id="menu_product_category_medicament"
         name="Grupos de medicamentos"
         action="action_medicament_category"
         sequence="1"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"  
         parent="menu_serena_care_root_medication_catalog"/>
+
+    <menuitem id="menu_medicament_config"
+        name="Configuración"
+        sequence="2"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
+        parent="menu_serena_care_root_medication_catalog"/>
+
 
     <menuitem id="menu_pharmaceutical_form"
         name="Formas Farmacéuticas"
         action="action_pharmaceutical_form"
         sequence="2"
-        parent="menu_serena_care_root_medication_catalog"/>
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
+        parent="menu_medicament_config"/>
+
+    <menuitem id="menu_medicament_substance"
+        name="Activos y Excipientes"
+        action="action_medicament_substance"
+        sequence="3"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
+        parent="menu_medicament_config"/>
     
-    <!-- <menuitem id="menu_route_administration"
+    <menuitem id="menu_route_administration"
         name="Vías de Administración"
-        action="action_route_administration"
-        sequence="2"
-        parent="menu_root_medication_catalog"/> -->
+        action="action_administration_route"
+        sequence="4"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
+        parent="menu_medicament_config"/>
+
+    <menuitem id="menu_population_group"
+        name="Grupo Poblacional"
+        action="action_population_group"
+        sequence="5"
+        groups="sc_group.group_doctor,sc_group.group_residence_manager,base.group_system"
+        parent="menu_medicament_config"/>
 </odoo>

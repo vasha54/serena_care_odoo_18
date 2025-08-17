@@ -1,6 +1,7 @@
 import json
 import odoo
 import logging
+import jwt
 
 from odoo import _, fields, http
 from odoo.http import Response
@@ -105,6 +106,20 @@ class BaseAPIController(http.Controller):
             headers={"Content-Type": "application/json"},
         )
 
-    @http.route("/api_serena/ping", type='json', auth='none')
+    def _get_token(self):
+        # Extraer token del encabezado Authorization
+        auth_header = http.request.httprequest.headers.get('Authorization')
+        if not auth_header or 'Bearer ' not in auth_header:
+            raise Exception("Encabezado de autorización inválido")
+            
+        token = auth_header.split('Bearer ')[1].strip()
+        return token
+
+    def _get_payload(self,_token):
+        payload = jwt.decode(_token, BaseAPIController.SECRET_KEY, algorithms=[BaseAPIController.ALGORITHM])
+        return payload
+                
+
+    @http.route("/api_serena/v1/ping", type='json', auth='none')
     def ping(self):
         return {"status": "pong"} 

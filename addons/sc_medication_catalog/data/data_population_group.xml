@@ -1,0 +1,78 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Grupos poblacionales según ciclo vital -->
+        <record id="population_neonatos" model="population.group">
+            <field name="name">Neonatos (0-28 días)</field>
+        </record>
+        <record id="population_lactantes" model="population.group">
+            <field name="name">Lactantes (1-23 meses)</field>
+        </record>
+        <record id="population_ninos" model="population.group">
+            <field name="name">Niños (2-11 años)</field>
+        </record>
+        <record id="population_adolescentes" model="population.group">
+            <field name="name">Adolescentes (12-18 años)</field>
+        </record>
+        <record id="population_adultos" model="population.group">
+            <field name="name">Adultos (19-65 años)</field>
+        </record>
+        <record id="population_geriatricos" model="population.group">
+            <field name="name">Adultos mayores (+65 años)</field>
+        </record>
+        
+        <!-- Grupos especiales por condición fisiológica -->
+        <record id="population_embarazo" model="population.group">
+            <field name="name">Embarazadas</field>
+        </record>
+        <record id="population_lactancia" model="population.group">
+            <field name="name">Mujeres en lactancia</field>
+        </record>
+        
+        <!-- Grupos con condiciones clínicas especiales -->
+        <record id="population_renal" model="population.group">
+            <field name="name">Pacientes con insuficiencia renal</field>
+        </record>
+        <record id="population_hepatico" model="population.group">
+            <field name="name">Pacientes con insuficiencia hepática</field>
+        </record>
+        <record id="population_diabeticos" model="population.group">
+            <field name="name">Pacientes diabéticos</field>
+        </record>
+        <record id="population_hipertensos" model="population.group">
+            <field name="name">Pacientes hipertensos</field>
+        </record>
+        <record id="population_oncologicos" model="population.group">
+            <field name="name">Pacientes oncológicos</field>
+        </record>
+        
+        <!-- Grupos por características farmacocinéticas -->
+        <record id="population_obesos" model="population.group">
+            <field name="name">Pacientes con obesidad</field>
+        </record>
+        <record id="population_desnutridos" model="population.group">
+            <field name="name">Pacientes desnutridos</field>
+        </record>
+        
+        <!-- Grupos especiales de farmacovigilancia -->
+        <record id="population_alergicos" model="population.group">
+            <field name="name">Pacientes con historial alérgico</field>
+        </record>
+        <record id="population_polidemedicados" model="population.group">
+            <field name="name">Pacientes polimedicados</field>
+        </record>
+        
+        <!-- Grupos adicionales según catálogo mexicano -->
+        <record id="population_recien_nacidos" model="population.group">
+            <field name="name">Recién nacidos prematuros</field>
+        </record>
+        <record id="population_inmunocomprometidos" model="population.group">
+            <field name="name">Pacientes inmunocomprometidos</field>
+        </record>
+        <record id="population_criticos" model="population.group">
+            <field name="name">Pacientes en estado crítico</field>
+        </record>
+        <record id="population_paliativos" model="population.group">
+            <field name="name">Cuidados paliativos</field>
+        </record>
+    </data>
+</odoo>

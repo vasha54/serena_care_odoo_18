@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">view.resident.form</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//page[@name='general']" position="after">
+                <page name="vital_signs" string="Signos Vitales" invisible="not id">
+                    <group  string="Registros">
+
+                        <field name="vital_signs_ids" options="{'create':false, 'delete':false}" nolabel="1">
+                            <list default_order="date desc" optional="show" export_xlsx="true" export_csv="true">
+                                <field name="date" width="120"/>
+                                <field name="temperature" width="100"/>
+                                <field name="blood_pressure" width="100"/>
+                                <field string="Frec. Cardiaca" name="heart_rate" width="100"/>
+                                <field string="Frec. Respiratoria" name="respiratory_rate" width="100"/>
+                                <field name="weight" width="100"/>
+                                <field name="oxygen_saturation" width="100"/>
+                                <field name="glucose" width="100"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

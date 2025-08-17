@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View vital.signs list -->
+    <record id="view_vital_signs_list" model="ir.ui.view">
+        <field name="name">view.vital.signs.list</field>
+        <field name="model">vital.signs</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc"  create="false" delete="false">
+                <field name="date"/> 
+                <field name="resident_id"/>
+                <field name="user_id"/> 
+                <field name="temperature"/>
+                <field name="blood_pressure"/>
+                <field string="Frec. Cardiaca" name="heart_rate"/>
+                <field string="Frec. Respiratoria" name="respiratory_rate"/>
+                <field name="weight"/>
+                <field name="oxygen_saturation"/>
+                <field name="glucose"/>
+            </list>
+        </field>
+    </record>
+
+    
+
+    <!-- View vital.signs form -->
+    <record id="view_vital_signs_form" model="ir.ui.view">
+        <field name="name">view.vital.signs.form</field>
+        <field name="model">vital.signs</field>
+        <field name="arch" type="xml">
+            <form string="Vital Signs" create="false" delete="false" >
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" readonly="1"/> 
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="La muestra inicial fue tomada por:" name="user_id" readonly="1"/>
+                        <field string="Fecha y hora" name="date" readonly="1" />
+                    </group>
+                    <group col="2" colspan="2" string="Parámetros">
+                        <group>
+                                <field name="temperature"/>
+                                <field string="Frec. Cardiaca" name="heart_rate"/>
+                                <field string="Frec. Respiratoria" name="respiratory_rate"/>
+                                <field name="weight"/>
+                        </group>
+                        <group>
+                                <field name="systolic" />
+                                <field name="diastolic" />
+                                <field name="oxygen_saturation"/>
+                                <field name="glucose"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter reload_on_follower="True" class="vital_signs_chatter"/>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!-- View vital.signs search -->
+    <record id="view_vital_signs_search" model="ir.ui.view">
+        <field name="name">view.vital.signs.search</field>
+        <field name="model">vital.signs</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="date"/>
+                <field name="temperature"/>
+                <field name="heart_rate"/>
+                <field name="respiratory_rate"/>
+                <field name="weight"/>
+                <field name="oxygen_saturation"/>
+                <field name="glucose"/>
+                                
+                <filter string="Hoy" name="today" 
+                        domain="[('date','&gt;=', context_today().start_of('day')), 
+                        ('date','&lt;=', context_today().end_of('day'))]"/>
+                <filter string="Últimos 7 días" name="last_week" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=7))]"/>
+                <filter string="Último mes" name="last_month" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=30))]"/>
+                <filter string="Último año" name="last_year" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=365))]"/>
+                <filter string="Rango de fechas" name="date_range" 
+                        date="date"/>
+                <filter string="Agrupado por mes" name="group_by_month" 
+                        context="{'group_by':'date:month'}"/>
+                <filter string="Agrupado por usuario" name="group_by_user" 
+                                context="{'group_by':'user_id'}"/>
+                <filter string="Agrupado por residente" name="group_by_resident" 
+                                context="{'group_by':'resident_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action vital.signs -->
+    <record id="action_vital_signs" model="ir.actions.act_window">
+        <field name="name">Listado de signos vitales</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vital.signs</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar Signos Vitales.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,23 +1,32 @@
-import re
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError, UserError
 
 import logging
+import re
+
 _logger = logging.getLogger(__name__)
 
-class PharmaceuticalForm(models.Model):
-    _name = 'pharmaceutical.form'
+class PopulationGroup(models.Model):
+    _name = 'population.group'
+    _description = 'Grupo Poblacional sobre la cual se aplica el medicamento'
+    _order = 'name asc'
 
     active = fields.Boolean(string='Activa', default=True)
-    name =  fields.Char(string="Nombre", required=True, upper=True)
+    name = fields.Char(string='Nombre', required=True)
     slug = fields.Char(
         string="Slug", compute="_compute_slug", readonly=True, store=True
     )
-    medicament_ids = fields.One2many(
-        'medicament.product', 
-        'pharmaceutical_form_id', 
-        string='Medicamentos que usan esta forma farmacéutica'
+    dosage_ids = fields.One2many(
+        'medicament.dosage', 
+        'population_group_id', 
+        string='Dosis que usan este grupo poblacional'
     )
+
+    _sql_constraints = [
+        ('name_slug_population_group', 
+         'UNIQUE(slug)', 
+         '¡El nombre del grupo poblacional ya existe (ignorando mayúsculas/minúsculas)!')
+    ]    
 
     @api.depends("name")
     def _compute_slug(self):
@@ -32,7 +41,6 @@ class PharmaceuticalForm(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            vals['name'] = vals.get('name', '').upper()
             existing_record_slug = self.search(
                 [
                     ("slug", "=", self._generate_slug(vals.get("name"))),
@@ -42,7 +50,7 @@ class PharmaceuticalForm(models.Model):
 
             if existing_record_slug:
                 raise ValidationError(
-                    f"Una forma farmacéuticas con nombre '{vals['name']}' ya existe."
+                    f"Un grupo poblacional con nombre '{vals['name']}' ya existe."
                 )
 
 
@@ -50,7 +58,6 @@ class PharmaceuticalForm(models.Model):
 
     def write(self, vals):
         if "name" in vals:
-            vals['name'] = vals['name'].upper()
             existing_record_slug = self.search(
                 [
                     ("slug", "=", self._generate_slug(vals.get("name"))),
@@ -61,25 +68,25 @@ class PharmaceuticalForm(models.Model):
 
             if existing_record_slug:
                 raise ValidationError(
-                    f"Una forma farmacéuticas con nombre '{vals['name']}' ya existe."
+                    f"Un grupo poblacional con nombre '{vals['name']}' ya existe."
                 )
 
         return super().write(vals)
 
     def unlink(self):
-        for form_show in self:
-            if form_show.medicament_ids:
-                medicamentos = form_show.medicament_ids.mapped('name')
+        for group in self:
+            if group.dosage_ids:
+                medicamentos = group.dosage_ids.mapped('medicament_id.name')
                 raise UserError(
-                    _("No se puede eliminar la forma farmacéutica %s porque está siendo utilizado en:\n- %s") % 
-                    (form_show.name, "\n- ".join(medicamentos))
+                    _("No se puede eliminar el grupo poblacional %s porque está siendo utilizado en:\n- %s") % 
+                    (group.name, "\n- ".join(medicamentos))
                 )
         return super().unlink()
 
     def toggle_active(self):
-        for form_show in self:
-            if form_show.active and form_show.medicament_ids:
+        for group in self:
+            if group.active and group.dosage_ids:
                 raise UserError(
-                    "No se puede desactivar una forma de farmacéutica que está en uso en medicamentos"
+                    "No se puede desactivar un grupo poblacional que está en uso en medicamentos"
                 )
         return super().toggle_active()

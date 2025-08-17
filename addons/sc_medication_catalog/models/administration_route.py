@@ -1,17 +1,25 @@
 import re
 from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 
 import logging
 _logger = logging.getLogger(__name__)
 
-class RouteAdministration(models.Model):
-    _name = 'route.administration'
+class AdministrationRoute(models.Model):
+    _name = 'administration.route'
 
-    name =  fields.Char(string="Nombre", required=True, upper=True)
+    active = fields.Boolean(string='Activa', default=True)
+    name =  fields.Char(string="Nombre", required=True)
     slug = fields.Char(
         string="Slug", compute="_compute_slug", readonly=True, store=True
     )
+    dosage_ids = fields.One2many(
+        'medicament.dosage', 
+        'route_id', 
+        string='Dosis que usan esta vía administrativa'
+    )
+    
+
     @api.depends("name")
     def _compute_slug(self):
         for record in self:
@@ -25,7 +33,6 @@ class RouteAdministration(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            vals['name'] = vals.get('name', '').upper()
             existing_record_slug = self.search(
                 [
                     ("slug", "=", self._generate_slug(vals.get("name"))),
@@ -43,7 +50,6 @@ class RouteAdministration(models.Model):
 
     def write(self, vals):
         if "name" in vals:
-            vals['name'] = vals['name'].upper()
             existing_record_slug = self.search(
                 [
                     ("slug", "=", self._generate_slug(vals.get("name"))),
@@ -58,3 +64,21 @@ class RouteAdministration(models.Model):
                 )
 
         return super().write(vals)
+
+    def unlink(self):
+        for route in self:
+            if route.dosage_ids:
+                medicamentos = route.dosage_ids.mapped('medicament_id.name')
+                raise UserError(
+                    _("No se puede eliminar la via de administración %s porque está siendo utilizado en:\n- %s") % 
+                    (route.name, "\n- ".join(medicamentos))
+                )
+        return super().unlink()
+
+    def toggle_active(self):
+        for route in self:
+            if route.active and route.dosage_ids:
+                raise UserError(
+                    "No se puede desactivar una vía de administración que está en uso en medicamentos"
+                )
+        return super().toggle_active()

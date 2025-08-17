@@ -73,6 +73,7 @@ residencias de ancianos en México.
         'sc_employee',            # Gestión de empleados
         'sc_resident',            # Gestión de residentes 
         'sc_medication_catalog',  # Gestión del catalogo de medicamento
+        'sc_vital_signs',         # Gestión de los signos vitales de los residentes
         'sc_api',                 # API
     ],
     'data': [],

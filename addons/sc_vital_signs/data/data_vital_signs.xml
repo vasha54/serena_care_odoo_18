@@ -1,0 +1,323 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Registro de signos vitales 1 -->
+        <record id="vital_signs_demo1" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-01 08:30:00</field>
+            <field name="temperature">36.5</field>
+            <field name="heart_rate">72</field>
+            <field name="systolic">120</field>
+            <field name="diastolic">80</field>
+            <field name="respiratory_rate">16</field>
+            <field name="weight">65.2</field>
+            <field name="oxygen_saturation">98</field>
+            <field name="glucose">90.0</field>
+            <field name="grip_strength">25.5</field>
+        </record>
+
+        <!-- Registro de signos vitales 2 -->
+        <record id="vital_signs_demo2" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-02 09:00:00</field>
+            <field name="temperature">36.7</field>
+            <field name="heart_rate">75</field>
+            <field name="systolic">122</field>
+            <field name="diastolic">78</field>
+            <field name="respiratory_rate">15</field>
+            <field name="weight">65.0</field>
+            <field name="oxygen_saturation">97</field>
+            <field name="glucose">95.0</field>
+            <field name="grip_strength">26.0</field>
+        </record>
+
+        <!-- Registro de signos vitales 3 -->
+        <record id="vital_signs_demo3" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-03 10:15:00</field>
+            <field name="temperature">37.0</field>
+            <field name="heart_rate">80</field>
+            <field name="systolic">125</field>
+            <field name="diastolic">80</field>
+            <field name="respiratory_rate">18</field>
+            <field name="weight">65.3</field>
+            <field name="oxygen_saturation">99</field>
+            <field name="glucose">100.0</field>
+            <field name="grip_strength">25.0</field>
+        </record>
+
+        <!-- Registro de signos vitales 4 -->
+        <record id="vital_signs_demo4" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-04 11:20:00</field>
+            <field name="temperature">36.8</field>
+            <field name="heart_rate">78</field>
+            <field name="systolic">130</field>
+            <field name="diastolic">85</field>
+            <field name="respiratory_rate">17</field>
+            <field name="weight">64.8</field>
+            <field name="oxygen_saturation">96</field>
+            <field name="glucose">102.0</field>
+            <field name="grip_strength">24.5</field>
+        </record>
+
+        <!-- Registro de signos vitales 5 -->
+        <record id="vital_signs_demo5" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-05 14:00:00</field>
+            <field name="temperature">36.9</field>
+            <field name="heart_rate">82</field>
+            <field name="systolic">128</field>
+            <field name="diastolic">82</field>
+            <field name="respiratory_rate">16</field>
+            <field name="weight">65.1</field>
+            <field name="oxygen_saturation">98</field>
+            <field name="glucose">105.0</field>
+            <field name="grip_strength">26.2</field>
+        </record>
+
+        <!-- Registro de signos vitales 6 -->
+        <record id="vital_signs_demo6" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-06 09:45:00</field>
+            <field name="temperature">37.1</field>
+            <field name="heart_rate">76</field>
+            <field name="systolic">124</field>
+            <field name="diastolic">79</field>
+            <field name="respiratory_rate">14</field>
+            <field name="weight">65.4</field>
+            <field name="oxygen_saturation">97</field>
+            <field name="glucose">92.0</field>
+            <field name="grip_strength">25.8</field>
+        </record>
+
+        <!-- Registro de signos vitales 7 -->
+        <record id="vital_signs_demo7" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-07 08:20:00</field>
+            <field name="temperature">36.6</field>
+            <field name="heart_rate">70</field>
+            <field name="systolic">118</field>
+            <field name="diastolic">77</field>
+            <field name="respiratory_rate">15</field>
+            <field name="weight">64.9</field>
+            <field name="oxygen_saturation">99</field>
+            <field name="glucose">88.0</field>
+            <field name="grip_strength">26.5</field>
+        </record>
+
+        <!-- Registro de signos vitales 8 -->
+        <record id="vital_signs_demo8" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-08 10:30:00</field>
+            <field name="temperature">37.2</field>
+            <field name="heart_rate">85</field>
+            <field name="systolic">132</field>
+            <field name="diastolic">86</field>
+            <field name="respiratory_rate">19</field>
+            <field name="weight">65.6</field>
+            <field name="oxygen_saturation">95</field>
+            <field name="glucose">115.0</field>
+            <field name="grip_strength">24.0</field>
+        </record>
+
+        <!-- Registro de signos vitales 9 -->
+        <record id="vital_signs_demo9" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-09 13:15:00</field>
+            <field name="temperature">36.4</field>
+            <field name="heart_rate">68</field>
+            <field name="systolic">116</field>
+            <field name="diastolic">75</field>
+            <field name="respiratory_rate">13</field>
+            <field name="weight">64.7</field>
+            <field name="oxygen_saturation">100</field>
+            <field name="glucose">85.0</field>
+            <field name="grip_strength">27.0</field>
+        </record>
+
+        <!-- Registro de signos vitales 10 -->
+        <record id="vital_signs_demo10" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-10 11:00:00</field>
+            <field name="temperature">37.3</field>
+            <field name="heart_rate">90</field>
+            <field name="systolic">135</field>
+            <field name="diastolic">88</field>
+            <field name="respiratory_rate">20</field>
+            <field name="weight">66.0</field>
+            <field name="oxygen_saturation">94</field>
+            <field name="glucose">125.0</field>
+            <field name="grip_strength">23.5</field>
+        </record>
+
+        <!-- Registro de signos vitales 11 -->
+        <record id="vital_signs_demo11" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-11 09:10:00</field>
+            <field name="temperature">36.3</field>
+            <field name="heart_rate">65</field>
+            <field name="systolic">112</field>
+            <field name="diastolic">72</field>
+            <field name="respiratory_rate">12</field>
+            <field name="weight">64.5</field>
+            <field name="oxygen_saturation">98</field>
+            <field name="glucose">82.0</field>
+            <field name="grip_strength">27.5</field>
+        </record>
+
+        <!-- Registro de signos vitales 12 -->
+        <record id="vital_signs_demo12" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-12 15:00:00</field>
+            <field name="temperature">37.4</field>
+            <field name="heart_rate">95</field>
+            <field name="systolic">140</field>
+            <field name="diastolic">90</field>
+            <field name="respiratory_rate">22</field>
+            <field name="weight">66.5</field>
+            <field name="oxygen_saturation">93</field>
+            <field name="glucose">130.0</field>
+            <field name="grip_strength">22.0</field>
+        </record>
+
+        <!-- Registro de signos vitales 13 -->
+        <record id="vital_signs_demo13" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-13 08:45:00</field>
+            <field name="temperature">36.9</field>
+            <field name="heart_rate">79</field>
+            <field name="systolic">126</field>
+            <field name="diastolic">81</field>
+            <field name="respiratory_rate">16</field>
+            <field name="weight">65.2</field>
+            <field name="oxygen_saturation">97</field>
+            <field name="glucose">98.0</field>
+            <field name="grip_strength">25.3</field>
+        </record>
+
+        <!-- Registro de signos vitales 14 -->
+        <record id="vital_signs_demo14" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-14 10:20:00</field>
+            <field name="temperature">37.0</field>
+            <field name="heart_rate">83</field>
+            <field name="systolic">129</field>
+            <field name="diastolic">84</field>
+            <field name="respiratory_rate">17</field>
+            <field name="weight">65.7</field>
+            <field name="oxygen_saturation">96</field>
+            <field name="glucose">108.0</field>
+            <field name="grip_strength">24.8</field>
+        </record>
+
+        <!-- Registro de signos vitales 15 -->
+        <record id="vital_signs_demo15" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-15 12:30:00</field>
+            <field name="temperature">36.7</field>
+            <field name="heart_rate">77</field>
+            <field name="systolic">121</field>
+            <field name="diastolic">79</field>
+            <field name="respiratory_rate">15</field>
+            <field name="weight">65.1</field>
+            <field name="oxygen_saturation">98</field>
+            <field name="glucose">94.0</field>
+            <field name="grip_strength">26.1</field>
+        </record>
+
+        <!-- Registro de signos vitales 16 -->
+        <record id="vital_signs_demo16" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-16 09:30:00</field>
+            <field name="temperature">36.5</field>
+            <field name="heart_rate">73</field>
+            <field name="systolic">119</field>
+            <field name="diastolic">78</field>
+            <field name="respiratory_rate">14</field>
+            <field name="weight">64.8</field>
+            <field name="oxygen_saturation">99</field>
+            <field name="glucose">89.0</field>
+            <field name="grip_strength">26.7</field>
+        </record>
+
+        <!-- Registro de signos vitales 17 -->
+        <record id="vital_signs_demo17" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-17 11:45:00</field>
+            <field name="temperature">37.1</field>
+            <field name="heart_rate">87</field>
+            <field name="systolic">133</field>
+            <field name="diastolic">87</field>
+            <field name="respiratory_rate">18</field>
+            <field name="weight">65.8</field>
+            <field name="oxygen_saturation">95</field>
+            <field name="glucose">118.0</field>
+            <field name="grip_strength">23.8</field>
+        </record>
+
+        <!-- Registro de signos vitales 18 -->
+        <record id="vital_signs_demo18" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-18 14:10:00</field>
+            <field name="temperature">36.8</field>
+            <field name="heart_rate">81</field>
+            <field name="systolic">127</field>
+            <field name="diastolic">83</field>
+            <field name="respiratory_rate">16</field>
+            <field name="weight">65.3</field>
+            <field name="oxygen_saturation">97</field>
+            <field name="glucose">103.0</field>
+            <field name="grip_strength">25.2</field>
+        </record>
+
+        <!-- Registro de signos vitales 19 -->
+        <record id="vital_signs_demo19" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-19 10:00:00</field>
+            <field name="temperature">37.2</field>
+            <field name="heart_rate">88</field>
+            <field name="systolic">134</field>
+            <field name="diastolic">89</field>
+            <field name="respiratory_rate">19</field>
+            <field name="weight">66.2</field>
+            <field name="oxygen_saturation">94</field>
+            <field name="glucose">120.0</field>
+            <field name="grip_strength">23.0</field>
+        </record>
+
+        <!-- Registro de signos vitales 20 -->
+        <record id="vital_signs_demo20" model="vital.signs">
+            <field name="resident_id" ref="sc_resident.resident_2"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="date">2023-08-20 08:50:00</field>
+            <field name="temperature">36.6</field>
+            <field name="heart_rate">74</field>
+            <field name="systolic">122</field>
+            <field name="diastolic">80</field>
+            <field name="respiratory_rate">15</field>
+            <field name="weight">65.0</field>
+            <field name="oxygen_saturation">98</field>
+            <field name="glucose">96.0</field>
+            <field name="grip_strength">26.3</field>
+        </record>
+    </data>
+</odoo>

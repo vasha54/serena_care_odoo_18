@@ -22,7 +22,8 @@ class AuditLog(models.Model):
         ('login', 'Inicio Sesión'),
         ('logout', 'Cierre Sesión'),
         ('access_denied', 'Acceso Denegado'),
-        ('activate_deactivate', 'Activar/Desactivar'), 
+        ('activate_deactivate', 'Activar/Desactivar'),
+        ('change_vital_signs','Modificación de signos vitales'), 
     ], 'Tipo de Acción', required=True)
     details = fields.Text('Detalles Adicionales')
 

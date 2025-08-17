@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vital_signs_user,access_vital_signs_user,model_vital_signs,sc_group.group_residence_user,1,0,0,0
+access_vital_signs_manager,access_vital_signs_manager,model_vital_signs,sc_group.group_residence_manager,1,0,0,0
+access_vital_signs_doctor,access_vital_signs_doctor,model_vital_signs,sc_group.group_doctor,1,1,0,0
+access_vital_signs_admin,access_vital_signs_admin,model_vital_signs,base.group_system,1,1,0,0

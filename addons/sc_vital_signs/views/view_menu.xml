@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_vital_signs"
+        name="Signos Vitales"
+        action="action_vital_signs"
+        sequence="-4"
+        groups="sc_group.group_doctor,base.group_system"
+        web_icon="sc_base,static/description/icon.png"/>
+
+
+</odoo>

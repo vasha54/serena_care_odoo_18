@@ -7,7 +7,7 @@
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <list default_order="active desc, name asc">
-                <field name="active" widget="boolean_toggle" />
+                <field string="Estado" name="active" widget="boolean_toggle" />
                 <field name="name" />
                 <field name="email" />
                 <field name="phone" />

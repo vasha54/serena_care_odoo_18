@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View population.group View List -->
+    <record id="view_population_group_list" model="ir.ui.view">
+        <field name="name">view.population.group.list</field>
+        <field name="model">population.group</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View population.group form -->
+    <record id="view_population_group_form" model="ir.ui.view">
+        <field name="name">view.population.group.form</field>
+        <field name="model">population.group</field>
+        <field name="arch" type="xml">
+            <form string="Population Group">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View population.group search -->
+    <record id="view_population_group_search" model="ir.ui.view">
+        <field name="name">view.population.group.search</field>
+        <field name="model">population.group</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action population.group -->
+    <record id="action_population_group" model="ir.actions.act_window">
+        <field name="name">Grupos Poblacionales</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">population.group</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nuevo Grupo Poblacional.
+            </p>
+        </field>
+    </record>
+
+</odoo>

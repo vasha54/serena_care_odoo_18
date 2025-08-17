@@ -40,18 +40,23 @@ Sistema especializado para la gestión de medicamentos
     'category': 'Healthcare',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product'],
+    'depends': ['base','product','sc_base','sc_group'],
 
     # always loaded
     "data": [
-        "security/ir.model.access.csv",
         "data/data_pharmaceutical_form.xml",
         "data/data_product_category_medicament.xml",
-        "data/data_product_medicament.xml",
+        "data/data_administration_route.xml",
+        "data/data_population_group.xml",
+        "data/data_medicament_substance.xml",
+        "security/ir.model.access.csv",
+        "views/administration_route_views.xml",
         "views/medicament_category_views.xml",
+        "views/medicament_dosage_views.xml",
         "views/medicament_product_views.xml",
+        "views/medicament_substance_views.xml",
         "views/pharmaceutical_form_views.xml",
-        "views/route_administration_views.xml",
+        "views/population_group_views.xml",
         "views/views_menu.xml"
     ],
     # only loaded in demonstration mode

@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from . import route_administration
+from . import administration_route
 from . import pharmaceutical_form
+from . import population_group
 from . import medicament_category
+from . import medicament_substance
 from . import medicament_product
-
-
+from . import medicament_composition
+from . import medicament_dosage

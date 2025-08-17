@@ -15,7 +15,7 @@ class ProductTemplate(models.Model):
     )
     medicament_product_ids = fields.One2many(
         'medicament.product', 
-        'product_tmp_id',
+        'product_template_id',
         string = "Detalles de Medicamento")
     categ_id = fields.Many2one(
         "product.category",
@@ -34,13 +34,13 @@ class ProductTemplate(models.Model):
 class MedicamentProduct(models.Model):
     _name = 'medicament.product'
     _description = "Producto Medicamento"
-    _inherits = {'product.template':'product_tmp_id'}
+    _inherits = {'product.template':'product_template_id'}
 
     _sql_constraints = [
         ('code_medicament_unique', 'UNIQUE(code)', 'La clave debe ser única para cada medicamento!'),
     ]
 
-    product_tmp_id = fields.Many2one(
+    product_template_id = fields.Many2one(
         'product.template',
         string="Plantilla de producto",
         required=True,
@@ -51,41 +51,32 @@ class MedicamentProduct(models.Model):
         'pharmaceutical.form', 
         string='Forma Farmacéutica', 
         required=True, 
-        ondelete='restrict'
+        ondelete='restrict',
     )
-    composition = fields.Text(string="Composición", required=True)
+    composicion_ids = fields.One2many(
+        'medicament.composition', 
+        'medicament_id', 
+        string='Composición',
+        required=True,
+    )
+    dosage_ids = fields.One2many(
+        'medicament.dosage',
+        'medicament_id',
+        string='Dosis por Grupo Poblacional',
+        required=True
+    )
+    others_details_presentation = fields.Text(string="Otros detalles de la presentación", required=True)
     indications = fields.Text(string="Indicaciones", required=True)
-    route_dosage = fields.Text(string="Vía de administración y Dosis", required=True)
-    # adult_dosage = fields.Text(string="Dosis para adultos")
-    # children_dosage = fields.Text(string="Dosis para niños")
-    # adult_route_admin_id = fields.Many2one(
-    #     'route.administration',
-    #     string='Vía de administración para adultos', 
-    #     ondelete='restrict'
-    # )
-    # children_route_admin_id = fields.Many2one(
-    #     'route.administration',
-    #     string='Vía de administración para niños', 
-    #     ondelete='restrict'
-    # )
 
-    
     @api.model
     def create(self, vals):
-        #self._validate_dosage_fields(vals)
+        
         self._validate_code(vals.get('code'))
         vals.update({'is_medicament': True})
         return super().create(vals)
 
     def write(self, vals):
-        # for record in self:
-        #     combined_vals = {
-        #         'children_route_admin_id': vals.get('children_route_admin_id', record.children_route_admin_id.id),
-        #         'children_dosage': vals.get('children_dosage', record.children_dosage),
-        #         'adult_route_admin_id': vals.get('adult_route_admin_id', record.adult_route_admin_id.id),
-        #         'adult_dosage': vals.get('adult_dosage', record.adult_dosage),
-        #     }
-        #     self._validate_dosage_fields(combined_vals)
+        
         if 'code' in vals:
             self._validate_code(vals['code'], self.id)
         vals.update({'is_medicament': True})
@@ -118,6 +109,14 @@ class MedicamentProduct(models.Model):
                 "El código debe tener el formato: XXX.XXX.XXXX.XX "
                 "(donde X es un dígito numérico). Ejemplo: 123.456.7890.12"
             )
+
+    @api.constrains('pharmaceutical_form_id')
+    def _check_pharmaceutical_form_in_use(self):
+        for rec in self:
+            if rec.pharmaceutical_form_id and not rec.pharmaceutical_form_id.active:
+                raise ValidationError(
+                    "La forma de presentación %s está desactivado y no puede usarse" % rec.pharmaceutical_form_id.name
+                )
 
     
 
