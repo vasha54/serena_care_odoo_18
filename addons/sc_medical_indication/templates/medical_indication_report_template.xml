@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_medical_indication_template">
+        <t t-call="web.html_container">
+            <!-- Agregar metadatos y estilos para soportar caracteres especiales -->
+            <meta charset="utf-8"/>
+            <style>
+                /* Usar fuentes que soporten caracteres Unicode */
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+            </style>
+            
+            <div class="page">
+                <h2>Reporte de Indicaciones Médicas</h2>
+                <h3>Residente: <span t-esc="resident_name"/></h3>
+                <p>Total de indicaciones mostradas: <span t-esc="quantity"/></p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Doctor</th>
+                            <th>Tipo</th> 
+                            <th>Indicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="indications" t-as="indication">
+                            <tr>
+                                <td><span t-esc="indication['date']"/></td>
+                                <td><span t-esc="indication['doctor']"/></td>
+                                <td><span t-esc="indication['type']"/></td>
+                                <td><span t-esc="indication['note']"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <record id="action_report_medical_indication" model="ir.actions.report">
+        <field name="name">Reporte de Indicaciones Médicas</field>
+        <field name="model">medical.indication.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_medical_indication.report_medical_indication_template</field>
+        <field name="report_file">sc_medical_indication.report_medical_indication_template</field>
+        <field name="binding_model_id" ref="model_medical_indication_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

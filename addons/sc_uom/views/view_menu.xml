@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Menú principal -->
+    <menuitem 
+        id="menu_serena_care_root_uom_main" 
+        name="Unidades de Medida" 
+        sequence="-1"
+        action="action_uom_categories" 
+        web_icon="sc_base,static/description/icon.png"
+    />
+    
+
+    <!-- Submenú para Categorías -->
+    <menuitem 
+        id="menu_uom_categories" 
+        name="Categorías" 
+        parent="menu_serena_care_root_uom_main" 
+        action="action_uom_categories" 
+        sequence="10"
+    />
+
+    <!-- Submenú para Unidades -->
+    <menuitem 
+        id="menu_uom_units" 
+        name="Unidades" 
+        parent="menu_serena_care_root_uom_main" 
+        action="action_uom_units" 
+        sequence="20"
+    />
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_water_balance" model="ir.ui.view">
+        <field name="name">view.resident.form</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//page[@name='family']" position="before">
+                <page name="water_balance" string="Balance Hídrico" invisible="not id">
+                    <group colspan="4" col="4">
+                        <group name="label_add_medical_indication" string="Registrar" >
+                            <group>
+                                <button 
+                                    name="open_register_income_wizard" 
+                                    string="Ingreso" 
+                                    type="object"
+                                    class="btn-primary"
+                                    invisible="not id"/>
+                                
+                                <button 
+                                    name="open_register_expense_wizard" 
+                                    string="Egreso" 
+                                    type="object"
+                                    class="btn-primary"
+                                    invisible="not id"/>
+                            </group>               
+                        </group>
+                        <group  string="Reporte" >
+                            <group>
+                                <button name="action_open_water_balance_report_wizard" 
+                                        string="Balance hídrico" 
+                                        type="object" 
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+                            </group>
+                        </group>
+                    </group>
+                    <group  string="Registros">
+
+                        <field name="water_balance_ids" options="{'create':false, 'delete':false}" nolabel="1">
+                            <list default_order="create_date desc" optional="show" export_xlsx="true" export_csv="true">
+                                <field string="Fecha/Hora" name="create_date"/>
+                                <field string="Registrado" name="user_id"/>
+                                <field name="type_annotation" />
+                                <field name="route_id" />
+                                <field name="quantity" />
+                                <field name="notes" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

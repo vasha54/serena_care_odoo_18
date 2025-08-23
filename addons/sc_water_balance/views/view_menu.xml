@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_water_balance"
+        name="Balance Hídrico"
+        action="action_water_balance_annotation"
+        sequence="-4"
+        web_icon="sc_base,static/description/icon.png"/>
+
+    <menuitem id="menu_water_balance_route"
+        name="Vías de Ingreso/Egreso"
+        action="action_water_balance_route"
+        sequence="1"
+        parent="menu_serena_care_root_water_balance"/>
+
+</odoo>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <!-- Categoría Tiempo -->
+    <record id="uom_categ_time" model="uom.category">
+        <field name="name">Tiempo</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad de referencia: Día -->
+    <record id="uom_time_day" model="uom.uom">
+        <field name="name">Día</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">1</field>
+        <field name="uom_type">reference</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Año (365 días) -->
+    <record id="uom_time_year" model="uom.uom">
+        <field name="name">Año</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">365</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Mes (30 días) -->
+    <record id="uom_time_month" model="uom.uom">
+        <field name="name">Mes</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">30</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Semana (7 días) -->
+    <record id="uom_time_week" model="uom.uom">
+        <field name="name">Semana</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">7</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Hora (1/24 día) -->
+    <record id="uom_time_hour" model="uom.uom">
+        <field name="name">Hora</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">0.0416667</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Minuto (1/1440 día) -->
+    <record id="uom_time_minute" model="uom.uom">
+        <field name="name">Minuto</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">0.000694444</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Segundo (1/86400 día) -->
+    <record id="uom_time_second" model="uom.uom">
+        <field name="name">Segundo</field>
+        <field name="category_id" ref="uom_categ_time"/>
+        <field name="factor">0.0000115741</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.0001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+   
+   
+</data>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Acciones para los botones de creación -->
+    <!-- <record id="medical_indication_create_general_action" model="ir.actions.act_window">
+        <field name="name">Crear Indicación General</field>
+        <field name="res_model">medical.indication</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="medical_medication_create_medication_action" model="ir.actions.act_window">
+        <field name="name">Crear Indicación de Medicamento</field>
+        <field name="res_model">medical.medication</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record> -->
+
+    <!-- View unified.medical.indication View List -->
+    <record id="view_unified_medical_indication_list" model="ir.ui.view">
+    <field name="name">view.unified.medical.indication.list</field>
+    <field name="model">unified.medical.indication</field>
+    <field name="arch" type="xml">
+        <list default_order="create_date desc" create="false" edit="false" delete="false">
+            <control>
+                <button name="action_create_general" string="Nueva Indicación General" type="object" class="oe_highlight"/>
+                <button name="action_create_medication" string="Nueva Indicación de Medicamento" type="object"/>
+            </control>
+            <field name="indication_id" column_invisible="1" /> 
+            <field string="Fecha/Hora" name="create_date" />
+            <field name="user_id" />
+            <field name="resident_id" />
+            <field name="indication_type" string="Tipo de indicación" />
+            <field name="note" />
+        </list>
+    </field>
+</record>
+
+    
+
+    <!-- View unified.medical.indication search -->
+    <record id="view_unified_medical_indication_search" model="ir.ui.view">
+        <field name="name">unified.medical.indication.search</field>
+        <field name="model">unified.medical.indication</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter name="filter_type" string="Tipo" context="{'group_by':'indication_type'}"/>
+                <filter name="general" string="General" domain="[('indication_type','=','general')]"/>
+                <filter name="medication" string="Medicamento" domain="[('indication_type','=','medication')]"/>
+                
+                
+                <filter string="Agrupado por doctor" name="group_by_user" 
+                        context="{'group_by':'user_id'}"/>
+                <filter string="Agrupado por residente" name="group_by_resident" 
+                        context="{'group_by':'resident_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action unified.medical.indication -->
+    <record id="action_unified_medical_indication" model="ir.actions.act_window">
+        <field name="name">Indicaciones Médicas</field>
+        <field name="res_model">unified.medical.indication</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_unified_medical_indication_list"/>
+        <field name="search_view_id" ref="view_unified_medical_indication_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No hay registros. Haga clic en un botón para agregar Indicaciones Médicas.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <!-- Categoría Medicamentos -->
+    <record id="uom_categ_medication" model="uom.category">
+        <field name="name">Medicamentos</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad de referencia: Tableta -->
+    <record id="uom_med_tablet" model="uom.uom">
+        <field name="name">Tableta</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">reference</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Cápsula (equivalente a tableta) -->
+    <record id="uom_med_capsule" model="uom.uom">
+        <field name="name">Cápsula</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Comprimido (equivalente a tableta) -->
+    <record id="uom_med_tablet_compressed" model="uom.uom">
+        <field name="name">Comprimido</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Gragea (equivalente a tableta) -->
+    <record id="uom_med_coated_pill" model="uom.uom">
+        <field name="name">Gragea</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Blister (10 tabletas) -->
+    <record id="uom_med_blister" model="uom.uom">
+        <field name="name">Blister (10)</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">10</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Caja (20 tabletas) -->
+    <record id="uom_med_box" model="uom.uom">
+        <field name="name">Caja de Med. (20)</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">20</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Frasco (30 tabletas) -->
+    <record id="uom_med_bottle" model="uom.uom">
+        <field name="name">Frasco de Med. (30)</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">30</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Ampolla (para medicamentos inyectables) -->
+    <record id="uom_med_ampoule" model="uom.uom">
+        <field name="name">Ampolla</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Vial (para medicamentos inyectables) -->
+    <record id="uom_med_vial" model="uom.uom">
+        <field name="name">Vial</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Sobre (polvos o granulados) -->
+    <record id="uom_med_sachet" model="uom.uom">
+        <field name="name">Sobre</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Tubo (cremas o ungüentos) -->
+    <record id="uom_med_tube" model="uom.uom">
+        <field name="name">Tubo</field>
+        <field name="category_id" ref="uom_categ_medication"/>
+        <field name="factor">1</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+    </data>
+</odoo>

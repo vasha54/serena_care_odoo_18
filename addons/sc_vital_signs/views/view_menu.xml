@@ -6,6 +6,4 @@
         sequence="-4"
         groups="sc_group.group_doctor,base.group_system"
         web_icon="sc_base,static/description/icon.png"/>
-
-
 </odoo>

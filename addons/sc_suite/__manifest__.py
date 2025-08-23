@@ -57,6 +57,7 @@ residencias de ancianos en México.
         'stock',         # Para gestión de medicamentos e inventarios
         'hr',            # Para gestión de cuidadores
         'crm',           # Para gestión de contactos familiares
+        'uom',           # Para gestión de unidades de medidas
         
         # Módulos adicionales para funcionalidad completa
         'contacts',      # Gestión avanzada de contactos
@@ -68,15 +69,21 @@ residencias de ancianos en México.
         # Módulos específicos de Serena Care
         'sc_base',                # Modelos bases del sistema
         'sc_group',               # Grupos y roles de Serena Care
-        'sc_residence',           # Gestión de residencias 
         'sc_sex',                 # Gestión de sexos
+        'sc_uom',                 # Gestión de las unidades de medición y sus categorias
+        'sc_residence',           # Gestión de residencias 
         'sc_employee',            # Gestión de empleados
         'sc_resident',            # Gestión de residentes 
         'sc_medication_catalog',  # Gestión del catalogo de medicamento
-        'sc_vital_signs',         # Gestión de los signos vitales de los residentes
+        'sc_vital_signs',         # Gestión de los signos vitales de los residentes 
+        'sc_medical_indication',  # Gestión de las indicaciones médicas de los residentes
+        'sc_water_balance',      # Gestión del balance híbrico 
         'sc_api',                 # API
     ],
-    'data': [],
+    'data': [
+        
+    ],
+    
     'installable': True,
     'auto_install': False,
     'application': True,

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View medical.medication View List -->
+    <record id="view_medical_medication_list" model="ir.ui.view">
+        <field name="name">view.medical.medication.list</field>
+        <field name="model">medical.medication</field>
+        <field name="arch" type="xml">
+            <list default_order="create_date desc">
+                <field string="Fecha/Hora" name="create_date"/>
+                <field name="user_id"/>
+                <field name="resident_id"/>
+                <field name="medicament_id" />
+                <field name="pharmaceutical_form_id" />
+                <field name="route_id" />
+                <field name="dosage_str" />
+                <field name="frequency_str" />
+                <field name="period_medication" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View medical.medication form -->
+    <record id="view_medical_medication_form" model="ir.ui.view">
+        <field name="name">view.medical.medication.form</field>
+        <field name="model">medical.medication</field>
+        <field name="arch" type="xml">
+            <form string="Medical Medication">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" /> 
+                        </h1>
+
+                    </div>
+                    <div class="oe_subtitle">
+                        <label for="user_id"/>
+                        <h3>
+                            <field name="user_id" readonly="1" /> 
+                        </h3>
+                        
+                    </div>
+                    <group col="4" colspan="4">
+                        <group col="2" colspan="2">
+                            <group string="Medicamento" col="2" colspan="2">
+                                <field name="medicament_id" required="1"/>
+                                <field name="pharmaceutical_form_id" required="1" readonly="1"/>
+                                <field name="route_id" required="1"/>    
+                            </group>
+                           
+                        </group>
+                        <group col="2" colspan="2">
+                            <group string="Dosis" col="4">
+                                <field name="dosage_amount" nolabel="1"/>
+                                <field name="dosage_unit"  nolabel="1"/>
+                            </group>
+                            <group string="Suministrar cada" col="4">
+                                <field name="frequency_amount"  nolabel="1"/>
+                                <field name="frequency_unit"  nolabel="1"/>
+                            </group>
+                            <group string="Período de medicación" col="4" colspan="4"> 
+                                <field string="Desde:" name="start_date_medication" widget="datetime" />
+                                <field string="Hasta:" name="end_date_medication" widget="datetime"/>
+                            </group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action medical.medication -->
+    <record id="action_medical_medication" model="ir.actions.act_window">
+        <field name="name">Indicaciones de Medicamentos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.medication</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros. Haga clic en un botón para agregar Indicación de medicamento.
+            </p>
+        </field>
+    </record>
+
+</odoo>
+
+    

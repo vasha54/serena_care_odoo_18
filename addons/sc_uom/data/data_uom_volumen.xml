@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <!-- Categoría Volumen -->
+    <record id="uom_categ_volume" model="uom.category">
+        <field name="name">Volumen</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad de referencia: Litro -->
+    <record id="uom_volume_liter" model="uom.uom">
+        <field name="name">Litro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">1</field>
+        <field name="uom_type">reference</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Kilolitro (1000 litros) -->
+    <record id="uom_volume_kiloliter" model="uom.uom">
+        <field name="name">Kilolitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">1000</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Hectolitro (100 litros) -->
+    <record id="uom_volume_hectoliter" model="uom.uom">
+        <field name="name">Hectolitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">100</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decalitro (10 litros) -->
+    <record id="uom_volume_decaliter" model="uom.uom">
+        <field name="name">Decalitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">10</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decilitro (0.1 litro) -->
+    <record id="uom_volume_deciliter" model="uom.uom">
+        <field name="name">Decilitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.1</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Centilitro (0.01 litro) -->
+    <record id="uom_volume_centiliter" model="uom.uom">
+        <field name="name">Centilitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.01</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Mililitro (0.001 litro) -->
+    <record id="uom_volume_milliliter" model="uom.uom">
+        <field name="name">Mililitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Microlitro (0.000001 litro) -->
+    <record id="uom_volume_microliter" model="uom.uom">
+        <field name="name">Microlitro</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.000001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.000001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Galón estadounidense (3.78541 litros) -->
+    <record id="uom_volume_gallon_us" model="uom.uom">
+        <field name="name">Galón (US)</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">3.78541</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Galón imperial (4.54609 litros) -->
+    <record id="uom_volume_gallon_uk" model="uom.uom">
+        <field name="name">Galón (UK)</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">4.54609</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Onza líquida estadounidense (0.0295735 litros) -->
+    <record id="uom_volume_ounce_us" model="uom.uom">
+        <field name="name">Onza Líquida (US)</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.0295735</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Onza líquida imperial (0.0284131 litros) -->
+    <record id="uom_volume_ounce_uk" model="uom.uom">
+        <field name="name">Onza Líquida (UK)</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.0284131</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Pinta estadounidense (0.473176 litros) -->
+    <record id="uom_volume_pint_us" model="uom.uom">
+        <field name="name">Pinta (US)</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.473176</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Pinta imperial (0.568261 litros) -->
+    <record id="uom_volume_pint_uk" model="uom.uom">
+        <field name="name">Pinta (UK)</field>
+        <field name="category_id" ref="uom_categ_volume"/>
+        <field name="factor">0.568261</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+    </data>
+</odoo>

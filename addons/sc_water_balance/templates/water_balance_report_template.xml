@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_water_balance_template">
+        <t t-call="web.html_container">
+            <!-- Agregar metadatos y estilos para soportar caracteres especiales -->
+            <meta charset="utf-8"/>
+            <style>
+                /* Usar fuentes que soporten caracteres Unicode */
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                th, td {
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    text-align: left;
+                }
+                th {
+                    background-color: #f2f2f2;
+                }
+            </style>
+            
+            <div class="page">
+                <h2>Reporte del  Balance Hídríco</h2>
+                <h3>Residente: <span t-esc="resident_name"/></h3>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Doctor</th>
+                            <th>Tipo</th>
+                            <th>Vía</th>
+                            <th>Cantidad</th> 
+                            <th>Observación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="annotations" t-as="annotation">
+                            <tr>
+                                <td><span t-esc="annotation['date']"/></td>
+                                <td><span t-esc="annotation['doctor']"/></td>
+                                <td><span t-esc="annotation['type']"/></td>
+                                <td><span t-esc="annotation['route']"/></td>
+                                <td><span t-esc="annotation['quality']"/></td>
+                                <td><span t-esc="annotation['notes']"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </t>
+    </template>
+
+    <record id="action_report_water_balance" model="ir.actions.report">
+        <field name="name">Reporte de Balance Hídrico</field>
+        <field name="model">water.balance.annotation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_water_balance.report_water_balance_template</field>
+        <field name="report_file">sc_water_balance.report_water_balance_template</field>
+        <field name="binding_model_id" ref="model_water_balance_annotation"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+    <!-- Categoría Longitud -->
+    <record id="uom_categ_length" model="uom.category">
+        <field name="name">Longitud</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad de referencia: Metro -->
+    <record id="uom_length_meter" model="uom.uom">
+        <field name="name">Metro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">1</field>
+        <field name="uom_type">reference</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Kilómetro (1000 metros) -->
+    <record id="uom_length_kilometer" model="uom.uom">
+        <field name="name">Kilómetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">1000</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Hectómetro (100 metros) -->
+    <record id="uom_length_hectometer" model="uom.uom">
+        <field name="name">Hectómetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">100</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decámetro (10 metros) -->
+    <record id="uom_length_decameter" model="uom.uom">
+        <field name="name">Decámetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">10</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decímetro (0.1 metro) -->
+    <record id="uom_length_decimeter" model="uom.uom">
+        <field name="name">Decímetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.1</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Centímetro (0.01 metro) -->
+    <record id="uom_length_centimeter" model="uom.uom">
+        <field name="name">Centímetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.01</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Milímetro (0.001 metro) -->
+    <record id="uom_length_millimeter" model="uom.uom">
+        <field name="name">Milímetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Micrómetro (0.000001 metro) -->
+    <record id="uom_length_micrometer" model="uom.uom">
+        <field name="name">Micrómetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.000001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.000001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Nanómetro (0.000000001 metro) -->
+    <record id="uom_length_nanometer" model="uom.uom">
+        <field name="name">Nanómetro</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.000000001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.000000001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Milla (1609.34 metros) -->
+    <record id="uom_length_mile" model="uom.uom">
+        <field name="name">Milla</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">1609.34</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Yardas (0.9144 metros) -->
+    <record id="uom_length_yard" model="uom.uom">
+        <field name="name">Yarda</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.9144</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Pies (0.3048 metros) -->
+    <record id="uom_length_foot" model="uom.uom">
+        <field name="name">Pie</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.3048</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Pulgadas (0.0254 metros) -->
+    <record id="uom_length_inch" model="uom.uom">
+        <field name="name">Pulgada</field>
+        <field name="category_id" ref="uom_categ_length"/>
+        <field name="factor">0.0254</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+</data>
+</odoo>

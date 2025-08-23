@@ -7,12 +7,12 @@
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <list default_order="active desc, name asc">
-                <field string="Estado" name="active" widget="boolean_toggle" />
-                <field name="name" />
-                <field name="email" />
-                <field name="phone" />
-                <field name="province_id" />
-                <field name="municipality_id" />
+                <field string="Estado" name="active" widget="boolean_toggle" width="40"/>
+                <field name="name"  width="110"/>
+                <field name="email" widget="email" width="120"/>
+                <field name="phone" widget="phone" width="110"/>
+                <field name="province_id" width="110"/>
+                <field name="municipality_id" width="110"/>
             </list>
         </field>
     </record>
@@ -29,51 +29,44 @@
                 </header>
                 <sheet>
                     <div class="oe_title">
-                        <label for="name" />
+                        <label for="name" string="Nombre"/>
                         <h1>
-                            <field name="name" placeholder="Nombre ..." />
+                            <field name="name" placeholder="Nombre ..." required="1"/>
                         </h1>
                     </div>
-                    <group>
-                        <group>
-                            <field string="Teléfono" name="phone" />
-                            <field string="Correo electrónico" name="email" />
-                            <field string="Activa" name="active" />
+                    <group col="4" colspan="4">
+                        <group string="Información General" col="2" colspan="2">
+                            <field string="Teléfono" name="phone" widget="phone" />
+                            <field string="Correo electrónico" name="email" widget="email" />
+                            <field string="Estado" name="active" widget="boolean_toggle" />
                             <field name="schedule"
                                 string="Horario de Atención"
                                 placeholder="..." />
                         </group>
-                        <group>
-                            <field name="image_1920" widget="image" />
-                        </group>
-                    </group>
-                    <notebook>
-                        <page name="address" string="Dirección">
-                            <group>
-                                <group>
-                                    <group>
-                                        <field name="street" placeholder="Calle principal" />
-                                        <field name="street2" placeholder="Entre calle 1" />
-                                        <field name="street3" placeholder="Entre calle 2" />
-                                        <field name="street_number" placeholder="Número" />
-                                    </group>
-                                    <field name="contact_address"
+                        <group string="Dirección" col="2" colspan="2">
+                            <group col="1" colspan="1">
+                                <field string="Calle principal" name="street" placeholder="Calle principal" />
+                                <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" />
+                                <field string="Entre calle #2" name="street3" placeholder="Entre calle 2" />
+                                <field string="Número" name="street_number" placeholder="Número" />
+                                <field name="contact_address"
                                         string="Dirección Completa"
                                         readonly="1"
                                         placeholder="Se genera automáticamente" />
-                                </group>
-                                <group>
-                                    <field string="Estado" name="province_id" placeholder="Estado"
+                            </group>
+                            <group col="1" colspan="1">
+                                <field string="Estado" name="province_id" placeholder="Estado"
                                         class="o_address_country" />
-                                    <field string="Municipio" name="municipality_id"
+                                <field string="Municipio" name="municipality_id"
                                         class="o_address_state"
                                         placeholder="Municipio"
                                         domain="[('province_id','=',province_id)]" />
-                                    <field string="Ciudad" name="city" placeholder="Ciudad"
+                                <field string="Ciudad" name="city" placeholder="Ciudad"
                                         class="o_address_city" />
-                                </group>
                             </group>
-                        </page>
+                        </group>
+                    </group>
+                    <notebook>
                         <page name="services" string="Servicios">
                             <field name="services_ids" domain="[('active', '=', True)]">
                                 <list>

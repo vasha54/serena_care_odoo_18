@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_water_balance_route_manager,water_balance_route_manager,model_water_balance_route,base.group_user,1,1,1,1
+access_water_balance_annotation_manager,water_balance_annotation_manager,model_water_balance_annotation,base.group_user,1,1,1,1
+access_register_water_balance_wizard_manager,register_water_balance_wizard_manager,model_register_water_balance_wizard,base.group_user,1,1,1,1

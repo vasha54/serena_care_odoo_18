@@ -259,6 +259,7 @@ class VitalSignalController(BaseAPIController):
 
                 # - Chequar que el usuario tenga los permisos para hacer
                 # el registro TODO
+
                 # - Chequear que exista el residente 
                 resident = Resident.browse(resident_id)
 

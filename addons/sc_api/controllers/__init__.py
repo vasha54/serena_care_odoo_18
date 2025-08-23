@@ -5,3 +5,7 @@ from . import auth
 from . import residence
 from . import resident
 from . import vital_signs
+from . import medical_indication
+from . import water_balance
+from . import uom
+from . import controller_api_docs

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Vías de Ingreso -->
+        <record id="route_oral" model="water.balance.route">
+            <field name="name">Vía Oral</field>
+        </record>
+
+        <record id="route_intravenosa" model="water.balance.route">
+            <field name="name">Vía Intravenosa</field>
+        </record>
+
+        <record id="route_enteral" model="water.balance.route">
+            <field name="name">Nutrición Enteral</field>
+        </record>
+
+        <record id="route_subcutanea" model="water.balance.route">
+            <field name="name">Vía Subcutánea</field>
+        </record>
+
+        <record id="route_rectal" model="water.balance.route">
+            <field name="name">Vía Rectal</field>
+        </record>
+
+        <!-- Vías de Egreso -->
+        <record id="route_orina" model="water.balance.route">
+            <field name="name">Diuresis (Orina)</field>
+        </record>
+
+        <record id="route_heces" model="water.balance.route">
+            <field name="name">Deposiciones (Heces)</field>
+        </record>
+
+        <record id="route_drenaje" model="water.balance.route">
+            <field name="name">Drenajes Quirúrgicos</field>
+        </record>
+
+        <record id="route_vomito" model="water.balance.route">
+            <field name="name">Vómito</field>
+        </record>
+
+        <record id="route_sudor" model="water.balance.route">
+            <field name="name">Pérdida Insensible (Sudor)</field>
+        </record>
+
+        <record id="route_otros_ingreso" model="water.balance.route">
+            <field name="name">Otros Ingresos</field>
+        </record>
+
+        <record id="route_otros_egreso" model="water.balance.route">
+            <field name="name">Otros Egresos</field>
+        </record>
+
+        <!-- Vías especiales -->
+        <record id="route_sonda_nasogastrica" model="water.balance.route">
+            <field name="name">Sonda Nasogástrica</field>
+        </record>
+
+        <record id="route_fistula" model="water.balance.route">
+            <field name="name">Fístula</field>
+        </record>
+
+        <record id="route_ostomia" model="water.balance.route">
+            <field name="name">Ostomía</field>
+        </record>
+
+        <record id="route_quemaduras" model="water.balance.route">
+            <field name="name">Pérdida por Quemaduras</field>
+        </record>
+
+        <record id="route_hemorragia" model="water.balance.route">
+            <field name="name">Hemorragia</field>
+        </record>
+    </data>
+</odoo>

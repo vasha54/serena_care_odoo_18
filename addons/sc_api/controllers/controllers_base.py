@@ -2,6 +2,7 @@ import json
 import odoo
 import logging
 import jwt
+import yaml
 
 from odoo import _, fields, http
 from odoo.http import Response
@@ -17,7 +18,7 @@ class BaseAPIController(http.Controller):
 
     SECRET_KEY = "v#7P!x9A$gF2mZbR5kYq8tNs3Wu6cJdE1hT4oVlXp0yIjOeQrDaSzMfHnLwK_+CtB"
     ALGORITHM = "HS256"
-    ENV = None
+    
 
     def _get_database(self):
         # Obtener la primera base de datos disponible

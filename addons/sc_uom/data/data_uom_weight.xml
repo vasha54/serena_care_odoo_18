@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    <!-- Categoría Peso -->
+    <record id="uom_categ_weight" model="uom.category">
+        <field name="name">Peso</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad de referencia: Gramo -->
+    <record id="uom_weight_gram" model="uom.uom">
+        <field name="name">Gramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">1</field>
+        <field name="uom_type">reference</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Kilogramo (1000 gramos) -->
+    <record id="uom_weight_kilogram" model="uom.uom">
+        <field name="name">Kilogramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">1000</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Hectogramo (100 gramos) -->
+    <record id="uom_weight_hectogram" model="uom.uom">
+        <field name="name">Hectogramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">100</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decagramo (10 gramos) -->
+    <record id="uom_weight_decagram" model="uom.uom">
+        <field name="name">Decagramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">10</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decigramo (0.1 gramo) -->
+    <record id="uom_weight_decigram" model="uom.uom">
+        <field name="name">Decigramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">0.1</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Centigramo (0.01 gramo) -->
+    <record id="uom_weight_centigram" model="uom.uom">
+        <field name="name">Centigramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">0.01</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Miligramo (0.001 gramo) -->
+    <record id="uom_weight_milligram" model="uom.uom">
+        <field name="name">Miligramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">0.001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Microgramo (0.000001 gramo) -->
+    <record id="uom_weight_microgram" model="uom.uom">
+        <field name="name">Microgramo</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">0.000001</field>
+        <field name="uom_type">smaller</field>
+        <field name="rounding">0.000001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Libra (453.592 gramos) -->
+    <record id="uom_weight_pound" model="uom.uom">
+        <field name="name">Libra</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">453.592</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Onza (28.3495 gramos) -->
+    <record id="uom_weight_ounce" model="uom.uom">
+        <field name="name">Onza</field>
+        <field name="category_id" ref="uom_categ_weight"/>
+        <field name="factor">28.3495</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">0.001</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+    </data>
+</odoo>

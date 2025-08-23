@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Serena Care - RESTful API Gateway",
-
-    'summary': """
+    "name": "Serena Care - RESTful API Gateway",
+    "summary": """
 API Gateway para integraciones seguras con aplicaciones de terceros
 | Endpoints RESTful | OAuth2 | Documentación Swagger
     """,
-
-    'description': """
+    "description": """
 Módulo API Gateway para Serena Care
 
 Transforma Serena Care en una plataforma de integración empresarial con este completo conjunto de herramientas API diseñado para desarrolladores de terceros.
@@ -31,36 +29,38 @@ Soluciones IoT y dispositivos inteligentes
 - /api_serena/v1/list_residence_login (Residencia, Listar residencias)
 - /api_serena/v1/list_residents_this_residence (Residente, Listar residentes de una residencia)
 - /api_serena/v1/register_vital_signs (Signos vitales, Crear registro de signos vitales)
+- /api_serena/v1/list_medical_indication_this_resident (Indicaciones Médicas, Listar las indicaciones medicas)
+- /api_serena/v1/ (Balance Hídrico, Registrar ingreso/egreso de líquido de un residente)
+- /api_serena/v1/ (Balance Hídrico, Listar todos los registros de ingreso/egreso de líquido de un residente)
+- /api_serena/v1/ (Balance Hídrico, Listar todos los registros de ingreso/egreso de líquido de un residente 
+ocurridos dentro de un rango de fechas)
     """,
-
-    'author': 'Serena Care Team',
-    'website': 'https://www.serena-care.mx',
-    'license': 'LGPL-3',
-
+    "author": "Serena Care Team",
+    "website": "https://www.serena-care.mx",
+    "license": "LGPL-3",
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'version': '18.0.1.0.0',
-    'category': 'API/Integration',
-
+    "version": "18.0.1.0.0",
+    "category": "API/Integration",
     # any module necessary for this one to work correctly
-    'depends': [
-        'base',
-        'sc_group',
-        'sc_residence',
-        'sc_employee',
-        'sc_vital_signs',
+    "depends": [
+        "base",
+        "sc_group",
+        "sc_residence",
+        "sc_employee",
+        "sc_vital_signs",
+        "sc_water_balance",
     ],
-
     # always loaded
-    'data': [
+    "data": [
         # 'security/ir.model.access.csv',
+        'data/ir_cron.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [],
-    'installable': True,
-    'auto_install': False,
-    'application': True,
-    'sequence': 1,
+    "demo": [],
+    "installable": True,
+    "auto_install": False,
+    "application": True,
+    "sequence": 1,
 }
-

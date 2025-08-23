@@ -133,7 +133,7 @@ class AuthAPIController(BaseAPIController):
                 # request.session.authenticate(db_name, login, password)
                 self._check_access_residences(env, user.id, residence_id)
                 # Generar token JWT
-                expiration = datetime.datetime.now() + datetime.timedelta(hours=8)
+                expiration = datetime.datetime.now() + datetime.timedelta(hours=12)
                 payload = {
                     "user_id": user.id,
                     "exp": expiration,

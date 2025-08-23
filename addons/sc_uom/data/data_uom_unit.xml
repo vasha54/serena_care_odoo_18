@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+    <record id="uom_categ_unit" model="uom.category">
+        <field name="name">Unidades</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad de referencia: Unidad -->
+    <record id="uom_unit_unit" model="uom.uom">
+        <field name="name">Unidad</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor">1</field>
+        <field name="uom_type">reference</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Docena (12 unidades) -->
+    <record id="uom_unit_dozen" model="uom.uom">
+        <field name="name">Docena</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor">12</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Media docena (6 unidades) -->
+    <record id="uom_unit_half_dozen" model="uom.uom">
+        <field name="name">Media Docena</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor">6</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Decena (10 unidades) -->
+    <record id="uom_unit_ten" model="uom.uom">
+        <field name="name">Decena</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor">10</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Centena (100 unidades) -->
+    <record id="uom_unit_hundred" model="uom.uom">
+        <field name="name">Centena</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor">100</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Millar (1000 unidades) -->
+    <record id="uom_unit_thousand" model="uom.uom">
+        <field name="name">Millar</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor">1000</field>
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad por paquete (puede variar según necesidad) -->
+    <record id="uom_unit_pack" model="uom.uom">
+        <field name="name">Paquete (24 u)</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor" eval="24"/>  <!-- Por ejemplo, 24 unidades por paquete -->
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    <!-- Unidad por caja (puede variar según necesidad) -->
+    <record id="uom_unit_box" model="uom.uom">
+        <field name="name">Caja (100 u)</field>
+        <field name="category_id" ref="uom_categ_unit"/>
+        <field name="factor" eval="100"/>  <!-- Por ejemplo, 100 unidades por caja -->
+        <field name="uom_type">bigger</field>
+        <field name="rounding">1</field>
+        <field name="is_uom_sc" eval="True"/>
+    </record>
+
+    </data>
+</odoo>

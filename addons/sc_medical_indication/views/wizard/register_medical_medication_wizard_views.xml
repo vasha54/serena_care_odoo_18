@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+
+    <!-- View register.medical.medication.wizard form -->
+    <record id="view_register_medical_medication_wizard_form" model="ir.ui.view">
+        <field name="name">view.register.medical.medication.wizard.form</field>
+        <field name="model">register.medical.medication.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Register Medical Medication Wizard">
+                <sheet>
+                    <group col="2" colspan="2">
+                        <group>
+                            <field name="current_resident_id" readonly="1"  />
+                            <field name="user_id" readonly="1" />
+                            <field name="date" readonly="1" />
+                            <field name="medicament_id" required="1"/>
+                            <field name="pharmaceutical_form_id" required="1"/>
+                            <field name="route_id" required="1"/>
+                        </group>
+                        <group>
+                            <field name="dosage" required="1" rows="4" widget="textarea"/>
+                            <field name="concentration" required="1" rows="4" widget="textarea"/>
+                            <field name="duration" required="1" rows="4" widget="textarea"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button 
+                            name="action_register_medical_medication" 
+                            string="Registrar indicación" 
+                            type="object" 
+                            class="btn-primary"/>
+                        <button 
+                            string="Cancelar" 
+                            special="cancel" 
+                            class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+   
+
+</odoo>

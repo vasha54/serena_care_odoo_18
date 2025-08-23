@@ -1,19 +1,26 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "sc_residence",
-    "summary": "Short (1 phrase/line) summary of the module's purpose",
+    "name": "Serena Care - Gestión de Residencias",
+    "summary": "Sistema integral para la gestión de residencias y casas de cuidados de ancianos",
     "description": """
-Long description of module's purpose
+Módulo para la gestión completa de residencias y casas de cuidados de ancianos. Incluye gestión 
+de los servicios que brindan las residencias y las casas de cuidados.
     """,
-    "author": "My Company",
-    "website": "https://www.yourcompany.com",
+    'author': 'Serena Care Team',
+    'website': 'https://www.serena-care.mx',
+    'license': 'LGPL-3',
+
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    "category": "Uncategorized",
-    "version": "0.1",
+    'version': '18.0.1.0.0',
+    'category': 'Healthcare',
     # any module necessary for this one to work correctly
-    "depends": ["base", "sc_base", "sc_group"],
+    "depends": [
+        "base", 
+        "sc_base", 
+        "sc_group"
+    ],
     # always loaded
     "data": [
         "data/residence_service.xml",

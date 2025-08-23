@@ -7,7 +7,7 @@
         <field name="model">residence_service</field>
         <field name="arch" type="xml">
             <list default_order="active desc, name asc">
-                <field name="active"/>
+                <field string="Estado" name="active" widget="boolean_toggle"/>
                 <field name="name"/>
                 <field name="description" />
             </list>
@@ -24,11 +24,11 @@
                     <div class="oe_title">
                         <label for="name"/>
                         <h1>
-                            <field name="name" placeholder="Name..."/>
+                            <field name="name" placeholder="Nombre del servicio..."/>
                         </h1>
                     </div>
                     <group>
-                        <field string="Activo" name="active"/>
+                        <field string="Estado" name="active" widget="boolean_toggle" />
                         <field string="Descripción" name="description"/>
                     </group>
                 </sheet>

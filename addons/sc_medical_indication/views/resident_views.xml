@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">view.resident.form</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//page[@name='general']" position="after">
+                <page name="medical_indication" string="Indicaciones Médicas" invisible="not id">
+                    <group colspan="4" col="4">
+                        <group name="label_add_medical_indication" string="Registrar indicación" >
+                            <group>
+                                <button 
+                                    name="open_register_medical_indication_wizard" 
+                                    string="General" 
+                                    type="object"
+                                    class="btn-primary"
+                                    groups="sc_group.group_doctor,base.group_system"
+                                    invisible="not id"/>
+                                
+                                <button 
+                                    name="open_register_medical_medication_wizard" 
+                                    string="Medicamento" 
+                                    type="object"
+                                    class="btn-primary"
+                                    groups="sc_group.group_doctor,base.group_system"
+                                    invisible="not id"/>
+                            </group>               
+                        </group>
+                        <group  string="Reporte">
+                            <group>
+                                <button name="action_open_medical_indication_report_wizard" 
+                                        string="Indicaciones" 
+                                        type="object" 
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+                            </group>
+                        </group>
+                    </group>
+                    <group colspan="4" col="4" string="Registros">
+
+                        <field name="medical_indication_ids" options="{'create':false, 'delete':false}" nolabel="1">
+                            <list default_order="create_date desc" optional="show" export_xlsx="true" export_csv="true">
+                                <field string="Fecha/Hora" name="create_date"  />
+                                <field name="user_id" />
+                                <field name="indication_type" string="Tipo de indicación"/>
+                                <field name="note" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -28,6 +28,7 @@ Módulo especializado para residencias que permite:
         'sc_base',
         'sc_group',
         'sc_resident',
+        'sc_employee',
     ],
 
     # always loaded
