@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_supplier_contact"
+        name="Red Médica"
+        action="action_supplier_base"
+        sequence="-3"
+        web_icon="sc_supplier_contact,static/description/icon.png"/>
+
+    <menuitem id="menu_residence_supplier_contact"
+        name="Proveedores"
+        action="action_supplier_base"
+        sequence="1"
+        parent="menu_serena_care_root_supplier_contact"/>
+
+    <menuitem id="menu_residence_supplier_contact_deleted"
+        name="Proveedores eliminados"
+        action="action_supplier_base_deleted"
+        sequence="3"
+        parent="menu_serena_care_root_supplier_contact"/>
+
+    <menuitem id="menu_residence_nomenclature_specialty_supplier"
+        name="Especialidades de los proveedores"
+        action="action_nomenclature_specialty_supplier"
+        sequence="2"
+        parent="menu_serena_care_root_supplier_contact"/>
+</odoo>

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-
+import base64
+import os
 from email import message
 import logging
 import datetime
@@ -49,6 +50,29 @@ class ResidenceHouse(models.Model):
     description = fields.Html(string="Descripción")
     schedule = fields.Char(string='Horario de Atención', size=255)
     services_ids = fields.Many2many("residence_service", string="Servicios")
+    image_with_default = fields.Binary(
+        string="Imagen con valor por defecto",
+        compute='_compute_image_with_default',
+        store=False
+    )
+    
+    @api.depends('image_1920')
+    def _compute_image_with_default(self):
+        default_image_path = os.path.join(
+            os.path.dirname(__file__), '..', 'static', 'src', 'img', 'default_house.png'
+        )
+        
+        # Leer la imagen por defecto si existe
+        default_image = None
+        if os.path.exists(default_image_path):
+            with open(default_image_path, 'rb') as f:
+                default_image = base64.b64encode(f.read())
+        
+        for record in self:
+            if record.image_1920:
+                record.image_with_default = record.image_1920
+            else:
+                record.image_with_default = default_image
     
 
     @api.constrains('email')

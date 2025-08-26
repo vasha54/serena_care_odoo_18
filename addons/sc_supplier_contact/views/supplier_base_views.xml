@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View supplier.base View List -->
+    <record id="view_supplier_base_list" model="ir.ui.view">
+        <field name="name">view.supplier.base.list</field>
+        <field name="model">supplier.base</field>
+        <field name="arch" type="xml">
+            <list>
+                <header>
+                    
+                </header>
+                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
+                <field name="name" width="200"/>
+                <field name="provider_type" width="120"/>
+                <field string="Teléfono" name="phone" widget="phone" width="120"/>
+                <field name="contact_address" width="500"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_supplier_base_list_deleted" model="ir.ui.view">
+        <field name="name">supplier.base.view.list.deleted</field>
+        <field name="model">supplier.base</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" delete="false">
+                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
+                <field name="name" width="200"/>
+                <field name="provider_type" width="120"/>
+                <field string="Teléfono" name="phone" widget="phone" width="120"/>
+                <field name="contact_address" width="500"/>
+            </list>
+        </field>
+    </record>
+    
+
+    <!-- View supplier.base form -->
+    <record id="view_supplier_base_form" model="ir.ui.view">
+    <field name="name">view.supplier.base.form</field>
+    <field name="model">supplier.base</field>
+    <field name="arch" type="xml">
+        <form string="Supplier Base">
+            <header>
+                    <button string="Restaurar proveedor" invisible="not is_deleted" 
+                            name="action_restore" type="object" class="oe_highlight"/>
+                    
+            </header>
+            <sheet>
+                <field name="image_1920" widget="image" class="oe_avatar"/>
+                <div class="oe_title">
+                    <label for="name" string="Nombre"/>
+                    <h1>
+                        <field name="name" placeholder="Nombre ..." required="1"/>
+                    </h1>
+                </div>
+                <group col="4" colspan="4">
+                    <group string="Información General" col="2" colspan="2">
+                        <field string="Tipo" name="provider_type" required="1" />
+                        <field name="nomenclature_specialty_id" 
+                               required="provider_type in ['doctor', 'specialist']"
+                               invisible="provider_type not in ['doctor', 'specialist']"/>
+                        <field string="Teléfono" name="phone" widget="phone" required="1"/>
+                        <field string="Correo electrónico" name="email" widget="email" />
+                        <field string="Activo" name="active" widget="boolean_toggle" />
+                        <field string="Trabaja en" name="works_at_id"
+                               invisible="provider_type not in ['doctor', 'specialist']"/>
+                    </group>
+                    <group string="Dirección" col="2" colspan="2">
+                        <group col="1" colspan="1">
+                            <field string="Calle principal" name="street" placeholder="Calle principal" required="1"/>
+                            <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" />
+                            <field string="Entre calle #2" name="street3" placeholder="Entre calle 2" />
+                            <field string="Número" name="street_number" placeholder="Número" />
+                        </group>
+                        <group col="1" colspan="1">
+                            <field string="Estado" name="province_id" placeholder="Estado"
+                                    class="o_address_country" required="1"/>
+                            <field string="Municipio" name="municipality_id"
+                                    class="o_address_state"
+                                    placeholder="Municipio"
+                                    domain="[('province_id','=',province_id)]" required="1"/>
+                            <field string="Ciudad" name="city" placeholder="Ciudad"
+                                    class="o_address_city" required="1"/>
+                        </group>
+                        <group col="2" colspan="2">
+                            <field name="contact_address"
+                                    string="Dirección Completa"
+                                    readonly="1"
+                                    placeholder="Se genera automáticamente" />
+                        </group>
+                    </group>
+                </group>
+            </sheet>
+            <chatter reload_on_follower="True" />
+        </form>
+    </field>
+</record>
+
+    <record id="view_supplier_base_form_deleted" model="ir.ui.view">
+        <field name="name">supplier.base.view.form.deleted</field>
+        <field name="model">supplier.base</field>
+        <field name="arch" type="xml">
+            <form string="Supplier Base" create="false" edit="false" delete="false">
+                <header>
+                        <button string="Restaurar proveedor" invisible="not is_deleted" 
+                                name="action_restore" type="object" class="oe_highlight"/>
+                        
+                </header>
+                <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name" string="Nombre"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..." required="1"/>
+                        </h1>
+                    </div>
+                    <group col="4" colspan="4">
+                        <group string="Información General" col="2" colspan="2">
+                            <field string="Tipo" name="provider_type" required="1" />
+                            <field name="nomenclature_specialty_id" 
+                                required="provider_type in ['doctor', 'specialist']"
+                                invisible="provider_type not in ['doctor', 'specialist']"/>
+                            <field string="Teléfono" name="phone" widget="phone" required="1"/>
+                            <field string="Correo electrónico" name="email" widget="email" />
+                            <field string="Activo" name="active" widget="boolean_toggle" />
+                            <field string="Trabaja en" name="works_at_id"
+                                invisible="provider_type not in ['doctor', 'specialist']"/>
+                        </group>
+                        <group string="Dirección" col="2" colspan="2">
+                            <group col="1" colspan="1">
+                                <field string="Calle principal" name="street" placeholder="Calle principal" required="1"/>
+                                <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" />
+                                <field string="Entre calle #2" name="street3" placeholder="Entre calle 2" />
+                                <field string="Número" name="street_number" placeholder="Número" />
+                            </group>
+                            <group col="1" colspan="1">
+                                <field string="Estado" name="province_id" placeholder="Estado"
+                                        class="o_address_country" required="1"/>
+                                <field string="Municipio" name="municipality_id"
+                                        class="o_address_state"
+                                        placeholder="Municipio"
+                                        domain="[('province_id','=',province_id)]" required="1"/>
+                                <field string="Ciudad" name="city" placeholder="Ciudad"
+                                        class="o_address_city" required="1"/>
+                            </group>
+                            <group col="2" colspan="2">
+                                <field name="contact_address"
+                                        string="Dirección Completa"
+                                        readonly="1"
+                                        placeholder="Se genera automáticamente" />
+                            </group>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter reload_on_follower="True" />
+            </form>
+        </field>
+    </record>
+
+    <!-- View supplier.base search -->
+    <record id="view_supplier_base_search" model="ir.ui.view">
+        <field name="name">view.supplier.base.search</field>
+        <field name="model">supplier.base</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="contact_address" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                    <filter string="Estado" name="province_id" domain="[]" context="{'group_by':'province_id'}"/>
+                    <filter string="Municipio" name="municipality_id" domain="[]" context="{'group_by':'municipality_id'}"/>
+                    <filter string="Tipos" name="provider_type" domain="[]" context="{'group_by':'provider_type'}" />
+                    <filter string="Instituciónn" name="work_at" domain="[]" context="{'group_by':'works_at_id'}" />
+                </group>
+                <filter string="Proveedores activas" name="supplier_active" domain="[('active','=',True)]" />
+                <filter string="Proveedores no activas" name="supplier_not_active" domain="[('active','=',False)]" />
+                <filter string="Clínicas" name="type_clinic" domain="[('provider_type','=','clinic')]" />
+                <filter string="Hospitales" name="type_hospital" domain="[('provider_type','=','hospital')]" />
+                <filter string="Laboratorios" name="type_laboratory" domain="[('provider_type','=','laboratory')]" />
+                <filter string="Especialistas" name="type_specialist" domain="[('provider_type','=','specialist')]" />
+                <filter string="Doctores" name="type_clinic" domain="[('provider_type','=','doctor')]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action supplier.base -->
+    <record id="action_supplier_base" model="ir.actions.act_window">
+        <field name="name">Proveedores de la red médica</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">supplier.base</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_deleted','=',False)]</field>
+        <field name="context">{'active_test': False}</field>
+                <field name="search_view_id" ref="view_supplier_base_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_supplier_base_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_supplier_base_form')})]"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar Proveedor.
+            </p>
+        </field>
+    </record>
+
+
+    <record id="action_supplier_base_deleted" model="ir.actions.act_window">
+        <field name="name">Proveedores de la red médica eliminados</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">supplier.base</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_deleted','=',True)]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="search_view_id" ref="view_supplier_base_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_supplier_base_list_deleted')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_supplier_base_form_deleted')})]"/>
+        
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_report_supplier_base_pdf" model="ir.actions.report">
+        <field name="name">Reporte de Proveedores (PDF)</field>
+        <field name="model">supplier.base</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_supplier_contact.report_supplier</field>
+        <field name="print_report_name">'Reporte_Proveedores_%s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_supplier_base"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="action_report_supplier_base_xlsx" model="ir.actions.server">
+        <field name="name">Reporte de Proveedores (Excel)</field>
+        <field name="model_id" ref="model_supplier_base"/>
+        <field name="binding_model_id" ref="model_supplier_base"/>
+        <field name="binding_type">report</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.export_xlsx()
+        </field>
+    </record>
+</odoo>

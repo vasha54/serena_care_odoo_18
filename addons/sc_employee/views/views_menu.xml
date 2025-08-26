@@ -5,7 +5,7 @@
         name="Usuarios"
         action="action_residence_res_user"
         sequence="-4"
-        web_icon="sc_residence,static/description/icon.png"/>
+        web_icon="sc_employee,static/description/icon.png"/>
 
     <menuitem id="menu_residence_res_user_deleted"
         name="Usuarios eliminados"
@@ -16,7 +16,7 @@
     <menuitem id="menu_serena_care_root_residence_employee"
         name="Empleados"
         sequence="-4"
-        web_icon="sc_residence,static/description/icon.png"/>
+        web_icon="sc_employee,static/description/icon.png"/>
 
     <menuitem id="menu_residence_employee"
         name="Empleados"

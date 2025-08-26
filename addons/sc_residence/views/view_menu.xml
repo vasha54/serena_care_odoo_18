@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <menuitem id="menu_serena_care_root_residence_house"
-        name="Residencias/Casas"
+        name="Residencias"
         action="action_residence_house"
         sequence="-5"
         web_icon="sc_residence,static/description/icon.png"/>

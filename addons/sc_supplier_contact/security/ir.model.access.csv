@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_supplier_base_manager,supplier_base_manager,model_supplier_base,base.group_user,1,1,1,1
+access_nomenclature_specialty_supplier_manager,nomenclature_specialty_supplier_manager,model_nomenclature_specialty_supplier,base.group_user,1,1,1,1

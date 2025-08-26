@@ -7,12 +7,13 @@
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <list default_order="active desc, name asc">
-                <field string="Estado" name="active" widget="boolean_toggle" width="40"/>
-                <field name="name"  width="110"/>
-                <field name="email" widget="email" width="120"/>
-                <field name="phone" widget="phone" width="110"/>
+                <field string="Activa" name="active" widget="boolean_toggle" width="80"/>
+                <field string="Imagen" name="image_with_default" widget="image" width="50"/>
+                <field name="name" />
+                <field name="email" widget="email"/>
+                <!-- <field name="phone" widget="phone" width="110"/>
                 <field name="province_id" width="110"/>
-                <field name="municipality_id" width="110"/>
+                <field name="municipality_id" width="110"/> -->
             </list>
         </field>
     </record>
@@ -28,6 +29,7 @@
                     
                 </header>
                 <sheet>
+                    <field name="image_1920" widget="image" class="oe_avatar"/>
                     <div class="oe_title">
                         <label for="name" string="Nombre"/>
                         <h1>
@@ -49,10 +51,6 @@
                                 <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" />
                                 <field string="Entre calle #2" name="street3" placeholder="Entre calle 2" />
                                 <field string="Número" name="street_number" placeholder="Número" />
-                                <field name="contact_address"
-                                        string="Dirección Completa"
-                                        readonly="1"
-                                        placeholder="Se genera automáticamente" />
                             </group>
                             <group col="1" colspan="1">
                                 <field string="Estado" name="province_id" placeholder="Estado"
@@ -63,6 +61,12 @@
                                         domain="[('province_id','=',province_id)]" />
                                 <field string="Ciudad" name="city" placeholder="Ciudad"
                                         class="o_address_city" />
+                            </group>
+                            <group col="2" colspan="2">
+                                <field name="contact_address"
+                                        string="Dirección Completa"
+                                        readonly="1"
+                                        placeholder="Se genera automáticamente" />
                             </group>
                         </group>
                     </group>
@@ -94,17 +98,19 @@
                 <field name="name" />
                 <field name="description" />
                 <group expand="1" string="Agrupar por">
-                    <filter string="Activo" name="active" domain="[]" context="{'group_by':'active'}"/>
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
                     <filter string="Estado" name="province_id" domain="[]" context="{'group_by':'province_id'}"/>
                     <filter string="Municipio" name="municipality_id" domain="[]" context="{'group_by':'municipality_id'}"/>
                 </group>
+                <filter string="Residencias activas" name="house_active" domain="[('active','=',True)]" />
+                <filter string="Residencias no activas" name="house_active" domain="[('active','=',False)]" />
             </search>
         </field>
     </record>
 
     <!-- Action residence_house -->
     <record id="action_residence_house" model="ir.actions.act_window">
-        <field name="name">Listado de Residencia/Casa</field>
+        <field name="name">Listado de Residencias</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">residence_house</field>
         <field name="view_mode">list,form</field>
@@ -118,7 +124,7 @@
     </record>
     
     <record id="action_residence_house_deleted" model="ir.actions.act_window">
-        <field name="name">Listado de Residencia/Casa eliminadas</field>
+        <field name="name">Listado de Residencias eliminadas</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">residence_house</field>
         <field name="view_mode">list,form</field>

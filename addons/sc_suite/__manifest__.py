@@ -77,7 +77,9 @@ residencias de ancianos en México.
         'sc_medication_catalog',  # Gestión del catalogo de medicamento
         'sc_vital_signs',         # Gestión de los signos vitales de los residentes 
         'sc_medical_indication',  # Gestión de las indicaciones médicas de los residentes
-        'sc_water_balance',      # Gestión del balance híbrico 
+        'sc_water_balance',       # Gestión del balance híbrico
+        'sc_supplier_contact',    # Gestión de los contactos de los proveedores que  
+                                  # que conforman la red médica 
         'sc_api',                 # API
     ],
     'data': [

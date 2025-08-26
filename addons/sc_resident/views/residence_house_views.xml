@@ -40,7 +40,7 @@
         <field name="inherit_id" ref="sc_residence.view_residence_house_list"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="after">
-                <field string="Cant. Residentes" name="resident_count" />
+                <field string="Residentes" name="resident_count" />
             </xpath>
         </field>
     </record>

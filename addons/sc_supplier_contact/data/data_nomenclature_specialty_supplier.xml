@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="specialty_geriatria" model="nomenclature.specialty.supplier">
+            <field name="name">Geriatría</field>
+        </record>
+
+        <record id="specialty_cardiologia" model="nomenclature.specialty.supplier">
+            <field name="name">Cardiología</field>
+        </record>
+
+        <record id="specialty_neurologia" model="nomenclature.specialty.supplier">
+            <field name="name">Neurología</field>
+        </record>
+
+        <record id="specialty_ortopedia" model="nomenclature.specialty.supplier">
+            <field name="name">Ortopedia Geriátrica</field>
+        </record>
+
+        <record id="specialty_reumatologia" model="nomenclature.specialty.supplier">
+            <field name="name">Reumatología</field>
+        </record>
+
+        <record id="specialty_oftalmologia" model="nomenclature.specialty.supplier">
+            <field name="name">Oftalmología Geriátrica</field>
+        </record>
+
+        <record id="specialty_endocrinologia" model="nomenclature.specialty.supplier">
+            <field name="name">Endocrinología</field>
+        </record>
+
+        <record id="specialty_neumologia" model="nomenclature.specialty.supplier">
+            <field name="name">Neumología</field>
+        </record>
+
+        <record id="specialty_psiquiatria" model="nomenclature.specialty.supplier">
+            <field name="name">Psiquiatría Geriátrica</field>
+        </record>
+
+        <record id="specialty_terapia_fisica" model="nomenclature.specialty.supplier">
+            <field name="name">Terapia Física</field>
+        </record>
+
+        <record id="specialty_terapia_ocupacional" model="nomenclature.specialty.supplier">
+            <field name="name">Terapia Ocupacional</field>
+        </record>
+
+        <record id="specialty_podologia" model="nomenclature.specialty.supplier">
+            <field name="name">Podología Geriátrica</field>
+        </record>
+
+        <record id="specialty_nutricion" model="nomenclature.specialty.supplier">
+            <field name="name">Nutrición Geriátrica</field>
+        </record>
+
+        <record id="specialty_audiologia" model="nomenclature.specialty.supplier">
+            <field name="name">Audiología</field>
+        </record>
+
+        <record id="specialty_enfermeria" model="nomenclature.specialty.supplier">
+            <field name="name">Enfermería Geriátrica</field>
+        </record>
+
+        <record id="specialty_laboratorio" model="nomenclature.specialty.supplier">
+            <field name="name">Laboratorio Clínico</field>
+        </record>
+
+        <record id="specialty_radiologia" model="nomenclature.specialty.supplier">
+            <field name="name">Radiología</field>
+        </record>
+
+        <record id="specialty_diabetes" model="nomenclature.specialty.supplier">
+            <field name="name">Diabetes y Metabolismo</field>
+        </record>
+
+        <record id="specialty_dolor" model="nomenclature.specialty.supplier">
+            <field name="name">Medicina del Dolor</field>
+        </record>
+
+        <record id="specialty_paliativa" model="nomenclature.specialty.supplier">
+            <field name="name">Cuidados Paliativos</field>
+        </record>
+
+        <record id="specialty_fisiatria" model="nomenclature.specialty.supplier">
+            <field name="name">Fisiatría</field>
+        </record>
+
+        <record id="specialty_medicina_interna" model="nomenclature.specialty.supplier">
+            <field name="name">Medicina Interna</field>
+        </record>
+
+        <record id="specialty_osteoporosis" model="nomenclature.specialty.supplier">
+            <field name="name">Osteoporosis</field>
+        </record>
+
+        <record id="specialty_urologia" model="nomenclature.specialty.supplier">
+            <field name="name">Urología Geriátrica</field>
+        </record>
+    </data>
+</odoo>

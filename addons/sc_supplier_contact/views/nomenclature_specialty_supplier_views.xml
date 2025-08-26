@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View nomenclature.specialty.supplier View List -->
+    <record id="view_nomenclature_specialty_supplier_list" model="ir.ui.view">
+        <field name="name">view.nomenclature.specialty.supplier.list</field>
+        <field name="model">nomenclature.specialty.supplier</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View nomenclature.specialty.supplier form -->
+    <record id="view_nomenclature_specialty_supplier_form" model="ir.ui.view">
+        <field name="name">view.nomenclature.specialty.supplier.form</field>
+        <field name="model">nomenclature.specialty.supplier</field>
+        <field name="arch" type="xml">
+            <form string="Nomenclature Specialty Supplier">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View nomenclature.specialty.supplier search -->
+    <record id="view_nomenclature_specialty_supplier_search" model="ir.ui.view">
+        <field name="name">view.nomenclature.specialty.supplier.search</field>
+        <field name="model">nomenclature.specialty.supplier</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action nomenclature.specialty.supplier -->
+    <record id="action_nomenclature_specialty_supplier" model="ir.actions.act_window">
+        <field name="name">Especialidades de los proveedores</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nomenclature.specialty.supplier</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar Especialidad.
+            </p>
+        </field>
+    </record>
+
+</odoo>
