@@ -7,8 +7,8 @@
         <field name="model">resident</field>
         <field name="arch" type="xml">
             <list>
-                <field string="Estado" name="active" widget="boolean_toggle"/>
-                <field name="vat" string="DNI/NIE"/>
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field name="dni" string="DNI"/>
                 <field string="Nombre" name="name"/>
                 <field string="Sexo" name="sex_id" />
                 <field name="birth_date"/>
@@ -41,20 +41,7 @@
         <field name="arch" type="xml">
             <form string="Resident" create="not is_deleted and active" edit="not is_deleted and active" delete="not is_deleted and active">
                 <header>
-                    <button 
-                        name="toggle_active" 
-                        type="object"
-                        class="oe_highlight btn-danger"
-                        invisible="not active or not id" 
-                        string="Desactivar residente"
-                    />                    
-                    <button 
-                        name="toggle_active" 
-                        type="object"
-                        class="oe_highlight btn-success"
-                        invisible="active or not id" 
-                        string="Activar residente"
-                    />
+                    
 
                 </header>
                 <sheet>
@@ -68,17 +55,20 @@
                                 <h1>
                                     <field string="Nombre" name="name" required="1"
                                         placeholder="Nombre del residente" class="mb-0" 
-                                        readonly="not active"
+                                        readonly="not active" 
                                         />
                                 </h1>
                             </div>
 
                             <group col="2">
                                 <group string="Información Personal">
-                                    <field name="birth_date" readonly="not active"/>
-                                    <field name="vat" string="DNI/NIE" readonly="not active"/>
-                                    <field string="Sexo" name="sex_id" readonly="not active"/>
+                                    <field name="birth_date" readonly="not active" required="1"/>
+                                    <field string="Edad:" name="age" readonly="1"/>
+                                    <field name="dni" string="DNI" required="1" readonly="not active"/>
+                                    <field string="Sexo" name="sex_id" readonly="not active" required="1"/>
+                                    <field string="Peso (Kg)" name="weight" readonly="not active"/>    
                                     <field name="residence_id" readonly="not active"/>
+                                    <field string="Activo" name="active" widget="boolean_toggle"/>
                                 </group>
                                 <group string="Contacto">
                                     <field name="phone" widget="phone" readonly="not active"/>
@@ -90,20 +80,21 @@
                             <group col="2">
                                 <group string="Dirección">
                                     <group col="2">
-                                        <field name="country_id" placeholder="País" readonly="not active"/>
+                                        <field name="country_id" placeholder="País" readonly="not active" required="1"/>
                                         <field string="Estado" name="province_id" placeholder="Estado"
-                                                class="o_address_country" 
+                                                class="o_address_country" required="1"
                                                 domain="[('country_id','=',country_id)]" readonly="not active"/>
                                         <field string="Municipio" name="municipality_id"
                                                 class="o_address_state"
-                                                placeholder="Municipio"
+                                                placeholder="Municipio" required="1"
                                                 domain="[('province_id','=',province_id)]" readonly="not active"/>
                                         <field string="Ciudad" name="city" placeholder="Ciudad"
-                                                class="o_address_city" readonly="not active"/>
+                                                class="o_address_city" readonly="not active" required="1"/>
                                         <field string="Código Postal" name="zip" placeholder="C.P." readonly="not active"/>
                                     </group>
                                     <group col="2">
-                                        <field string="Calle principal" name="street" placeholder="Calle principal" readonly="not active"/>
+                                            <field string="Calle principal" name="street" placeholder="Calle principal" 
+                                                    required="1" readonly="not active"/>
                                         <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" readonly="not active"/>
                                         <field name="street3" placeholder="Entre calle 2" readonly="not active"/>
                                         <field name="street_number" placeholder="Número" readonly="not active"/>
@@ -111,7 +102,28 @@
                                         
                                 </group>
                                 <group string="Información Adicional">
-                                    <field string="Notas" name="comment" placeholder="Notas adicionales..." readonly="not active"/>
+                                    <notebook>
+                                        <page name="allergys" string="Alergías">
+                                            <field name="allergy_ids" nolabel="1" widget="many2many_tags" 
+                                                    domain="[('active','=',True)]" readonly="not active"/>
+                                        </page>
+                                        <page name="observations" string="Descripción">
+                                            <field name="comment" widget="html" nolabel="1" 
+                                                    placeholder="Descripción"  readonly="not active"/>
+                                        </page>
+                                        <page name="observations" string="Observaciones">
+                                            <field name="observations" rows="7" widget="textarea" nolabel="1" 
+                                                    placeholder="Obervaciones"  readonly="not active"/>
+                                        </page>
+                                        <page name="risk_falling" string="Riesgo de caída">
+                                            <field name="risk_falling" rows="7" widget="textarea" nolabel="1" 
+                                                    placeholder="Riesgo de caída" readonly="not active"/>
+                                        </page>
+                                        <page name="risk_upp" string="Riesgo de UPP">
+                                            <field name="risk_upp" rows="7" widget="textarea" nolabel="1" 
+                                                    placeholder="Riesgo de UPP" readonly="not active"/>
+                                        </page>
+                                    </notebook>
                                     <field name="partner_id" invisible="1"/>
                                 </group>
                             </group>
@@ -138,7 +150,7 @@
                                 </group>
                             </group>
                             <group colspan="4" col="4" string="Familiares">
-                                <field name="family_ids" widget="one2many" nolabel="1">
+                                <field name="family_ids" widget="one2many" nolabel="1" required="1">
                                     <list create="False">
                                         <field name="family_id"/>
                                         <field name="kinship_id" />

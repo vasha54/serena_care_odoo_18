@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Alergias a medicamentos comunes en adultos mayores -->
+        <record id="allergy_penicillin" model="nomenclature.allergy">
+            <field name="name">Penicilina</field>
+        </record>
+        
+        <record id="allergy_aspirin" model="nomenclature.allergy">
+            <field name="name">Aspirina (AAS)</field>
+        </record>
+        
+        <record id="allergy_ibuprofen" model="nomenclature.allergy">
+            <field name="name">Ibuprofeno</field>
+        </record>
+        
+        <record id="allergy_naproxen" model="nomenclature.allergy">
+            <field name="name">Naproxeno</field>
+        </record>
+        
+        <record id="allergy_sulfa" model="nomenclature.allergy">
+            <field name="name">Sulfamidas</field>
+        </record>
+        
+        <record id="allergy_opioids" model="nomenclature.allergy">
+            <field name="name">Opioides</field>
+        </record>
+        
+        <!-- Alergias alimentarias comunes -->
+        <record id="allergy_lactose" model="nomenclature.allergy">
+            <field name="name">Lactosa</field>
+        </record>
+        
+        <record id="allergy_gluten" model="nomenclature.allergy">
+            <field name="name">Gluten</field>
+        </record>
+        
+        <record id="allergy_shellfish" model="nomenclature.allergy">
+            <field name="name">Mariscos</field>
+        </record>
+        
+        <record id="allergy_nuts" model="nomenclature.allergy">
+            <field name="name">Frutos secos</field>
+        </record>
+        
+        <record id="allergy_eggs" model="nomenclature.allergy">
+            <field name="name">Huevos</field>
+        </record>
+        
+        <record id="allergy_soy" model="nomenclature.allergy">
+            <field name="name">Soja</field>
+        </record>
+        
+        <!-- Alergias ambientales -->
+        <record id="allergy_dust" model="nomenclature.allergy">
+            <field name="name">Ácaros del polvo</field>
+        </record>
+        
+        <record id="allergy_pollen" model="nomenclature.allergy">
+            <field name="name">Polen</field>
+        </record>
+        
+        <record id="allergy_mold" model="nomenclature.allergy">
+            <field name="name">Moho</field>
+        </record>
+        
+        <record id="allergy_latex" model="nomenclature.allergy">
+            <field name="name">Látex</field>
+        </record>
+        
+        <!-- Alergias a medios de contraste -->
+        <record id="allergy_contrast" model="nomenclature.allergy">
+            <field name="name">Medios de contraste yodados</field>
+        </record>
+        
+        <!-- Alergias a insectos -->
+        <record id="allergy_bees" model="nomenclature.allergy">
+            <field name="name">Veneno de abejas/avispas</field>
+        </record>
+        
+        <!-- Alergias a anestésicos -->
+        <record id="allergy_anesthesia" model="nomenclature.allergy">
+            <field name="name">Anestésicos locales</field>
+        </record>
+    </data>
+</odoo>

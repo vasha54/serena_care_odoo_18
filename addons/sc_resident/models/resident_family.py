@@ -23,4 +23,8 @@ class ResidentFamily(models.Model):
         'family_id',
         string='Residentes',
     )
+    @api.model
+    def create(self, vals):
+        vals['is_company'] = False
+        return super().create(vals)
    

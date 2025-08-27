@@ -145,3 +145,8 @@ class ResidenceHouse(models.Model):
 
         # Si todas las validaciones pasan, ejecutar la lógica original de write
         return super().write(vals)
+
+    @api.model
+    def create(self, vals):
+        vals['is_company'] = True
+        return super().create(vals)   
