@@ -191,7 +191,7 @@
         <field name="view_mode">list,form</field>
         <field name="domain">[('is_deleted','=',False)]</field>
         <field name="context">{'active_test': False}</field>
-                <field name="search_view_id" ref="view_supplier_base_search" />
+        <field name="search_view_id" ref="view_supplier_base_search" />
         <field name="view_ids" eval="[ (5, 0, 0), 
             (0, 0, {'view_mode': 'list', 'view_id': ref('view_supplier_base_list')}),
             (0, 0, {'view_mode': 'form', 'view_id': ref('view_supplier_base_form')})]"/>

@@ -6,8 +6,8 @@ import logging
 import datetime
 from os import unlink
 import re
-from odoo import api, fields, models
-from odoo.exceptions import ValidationError
+from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError, UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -130,3 +130,28 @@ class ResidenceHouse(models.Model):
            raise ValidationError(message)
 
         return self.action_soft_delete()
+
+    def write(self, vals):
+        # Verificar si se está intentando desactivar el registro
+        if 'active' in vals and not vals['active']:
+            # Para cada registro que se está modificando
+            for record in self:
+                # Verificar si el campo resident_ids existe y tiene registros
+                resident_count = 0
+                if hasattr(record, 'resident_ids'):
+                    resident_count = len(record.resident_ids)
+                
+                # Verificar si el campo employee_ids existe y tiene registros
+                employee_count = 0
+                if hasattr(record, 'employee_ids'):
+                    employee_count = len(record.employee_ids)
+                
+                # Si hay residentes o empleados, prevenir la desactivación
+                if resident_count > 0 or employee_count > 0:
+                    raise UserError(_(
+                        'No se puede desactivar la residencia "%s" porque tiene %d residente(s) y %d empleado(s) asignado(s). '
+                        'Por favor, reasigne estos recursos antes de desactivar.'
+                    ) % (record.name, resident_count, employee_count))
+        
+        # Si todas las validaciones pasan, ejecutar la lógica original de write
+        return super().write(vals)

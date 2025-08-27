@@ -29,7 +29,7 @@ class Resident(models.Model):
         string='Residencia',
         required=True,
         help='Residencia a la que pertenece el residente',
-        domain="[('active', '=', True)]"
+        domain="[('active', '=', True),('is_deleted','=',False)]"
     )
     birth_date = fields.Date(
         string='Fecha de Nacimiento',

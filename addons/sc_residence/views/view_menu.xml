@@ -13,7 +13,7 @@
         parent="menu_serena_care_root_residence_house"/>
 
     <menuitem id="menu_residence_house_deleted"
-        name="Residencias/Casas eliminadas"
+        name="Residencias eliminadas"
         action="action_residence_house_deleted"
         sequence="100"
         parent="menu_serena_care_root_residence_house"/>
