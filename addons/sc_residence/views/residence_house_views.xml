@@ -54,9 +54,9 @@
                     </div>
                     <group col="4" colspan="4">
                         <group string="Información General" col="2" colspan="2">
-                            <field string="Teléfono" name="phone" widget="phone" />
-                            <field string="Correo electrónico" name="email" widget="email" />
-                            <field string="Estado" name="active" widget="boolean_toggle" />
+                            <field string="Teléfono" name="phone" widget="phone" required="1"/>
+                            <field string="Correo electrónico" name="email" widget="email" required="1"/>
+                            <field string="Activa" name="active" widget="boolean_toggle" />
                             <field name="schedule"
                                 string="Horario de Atención"
                                 placeholder="..." />
