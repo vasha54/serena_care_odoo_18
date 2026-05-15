@@ -1,17 +1,23 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "sc_water_balance",
-    "summary": "Short (1 phrase/line) summary of the module's purpose",
-    "description": """
-Long description of module's purpose
+    "name": "Serena Care - Balance Hídrico",
+    "summary": """
+ Sistema integral para el control y registro de vías de ingreso/egreso de líquidos en los residentes
     """,
-    "author": "My Company",
-    "website": "https://www.yourcompany.com",
+    "description": """
+Módulo de Gestión del Balance Hídricos para Residentes
+
+Este módulo proporciona un sistema completo para el control y seguimiento de los ingresos y egresos de líquidos 
+en pacientes, ideal para entornos hospitalarios, clínicas y centros de salud.
+    """,
+    "author": "Serena Care Team",
+    "website": "https://www.serena-care.mx",
+    "license": "LGPL-3",
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    "category": "Uncategorized",
-    "version": "0.1",
+    "version": "18.0.1.0.0",
+    "category": "Healthcare",
     # any module necessary for this one to work correctly
     "depends": [
         "base",
@@ -28,8 +34,8 @@ Long description of module's purpose
         "views/water_balance_route_views.xml",
         "views/resident_views.xml",
         "views/wizard/register_water_balance_wizard_views.xml",
+        "views/wizard/compute_water_balance_range_wizard.xml",
         "views/view_menu.xml",
-        "templates/water_balance_report_template.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],

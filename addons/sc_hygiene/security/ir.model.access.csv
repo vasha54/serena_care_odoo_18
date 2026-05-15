@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hygiene_type_admin,Gestión de los tipos de higiene,model_hygiene_type,sc_group.gs_admin,1,1,1,0
+hygiene_type_coordinator_nurse,Gestión de los tipos de higiene,model_hygiene_type,sc_group.gs_coordinator_nurse,1,1,1,0
+hygiene_type_gerente_salud,Lectura de los tipos de higiene,model_hygiene_type,sc_group.gs_gerente_salud,1,0,0,0
+hygiene_type_enfermeria,Gestión de los tipos de higiene,model_hygiene_type,sc_group.gs_enfermeria,1,1,1,0
+hygiene_admin,Gestión de los registros de higiene,model_hygiene,sc_group.gs_admin,1,1,1,0
+hygiene_coordinator_nurse,Gestión de los registros de higiene,model_hygiene,sc_group.gs_coordinator_nurse,1,1,1,0
+hygiene_gerente_salud,Lectura de los registros de higiene,model_hygiene,sc_group.gs_gerente_salud,1,0,0,0
+hygiene_enfermeria,Gestión de los registros de higiene,model_hygiene,sc_group.gs_enfermeria,1,1,1,0
+evacuation_type_admin,Gestión de los tipos de evacuación,model_evacuation_type,sc_group.gs_admin,1,1,1,0
+evacuation_type_coordinator_nurse,Gestión de los tipos de evacuación,model_evacuation_type,sc_group.gs_coordinator_nurse,1,1,1,0
+evacuation_type_gerente_salud,Lectura de los tipos de evacuación,model_evacuation_type,sc_group.gs_gerente_salud,1,0,0,0
+evacuation_type_enfermeria,Gestión de los tipos de evacuación,model_evacuation_type,sc_group.gs_enfermeria,1,1,1,0

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View mood.assessment View List -->
+    <record id="view_mood_assessment_list" model="ir.ui.view">
+        <field name="name">Vista Lista Evaluaciones de Ánimo</field>
+        <field name="model">mood.assessment</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" delete="false">
+                <field string="Fecha" name="date"/>
+                <field name="user_id" />
+                <field name="resident_id" />
+                <field name="residence_id" />
+                <field string=" " name="image" widget="image"
+                       width="28"/>
+                <field string="Respuesta" name="mood_state_id"/>
+                <field name="observations_clinic"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View mood.assessment form -->
+    <record id="view_mood_assessment_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Evaluación de Ánimo</field>
+        <field name="model">mood.assessment</field>
+        <field name="arch" type="xml">
+            <form string="Mood Assessment" create="false" edit="false" delete="false">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" />
+                            <field string="Realizado" name="user_id" />
+                        </group>
+                        <group>
+                            <field string="Respuesta" name="mood_state_id"/>
+                        </group>
+                    </group>
+                    <group string="Observación clínica">
+                        <field name="observations_clinic" nolabel="1" />
+                    </group>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View mood.assessment search -->
+    <record id="view_mood_assessment_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Evaluación de Ánimo</field>
+        <field name="model">mood.assessment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="mood_state_display" />
+                <field name="residence_id" />
+                <group expand="1" string="Evaluación">
+                    <filter string="Evaluación" name="filter_evaluation" domain="[]" context="{'group_by':'mood_state_display'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action mood.assessment -->
+    <record id="action_mood_assessment" model="ir.actions.act_window">
+        <field name="name">Evaluaciones de Ánimo</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mood.assessment</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registro de una evaluación del estado de ánimo.
+            </p>
+        </field>
+    </record>
+
+</odoo>

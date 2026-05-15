@@ -7,7 +7,8 @@
         name="Unidades de Medida" 
         sequence="-1"
         action="action_uom_categories" 
-        web_icon="sc_base,static/description/icon.png"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+        web_icon="sc_uom,static/src/img/item_menu.png"
     />
     
 
@@ -16,7 +17,8 @@
         id="menu_uom_categories" 
         name="Categorías" 
         parent="menu_serena_care_root_uom_main" 
-        action="action_uom_categories" 
+        action="action_uom_categories"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse" 
         sequence="10"
     />
 
@@ -25,7 +27,8 @@
         id="menu_uom_units" 
         name="Unidades" 
         parent="menu_serena_care_root_uom_main" 
-        action="action_uom_units" 
+        action="action_uom_units"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse" 
         sequence="20"
     />
 </odoo>

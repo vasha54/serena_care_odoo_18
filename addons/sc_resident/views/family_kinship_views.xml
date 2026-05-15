@@ -3,7 +3,7 @@
 
     <!-- View family.kinship View List -->
     <record id="view_family_kinship_list" model="ir.ui.view">
-        <field name="name">view.family.kinship.list</field>
+        <field name="name">Vista Lista de Parentescos</field>
         <field name="model">family.kinship</field>
         <field name="arch" type="xml">
             <list>
@@ -17,10 +17,10 @@
 
     <!-- View family.kinship form -->
     <record id="view_family_kinship_form" model="ir.ui.view">
-        <field name="name">view.family.kinship.form</field>
+        <field name="name">Vista Formulario de Parentesco</field>
         <field name="model">family.kinship</field>
         <field name="arch" type="xml">
-            <form string="Family Kinship">
+            <form string="Formulario de Parentesco">
                 <sheet>
                     <group>
                         <group>
@@ -39,7 +39,7 @@
 
     <!-- View family.kinship search -->
     <record id="view_family_kinship_search" model="ir.ui.view">
-        <field name="name">view.family.kinship.search</field>
+        <field name="name">Vista Búsqueda de Parentesco</field>
         <field name="model">family.kinship</field>
         <field name="arch" type="xml">
             <search>

@@ -1,3 +1,13 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_supplier_base_manager,supplier_base_manager,model_supplier_base,base.group_user,1,1,1,1
-access_nomenclature_specialty_supplier_manager,nomenclature_specialty_supplier_manager,model_nomenclature_specialty_supplier,base.group_user,1,1,1,1
+supplier_base_admin,Gestión de proovedores,model_supplier_base,sc_group.gs_admin,1,1,1,0
+specialty_supplier_admin,Gestión de las especialidades de los proovedores,model_nomenclature_specialty_supplier,sc_group.gs_admin,1,1,1,0
+supplier_base_gerente_salud,Lectura de proovedores,model_supplier_base,sc_group.gs_gerente_salud,1,0,0,0
+specialty_supplier_gerente_salud,Lectura de las especialidades de los proovedores,model_nomenclature_specialty_supplier,sc_group.gs_gerente_salud,1,0,0,0
+supplier_base_enfermeria,Lectura de proovedores,model_supplier_base,sc_group.gs_enfermeria,1,0,0,0
+specialty_supplier_enfermeria,Lectura de las especialidades de los proovedores,model_nomenclature_specialty_supplier,sc_group.gs_enfermeria,1,0,0,0
+supplier_category_admin,Gestión de las categorías de los proveedores,model_supplier_category,sc_group.gs_admin,1,1,1,0
+supplier_category_gerente_salud,Lectura de las categorías de los proveedores,model_supplier_category,sc_group.gs_gerente_salud,1,0,0,0
+supplier_category_enfermeria,Lectura de las categorías de los proveedores,model_supplier_category,sc_group.gs_enfermeria,1,0,0,0
+supplier_base_coordinator_nurse,Gestión de proovedores,model_supplier_base,sc_group.gs_coordinator_nurse,1,1,1,0
+specialty_supplier_coordinator_nurse,Gestión de las especialidades de los proovedores,model_nomenclature_specialty_supplier,sc_group.gs_coordinator_nurse,1,1,1,0
+supplier_category_coordinator_nurse,Gestión de las categorías de los proveedores,model_supplier_category,sc_group.gs_coordinator_nurse,1,1,1,0

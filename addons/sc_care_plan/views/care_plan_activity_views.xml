@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View care.plan.activity View List -->
+    <record id="view_care_plan_activity_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Actividades del Plan de Cuidado</field>
+        <field name="model">care.plan.activity</field>
+        <field name="arch" type="xml" >
+            <list create="false">
+                <field name="care_plan_id"/>
+                <field name="activity_id"/>
+                <field name="dependency_level_id"/>
+                <field name="goal_ids" widget="many2many_tags"/>
+                <field name="action_ids" widget="many2many_tags"/>
+                <field name="observation_ids" widget="many2many_tags"/>
+                <field name="result_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View care.plan.activity form -->
+    <record id="view_care_plan_activity_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Actividades del Plan de Cuidado</field>
+        <field name="model">care.plan.activity</field>
+        <field name="arch" type="xml">
+            <form string="Care Plan Activity">
+                <sheet>
+                    <field name="care_plan_id" readonly="1" nolabel="1"/>
+                    <group>
+                        <group>
+                            <field name="activity_id" onchange="1"/>
+                        </group>
+                        <group>
+                            <field name="dependency_level_id" />
+                        </group>
+                    </group>
+                    <group>
+                            <group string="Acciones">
+                                <field name="action_ids" nolabel="1" 
+                                       context="{'tree_view_ref': 'sc_care_plan.view_care_action_list_without_active'}"
+                                       domain="[('id', 'in', filtered_action_ids),('active','=',True)]">
+                                    <list>
+                                        <field nolabel="1" name="name" />
+                                    </list>
+                                </field>
+                            </group>
+                            <group string="Resultados">
+                                <field name="result_ids" nolabel="1" domain="[('id', 'in', filtered_result_ids),('active','=',True)]">
+                                    <list>
+                                        <field nolabel="1" name="name" />
+                                    </list>
+                                </field>
+                            </group>
+                    </group>
+                    <group>
+                            <group string="Observaciones">
+                                <field name="observation_ids" nolabel="1" domain="[('id', 'in', filtered_observation_ids),('active','=',True)]">
+                                    <list>
+                                        <field nolabel="1" name="name" />
+                                    </list>
+                                </field>
+                            </group>
+                            <group string="Objetivos">
+                                <field name="goal_ids" nolabel="1" domain="[('id', 'in', filtered_goal_ids),('active','=',True)]">
+                                    <list>
+                                        <field nolabel="1" name="name" />
+                                    </list>
+                                </field>
+                            </group>
+                    </group>
+                    
+                </sheet> 
+                <field name="filtered_goal_ids" invisible="1"/>
+                <field name="filtered_action_ids" invisible="1"/>
+                <field name="filtered_result_ids" invisible="1"/>
+                <field name="filtered_observation_ids" invisible="1"/>
+            </form>
+        </field>
+    </record>
+
+    <!-- View care.plan.activity search -->
+    <record id="view_care_plan_activity_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Actividades del Plan de Cuidado</field>
+        <field name="model">care.plan.activity</field>
+        <field name="arch" type="xml">
+            <search>
+                
+            </search>
+        </field>
+    </record>
+
+    <!-- Action care.plan.activity -->
+    <record id="action_care_plan_activity" model="ir.actions.act_window">
+        <field name="name">Actividades de los planes de cuidado</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">care.plan.activity</field>
+        <field name="view_mode">list</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ejemplos, haga clic aquí para agregar una nueva actividad de plan de atención.
+            </p>
+        </field>
+    </record>
+
+</odoo>

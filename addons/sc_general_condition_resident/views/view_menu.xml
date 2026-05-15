@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_medical_resident_state"
+            name="Estado General"
+            sequence="-4"
+            action="action_medical_resident_state"
+            web_icon="sc_general_condition_resident,static/src/img/menu_item.png"/>
+    </data>
+</odoo>

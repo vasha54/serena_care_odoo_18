@@ -1,0 +1,50 @@
+<odoo>
+    <data noupdate="1">
+        <!-- A -->
+        <record id="type_avd_grooming" model="activity.type">
+            <field name="name">Arreglo personal</field>
+        </record>
+        <!-- B -->
+        <record id="type_avd_body_hygiene" model="activity.type">
+            <field name="name">Higiene Corporal</field>
+        </record>
+        <!-- C -->
+        <record id="type_avd_eating" model="activity.type">
+            <field name="name">Comer</field>
+        </record>
+        <!-- D -->
+        <record id="type_avd_ambulation_transfer" model="activity.type">
+            <field name="name">Deambulación y traslado</field>
+        </record>
+        <!-- E -->
+        <record id="type_avd_emunctories" model="activity.type">
+            <field name="name">Emuntorios</field>
+        </record>
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <!-- M -->
+        <!-- N -->
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <!-- T -->
+        <!-- U -->
+        <!-- V -->
+        <record id="type_avd_dressing" model="activity.type">
+            <field name="name">Vestirse</field>
+        </record>
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+        
+        
+    </data>
+</odoo>

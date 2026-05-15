@@ -5,7 +5,7 @@
 
     <!-- View register.medical.indication.wizard form -->
     <record id="view_register_medical_indication_wizard_form" model="ir.ui.view">
-        <field name="name">view.register.medical.indication.wizard.form</field>
+        <field name="name">Vista Wizard-Formulario registrar Indicación Médica General</field>
         <field name="model">register.medical.indication.wizard</field>
         <field name="arch" type="xml">
             <form string="Register Medical Indication Wizard">

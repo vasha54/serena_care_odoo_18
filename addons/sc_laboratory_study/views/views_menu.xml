@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_laboratory_study"
+            name="Estudios de Laboratorio"
+            sequence="-4"
+            action="action_laboratory_file"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud"
+            web_icon="sc_laboratory_study,static/src/img/menu_item.png"/>
+
+    </data>
+</odoo>

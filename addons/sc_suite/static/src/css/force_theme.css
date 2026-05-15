@@ -1,0 +1,12 @@
+:root {
+    --o-color-1: #5f2e7f !important;
+    --o-color-2: #f4701e !important;
+    --o-color-3: #4ea83d !important;
+    --o-color-4: #f8f9fa !important;
+    --o-color-5: #212529 !important;
+}
+
+.o_main_navbar {
+    background-color: var(--o-color-4) !important;
+    color: var(--o-color-1) !important;
+}

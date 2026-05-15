@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_res_groups"
+        name="Roles y permisos"
+        sequence="-100"
+        groups="sc_group.gs_admin"
+        web_icon="sc_group,static/src/img/menu_item.png"/>
+
+    
+    <menuitem id="menu_res_groups_serena"
+        name="Roles"
+        action="action_res_groups_serena"
+        sequence="0"
+        groups="sc_group.gs_admin"
+        parent="menu_serena_care_root_res_groups"/>
+
+    <menuitem id="menu_serena_care_root_audit_log"
+        name="Registros auditables"
+        action="action_audit_log"
+        sequence="0"
+        groups="sc_group.gs_admin"
+        web_icon="sc_group,static/src/img/icon_log.png"/>
+        
+</odoo>

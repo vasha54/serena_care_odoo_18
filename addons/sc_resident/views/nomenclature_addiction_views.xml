@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View nomenclature.addiction View List -->
+    <record id="view_nomenclature_addiction_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de las Addiciones no activas</field>
+        <field name="model">nomenclature.addiction</field>
+        <field name="priority">1</field> 
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nomenclature_addiction_list" model="ir.ui.view">
+        <field name="name">Vista Lista de las Addiciones</field>
+        <field name="model">nomenclature.addiction</field>
+        <field name="priority">2</field> 
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View nomenclature.addiction form -->
+    <record id="view_nomenclature_addiction_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Addición</field>
+        <field name="model">nomenclature.addiction</field>
+        <field name="arch" type="xml">
+            <form string="Formulario de Addición">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View nomenclature.addiction search -->
+    <record id="view_nomenclature_addiction_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Addición</field>
+        <field name="model">nomenclature.addiction</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action nomenclature.addiction -->
+    <record id="action_nomenclature_addiction" model="ir.actions.act_window">
+        <field name="name">Listado de Adicciones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nomenclature.addiction</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_resident.view_nomenclature_addiction_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_resident.view_nomenclature_addiction_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar Adicción.
+            </p>
+        </field>
+    </record>
+
+</odoo>

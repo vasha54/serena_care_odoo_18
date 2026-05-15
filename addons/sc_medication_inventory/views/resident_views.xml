@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_medication_inventory" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Inventario Medicamento</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//page[@name='medical_history']" position="before">
+                <page name="pharmacy" string="Inventario de Medicamentos" invisible="not id">
+                    <group>
+                        <group name="group_operation" string="Acciones">
+                            <group>
+                                <button name="action_add_medication"
+                                    string="Agregar medicamento"
+                                    type="object"
+                                    class="btn-primary"
+                                    groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+                                    invisible="not id or show_actions_buttons"
+                                    icon="fa-plus"/>
+                            </group>
+                            <group>
+                                <group>
+                                    <button name="action_increase_quantity"
+                                        string="Actualizar la cantidad disponible (+)"
+                                        type="object"
+                                        class="btn-success"
+                                        groups="sc_group.gs_admin"
+                                        invisible="not id or show_actions_buttons"
+                                        icon="fa-arrow-up"/>
+                                </group>
+                                <group>
+                                    <button name="action_decrease_quantity"
+                                        string="Actualizar la cantidad disponible (-)"
+                                        type="object"
+                                        class="btn-danger"
+                                        groups="sc_group.gs_admin"
+                                        invisible="not id or show_actions_buttons"
+                                        icon="fa-arrow-down"/>
+                                </group>
+                            </group>
+                        </group>
+                    </group>
+    
+                    <group  string="Medicamentos" col="4" colspan="4">
+
+                        <field name="medication_inventory_ids" options="{'create':false, 'delete':false}" nolabel="1">
+                            <list decoration-danger="available_quantity &lt;= alert_quantity" 
+                    decoration-warning="available_quantity &lt;= warning_quantity">
+                                <field string="Medicamento" name="medicament_id" width="100"/>
+                                <field string="Forma Farmacéutica" name="pharmaceutical_form" width="100" />
+                                <field string="Cantidad disponible" name="quantity_str" width="100" />
+                                <field name="alert_quantity" column_invisible="1" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

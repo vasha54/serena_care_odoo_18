@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Actividades originales -->
+        <record id="activity_output" model="nomenclature.activity.type">
+            <field name="name">Salidas</field>
+
+        </record>
+        
+        <record id="activity_visit" model="nomenclature.activity.type">
+            <field name="name">Visitas</field>
+        </record>
+        
+        <record id="activity_recreative" model="nomenclature.activity.type">
+            <field name="name">Recreación</field>
+        </record>
+        
+        <!-- Actividades físicas -->
+        <record id="activity_yoga" model="nomenclature.activity.type">
+            <field name="name">Yoga adaptado</field>
+        </record>
+        
+        <record id="activity_walking" model="nomenclature.activity.type">
+            <field name="name">Paseos guiados</field>
+        </record>
+        
+        <record id="activity_physiotherapy" model="nomenclature.activity.type">
+            <field name="name">Ejercicios de fisioterapia</field>
+        </record>
+        
+        <record id="activity_gentle_gymnastics" model="nomenclature.activity.type">
+            <field name="name">Gimnasia suave</field>
+        </record>
+        
+        <record id="activity_dance" model="nomenclature.activity.type">
+            <field name="name">Baile terapéutico</field>
+        </record>
+        
+        <!-- Actividades cognitivas -->
+        <record id="activity_memory" model="nomenclature.activity.type">
+            <field name="name">Taller de memoria</field>
+        </record>
+        
+        <record id="activity_reading" model="nomenclature.activity.type">
+            <field name="name">Club de lectura</field>
+        </record>
+        
+        <record id="activity_puzzles" model="nomenclature.activity.type">
+            <field name="name">Resolución de puzzles</field>
+        </record>
+        
+        <record id="activity_bingo" model="nomenclature.activity.type">
+            <field name="name">Bingo</field>
+        </record>
+        
+        <record id="activity_trivia" model="nomenclature.activity.type">
+            <field name="name">Juegos de trivia</field>
+        </record>
+        
+        <!-- Actividades sociales -->
+        <record id="activity_intergenerational" model="nomenclature.activity.type">
+            <field name="name">Encuentros intergeneracionales</field>
+        </record>
+        
+        <record id="activity_coffee" model="nomenclature.activity.type">
+            <field name="name">Tertulias de café</field>
+        </record>
+        
+        <record id="activity_celebrations" model="nomenclature.activity.type">
+            <field name="name">Celebraciones especiales</field>
+        </record>
+        
+        <record id="activity_birthdays" model="nomenclature.activity.type">
+            <field name="name">Fiestas de cumpleaños</field>
+        </record>
+        
+        <record id="activity_group_dinner" model="nomenclature.activity.type">
+            <field name="name">Cenas grupales</field>
+        </record>
+        
+        <!-- Actividades creativas -->
+        <record id="activity_painting" model="nomenclature.activity.type">
+            <field name="name">Taller de pintura</field>
+        </record>
+        
+        <record id="activity_music" model="nomenclature.activity.type">
+            <field name="name">Musicoterapia</field>
+        </record>
+        
+        <record id="activity_handcrafts" model="nomenclature.activity.type">
+            <field name="name">Manualidades</field>
+        </record>
+        
+        <record id="activity_cooking" model="nomenclature.activity.type">
+            <field name="name">Taller de cocina</field>
+        </record>
+        
+        <record id="activity_gardening" model="nomenclature.activity.type">
+            <field name="name">Jardinería terapéutica</field>
+        </record>
+        
+        <!-- Actividades terapéuticas -->
+        <record id="activity_pet" model="nomenclature.activity.type">
+            <field name="name">Terapia con animales</field>
+        </record>
+        
+        <record id="activity_remembrance" model="nomenclature.activity.type">
+            <field name="name">Terapia de reminiscencia</field>
+        </record>
+        
+        <record id="activity_relaxation" model="nomenclature.activity.type">
+            <field name="name">Técnicas de relajación</field>
+        </record>
+        
+        <record id="activity_aromatherapy" model="nomenclature.activity.type">
+            <field name="name">Aromaterapia</field>
+        </record>
+        
+        <record id="activity_massage" model="nomenclature.activity.type">
+            <field name="name">Masajes terapéuticos</field>
+        </record>
+        
+        <!-- Actividades culturales -->
+        <record id="activity_movies" model="nomenclature.activity.type">
+            <field name="name">Sesiones de cine</field>
+        </record>
+        
+        <record id="activity_theater" model="nomenclature.activity.type">
+            <field name="name">Representaciones teatrales</field>
+        </record>
+        
+        <record id="activity_museum" model="nomenclature.activity.type">
+            <field name="name">Visitas a museos</field>
+        </record>
+        
+        <record id="activity_concerts" model="nomenclature.activity.type">
+            <field name="name">Conciertos</field>
+        </record>
+        
+        <!-- Actividades espirituales -->
+        <record id="activity_meditation" model="nomenclature.activity.type">
+            <field name="name">Meditación guiada</field>
+        </record>
+        
+        <record id="activity_prayer" model="nomenclature.activity.type">
+            <field name="name">Grupos de oración</field>
+        </record>
+        
+        <record id="activity_religious" model="nomenclature.activity.type">
+            <field name="name">Actividades religiosas</field>
+        </record>
+        
+        <!-- Actividades tecnológicas -->
+        <record id="activity_digital" model="nomenclature.activity.type">
+            <field name="name">Taller digital</field>
+        </record>
+        
+        <record id="activity_videocalls" model="nomenclature.activity.type">
+            <field name="name">Videollamadas con familiares</field>
+        </record>
+        
+        <record id="activity_virtual_tours" model="nomenclature.activity.type">
+            <field name="name">Recorridos virtuales</field>
+        </record>
+    </data>
+</odoo>

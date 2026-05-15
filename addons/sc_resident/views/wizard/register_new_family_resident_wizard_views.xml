@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="view_register_new_family_resident_wizard_form" model="ir.ui.view">
-        <field name="name">view.register.new.family.resident.wizard.form</field>
+        <field name="name">Vista Dialogo Registrar Nuevo Familar al Residente</field>
         <field name="model">register.new.family.resident.wizard</field>
         <field name="arch" type="xml">
             <form string="Register New Family Resident Wizard">
@@ -15,6 +15,9 @@
                                 placeholder="Nombre del familiar" class="mb-0"/>
                         </h1>
                     </div>
+                    <group col="2" colspan="2">
+                        <field name="is_contractor"  />
+                    </group>
                     <group col="2">
                         <group string="Contacto">
                             <field name="family_phone" widget="phone" />
@@ -23,25 +26,7 @@
                             <field name="kinship_id" />
                         </group>
                         <group string="Dirección">
-                            <group col="2">
-                                <field name="family_country_id" placeholder="País" />
-                                 <field string="Estado" name="family_province_id" placeholder="Estado"
-                                       class="o_address_country" domain="[('country_id','=',family_country_id)]" 
-                                       />
-                                <field string="Municipio" name="family_municipality_id"
-                                       class="o_address_state" placeholder="Municipio"
-                                       domain="[('province_id','=',family_province_id)]"
-                                    />
-                                <field string="Ciudad" name="family_city" placeholder="Ciudad"
-                                       class="o_address_city" />
-                                <field string="Código Postal" name="family_zip" placeholder="C.P." /> 
-                            </group>
-                            <group col="2">
-                                <field string="Calle principal" name="family_street" placeholder="Calle principal" />
-                                <field string="Entre calle #1" name="family_street2" placeholder="Entre calle 1" />
-                                <field name="family_street3" placeholder="Entre calle 2" />
-                                <field name="family_street_number" placeholder="Número" />
-                            </group>
+                            <field name="family_address" rows="5" widget="textarea" nolabel="1" required="1" />
                         </group>
                     </group>
                     <group col="2" colspan="2" string="Niveles de autorización">

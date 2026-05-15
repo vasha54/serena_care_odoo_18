@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+        <!-- <record id="residence_house_user_rule" model="ir.rule">
+            <field name="name">Residencias visibles por usuario con acceso a dichas residencias</field>
+            <field name="model_id" ref="sc_residence.model_residence_house"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">
+            [('id', 'in',
+            user.selected_residences_ids.ids
+            if user.selected_residences_ids
+            else user.accessible_residences_ids.ids
+            )]
+            </field>
+        </record> -->
+    
+</odoo>
+
+<!-- 
+<field name="domain_force">
+            ['|',
+                ('id', 'in', user.selected_residences_ids.ids),
+                '&amp;', 
+                ('id', 'in', user.accessible_residences_ids.ids),
+                ('id', 'not in', user.selected_residences_ids.ids)
+            ]
+            </field>
+<field name="domain_force">
+
+
+            [('id', 'in', user.selected_residences_ids.ids)]
+            </field> -->
+            <!--  -->
+            <!-- <field name="domain_force">
+            
+             [('id', 'in', user.visible_residences_ids.ids)] -->

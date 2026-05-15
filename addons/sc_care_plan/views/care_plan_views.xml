@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View care.plan View List -->
+    <record id="view_care_plan_list" model="ir.ui.view">
+        <field name="name">Vista de Lista de Planes de Cuidado</field>
+        <field name="model">care.plan</field>
+        <field name="arch" type="xml">
+            <list create="false">
+                <field string="Plan" name="display_name"/>
+                <field name="count_activitys" />
+                <field name="count_dependency_level" />
+                <field name="count_goals" />
+                <field name="count_actions" />
+                <field name="count_observations" />
+                <field name="count_results" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View care.plan form -->
+    <!-- <record id="view_care_plan_form" model="ir.ui.view">
+        <field name="name">view.care.plan.form</field>
+        <field name="model">care.plan</field>
+        <field name="arch" type="xml">
+            <form string="Care Plan">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record> -->
+
+    <!-- View care.plan search -->
+    <record id="view_care_plan_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Plan de Cuidado</field>
+        <field name="model">care.plan</field>
+        <field name="arch" type="xml">
+            <search>
+                <field string="Nombre del plan" name="display_name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action care.plan -->
+    <record id="action_care_plan" model="ir.actions.act_window">
+        <field name="name">Planes de cuidados</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">care.plan</field>
+        <field name="view_mode">list</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de planes de cuidado.
+            </p>
+        </field>
+    </record>
+
+</odoo>

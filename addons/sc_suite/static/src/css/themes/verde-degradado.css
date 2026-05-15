@@ -1,0 +1,46 @@
+/* sc_suite/static/src/css/themes/verde-degradado.css */
+:root {
+    --o-color-1: #4ea83d;    /* Verde principal */
+    --o-color-2: #75c467;    /* Verde claro */
+    --o-color-3: #368526;    /* Verde oscuro */
+    --o-color-4: #f2f9f1;    /* Fondo verde muy claro */
+    --o-color-5: #1e441a;    /* Texto verde oscuro */
+    
+    --o-brand-primary: var(--o-color-1);
+    --o-brand-secondary: var(--o-color-2);
+    --o-brand-optional: var(--o-color-3);
+    --o-brand-light: var(--o-color-4);
+    --o-brand-dark: var(--o-color-5);
+    
+    --o-main-bg-color: var(--o-color-4);
+    --o-main-text-color: var(--o-color-5);
+    --o-header-bg-color: var(--o-color-1);
+    --o-header-text-color: white;
+    --o-link-color: var(--o-color-2);
+    --o-button-primary-bg: var(--o-color-1);
+    --o-button-primary-text: white;
+    --o-button-secondary-bg: var(--o-color-2);
+    --o-button-secondary-text: white;
+
+    --NavBar-entry-backgroundColor: var(--o-color-1);
+    --o-navbar-badge-bg: #5f2e7f;
+}
+
+.o_main_navbar {
+    background-color: var(--o-header-bg-color) !important;
+    color: var(--o-header-text-color) !important;
+}
+
+.o_main_navbar{
+    --o-navbar-height: 46px;
+    --Dropdown_menu-margin-y: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: var(--o-navbar-height);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid var(--o-color-3);
+    background: var(--o-color-1);
+    font-size: 0.875rem;
+}

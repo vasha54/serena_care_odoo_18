@@ -3,31 +3,39 @@
 
     <!-- View supplier.base View List -->
     <record id="view_supplier_base_list" model="ir.ui.view">
-        <field name="name">view.supplier.base.list</field>
+        <field name="name">Vista Lista de Proovedores</field>
         <field name="model">supplier.base</field>
         <field name="arch" type="xml">
             <list>
                 <header>
                     
                 </header>
-                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
-                <field name="name" width="200"/>
+                <field name="is_affiliate" widget="boolean_toggle"/>
+                <field string="Nombre" name="name" width="200"/>
                 <field name="provider_type" width="120"/>
+                <field name="nomenclature_specialty_id" width="120"/>
+                <field string="Correo electrónico" name="email" widget="email" width="120"/>
                 <field string="Teléfono" name="phone" widget="phone" width="120"/>
+                <field string="Trabaja en" name="works_at_id"/>
+                <field name="discount" />
                 <field name="contact_address" width="500"/>
             </list>
         </field>
     </record>
 
     <record id="view_supplier_base_list_deleted" model="ir.ui.view">
-        <field name="name">supplier.base.view.list.deleted</field>
+        <field name="name">Vista Lista de Proovedores eliminados</field>
         <field name="model">supplier.base</field>
         <field name="arch" type="xml">
             <list create="false" edit="false" delete="false">
-                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
-                <field name="name" width="200"/>
+                <field name="is_affiliate" widget="boolean_toggle"/>
+                <field string="Nombre" name="name" width="200"/>
                 <field name="provider_type" width="120"/>
+                <field name="nomenclature_specialty_id" width="120"/>
+                <field string="Correo electrónico" name="email" widget="email" width="120"/>
                 <field string="Teléfono" name="phone" widget="phone" width="120"/>
+                <field string="Trabaja en" name="works_at_id"/>
+                <field name="discount" />
                 <field name="contact_address" width="500"/>
             </list>
         </field>
@@ -36,7 +44,7 @@
 
     <!-- View supplier.base form -->
     <record id="view_supplier_base_form" model="ir.ui.view">
-    <field name="name">view.supplier.base.form</field>
+    <field name="name">Vista Formulario de Proovedor</field>
     <field name="model">supplier.base</field>
     <field name="arch" type="xml">
         <form string="Supplier Base">
@@ -55,6 +63,7 @@
                 </div>
                 <group col="4" colspan="4">
                     <group string="Información General" col="2" colspan="2">
+                        <field name="category_id" string="Categoría" requerid="1" />
                         <field string="Tipo" name="provider_type" required="1" />
                         <field name="nomenclature_specialty_id" 
                                required="provider_type in ['doctor', 'specialist']"
@@ -64,6 +73,8 @@
                         <field string="Activo" name="active" widget="boolean_toggle" />
                         <field string="Trabaja en" name="works_at_id"
                                invisible="provider_type not in ['doctor', 'specialist']"/>
+                        <field name="is_affiliate" widget="boolean_toggle"/>
+                        <field name="discount" invisible="not is_affiliate" required="1" />
                     </group>
                     <group string="Dirección" col="2" colspan="2">
                         <group col="1" colspan="1">
@@ -97,7 +108,7 @@
 </record>
 
     <record id="view_supplier_base_form_deleted" model="ir.ui.view">
-        <field name="name">supplier.base.view.form.deleted</field>
+        <field name="name">Vista Formulario de Proovedor eliminado</field>
         <field name="model">supplier.base</field>
         <field name="arch" type="xml">
             <form string="Supplier Base" create="false" edit="false" delete="false">
@@ -159,7 +170,7 @@
 
     <!-- View supplier.base search -->
     <record id="view_supplier_base_search" model="ir.ui.view">
-        <field name="name">view.supplier.base.search</field>
+        <field name="name">Vista Búsqueda de Proovedor</field>
         <field name="model">supplier.base</field>
         <field name="arch" type="xml">
             <search>

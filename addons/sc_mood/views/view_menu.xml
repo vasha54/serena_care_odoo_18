@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_mood"
+            name="Ánimo"
+            sequence="-4"
+            action="action_mood_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            web_icon="sc_mood,static/src/img/item_menu.png"/>
+
+        <menuitem id="menu_mood_assessment"
+            name="Evaluaciones"
+            sequence="1"
+            action="action_mood_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_mood"/>
+
+        <menuitem id="menu_mood_configuration"
+            name="Configuración"
+            sequence="3"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_mood"/>
+
+        <menuitem id="menu_mood_state"
+            name="Estado de ánimo"
+            sequence="1"
+            action="action_mood_state"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_mood_configuration"/>
+
+
+
+        
+    </data>
+</odoo>

@@ -32,7 +32,7 @@ class BaseModel(models.AbstractModel):
                 # Comparar valores antiguo y nuevo
                 if old_active != new_active:
                     logs.append({
-                        'name': f"Cambio estado activo: {model.name} ({self._name}) ID {rec.id} " + (f"Nombre {rec.name}" if rec.name else ""),
+                        'name': f"Cambio estado activo: {model.display_name} ({self._name}) ID {rec.id} " + (f"Nombre {rec.display_name}" if rec.display_name else ""),
                         'user_id': self.env.user.id,
                         'model_id': model.id,
                         'record_id': rec.id,

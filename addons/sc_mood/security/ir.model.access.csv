@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+nutrition_level_admin,Gestión de los estados de ánimo,model_mood_state,sc_group.gs_admin,1,1,1,0
+nutrition_level_gerente_salud,Lectura de los estados de ánimo,model_mood_state,sc_group.gs_gerente_salud,1,0,0,0
+nutrition_level_enfermeria,Gestión de los estados de ánimo,model_mood_state,sc_group.gs_enfermeria,1,1,1,0
+nutrition_admin,Gestión de evaluación de ánimo,model_mood_assessment,sc_group.gs_admin,1,1,1,0
+nutrition_gerente_salud,Lectura de evaluación de ánimo,model_mood_assessment,sc_group.gs_gerente_salud,1,0,0,0
+nutrition_enfermeria,Gestión de evaluación de ánimo,model_mood_assessment,sc_group.gs_enfermeria,1,1,1,0
+nutrition_level_coordinator_nurse,Gestión de los estados de ánimo,model_mood_state,sc_group.gs_coordinator_nurse,1,1,1,0
+nutrition_coordinator_nurse,Gestión de evaluación de ánimo,model_mood_assessment,sc_group.gs_coordinator_nurse,1,1,1,0

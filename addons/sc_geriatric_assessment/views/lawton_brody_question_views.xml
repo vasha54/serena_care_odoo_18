@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View lawtonbrody.question View List -->
+    <record id="view_lawtonbrody_question_list" model="ir.ui.view">
+        <field name="name">Vista Lista Actividades de Lawton-Brody</field>
+        <field name="model">lawtonbrody.question</field>
+        <field name="arch" type="xml">
+            <list default_order="order">
+                <field name="active" widget="boolean_toggle" string="Activo"/>
+                <field name="order" />
+                <field name="name"/>
+                <field name="count_choises"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View lawtonbrody.question form -->
+    <record id="view_lawtonbrody_question_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Actividad de Lawton-Brody</field>
+        <field name="model">lawtonbrody.question</field>
+        <field name="arch" type="xml">
+            <form string="Lawton-Brody Activity">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Configuración">
+                            <field name="active" string="Activa" widget="boolean_toggle"/>
+                            <field name="order" />
+                        </group>
+
+                    </group>
+                    <group string="Opciones de Criterios">
+                        <field nolabel="1" name="choise_ids">
+                            <list default_order="value">
+                                <field name="name"/>
+                                <field name="value"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View lawtonbrody.question search -->
+    <record id="view_lawtonbrody_question_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Actividad de Lawton-Brody</field>
+        <field name="model">lawtonbrody.question</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action lawtonbrody.question -->
+    <record id="action_lawtonbrody_question" model="ir.actions.act_window">
+        <field name="name">Actividades de Lawton-Brody</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lawtonbrody.question</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar una nueva
+                actividad
+                de Lawton-Brody.
+            </p>
+        </field>
+    </record>
+
+</odoo>

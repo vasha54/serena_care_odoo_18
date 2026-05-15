@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View anomaly.level View List -->
+    <record id="view_anomaly_level_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de Niveles de Anomalías sin columna Activo</field>
+        <field name="model">anomaly.level</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Orden" name="sequence" />
+                <field string="Color" name="color" />
+                <field string="Nombre" name="name"/>
+                <field string="Descripción" name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_anomaly_level_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Niveles de Anomalías</field>
+        <field name="model">anomaly.level</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list >
+                <field string="Activo" name="active" widget="boolean_toggle" />
+                <field string="Orden" name="sequence" />
+                <field string="Color" name="color" />
+                <field string="Nombre" name="name"/>
+                <field string="Descripción" name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View anomaly.level form -->
+    <record id="view_anomaly_level_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Nivel de Anomalía</field>
+        <field name="model">anomaly.level</field>
+        <field name="arch" type="xml">
+            <form string="Anomaly Level">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Activo" name="active" widget="boolean_toggle" />
+                            <field name="color" />
+                            <field string="Orden" name="sequence" />
+                        </group>
+                        <group>
+                            <field name="description" rows="5" widget="textarea"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View anomaly.level search -->
+    <record id="view_anomaly_level_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Nivel de Anomalía</field>
+        <field name="model">anomaly.level</field>
+        <field name="arch" type="xml">
+            <search>
+                <field string="Nombre" name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action anomaly.level -->
+    <record id="action_anomaly_level" model="ir.actions.act_window">
+        <field name="name">Niveles de Anomalías</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">anomaly.level</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_anomalies.view_anomaly_level_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_anomalies.view_anomaly_level_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de niveles de anomalía.
+            </p>
+        </field>
+    </record>
+
+</odoo>

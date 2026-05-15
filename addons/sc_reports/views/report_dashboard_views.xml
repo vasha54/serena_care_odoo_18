@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <record id="view_report_dashboard_form" model="ir.ui.view">
+        <field name="name">Vista de Dashboard de Reportes</field>
+        <field name="model">report.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard de Reportes" with_control_panel="false" create="false" edit="false" delete="false">
+                
+                <!-- Reemplazar el header para eliminar botones por defecto -->
+                <header position="replace">
+                    <div class="oe_button_box" name="button_box">
+                        <!-- Aquí puedes poner tus propios botones si los necesitas -->
+                    </div>
+                </header>
+                <sheet>
+                    <!-- Header con título -->
+                    <div class="oe_title">
+                        <h1>Reportes Clínicos y Administrativos</h1>
+                        
+                    </div>
+                    
+                    <!-- Grupo de Reportes Clínicos -->
+                    <group string="Reportes Clínicos" colspan="4">
+                        <group string="Monitoreo Diario">
+                            <button name="action_open_hydric_balance" 
+                                    type="object" 
+                                    string="Balance Hídrico" 
+                                    class="btn-primary"
+                                    icon="fa-bar-chart"/>
+                            
+                            <button name="action_open_feeding_report" 
+                                    type="object" 
+                                    string="Alimentación" 
+                                    class="btn-primary"
+                                    icon="fa-cutlery"/>
+                            
+                            <button name="action_open_hygiene_report" 
+                                    type="object" 
+                                    string="Higiene/Aseo" 
+                                    class="btn-primary"
+                                    icon="fa-shower"/>
+                        </group>
+                        
+                        <group string="Evaluaciones">
+                            <button name="action_open_consciousness_report" 
+                                    type="object" 
+                                    string="Estados de Conciencia" 
+                                    class="btn-info"
+                                    icon="fa-heartbeat"/>
+                            
+                            <button name="action_open_neurological_report" 
+                                    type="object" 
+                                    string="Evaluaciones Neurológicas" 
+                                    class="btn-info"
+                                    icon="fa-brain"/>
+                        </group>
+                    </group>
+                    
+                    <!-- Grupo de Reportes Administrativos -->
+                    <group string="Reportes Administrativos" colspan="4">
+                        <group string="Gestión">
+                            <button name="action_open_medication_report" 
+                                    type="object" 
+                                    string="Medicamentos" 
+                                    class="btn-warning"
+                                    icon="fa-medkit"/>
+                            
+                            <button name="action_open_recreation_report" 
+                                    type="object" 
+                                    string="Recreación" 
+                                    class="btn-warning"
+                                    icon="fa-gamepad"/>
+                            
+                            <button name="action_open_care_plan_report" 
+                                    type="object" 
+                                    string="Plan de Cuidados" 
+                                    class="btn-warning"
+                                    icon="fa-clipboard"/>
+                        </group>
+                        
+                        <group string="Reportes Integrales">
+                            <button name="action_open_general_resident_report" 
+                                    type="object" 
+                                    string="Reporte General del Residente" 
+                                    class="btn-success oe_highlight"
+                                    icon="fa-file-pdf-o"/>
+                        </group>
+                    </group>
+                    
+                    <!-- Información adicional -->
+                    <footer>
+                        <div class="alert alert-info" role="alert">
+                            <strong>Nota:</strong> Todos los reportes requieren filtros de residente y rango de fechas.
+                        </div>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- Acción de ventana para el dashboard -->
+        <record id="action_report_dashboard" model="ir.actions.act_window">
+            <field name="name">Reportes</field>
+            <field name="res_model">report.dashboard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_report_dashboard_form"/>
+            <field name="target">current</field>
+            <field name="context">
+                {
+                    'hide_control_panel': True,
+                    'create': False,
+                    'edit': False,
+                    'delete': False
+                }
+            </field>
+            <!-- Especificar que no se pueden crear, editar o eliminar registros -->
+            
+        </record>
+
+</odoo>

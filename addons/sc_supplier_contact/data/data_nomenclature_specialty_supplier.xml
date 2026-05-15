@@ -16,13 +16,16 @@
         <record id="specialty_ortopedia" model="nomenclature.specialty.supplier">
             <field name="name">Ortopedia Geriátrica</field>
         </record>
+        <record id="specialty_orthopedics" model="nomenclature.specialty.supplier">
+            <field name="name">Ortopedia</field>
+        </record>
 
         <record id="specialty_reumatologia" model="nomenclature.specialty.supplier">
             <field name="name">Reumatología</field>
         </record>
 
         <record id="specialty_oftalmologia" model="nomenclature.specialty.supplier">
-            <field name="name">Oftalmología Geriátrica</field>
+            <field name="name">Oftalmología</field>
         </record>
 
         <record id="specialty_endocrinologia" model="nomenclature.specialty.supplier">
@@ -50,7 +53,7 @@
         </record>
 
         <record id="specialty_nutricion" model="nomenclature.specialty.supplier">
-            <field name="name">Nutrición Geriátrica</field>
+            <field name="name">Nutrición</field>
         </record>
 
         <record id="specialty_audiologia" model="nomenclature.specialty.supplier">
@@ -94,7 +97,51 @@
         </record>
 
         <record id="specialty_urologia" model="nomenclature.specialty.supplier">
-            <field name="name">Urología Geriátrica</field>
+            <field name="name">Urología</field>
+        </record>
+
+        <record id="specialty_general_physician" model="nomenclature.specialty.supplier">
+            <field name="name">Médico general</field>
+        </record>
+
+        <record id="specialty_surgeon" model="nomenclature.specialty.supplier">
+            <field name="name">Cirujano</field>
+        </record>
+
+        <record id="specialty_dental_surgeon" model="nomenclature.specialty.supplier">
+            <field name="name">Cirujano dental</field>
+        </record>
+
+        <record id="specialty_orthopedic_surgeon" model="nomenclature.specialty.supplier">
+            <field name="name">Cirujano ortopédica</field>
+        </record>
+
+        <record id="specialty_physical_rehabilitation" model="nomenclature.specialty.supplier">
+            <field name="name">Rehabilitación Física</field>
+        </record>
+
+         <record id="specialty_neurological_rehabilitation" model="nomenclature.specialty.supplier">
+            <field name="name">Rehabilitación Neurológica</field>
+        </record>
+
+        <record id="specialty_dermatologist" model="nomenclature.specialty.supplier">
+            <field name="name">Dermatología</field>
+        </record>
+
+        <record id="specialty_stomatology" model="nomenclature.specialty.supplier">
+            <field name="name">Estomatología</field>
+        </record>
+
+        <record id="specialty_traumatologist" model="nomenclature.specialty.supplier">
+            <field name="name">Traumología</field>
+        </record>
+
+        <record id="specialty_anesthesiologist" model="nomenclature.specialty.supplier">
+            <field name="name">Anestesiólogía</field>
+        </record>
+
+        <record id="specialty_comprehensive_dentistry" model="nomenclature.specialty.supplier">
+            <field name="name">Odontologia Integral</field>
         </record>
     </data>
 </odoo>

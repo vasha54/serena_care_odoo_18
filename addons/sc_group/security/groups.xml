@@ -1,49 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="module_category_sc_residency" model="ir.module.category">
-        <field name="name">Serena Care - Residencias</field>
-        <field name="description">Gestión de Residencias de Adultos Mayores</field>
-        <field name="sequence">100</field>
+    <!-- 1. Crear la categoría "Serena" -->
+    <record id="module_category_serena" model="ir.module.category">
+        <field name="name">Serena</field>
+        <field name="description">Grupos para el sistema Serena</field>
+        <field name="sequence">10</field>
     </record>
 
-    <!-- Grupo Padre: Base -->
-    <record id="group_residence_user" model="res.groups">
-        <field name="name">Usuario de Residencias</field>
-        <field name="category_id" ref="module_category_sc_residency"/>
+    <!-- 2. Grupo base: Usuario Serena (hereda del grupo interno por defecto base.group_user) -->
+    <record id="gs_user" model="res.groups">
+        <field name="name">Usuario Serena</field>
+        <field name="category_id" ref="module_category_serena"/>
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
-        <field name="comment">Acceso de lectura a información de residencias</field>
+        <field name="comment">Grupo base para todos los usuarios del sistema Serena. Hereda del usuario interno estándar.</field>
+        <field name="is_group_serena">True</field>
+        <!-- <field name="can_delete">False</field> -->
     </record>
 
-    <!-- Grupo Padre: Administradores -->
-    <record id="group_residence_manager" model="res.groups">
-        <field name="name">Administrador de Residencias</field>
-        <field name="category_id" ref="module_category_sc_residency"/>
-        <field name="implied_ids" eval="[(4, ref('group_residence_user'))]"/>
-        <field name="comment">Acceso completo para gestionar residencias</field>
+    <!-- 3. Grupo Admin (y sus subgrupos) -->
+    <record id="gs_admin" model="res.groups">
+        <field name="name">Admin</field>
+        <field name="category_id" ref="module_category_serena"/>
+        <field name="implied_ids" eval="[
+        (4, ref('base.group_system')),
+        (4, ref('hr.group_hr_user'))]"/>
+        <field name="comment">Grupo administrativo principal. Hereda de Usuario Admin de Odoo.</field>
+        <field name="is_group_serena">True</field>
+        <!-- <field name="can_delete">False</field> -->
     </record>
 
-    <!-- Grupo Padre: Cuidadores -->
-    <record id="group_carer" model="res.groups">
-        <field name="name">Cuidador</field>
-        <field name="category_id" ref="module_category_sc_residency"/>
-        <field name="implied_ids" eval="[(4, ref('group_residence_user'))]"/>
-        <field name="comment">Acceso a las funcionalidades de Cuidadores</field>
+   
+
+    <!-- 4. Grupo Gerente Salud (Médico) -->
+    <record id="gs_gerente_salud" model="res.groups">
+        <field name="name">Gerente Salud</field>
+        <field name="category_id" ref="module_category_serena"/>
+        <field name="implied_ids" eval="[(4, ref('gs_user'))]"/>
+        <field name="is_group_serena">True</field>
+        <!-- <field name="can_delete">False</field> -->
+    </record>
+    
+    <!-- 5. Grupo Enfermería (cuidadores) -->
+    <record id="gs_enfermeria" model="res.groups">
+        <field name="name">Enfermería</field>
+        <field name="category_id" ref="module_category_serena"/>
+        <field name="implied_ids" eval="[(4, ref('gs_user'))]"/>
+        <field name="is_group_serena">True</field>
+        <!-- <field name="can_delete">False</field> -->
+    </record>
+  
+
+    <!-- 6. Grupo Admin (y sus subgrupos) -->
+    <record id="gs_coordinator_nurse" model="res.groups">
+        <field name="name">Coordinador de Enfermeria</field>
+        <field name="category_id" ref="module_category_serena"/>
+        <field name="comment">Grupo administrativo para una residencia en específico.</field>
+        <field name="implied_ids" eval="[
+        (4, ref('base.group_system')),
+        (4, ref('hr.group_hr_user'))]"/>
+        <field name="is_group_serena">True</field>
+        <!-- <field name="can_delete">False</field> -->
     </record>
 
-    <!-- Grupo Médico -->
-    <record id="group_doctor" model="res.groups">
-        <field name="name">Medico</field>
-        <field name="category_id" ref="module_category_sc_residency"/>
-        <field name="implied_ids" eval="[(4, ref('group_residence_user'))]"/>
-        <field name="comment">Acceso a las funcionalidades de Doctores</field>
-    </record>
-
-    <!-- Grupo Enfermera -->
-    <record id="group_nurse" model="res.groups">
-        <field name="name">Enfermera</field>
-        <field name="category_id" ref="module_category_sc_residency"/>
-        <field name="implied_ids" eval="[(4, ref('group_residence_user'))]"/>
-        <field name="comment">Acceso a las funcionalidades de Enfermera</field>
-    </record>
 </odoo>

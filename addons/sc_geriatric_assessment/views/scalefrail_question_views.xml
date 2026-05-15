@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View scalefrail.question View List -->
+    <record id="view_scalefrail_question_list" model="ir.ui.view">
+        <field name="name">Vista Lista Preguntas para FRAIL</field>
+        <field name="model">scalefrail.question</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="active" string="Activa" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="statement" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View scalefrail.question form -->
+    <record id="view_scalefrail_question_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Pregunta para FRAIL</field>
+        <field name="model">scalefrail.question</field>
+        <field name="arch" type="xml">
+            <form string="Scalefrail Question">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Título ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Configuración">
+                            <field name="active" string="Activa" widget="boolean_toggle"/>
+                        </group>
+                        <group string="Enunciado">
+                            <field name="statement" nolabel="1" widget="textarea" rows="5" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View scalefrail.question search -->
+    <record id="view_scalefrail_question_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Pregunta para FRAIL</field>
+        <field name="model">scalefrail.question</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action scalefrail.question -->
+    <record id="action_scalefrail_question" model="ir.actions.act_window">
+        <field name="name">Preguntas para FRAIL</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scalefrail.question</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar una nueva pregunta para FRAIL.
+            </p>
+        </field>
+    </record>
+
+</odoo>

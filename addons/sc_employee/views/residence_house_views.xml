@@ -3,7 +3,7 @@
     
     <!-- View residence_house form -->
     <record id="view_residence_house_form_employee" model="ir.ui.view">
-        <field name="name">view.residence_house.form</field>
+        <field name="name">Vista Formulario Residencia extendida a Empleado</field>
         <field name="model">residence_house</field>
         <field name="inherit_id" ref="sc_residence.view_residence_house_form"/>
         <field name="arch" type="xml">
@@ -32,7 +32,7 @@
 
     <!-- View residence_house list -->
     <record id="view_residence_house_list_employee" model="ir.ui.view">
-        <field name="name">view.residence_house.list</field>
+        <field name="name">Vista Lista de las Residencias extendida a Empleado</field>
         <field name="model">residence_house</field>
         <field name="inherit_id" ref="sc_residence.view_residence_house_list"/>
         <field name="arch" type="xml">

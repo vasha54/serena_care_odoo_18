@@ -9,6 +9,12 @@ class MedicalIndication(models.Model):
     _name = 'medical.indication'
     _description = 'Indicación Médica General'
     
+    active = fields.Boolean(
+        string='Activa',
+        default=True,
+        help="Si está marcado, la indicación se considera activa."
+    )
+    
     user_id = fields.Many2one(
         'res.users', 
         string='Doctor',
@@ -22,6 +28,12 @@ class MedicalIndication(models.Model):
         required=True,
         ondelete='restrict',
         tracking=True,
+    )
+    residence_id =  fields.Many2one(
+        string="Residencia",
+        related='resident_id.residence_id', 
+        store=True,
+        readonly=True
     )
     
     
@@ -37,10 +49,18 @@ class MedicalIndication(models.Model):
             return "Vacío"
         
         field_type = self._fields[field].type
-        if field_type in ['many2one', 'one2many', 'many2many']:
-            if field_type == 'many2one':
+        if field_type == 'many2one':
+            # value puede ser ID (int) o recordset
+            if isinstance(value, models.BaseModel):
+                record = value
+            else:
+                # Asumimos que es un ID
                 record = self.env[self._fields[field].comodel_name].browse(value)
-                return record.display_name if record else str(value)
+            return record.display_name if record else str(value)
+        elif field_type in ['one2many', 'many2many']:
+            # Para relaciones múltiples, mostrar representación
+            if isinstance(value, models.BaseModel):
+                return f"{len(value)} registro(s)" if value else "Vacío"
             else:
                 return str(value)
         else:
@@ -62,17 +82,21 @@ class MedicalIndication(models.Model):
             allowed_residences = employee.alternative_residences_ids + employee.residence_id
             
             # Verificar si la residencia del residente está permitida
-            if resident.residence_id not in allowed_residences:
-                raise UserError(_('No tiene permisos para crear indicaciones en esta residencia.'))
+            # if resident.residence_id not in allowed_residences:
+            #     raise UserError(_('No tiene permisos para crear indicaciones a residentes de esta residencia.'))
         
-        return super().create(vals)
+        records = super().create(vals)
+        # Crear log de auditoría para cada registro creado
+        for record in records:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'medical.indication', 'create')
+        return records
 
     def write(self, vals):
         # Verificar autorización para cada registro
         for record in self:
             if self.env.user != record.user_id:
                 # Registrar acceso denegado
-                self.env['audit.log'].create({
+                self.env['audit.log'].sudo().create({
                     'name': f"Intento de modificación no autorizado de Indicación Médica (ID: {record.id})",
                     'user_id': self.env.user.id,
                     'model_id': self.env['ir.model']._get('medical.indication').id,
@@ -107,7 +131,7 @@ class MedicalIndication(models.Model):
                         changes.append(f"{field}: {old_value_str} -> {new_value_str}")
             
             if changes:
-                self.env['audit.log'].create({
+                self.env['audit.log'].sudo().create({
                     'name': f"Modificación de Indicación Médica (ID: {record.id})",
                     'user_id': self.env.user.id,
                     'model_id': self.env['ir.model']._get('medical.indication').id,
@@ -144,3 +168,8 @@ class MedicalIndication(models.Model):
             })
         
         return super(MedicalIndication, self).unlink()
+    
+    @api.depends('resident_id')
+    def _compute_display_name(self):
+        for r in self:
+            r.display_name = f"Indicación médica general de {r.resident_id.name}"

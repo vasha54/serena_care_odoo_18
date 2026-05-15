@@ -1,0 +1,72 @@
+<odoo>        
+    <data noupdate="1">
+        <!-- A -->
+        <!-- B -->
+        <!-- C -->
+        <!-- D -->
+        <!-- E -->
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <record id="care_result_1" model="care.result">
+            <field name="name">Lograr una ingesta adecuada con calidad y cantidad, cumpliendo con los requerimientos energéticos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'),ref('sc_care_plan.dlevel_half'),ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- M -->
+        <record id="care_result_2" model="care.result">
+            <field name="name">Mantener la piel en óptimas condiciones de limpieza e hidratación para evitar complicaciones de salud.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'),ref('sc_care_plan.dlevel_half'),ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_result_3" model="care.result">
+            <field name="name">Mantener la salud y vitalidad en óptimas condiciones del Residente con detección oportuna de retención.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'),ref('sc_care_plan.dlevel_half'),ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_result_4" model="care.result">
+            <field name="name">Mantener la imagen estética en óptimas condiciones respetando la dignidad e individualidad del Residente.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'),ref('sc_care_plan.dlevel_half'),ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_result_5" model="care.result">
+            <field name="name">Mantener una imagen con calidad de vida y trato digno.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'),ref('sc_care_plan.dlevel_half'),ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_result_6" model="care.result">
+            <field name="name">Mantener la movilidad para mejorar la autonomía y evitar el deterioro físico que acompaña la edad.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'),ref('sc_care_plan.dlevel_half'),ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- N -->
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <!-- T -->
+        <!-- U -->
+        <!-- V -->
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>

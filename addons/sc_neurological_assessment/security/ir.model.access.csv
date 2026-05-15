@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+neurological_level_admin,Gestión de los estados de neurologia,model_neurological_state,sc_group.gs_admin,1,1,1,0
+neurological_level_gerente_salud,Lectura de los estados de neurología,model_neurological_state,sc_group.gs_gerente_salud,1,0,0,0
+neurological_level_enfermeria,Gestión de los estados de neurologia,model_neurological_state,sc_group.gs_enfermeria,1,1,1,0
+neurological_assessment_admin,Gestión de evaluación de neurologia,model_neurological_assessment,sc_group.gs_admin,1,1,1,0
+neurological_assessment_gerente_salud,Lectura de evaluación de neurologia,model_neurological_assessment,sc_group.gs_gerente_salud,1,0,0,0
+neurological_assessment_enfermeria,Gestión de evaluación de neurologia,model_neurological_assessment,sc_group.gs_enfermeria,1,1,1,0
+neurological_level_coordinator_nurse,Gestión de los estados de neurologia,model_neurological_state,sc_group.gs_coordinator_nurse,1,1,1,0
+neurological_assessment_coordinator_nurse,Gestión de evaluación de neurologia,model_neurological_assessment,sc_group.gs_coordinator_nurse,1,1,1,0

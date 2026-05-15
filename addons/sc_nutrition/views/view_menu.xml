@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_nutrition"
+            name="Nutrición"
+            sequence="-4"
+            action="action_nutrition" 
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            web_icon="sc_nutrition,static/src/img/icon.png"/>
+
+        <menuitem id="menu_nutrition"
+            name="Nutrición"
+            sequence="1"
+            action="action_nutrition"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_nutrition"/>
+
+        <menuitem id="menu_level_nutrition"
+            name="Niveles de Nutrición"
+            sequence="2"
+            action="action_nutrition_level"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_nutrition"/>
+
+        
+    </data>
+</odoo>

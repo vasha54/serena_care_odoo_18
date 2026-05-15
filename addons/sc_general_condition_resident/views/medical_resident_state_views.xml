@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View medical.resident.state View List -->
+    <record id="view_medical_resident_state_list" model="ir.ui.view">
+        <field name="name">Vista Lista de los Estados Generales de los Residentes</field>
+        <field name="model">medical.resident.state</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc" create="false" edit="false" delete="false"
+                  decoration-danger="general_status_int == 0"
+                  decoration-warning="general_status_int == 1"
+                  decoration-success="general_status_int == 2"
+                  decoration-muted="general_status_int not in (0, 1, 2)">
+                <field string="Fecha/Hora" name="date"/>
+                <field string="Residente" name="resident_id" width="250"/>
+                <field string="Evaluación General" name="general_status" width="150"/>
+                <field name="status_anomaly_id" width="150"/>
+                <field name="status_pain_scale_id" width="150"/>
+                <field name="status_neurological_assessment_id" width="150"/>
+                <field name="status_vital_signs_id" width="150"/>
+                <field name="general_status_int" column_invisible="1" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View medical.resident.state form -->
+    <record id="view_medical_resident_state_form" model="ir.ui.view">
+        <field name="name">Vista Formulario del Estado General del Residente</field>
+        <field name="model">medical.resident.state</field>
+        <field name="arch" type="xml">
+            <form string="Medical Resident State">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" />
+                        </group>
+                        <group>
+                            <field string="Estado General" name="general_status" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="page_anomaly" string="Evaluación de Anomalía">
+                            <group>
+                                <group>
+                                    <field name="date_anomaly_id" />
+                                    <field name="user_id_anomaly_id" />
+                                    <field name="anomaly_level_id_anomaly_id" />
+                                    
+                                </group>
+                                <group>
+                                    <label class="o_form_label fw-bolder" string="Estado" for="status_anomaly_id"/>
+                                    <field name="status_anomaly_id"/>
+                                    <group string="Descripción" colspan="2">
+                                        <field name="description_anomaly_id" nolabel="1" />
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page_pain_scale" string="Evaluación de Escala del Dolor">
+                            <group>
+                                <group>
+                                    <field name="date_pain_scale_id" />
+                                    <field name="user_id_pain_scale_id" />
+                                    <field name="value_pain_pain_scale_id" />
+                                    <field name="pain_status_pain_scale_id" />
+                                </group>
+                                <group>
+                                    <label class="o_form_label fw-bolder" string="Estado" for="status_pain_scale_id"/>
+                                    <field name="status_pain_scale_id"/>
+                                    <group string="Descripción" colspan="2">
+                                        <field name="description_pain_scale_id" nolabel="1" />
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page_neurological_assessment" string="Evaluación de Neurológica">
+                            <group>
+                                <group>
+                                    <field name="date_neurological_assessment_id" />
+                                    <field name="user_id_neurological_assessment_id" />
+                                    <field name="neurological_state_id_neurological_assessment_id" />
+                                </group>
+                                <group>
+                                    <label class="o_form_label fw-bolder" string="Estado" for="status_neurological_assessment_id"/>
+                                    <field name="status_neurological_assessment_id"/>
+                                    <group string="Descripción" colspan="2">
+                                        <field name="description_neurological_assessment_id" nolabel="1" />
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page_vital_signs" string="Evaluación de Signos Vitales">
+                            <group col="4">
+                                <group>
+                                    <group colspan="2">
+                                        <field name="date_vital_signs_id" />
+                                        <field name="user_id_signs_id" />
+                                    </group>
+                                </group>
+                                <group>
+                                    <group colspan="2" name="g_oxygen_saturation" string="Saturación de Oxígeno">
+                                        <field string="Valor" name="oxygen_saturation_vital_signs_id" />
+                                        <field string="Estado" name="gsr_oxygen_saturation" />
+                                    </group>
+                                    <group colspan="2" name="g_heart_rate" string="Frecuencia Cardíaca">
+                                        <field string="Valor" name="heart_rate_vital_signs_id" />
+                                        <field string="Estado" name="gsr_heart_rate" />
+                                    </group>
+                                </group>
+                                <group>
+                                    <group colspan="2" name="g_temperature" string="Temperatura">
+                                        <field string="Valor" name="temperature_vital_signs_id" />
+                                        <field string="Estado" name="gsr_temperature" />
+                                    </group>
+                                    <group colspan="2" name="g_blood_pressure" string="Tensión Arterial">
+                                        <field string="Valor" name="blood_pressure_vital_signs_id" />
+                                        <field string="Estado" name="gsr_blood_pressure" />
+                                    </group>
+                                </group>
+                                <group>
+                                    <group colspan="2" name="g_glucose" string="Glucosa">
+                                        <field string="Valor" name="glucose_vital_signs_id" />
+                                        <field string="Estado" name="gsr_glucose" />
+                                    </group>
+                                    <group colspan="2" name="g_respiratory_rate" string="Frecuencia Respiratoria">
+                                        <field string="Valor" name="respiratory_rate_vital_signs_id" />
+                                        <field string="Estado" name="gsr_respiratory_rate" />
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View medical.resident.state search -->
+    <record id="view_medical_resident_state_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda del Estado General del Residente</field>
+        <field name="model">medical.resident.state</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="resident_id"/>
+                <!-- <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group> -->
+            </search>
+        </field>
+    </record>
+
+    <!-- Action medical.resident.state -->
+    <record id="action_medical_resident_state" model="ir.actions.act_window">
+        <field name="name">Comprobaciones del Estado General</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.resident.state</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No existe registro de las Comprobaciones del Estado de los Residentes.
+            </p>
+        </field>
+    </record>
+
+</odoo>

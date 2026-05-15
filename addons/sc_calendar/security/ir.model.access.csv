@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+calendar_note_admin,Gestión de las notas del calendario,model_calendar_note,sc_group.gs_admin,1,1,1,0
+calendar_note_enfermeria,Gestión de las notas del calendario,model_calendar_note,sc_group.gs_enfermeria,1,1,1,0
+calendar_note_gerente_salud,Lectura de las notas del calendario,model_calendar_note,sc_group.gs_gerente_salud,1,0,0,0
+create_calendar_note_wizard_admin,Wizard para crear nota del calendario,model_create_calendar_note_wizard,sc_group.gs_admin,1,1,1,0
+create_calendar_note_wizard_enfermeria,Wizard para crear nota del calendario,model_create_calendar_note_wizard,sc_group.gs_enfermeria,1,1,1,0
+calendar_note_coordinator_nurse,Gestión de las notas del calendario,model_calendar_note,sc_group.gs_coordinator_nurse,1,1,1,0
+create_calendar_note_wizard_coordinator_nurse,Wizard para crear nota del calendario,model_create_calendar_note_wizard,sc_group.gs_coordinator_nurse,1,1,1,0

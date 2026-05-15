@@ -1,0 +1,30 @@
+/* sc_suite/static/src/css/themes/triada-armoniosa.css */
+:root {
+    /* Colores base */
+    --o-color-1: #5f2e7f;    /* Púrpura principal */
+    --o-color-2: #f4701e;    /* Naranja acento */
+    --o-color-3: #4ea83d;    /* Verde secundario */
+    --o-color-4: #f8f9fa;    /* Fondo claro */
+    --o-color-5: #212529;    /* Texto oscuro */
+    
+    --o-brand-primary: var(--o-color-1);
+    --o-brand-secondary: var(--o-color-2);
+    --o-brand-optional: var(--o-color-3);
+    --o-brand-light: var(--o-color-4);
+    --o-brand-dark: var(--o-color-5);
+    
+    --o-main-bg-color: var(--o-color-4);
+    --o-main-text-color: var(--o-color-5);
+    --o-header-bg-color: var(--o-color-1);
+    --o-header-text-color: white;
+    --o-link-color: var(--o-color-2);
+    --o-button-primary-bg: var(--o-color-1);
+    --o-button-primary-text: white;
+    --o-button-secondary-bg: var(--o-color-2);
+    --o-button-secondary-text: white;
+}
+
+.o_main_navbar {
+    background-color: var(--o-header-bg-color) !important;
+    color: var(--o-header-text-color) !important;
+}

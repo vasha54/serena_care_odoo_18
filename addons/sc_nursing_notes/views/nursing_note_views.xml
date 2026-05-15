@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View nursing.note View List -->
+    <record id="view_nursing_note_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Notas de Enfermería</field>
+        <field name="model">nursing.note</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Fecha" name="date"/>
+                <field string="Registrado" name="user_id"/>
+                <field string="Residente" name="resident_id"/>
+                <field name="residence_id" />
+                <field string="Descripción" name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View nursing.note form -->
+    <record id="view_nursing_note_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Nota de Enfermería</field>
+        <field name="model">nursing.note</field>
+        <field name="arch" type="xml">
+            <form string="Nota de enfermería">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" readonly="1"/>
+                        </group>
+                        <group>
+                            <field string="Registrado" name="user_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Descripción" >
+                        <field name="description" nolabel="1" widget="textarea" rows="7" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View nursing.note search -->
+    <record id="view_nursing_note_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Nota de Enfermería</field>
+        <field name="model">nursing.note</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="residence_id" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action nursing.note -->
+    <record id="action_nursing_note" model="ir.actions.act_window">
+        <field name="name">Notas de enfermería</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nursing.note</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de nota de enfermería.
+            </p>
+        </field>
+    </record>
+
+</odoo>

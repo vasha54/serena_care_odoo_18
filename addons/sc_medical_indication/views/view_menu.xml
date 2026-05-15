@@ -2,24 +2,24 @@
 <odoo>
     <menuitem id="menu_serena_care_root_medical_indication"
         name="Indicaciones Médicas"
-        action="action_unified_medical_indication"
+        action="action_medical_indication"
         sequence="-4"
-        groups="sc_group.group_doctor,base.group_system"
-        web_icon="sc_base,static/description/icon.png"/>
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_medical_indication,static/src/img/menu_item.png"/>
 
 
     <menuitem id="menu_general_indications" 
         name="Generales" 
         parent="menu_serena_care_root_medical_indication" 
         action="action_medical_indication"
-        groups="sc_group.group_doctor,base.group_system"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
         sequence="1"/>
 
     <menuitem id="menu_medicament_indications" 
         name="Medicamentos" 
         parent="menu_serena_care_root_medical_indication" 
         action="action_medical_medication"
-        groups="sc_group.group_doctor,base.group_system"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
         sequence="2"/>
 
 </odoo>

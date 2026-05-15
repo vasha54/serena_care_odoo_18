@@ -3,7 +3,7 @@
 
     <!-- View residence_house View List -->
     <record id="view_residence_house_list" model="ir.ui.view">
-        <field name="name">view.residence_house.list</field>
+        <field name="name">Vista Lista de Residencias</field>
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <list default_order="active desc, name asc">
@@ -19,7 +19,7 @@
     </record>
 
     <record id="view_residence_house_list_delete" model="ir.ui.view">
-        <field name="name">view.residence_house.list</field>
+        <field name="name">Vista Lista de Residencias eliminadas</field>
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <list default_order="active desc, name asc" create="false" edit="false" delete="false">
@@ -36,7 +36,7 @@
 
     <!-- View residence_house form -->
     <record id="view_residence_house_form" model="ir.ui.view">
-        <field name="name">view.residence_house.form</field>
+        <field name="name">Vista Formulario de Residencia</field>
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <form string="Residence_house">
@@ -107,7 +107,7 @@
 
 
     <record id="view_residence_house_form_delete" model="ir.ui.view">
-        <field name="name">view.residence_house.form</field>
+        <field name="name">Vista Formulario de Residencia eliminada</field>
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <form string="Residence_house" create="false" edit="false" delete="false">
@@ -178,7 +178,7 @@
 
     <!-- View residence_house search -->
     <record id="view_residence_house_search" model="ir.ui.view">
-        <field name="name">view.residence_house.search</field>
+        <field name="name">Vista Búsqueda de Residencia</field>
         <field name="model">residence_house</field>
         <field name="arch" type="xml">
             <search>

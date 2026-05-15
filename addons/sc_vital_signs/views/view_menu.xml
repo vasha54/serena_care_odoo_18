@@ -4,6 +4,6 @@
         name="Signos Vitales"
         action="action_vital_signs"
         sequence="-4"
-        groups="sc_group.group_doctor,base.group_system"
-        web_icon="sc_base,static/description/icon.png"/>
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_vital_signs,static/src/img/menu_item.png"/>
 </odoo>

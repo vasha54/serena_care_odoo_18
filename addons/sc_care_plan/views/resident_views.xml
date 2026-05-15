@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_care_plan" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Plan de Cuidado</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//page[@name='family']" position="after">
+                <page name="care_plan_tab" string="Plan de cuidados" invisible="not id">
+                    <field name="care_plan_id" invisible="1"/>
+                    <group colspan="4" col="4" name="group_action_button">
+                        <button name="open_register_care_plan_wizard"
+                                string="Crear plan de cuidado"
+                                type="object"
+                                class="oe_stat_button"
+                                invisible="care_plan_id"
+                                icon="fa-file"/>
+                    </group>
+                    <group colspan="4" col="4" invisible="not care_plan_id">
+                        <group col="2" colspan="2" string="Diagnóstico">
+                            <field name="diagnosis_care_plan" nolabel="1"
+                                   rows="3" widget="textarea" invisible="not care_plan_id"/>
+                        </group>
+                        <group col="2" colspan="2" string="Nivel de cuidado">
+                            <field name="plan_care_level_id" nolabel="1"
+                                   required="1" invisible="not care_plan_id"/>
+                        </group>
+                    </group>
+                    <group colspan="4" col="4" string="Actividades de la Vida Diaria" invisible="not care_plan_id">
+                        <field name="plan_activity_ids" nolabel="1" context="{'default_care_plan_id': care_plan_id}">
+                            <list>
+                                <field name="activity_id" required="1"/>
+                                <field name="dependency_level_id" required="1"/>
+                                <field name="action_ids" domain="[('active','=',True),('activity_type_ids','in',activity_id)]" required="1" widget="many2many_tags"/>
+                                <field name="observation_ids" domain="[('active','=',True),('activity_type_ids','in',activity_id)]" required="1" widget="many2many_tags"/>
+                                <field name="result_ids" domain="[('active','=',True),('activity_type_ids','in',activity_id)]" required="1" widget="many2many_tags"/>
+                                <field name="goal_ids" domain="[('active','=',True),('activity_type_ids','in',activity_id)]" required="1" widget="many2many_tags"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View scalegds5.answer View List -->
+    <record id="view_scalegds5_answer_list" model="ir.ui.view">
+        <field name="name">Vista Lista Respuestas de las evaluaciones de GDS-5</field>
+        <field name="model">scalegds5.answer</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" delete="false">
+                <field name="assessment_id" />
+                <field name="user_id" />
+                <field name="resident_id" />
+                <field name="question_id" />
+                <field string="Respuesta depresiva" name="depression_answer" />
+                <field string="Respuesta dada" name="answer_select" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View scalegds5.answer form -->
+    <record id="view_scalegds5_answer_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Respuesta de las evaluaciones de GDS-5</field>
+        <field name="model">scalegds5.answer</field>
+        <field name="arch" type="xml">
+            <form string="Scalegds5 Answer" create="false" edit="false" delete="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..." readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="assessment_id" readonly="1"/>
+                            <field name="user_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="question_statement" readonly="1"/>
+                            <field name="depression_answer" readonly="1"/>
+                            <field name="answer_select" readonly="1"/>
+                        </group>    
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View scalegds5.answer search -->
+    <record id="view_scalegds5_answer_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Respuesta de las evaluaciones de GDS-5</field>
+        <field name="model">scalegds5.answer</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group> -->
+            </search>
+        </field>
+    </record>
+
+    <!-- Action scalegds5.answer -->
+    <record id="action_scalegds5_answer" model="ir.actions.act_window">
+        <field name="name">Respuestas de GDS-5</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scalegds5.answer</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay respuesta de evaluaciones GDS-5 registrada.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    
+
+    <!-- View activity.filter.report.wizard form -->
+    <record id="view_activity_filter_report_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard de Reporte Filtrado de Actividades Recreativas</field>
+        <field name="model">activity.filter.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generar Reporte de Actividades Recreativas">
+                <sheet>
+                    <group>
+                        <group string="Tipo de actividad a filtrar">
+                            <field name="resident_id" invisible="1"/>
+                            <field name="all_activity_type" widget="boolean_toggle"/>
+                            <field name="activity_type_ids" widget="many2many_tags" 
+                                    required="1" invisible="all_activity_type" 
+                                    options="{'no_create': True}"/>
+                        </group>
+                        <group string="Rango de fecha">
+                            <field name="report_type" invisible="1"/>
+                            <field string="Desde" name="date_start"/>
+                            <field string="Hasta" name="date_end"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="generate_report" string="Generar Reporte" type="object" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    
+
+</odoo>

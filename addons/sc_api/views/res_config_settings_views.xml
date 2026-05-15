@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_inherit_jwt" model="ir.ui.view">
+        <field name="name">Vista Formulario de Configuración extendida para JWT</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='about']" position="before">
+                <div class="app_settings_block" data-string="Configuración de JWT">
+                    <h2>Configuración de JWT</h2>
+                    <div class="row mt16">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="jwt_token_expiration_value" width="100"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="jwt_token_expiration_value"/>
+                                
+                                <div class="text-muted">
+                                    Valor de vencimiento del token JWT. El valor predeterminado es 12.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="jwt_token_expiration_unit"/>
+                                <field name="jwt_token_expiration_unit" widget="radio"/>
+                                <div class="text-muted">
+                                    Unidad de tiempo de expiración (horas, minutos o días).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

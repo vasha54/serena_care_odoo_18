@@ -4,35 +4,41 @@
     <menuitem id="menu_serena_care_root_residence_res_user"
         name="Usuarios"
         action="action_residence_res_user"
-        sequence="-4"
-        web_icon="sc_employee,static/description/icon.png"/>
+        sequence="-99"
+        groups="sc_group.gs_admin"
+        web_icon="sc_employee,static/src/img/icon_user.png"/>
 
     <menuitem id="menu_residence_res_user_deleted"
         name="Usuarios eliminados"
         action="action_residence_res_user_delete"
         sequence="-4"
+        groups="sc_group.gs_admin"
         parent="menu_serena_care_root_residence_res_user"/>
 
     <menuitem id="menu_serena_care_root_residence_employee"
         name="Empleados"
-        sequence="-4"
-        web_icon="sc_employee,static/description/icon.png"/>
+        sequence="-98"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_employee,static/src/img/icon_employee.png"/>
 
     <menuitem id="menu_residence_employee"
         name="Empleados"
         action="action_residence_employee"
         sequence="0"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
         parent="menu_serena_care_root_residence_employee"/>
 
     <menuitem id="menu_residence_employee_departament"
         name="Departamentos"
         action="action_residence_employee_departament"
         sequence="1"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
         parent="menu_serena_care_root_residence_employee"/>
 
     <menuitem id="menu_residence_employee_job"
         name="Ocupaciones"
         action="action_residence_employee_job"
         sequence="2"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
         parent="menu_serena_care_root_residence_employee"/>
 </odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_recreational_activity"
+        name="Actividades Recreativas"
+        action="action_recreational_activity"
+        sequence="-4"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_recreational_activity,static/src/img/menu_item.png"/>
+
+    <menuitem id="menu_activity_type"
+        name="Tipos de actividad"
+        action="action_nomenclature_activity_type"
+        groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        parent="menu_serena_care_root_recreational_activity"
+        sequence="1"/>
+</odoo>

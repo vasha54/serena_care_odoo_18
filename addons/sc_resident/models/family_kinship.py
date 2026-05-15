@@ -35,23 +35,62 @@ class FamilyKinship(models.Model):
          '¡Ya existe un parentesco con este nombre!'),
     ]
 
-    @api.model_create_multi
+    @api.model
     def create(self, vals_list):
+        # Normalizar: si es un solo dict, convertirlo a lista
+        if not isinstance(vals_list, list):
+            vals_list = [vals_list]
+        
         for vals in vals_list:
             if 'name' in vals:
                 vals['name'] = vals['name'].strip().lower()
-        return super().create(vals_list)
+        
+        records = super().create(vals_list)
+        
+        for record in records:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'family.kinship', 'create')
+        
+        return records
 
     def write(self, vals):
         if 'name' in vals:
             vals['name'] = vals['name'].strip().lower()
-        return super().write(vals)
+        # Guardar estado anterior para detectar cambios (opcional, mejora la calidad del detalle)
+        old_values = {}
+        for record in self:
+            old_values[record.id] = {
+                field: record[field] for field in vals if field in record._fields and not record._fields[field].compute
+            }
+        result = super().write(vals)
+        # Después de la escritura, crear logs con los campos modificados
+        for record in self:
+            changed_fields = []
+            for field, new_val in vals.items():
+                if field in old_values.get(record.id, {}):
+                    old_val = old_values[record.id][field]
+                    if old_val != record[field]:
+                        changed_fields.append(f"{field}: {old_val!r} -> {record[field]!r}")
+                else:
+                    # Campo no almacenado o no presente en el registro anterior, se registra igual
+                    changed_fields.append(f"{field}: {record[field]!r}")
+            if changed_fields:
+                details = "Campos modificados: " + "; ".join(changed_fields)
+            else:
+                details = "Modificación sin cambios detectados"
+            self.env['audit.log'].sudo().crud_audit_log(record, 'family.kinship', 'write', extra_details=details)
+        return result
+    
+    def unlink(self):
+        # Antes de eliminar, crear logs para cada registro
+        for record in self:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'family.kinship', 'unlink')
+        return super().unlink()
 
     @api.constrains('name')
     def _check_name(self):
         for rec in self:
             existing = self.search([
-                ('name', '=ilike', rec.name),
+                ('name', '=', rec.name.lower()),  # comparar en minúsculas
                 ('id', '!=', rec.id)
             ], limit=1)
             if existing:

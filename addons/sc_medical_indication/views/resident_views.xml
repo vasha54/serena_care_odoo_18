@@ -3,12 +3,12 @@
     
     <!-- View resident form -->
     <record id="view_resident_form_vital_signs" model="ir.ui.view">
-        <field name="name">view.resident.form</field>
+        <field name="name">Vista Formulario Residente extendida Indicación Médica</field>
         <field name="model">resident</field>
         <field name="inherit_id" ref="sc_resident.view_resident_form"/>
         <field name="arch" type="xml">
             
-            <xpath expr="//page[@name='general']" position="after">
+            <xpath expr="//notebook[@name='notebook_medical_history']" position="inside">
                 <page name="medical_indication" string="Indicaciones Médicas" invisible="not id">
                     <group colspan="4" col="4">
                         <group name="label_add_medical_indication" string="Registrar indicación" >
@@ -18,19 +18,19 @@
                                     string="General" 
                                     type="object"
                                     class="btn-primary"
-                                    groups="sc_group.group_doctor,base.group_system"
-                                    invisible="not id"/>
+                                    groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+                                    invisible="not id or show_actions_buttons"/>
                                 
                                 <button 
                                     name="open_register_medical_medication_wizard" 
                                     string="Medicamento" 
                                     type="object"
                                     class="btn-primary"
-                                    groups="sc_group.group_doctor,base.group_system"
-                                    invisible="not id"/>
+                                    invisible="not id or show_actions_buttons"
+                                    groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"/>
                             </group>               
                         </group>
-                        <group  string="Reporte">
+                        <!-- <group  string="Reporte">
                             <group>
                                 <button name="action_open_medical_indication_report_wizard" 
                                         string="Indicaciones" 
@@ -38,18 +38,38 @@
                                         class="oe_stat_button"
                                         icon="fa-file-pdf-o"/>
                             </group>
-                        </group>
+                        </group> -->
                     </group>
                     <group colspan="4" col="4" string="Registros">
 
-                        <field name="medical_indication_ids" options="{'create':false, 'delete':false}" nolabel="1">
-                            <list default_order="create_date desc" optional="show" export_xlsx="true" export_csv="true">
-                                <field string="Fecha/Hora" name="create_date"  />
-                                <field name="user_id" />
-                                <field name="indication_type" string="Tipo de indicación"/>
-                                <field name="note" />
-                            </list>
-                        </field>
+                        <notebook>
+                            <page  string="Generales">
+                                <field name="medical_indication_general_ids" options="{'delete':false}" nolabel="1">
+                                    <list default_order="create_date desc" optional="show" export_xlsx="true" export_csv="true">
+                                        <field string="Fecha/Hora" name="create_date"  />
+                                        <field name="user_id" />
+                                        <field name="note" />
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page  string="Medicamentos">
+                                <field name="medical_indication_medication_ids" options="{'delete':false}" nolabel="1">
+                                    <list default_order="create_date desc" optional="show" export_xlsx="true" export_csv="true">
+                                        <field string="Fecha/Hora" name="create_date"/>
+                                        <field name="user_id"/>
+                                        <!-- <field name="resident_id"/>
+                                        <field name="medicament_id" />
+                                        <field name="pharmaceutical_form" />
+                                        <field name="route_id" />
+                                        <field name="dosage_str" />
+                                        <field name="frequency_str" />
+                                        <field name="period_medication" /> -->
+                                        <field name="note" />
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
                     </group>
                 </page>
             </xpath>

@@ -1,5 +1,9 @@
-from odoo import models, fields, api
+import re
 import logging
+
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError, AccessDenied, UserError
+
 
 _logger = logging.getLogger(__name__)
 
@@ -17,16 +21,14 @@ class RegisterNewFamilyResidentWizard(models.TransientModel):
     family_mobile = fields.Char( string='Móvil', required=True)
     family_email = fields.Char( string='Email', required=True) 
     family_image_1920 = fields.Binary( string='Foto')
-    family_country_id = fields.Many2one( 'res.country',string='País') 
-    family_province_id = fields.Many2one('res_province_mx' ,string='Provincia') 
-    family_municipality_id = fields.Many2one('res_municipality_mx' ,string='Municipio') 
-    family_city = fields.Char( string='Ciudad')
-    family_zip = fields.Char( string='Código Postal')
-    family_street = fields.Char( string='Calle principal')
-    family_street2 = fields.Char( string='Entre calle #1')
-    family_street3 = fields.Char( string='Entre calle #2')
-    family_street_number = fields.Char( string='Número')
+    family_address = fields.Text(
+        string="Dirección",
+        required=True,
+    )
     kinship_id = fields.Many2one( 'family.kinship', string='Parentesco', required=True)
+    is_contractor = fields.Boolean(
+        string="Contratante"
+    )
     auth_level_ids = fields.Many2many(
         'auth.level', 
         string='Niveles de autorización',
@@ -34,7 +36,16 @@ class RegisterNewFamilyResidentWizard(models.TransientModel):
         required=True,
     )
     
-    
+    @api.depends("family_email")
+    def _check_valid_family_email(self):
+        for record in self:
+            if record.family_email:
+                # Regex para validar email con dominio correcto
+                pattern = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                if not re.match(pattern, record.family_email):
+                    raise ValidationError(
+                        "Formato de correo inválido. Debe tener un formato válido como: ejemplo@dominio.com"
+                    )
 
     def action_create_family(self):
         self.ensure_one()
@@ -42,18 +53,10 @@ class RegisterNewFamilyResidentWizard(models.TransientModel):
         family = ResidentFamily.create({
             'name': self.family_name,
             'phone': self.family_phone if self.family_phone else False,
-            'country_id': self.family_country_id if self.family_country_id else False,
             'image_1920' : self.family_image_1920 if self.family_image_1920 else False,
-            'city' : self.family_city if self.family_city else False,
             'email' : self.family_email if self.family_email else False,
             'mobile' : self.family_mobile if self.family_mobile else False,
-            'municipality_id' : self.family_municipality_id if self.family_municipality_id else False,
-            'province_id' : self.family_province_id if self.family_province_id else False,
-            'zip' : self.family_zip if self.family_zip else False,
-            'street' : self.family_street if self.family_street else False,
-            'street2' : self.family_street2 if self.family_street2 else False,
-            'street3' : self.family_street3 if self.family_street3 else False,
-            'street_number' : self.family_street_number if self.family_street_number else False,   
+            'address' : self.family_address if self.family_address else False,   
         })
         
         answer = {} 
@@ -63,7 +66,8 @@ class RegisterNewFamilyResidentWizard(models.TransientModel):
                 'family_id' : family.id,
                 'resident_id' : self.current_resident_id.id,
                 'kinship_id' : self.kinship_id.id,
-                'auth_level_ids' : self.auth_level_ids,  
+                'auth_level_ids' : self.auth_level_ids,
+                'is_contractor' : self.is_contractor,
             }) 
             answer = {
                         'type': 'ir.actions.client',

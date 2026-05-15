@@ -24,6 +24,9 @@ class SearchNewFamilyResidentWizard(models.TransientModel):
         string='Familiar',
         required=True,
     )
+    is_contractor = fields.Boolean(
+        string="Contratante"
+    )
     
     def action_create_family(self):
         self.ensure_one()
@@ -48,7 +51,8 @@ class SearchNewFamilyResidentWizard(models.TransientModel):
                 'family_id' : self.family_id.id,
                 'resident_id' : self.current_resident_id.id,
                 'kinship_id' : self.kinship_id.id,
-                'auth_level_ids' : self.auth_level_ids,  
+                'auth_level_ids' : self.auth_level_ids,
+                'is_contractor' : self.is_contractor,
             })
             answer = {
                         'type': 'ir.actions.client',

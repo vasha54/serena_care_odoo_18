@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1" >   
+        <record id="supplier_base_0" model="supplier.base">
+            <field name="name">Ambulancias Medik 2000</field>
+            <field name="phone">664 608 9690</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_1" model="supplier.base">
+            <field name="name">Anytime Fitness</field>
+            <field name="phone">661 612 4853</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_2" model="supplier.base">
+            <field name="name">AXIS Clínica de Rehabilitación Física</field>
+            <field name="phone">664 331 1827</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">clinic</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_3" model="supplier.base">
+            <field name="name">Californias Laboratorio</field>
+            <field name="phone">664 686 6181</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_4" model="supplier.base">
+            <field name="name">Casa Playa Spa</field>
+            <field name="phone">661 612 1111</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_5" model="supplier.base">
+            <field name="name">Centro de Ortopedia y Rehabilitación- Dra. Marcela M. Pérez Laustaunau</field>
+            <field name="phone">646 178 3451</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_6" model="supplier.base">
+            <field name="name">Centro Médico Florence</field>
+            <field name="phone">664 684 8043</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_7" model="supplier.base">
+            <field name="name">Centro Medico Hospital del Prado</field>
+            <field name="phone">664 6816540</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">hospital</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_8" model="supplier.base">
+            <field name="name">Centro Optico Coronel</field>
+            <field name="phone">661 612 4241</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_9" model="supplier.base">
+            <field name="name">Clinica San Jose- Dra. Anabelinda Hernández</field>
+            <field name="phone">646117 2648 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">clinic</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_10" model="supplier.base">
+            <field name="name">D'La Vid Spa and Salon</field>
+            <field name="phone">664 621 1146</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_11" model="supplier.base">
+            <field name="name">Dagnino's Spa</field>
+            <field name="phone">6616122950</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_12" model="supplier.base">
+            <field name="name">Del Carmen Laboratorio- Clínica San José</field>
+            <field name="phone">646 173 6013 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_13" model="supplier.base">
+            <field name="name">Dental and Medical Health Center</field>
+            <field name="phone">661 612 5915 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_14" model="supplier.base">
+            <field name="name">Dental Mirozk</field>
+            <field name="phone">646 204 0018</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_15" model="supplier.base">
+            <field name="name">Dental Zamora- Fernando, Alicia y Alejandro</field>
+            <field name="phone">661 612 3030</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_16" model="supplier.base">
+            <field name="name">Diagnostico x imagen- 3D Ultrasound, X-Rays, Tomography</field>
+            <field name="phone">661 612 0837</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_17" model="supplier.base">
+            <field name="name">Dr. Alejandro Leos Garcia- Cardiologist</field>
+            <field name="phone">664 6346259</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_cardiologia" />
+        </record>
+        <record id="supplier_base_18" model="supplier.base">
+            <field name="name">Dr. Arturo Vazquez Guzman- General Physician</field>
+            <field name="phone">646 154 0219 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_general_physician" />
+        </record>
+        <record id="supplier_base_19" model="supplier.base">
+            <field name="name">Dr. Clemente Zuñiga - Geriatrician</field>
+            <field name="phone">664 635 1900 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_geriatria" />
+        </record>
+        <!-- <record id="supplier_base_20" model="supplier.base">
+            <field name="name">Dr. Cristian Esquer Hernandez</field>
+            <field name="phone">646 2102703</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record> -->
+        <record id="supplier_base_21" model="supplier.base">
+            <field name="name">Dr. Eduardo Guadiana- Orthopedics</field>
+            <field name="phone">664 685 8655</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_orthopedics" />
+        </record>
+        <record id="supplier_base_22" model="supplier.base">
+            <field name="name">Dr. EDUARDO NOBLE- Cardiologist</field>
+            <field name="phone">661 612 4240</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_cardiologia" />
+        </record>
+        <record id="supplier_base_23" model="supplier.base">
+            <field name="name">Dr. Felipe Hurtado- Surgeon</field>
+            <field name="phone">646 947 7592</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_surgeon" />
+        </record>
+        <record id="supplier_base_24" model="supplier.base">
+            <field name="name">Dr. Francisco Gutierrez-Neurologist</field>
+            <field name="phone">6642867325</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_neurologia" />
+        </record>
+        <record id="supplier_base_25" model="supplier.base">
+            <field name="name">Dr. Gerardo Martinez--internalist</field>
+            <field name="phone">6646852620</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_medicina_interna" />
+        </record>
+        <record id="supplier_base_26" model="supplier.base">
+            <field name="name">Dr. Gerardo Santos- Orthopedic surgeon</field>
+            <field name="phone">661 6125157</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_orthopedic_surgeon" />
+        </record>
+        <record id="supplier_base_27" model="supplier.base">
+            <field name="name">Dr. Gonzalo Gomez Ruiz -Anesthesiologist</field>
+            <field name="phone">646 151 3180 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_anesthesiologist" />
+        </record>
+        <!-- <record id="supplier_base_28" model="supplier.base">
+            <field name="name">Dr. Jaime Caloca Valenzuela- Plastic Surgery Center</field>
+            <field name="phone">664 634 2090</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record> -->
+        <record id="supplier_base_29" model="supplier.base">
+            <field name="name">Dr. Jorge Baylon Rebelin - Urology</field>
+            <field name="phone">664 635 1819-</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_urologia" />
+        </record>
+        <!-- <record id="supplier_base_30" model="supplier.base">
+            <field name="name">Dr. Jorge Santiago Zavala Ruiz- General Laparoscopy and Cancer Surgery</field>
+            <field name="phone">664635 1853</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record> -->
+        <record id="supplier_base_31" model="supplier.base">
+            <field name="name">Dr. Jose Antonio Hernandez -General Physician</field>
+            <field name="phone">646 117 9284 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_general_physician" />
+        </record>
+        <record id="supplier_base_32" model="supplier.base">
+            <field name="name">Dr. Juan Carlos Granados Sanchez--Neurological rehabilitation</field>
+            <field name="phone">6646817750</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_neurological_rehabilitation" />
+        </record>
+        <!-- <record id="supplier_base_33" model="supplier.base">
+            <field name="name">Dr. Juan Manuel Alcantar Schramm Physical And Pulmonary Rehabilitation</field>
+            <field name="phone">6641150602</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record> -->
+        <record id="supplier_base_34" model="supplier.base">
+            <field name="name">Dr. Marco Antonio Belmores -Internal Medicine</field>
+            <field name="phone">646 179 4439 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_medicina_interna" />
+        </record>
+        <record id="supplier_base_35" model="supplier.base">
+            <field name="name">Dr. Mario Esteban Minor-Surgeon</field>
+            <field name="phone">6611244741</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_surgeon" />
+        </record>
+        <record id="supplier_base_36" model="supplier.base">
+            <field name="name">DR. Omar de la Vega (Geriatrician)</field>
+            <field name="phone">6616120368</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_geriatria" />
+        </record>
+        <record id="supplier_base_37" model="supplier.base">
+            <field name="name">Dr. Pablo Villaseñor -Internalist and rheumatologist</field>
+            <field name="phone">6643895391</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_medicina_interna" />
+        </record>
+        <record id="supplier_base_38" model="supplier.base">
+            <field name="name">Dr. Pierre Youssef Azzi-General Doctor</field>
+            <field name="phone">646 154 0844</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_general_physician" />
+        </record>
+        <record id="supplier_base_39" model="supplier.base">
+            <field name="name">Dr. Rafael Alcaraz Odontologia Integral</field>
+            <field name="phone">664 6864844</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_comprehensive_dentistry" />
+        </record>
+        <record id="supplier_base_40" model="supplier.base">
+            <field name="name">DR. Rafael Ramos Felix- Traumatologist</field>
+            <field name="phone">646 177 4757</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_traumatologist" />
+        </record>
+        <record id="supplier_base_41" model="supplier.base">
+            <field name="name">Dra. Abril Seañez--physical rehabilitation</field>
+            <field name="phone">6646817750</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_physical_rehabilitation" />
+        </record>
+        <record id="supplier_base_42" model="supplier.base">
+            <field name="name">Dra. Alma Muñoz--Internalist</field>
+            <field name="phone">664 6848302</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_medicina_interna" />
+        </record>
+        <record id="supplier_base_43" model="supplier.base">
+            <field name="name">Dra. Amalia Martinez Zabatdeny-Dentist</field>
+            <field name="phone">646 174 0664 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_stomatology" />
+        </record>
+        <record id="supplier_base_44" model="supplier.base">
+            <field name="name">Dra. Ana Luz Rabago Perez(ophthalmologist)</field>
+            <field name="phone">6646073162</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_oftalmologia" />
+        </record>
+        <record id="supplier_base_45" model="supplier.base">
+            <field name="name">Dra. Blanca Iveth Pulido Partida (getriatrician)</field>
+            <field name="phone">6643756474</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_geriatria" />
+        </record>
+        <record id="supplier_base_46" model="supplier.base">
+            <field name="name">Dra. Gloria Lopez-Dermatologist</field>
+            <field name="phone">6646858196</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_dermatologist" />
+        </record>
+        <record id="supplier_base_47" model="supplier.base">
+            <field name="name">Dra. Lucila Velasco Osorio (nutritionist)</field>
+            <field name="phone">6641271282</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_nutricion" />
+        </record>
+        <!-- <record id="supplier_base_48" model="supplier.base">
+            <field name="name">Dra. Maymes De Gracia- General Practice</field>
+            <field name="phone">646 154 0844</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record> -->
+        <!-- <record id="supplier_base_49" model="supplier.base">
+            <field name="name">Dra. Norma Guadalupe Arellano Becerril</field>
+            <field name="phone">6644806553</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record> -->
+        <record id="supplier_base_50" model="supplier.base">
+            <field name="name">Dra. Nubia Delil Osorio Jauregui(internalist and geriatrician)</field>
+            <field name="phone">6643319492</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_medicina_interna" />
+        </record>
+        <record id="supplier_base_51" model="supplier.base">
+            <field name="name">Dra. Tania Paola Ojeda Polanco--physical rehabilitation</field>
+            <field name="phone">6646817750</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_physical_rehabilitation" />
+        </record>
+        <record id="supplier_base_52" model="supplier.base">
+            <field name="name">Dra. Yahara Gastelum---dental surgeon</field>
+            <field name="phone">6646848302</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">doctor</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+            <field name="nomenclature_specialty_id" ref="sc_supplier_contact.specialty_dental_surgeon" />
+        </record>
+        <record id="supplier_base_53" model="supplier.base">
+            <field name="name">Esport Medicine - Dr. Juan José Bernal</field>
+            <field name="phone">664 681 5383</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_54" model="supplier.base">
+            <field name="name">Health and Nutrition Spa- Nutrician, Spa, Organic Products</field>
+            <field name="phone">664 686 5163</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_55" model="supplier.base">
+            <field name="name">Hospital Angeles</field>
+            <field name="phone">nan</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">hospital</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_56" model="supplier.base">
+            <field name="name">Hospital de Cruz Roja Tijuana</field>
+            <field name="phone">6646086700</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">hospital</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_57" model="supplier.base">
+            <field name="name">Hospital Santa Catalina</field>
+            <field name="phone">665 654 5555</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">hospital</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_2" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_58" model="supplier.base">
+            <field name="name">Hospital Velmar</field>
+            <field name="phone">646 173 4500</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">hospital</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_59" model="supplier.base">
+            <field name="name">Imagen Radiologica de Tijuana</field>
+            <field name="phone">664 971 0940</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_60" model="supplier.base">
+            <field name="name">Imaxess diagnosticox imagen</field>
+            <field name="phone">664 634 1118 ext 101</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_61" model="supplier.base">
+            <field name="name">Instituto Cardiovascular de Tijuana Dr. Hector Soto</field>
+            <field name="phone">664 631 1537</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_62" model="supplier.base">
+            <field name="name">Instrumentación y Equipos Medicos</field>
+            <field name="phone">664 684 9520 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_63" model="supplier.base">
+            <field name="name">Jessica Jazmin Ramos Martinez(podiatrist)</field>
+            <field name="phone">6611078661</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_64" model="supplier.base">
+            <field name="name">LaboMedic</field>
+            <field name="phone">6616121977</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_65" model="supplier.base">
+            <field name="name">Laboratorio Accura</field>
+            <field name="phone">664 684 7149 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_66" model="supplier.base">
+            <field name="name">Laboratorio Bahia- Centro</field>
+            <field name="phone">646 176 2519</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_67" model="supplier.base">
+            <field name="name">Laboratorio Bahia- Maneadero</field>
+            <field name="phone">No phone available</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_68" model="supplier.base">
+            <field name="name">Laboratorio Nuñez- Centro</field>
+            <field name="phone">646 178 1716</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_69" model="supplier.base">
+            <field name="name">Laboratorio Nuñez- Playa Ensenada</field>
+            <field name="phone">646 177 2119</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">laboratory</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_70" model="supplier.base">
+            <field name="name">Life the Health Club- Gym</field>
+            <field name="phone">646 178 1357</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_71" model="supplier.base">
+            <field name="name">Luis Arturo Galaviz Meza(physiotherapist)</field>
+            <field name="phone">6611239184</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_72" model="supplier.base">
+            <field name="name">Medic Mobil</field>
+            <field name="phone">664 4164336</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_73" model="supplier.base">
+            <field name="name">Oceana Spa- Therapeutic Massages</field>
+            <field name="phone">661 613 0056</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_4" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_74" model="supplier.base">
+            <field name="name">OCuvisión</field>
+            <field name="phone">664 973 0300</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_75" model="supplier.base">
+            <field name="name">Optica Piwi- OPT Rafael Chávez Montaño</field>
+            <field name="phone">nan</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_76" model="supplier.base">
+            <field name="name">Pacific Critical Care</field>
+            <field name="phone">018007887333/6461208578</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_0" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_77" model="supplier.base">
+            <field name="name">Phybalance</field>
+            <field name="phone">6646848474</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_78" model="supplier.base">
+            <field name="name">Plastic Surgery Center-Dr. Benito Rodríguez</field>
+            <field name="phone">664 634 2307</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_medical_service" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_79" model="supplier.base">
+            <field name="name">Total Fitness Club and Spa</field>
+            <field name="phone">6649006118</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_80" model="supplier.base">
+            <field name="name">Vita Spa</field>
+            <field name="phone">664 636 0016 </field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+        <record id="supplier_base_81" model="supplier.base">
+            <field name="name">Vive Orgánico</field>
+            <field name="phone">664 104 6222</field>
+            <field name="is_affiliate">True</field>
+            <field name="provider_type">other</field>
+            <field name="category_id" ref="sc_supplier_contact.category_spa_wellness" />
+            <field name="municipality_id" ref="sc_base.state_mx_bc_municipality_3" />
+            <field name="province_id" ref="sc_base.state_mx_bc" />
+        </record>
+
+    </data>
+</odoo>

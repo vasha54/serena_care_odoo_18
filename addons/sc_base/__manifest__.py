@@ -1,27 +1,40 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "sc_base",
+    'name': "Serena Care - Módulo Núcleo",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Módulo base y núcleo del sistema, contiene funcionalidades esenciales y configuración compartida",
 
     'description': """
-Long description of module's purpose
+Este módulo constituye la base fundamental del sistema, proporcionando:
+        - Modelos base y heredados
+        - Configuraciones globales del sistema
+        - Utilidades y funciones compartidas
+        - Estructuras comunes para todos los módulos
+        - Configuración de seguridad base
+        
+        Todos los módulos del sistema dependen de este núcleo para su correcto funcionamiento.
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
+    "author": "Serena Care Team",
+    "website": "https://www.serena-care.mx",
+    "license": "LGPL-3",
+    "version": "18.0.1.0.0",
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    "category": "Hidden/Tools",
+    
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': [
+        'base', 
+        'web',
+        'sc_group',
+    ],
 
     # always loaded
     "data": [
+        "data/res_province_mx_data.xml",
         "data/municipality/res_municipality_ags_mx_data.xml",
         "data/municipality/res_municipality_bc_mx_data.xml",
         "data/municipality/res_municipality_bcs_mx_data.xml",
@@ -54,19 +67,20 @@ Long description of module's purpose
         "data/municipality/res_municipality_ver_mx_data.xml",
         "data/municipality/res_municipality_yuc_mx_data.xml",
         "data/municipality/res_municipality_zac_mx_data.xml",
-        "data/res_province_mx_data.xml",
         "security/ir.model.access.csv",
-        "views/audit_log_views.xml",
         "views/res_municipality_mx_views.xml",
         "views/res_province_mx_views.xml",
+        "views/wizard/wizard_not_implemented_views.xml",
         "views/view_menu.xml",
     ],
+    
     'demo':[], 
     
     'installable': True,
     'auto_install': False,
     'application': True,
     'sequence': 1,
-    
+    'post_init_hook': 'post_init_hook',
+    'post_update_hook': 'post_update_hook',
 }
 

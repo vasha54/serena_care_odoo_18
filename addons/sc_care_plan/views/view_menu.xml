@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_care_plan"
+            name="Planes de cuidados"
+            sequence="-4"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            web_icon="sc_care_plan,static/src/img/menu_item.png"/>
+
+        <menuitem id="menu_care_plan_resident"
+            name="Planes de cuidados"
+            sequence="1"
+            action="action_care_plan"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_care_plan"/>
+
+        <menuitem id="menu_care_plan_activity"
+            name="Actividades"
+            sequence="2"
+            action="action_care_plan_activity"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_care_plan"/>
+
+
+        <menuitem id="menu_care_plan_configuration"
+            name="Configuración"
+            sequence="3"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_care_plan"/>
+        
+        <menuitem id="menu_care_plan_activity_type"
+            name="Tipos de actividades"
+            sequence="1"
+            action="action_activity_type"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+
+        <menuitem id="menu_care_dependency_level"
+            name="Niveles de cuidados"
+            sequence="2"
+            action="action_care_level"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+
+        <menuitem id="menu_care_dependency_level"
+            name="Niveles de dependencias"
+            sequence="3"
+            action="action_dependency_level"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+
+        <menuitem id="menu_care_action"
+            name="Acciones"
+            sequence="4"
+            action="action_care_action"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+
+        <menuitem id="menu_care_goal"
+            name="Objetivos"
+            sequence="5"
+            action="action_care_goal"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+
+        <menuitem id="menu_care_observation"
+            name="Observaciones"
+            sequence="5"
+            action="action_care_observation"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+
+        <menuitem id="menu_care_result"
+            name="Resultados"
+            sequence="6"
+            action="action_care_result"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_care_plan_configuration"/>
+    </data>
+</odoo>

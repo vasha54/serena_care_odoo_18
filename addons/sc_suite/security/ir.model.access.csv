@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink 
-access_serena_care_dashboard_manager,serena_care_dashboard_manager,model_serena_care_dashboard,,1,1,1,1
+access_menu_hider_manager,menu_hider_manager,model_menu_hider,base.group_user,1,1,1,1
+access_suite_dashboard_manager,suite_dashboard_manager,model_suite_dashboard,base.group_user,1,1,1,1

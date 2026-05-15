@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_care_plan_report" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Reporte Familiar</field>
+        <field name="model">resident</field>
+        <field name="inherit_id"
+               ref="sc_care_plan.view_resident_form_care_plan"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//group[@name='group_action_button']"
+                   position="inside">
+                <button name="action_export_care_plan_pdf"
+                        string="Exportar Plan de Cuidado (PDF)"
+                        type="object"
+                        class="oe_stat_button"
+                        invisible="not care_plan_id"
+                        icon="fa-file-pdf-o"/>
+
+                <!-- <button
+                        name="action_export_care_plan_xlsx"
+                        string="Exportar Plan de Cuidado (Excel)"
+                        type="object"
+                        class="oe_stat_button"
+                        invisible="not care_plan_id"
+                        icon="fa-file-excel-o"/> -->
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

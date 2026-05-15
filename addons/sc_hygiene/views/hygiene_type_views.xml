@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View hygiene.type View List -->
+    <record id="view_hygiene_type_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista Tipos de Higiene sin columna Activo</field>
+        <field name="model">hygiene.type</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Nombre" name="name"/>
+                <field string="Descripción" name="description"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_hygiene_type_list" model="ir.ui.view">
+        <field name="name">Vista Lista Tipos de Higiene</field>
+        <field name="model">hygiene.type</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle" />
+                <field string="Nombre" name="name"/>
+                <field string="Descripción" name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View hygiene.type form -->
+    <record id="view_hygiene_type_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Tipo de Higiene</field>
+        <field name="model">hygiene.type</field>
+        <field name="arch" type="xml">
+            <form string="Hygiene Type">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Activo" name="active" widget="boolean_toggle" />
+                        </group>
+                        <group>
+                            <field name="description" rows="5" widget="textarea"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View hygiene.type search -->
+    <record id="view_hygiene_type_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Tipo de Higiene</field>
+        <field name="model">hygiene.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field string="Nombre" name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action hygiene.type -->
+    <record id="action_hygiene_type" model="ir.actions.act_window">
+        <field name="name">Tipos de higiene</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hygiene.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_hygiene.view_hygiene_type_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_hygiene.view_hygiene_type_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de tipos de higiene.
+            </p>
+        </field>
+    </record>
+
+</odoo>

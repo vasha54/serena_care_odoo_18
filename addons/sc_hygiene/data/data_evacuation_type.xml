@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="1">
+        <record id="etype_nuts" model="evacuation.type">
+            <field name="name">Tipo 1: Nueces</field>
+        </record>
+        <record id="etype_sausages_with_chunks" model="evacuation.type">
+            <field name="name">Tipo 2: Salchichas con fragmentos</field>
+        </record>
+        <record id="etype_sausages_with_cracks" model="evacuation.type">
+            <field name="name">Tipo 3: Salchichas con grietas</field>
+        </record>
+        <record id="etype_smooth_sausages" model="evacuation.type">
+            <field name="name">Tipo 4: Salchichas lisas</field>
+        </record>
+        <record id="etype_mastic_pieces" model="evacuation.type">
+            <field name="name">Tipo 5: Trozos pastosos</field>
+        </record>
+        <record id="etype_soft_pieces" model="evacuation.type">
+            <field name="name">Tipo 6: Pedazos blandos</field>
+        </record>
+        <record id="etype_liquid" model="evacuation.type">
+            <field name="name">Tipo 7: Líquido</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View lawtonbrody.assessment View List -->
+    <record id="view_lawtonbrody_assessment_list" model="ir.ui.view">
+        <field name="name">Vista Lista Evaluaciones Lawton-Brody</field>
+        <field name="model">lawtonbrody.assessment</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc" create="false" edit="false" delete="false">
+                <field string="Fecha" name="date"/>
+                <field name="user_id" />
+                <field name="resident_id" />
+                <field string="Residencia" name="residence_id"/>
+                <field name="total_questions" width="180"/>
+                <field name="total_score" width="180"/>
+                <field name="lawtonbrody_state_display" />
+                <field name="observations" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View lawtonbrody.assessment form -->
+    <record id="view_lawtonbrody_assessment_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Evaluación Lawton-Brody</field>
+        <field name="model">lawtonbrody.assessment</field>
+        <field name="arch" type="xml">
+            <form string="Scalesarcf Assessment" create="false" edit="false" delete="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" />
+                            <field string="Realizado" name="user_id" />
+                        </group>
+                        <group>
+                            <field name="total_questions" />
+                            <field name="total_score" />
+                            <field name="lawtonbrody_state_display" />
+                        </group>
+                    </group>
+                    <group string="Observación">
+                        <field nolabel="1" name="observations" />
+                    </group>
+                    <group string="Actividades">
+                        <field name="question_answers"  nolabel="1">
+                            <list>
+                                <field name="question_name" />
+                                <field name="choise_select_id" />
+                                <field name="choise_select_value" />
+                            </list>
+                        </field>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View lawtonbrody.assessment search -->
+    <record id="view_lawtonbrody_assessment_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Evaluación Lawton-Brody</field>
+        <field name="model">lawtonbrody.assessment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="residence_id"/>
+<!--                <group expand="1" string="Group By">-->
+<!--                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>-->
+<!--                </group>-->
+            </search>
+        </field>
+    </record>
+
+    <!-- Action lawtonbrody.assessment -->
+    <record id="action_lawtonbrody_assessment" model="ir.actions.act_window">
+        <field name="name">Evaluaciones Lawton-Brody</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lawtonbrody.assessment</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registro de evaluaciones Lawton-Brody
+            </p>
+        </field>
+    </record>
+
+
+</odoo>

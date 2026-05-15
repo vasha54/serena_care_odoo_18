@@ -2,9 +2,21 @@
 <odoo>
 
     <!-- View nomenclature.allergy View List -->
-    <record id="view_nomenclature_allergy_list" model="ir.ui.view">
-        <field name="name">view.nomenclature.allergy.list</field>
+    <record id="view_nomenclature_allergy_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de la alergías no activas</field>
         <field name="model">nomenclature.allergy</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nomenclature_allergy_list" model="ir.ui.view">
+        <field name="name">Vista Lista de la alergías</field>
+        <field name="model">nomenclature.allergy</field>
+        <field name="priority">2</field>
         <field name="arch" type="xml">
             <list>
                 <field string="Activo" name="active" widget="boolean_toggle"/>
@@ -15,10 +27,10 @@
 
     <!-- View nomenclature.allergy form -->
     <record id="view_nomenclature_allergy_form" model="ir.ui.view">
-        <field name="name">view.nomenclature.allergy.form</field>
+        <field name="name">Vista Formulario de la alergía</field>
         <field name="model">nomenclature.allergy</field>
         <field name="arch" type="xml">
-            <form string="Nomenclature Allergy">
+            <form string="Formulario de Alergía">
                 <sheet>
                     <div class="oe_title">
                         <label for="name"/>
@@ -36,7 +48,7 @@
 
     <!-- View nomenclature.allergy search -->
     <record id="view_nomenclature_allergy_search" model="ir.ui.view">
-        <field name="name">view.nomenclature.allergy.search</field>
+        <field name="name">Vista Búsqueda de la alergías</field>
         <field name="model">nomenclature.allergy</field>
         <field name="arch" type="xml">
             <search>
@@ -47,10 +59,14 @@
 
     <!-- Action nomenclature.allergy -->
     <record id="action_nomenclature_allergy" model="ir.actions.act_window">
-        <field name="name">Listado de Alergías</field>
+        <field name="name">Listado de Alergias</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">nomenclature.allergy</field>
         <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_resident.view_nomenclature_allergy_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_resident.view_nomenclature_allergy_form')}),]" />
         <field name="domain">[]</field>
         <field name="context">{}</field>
         <field name="help" type="html">

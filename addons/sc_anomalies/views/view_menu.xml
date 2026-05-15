@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_anomalies"
+            name="Anomalías"
+            sequence="-4"
+            action="action_anomaly"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            web_icon="sc_anomalies,static/src/img/item_menu.png"/>
+
+        <menuitem id="menu_anomalies"
+            name="Anomalías"
+            sequence="1"
+            action="action_anomaly"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_anomalies"/>
+
+        <menuitem id="menu_level_anomalies"
+            name="Niveles de Anomalía"
+            sequence="2"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            action="action_anomaly_level"
+            parent="menu_serena_care_root_anomalies"/>
+
+        <menuitem id="menu_notification_email"
+            name="Correos electrónicos a notificar"
+            sequence="3"
+            action="action_notification_email"
+            groups="sc_group.gs_admin"
+            parent="menu_serena_care_root_anomalies"/>
+
+    </data>
+</odoo>

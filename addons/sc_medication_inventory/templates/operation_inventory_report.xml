@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_operation_inventory">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Reporte de operaciones de Inventario</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fecha/Hora</th>
+                                <th>Tipo</th>
+                                <th>Registrado</th>
+                                <th>Medicamento</th>
+                                <th>Cantidad</th>
+                                <th>Residente</th>
+                                <th>Residencia</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="docs" t-as="oper">
+                                <td><span t-field="oper.create_date"/></td>
+                                <td>
+                                    <span t-esc="dict(oper._fields['operation_type'].selection).get(oper.operation_type)"/>
+                                </td>
+                                <td><span t-field="oper.user_id"/></td>
+                                <td><span t-field="oper.medication_id"/></td>
+                                <td><span t-field="oper.quantity_str"/></td>
+                                <td><span t-field="oper.resident_id"/></td>
+                                <td><span t-field="oper.residence_id"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

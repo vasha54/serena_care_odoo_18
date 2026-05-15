@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+medication_inventory_admin,Gestión de Inventario de Medicamentos,model_medication_inventory,sc_group.gs_admin,1,1,1,0
+medication_inventory_gerente_salud,Lectura de Inventario de Medicamentos,model_medication_inventory,sc_group.gs_gerente_salud,1,0,0,0
+medication_inventory_enfermeria,Lectura de Inventario de Medicamentos,model_medication_inventory,sc_group.gs_enfermeria,1,1,1,0
+operation_inventory_admin,Gestión de operaciones en el Inventario,model_operation_inventory,sc_group.gs_admin,1,1,1,0
+operation_inventory_gerente_salud,Lectura de Inventario de Medicamentos,model_operation_inventory,sc_group.gs_gerente_salud,1,0,0,0
+operation_inventory_enfermeria,Lectura de Inventario de Medicamentos,model_operation_inventory,sc_group.gs_enfermeria,1,1,1,0
+medication_inventory_create_wizard_admin,Wizard de Creación de Inventario de Medicamentos,model_medication_inventory_create_wizard,sc_group.gs_admin,1,1,1,0
+medication_inventory_create_wizard_gerente_salud,Wizard de Creación de Inventario de Medicamentos,model_medication_inventory_create_wizard,sc_group.gs_gerente_salud,1,0,0,0
+medication_inventory_create_wizard_enfermeria,Wizard de Creación de Inventario de Medicamentos,model_medication_inventory_create_wizard,sc_group.gs_enfermeria,1,1,1,0
+operation_inventory_create_wizard_admin,Wizard de Registro de Operación en Inventario,model_operation_inventory_create_wizard,sc_group.gs_admin,1,1,1,0
+operation_inventory_create_wizard_gerente_salud,Wizard de Registro de Operación en Inventario,model_operation_inventory_create_wizard,sc_group.gs_gerente_salud,1,0,0,0
+operation_inventory_create_wizard_enfermeria,Wizard de Registro de Operación en Inventario,model_operation_inventory_create_wizard,sc_group.gs_enfermeria,1,1,1,0
+medication_inventory_coordinator_nurse,Gestión de Inventario de Medicamentos,model_medication_inventory,sc_group.gs_coordinator_nurse,1,0,1,0
+operation_inventory_coordinator_nurse,Gestión de operaciones en el Inventario,model_operation_inventory,sc_group.gs_coordinator_nurse,1,0,0,0
+medication_inventory_create_wizard_coordinator_nurse,Wizard de Creación de Inventario de Medicamentos,model_medication_inventory_create_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+operation_inventory_create_wizard_coordinator_nurse,Wizard de Registro de Operación en Inventario,model_operation_inventory_create_wizard,sc_group.gs_coordinator_nurse,0,0,0,0

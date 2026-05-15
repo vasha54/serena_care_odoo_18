@@ -3,15 +3,17 @@
 
     <!-- View medical.medication View List -->
     <record id="view_medical_medication_list" model="ir.ui.view">
-        <field name="name">view.medical.medication.list</field>
+        <field name="name">Vista Lista de Indicaciones Médicas de Medicamento</field>
         <field name="model">medical.medication</field>
         <field name="arch" type="xml">
-            <list default_order="create_date desc">
+            <list default_order="active desc, create_date desc">
+                <field name="active" widget="boolean_toggle"/>
                 <field string="Fecha/Hora" name="create_date"/>
                 <field name="user_id"/>
                 <field name="resident_id"/>
+                <field name="residence_id" />
                 <field name="medicament_id" />
-                <field name="pharmaceutical_form_id" />
+                <field name="pharmaceutical_form" />
                 <field name="route_id" />
                 <field name="dosage_str" />
                 <field name="frequency_str" />
@@ -22,7 +24,7 @@
 
     <!-- View medical.medication form -->
     <record id="view_medical_medication_form" model="ir.ui.view">
-        <field name="name">view.medical.medication.form</field>
+        <field name="name">Vista Formulario de Indicación Médica de Medicamento</field>
         <field name="model">medical.medication</field>
         <field name="arch" type="xml">
             <form string="Medical Medication">
@@ -30,43 +32,89 @@
                     <div class="oe_title">
                         <label for="resident_id"/>
                         <h1>
-                            <field name="resident_id" /> 
+                            <field name="resident_id" />
                         </h1>
 
                     </div>
                     <div class="oe_subtitle">
                         <label for="user_id"/>
                         <h3>
-                            <field name="user_id" readonly="1" /> 
+                            <field name="user_id" readonly="1" />
                         </h3>
-                        
+
                     </div>
                     <group col="4" colspan="4">
                         <group col="2" colspan="2">
                             <group string="Medicamento" col="2" colspan="2">
-                                <field name="medicament_id" required="1"/>
-                                <field name="pharmaceutical_form_id" required="1" readonly="1"/>
-                                <field name="route_id" required="1"/>    
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="medicament_id" required="1" placeholder="Seleccione" options="{'no_create': False, 'no_create_edit': False, 'create_edit': True}"/>
+                                <field name="pharmaceutical_form" required="1" readonly="1"/>
+                                <field name="route_id" required="1" placeholder="Seleccione"/>
+                                <field name="is_prn" widget="boolean_toggle"/>
                             </group>
-                           
+
                         </group>
                         <group col="2" colspan="2">
                             <group string="Dosis" col="4">
-                                <field name="dosage_amount" nolabel="1"/>
-                                <field name="dosage_unit"  nolabel="1"/>
+                                <group col="2" colspan="2">
+                                    <label for='dosage_amount' string="Cantidad"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <label for='dosage_unit' string="Unidad"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="dosage_amount" nolabel="1"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="dosage_unit" nolabel="1" placeholder="Seleccione unidad" options="{'no_create': True}"/>
+                                </group>
                             </group>
-                            <group string="Suministrar cada" col="4">
-                                <field name="frequency_amount"  nolabel="1"/>
-                                <field name="frequency_unit"  nolabel="1"/>
+                            <group string="Suministrar cada" col="4" invisible="is_prn">
+                                <group col="2" colspan="2">
+                                    <label for='frequency_amount' string="Valor"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <label for='frequency_unit' string="Unidad" options="{'no_create': True}"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="frequency_amount" nolabel="1" required="not is_prn" />
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="frequency_unit" nolabel="1" placeholder="Seleccione unidad de tiempo" required="not is_prn" options="{'no_create': True}"/>/>
+                                </group>
                             </group>
-                            <group string="Período de medicación" col="4" colspan="4"> 
-                                <field string="Desde:" name="start_date_medication" widget="datetime" />
-                                <field string="Hasta:" name="end_date_medication" widget="datetime"/>
+                            <group string="Período de medicación" col="4" colspan="4">
+                                <group col="4" colspan="4">
+                                    <field string="Desde:" name="start_date_medication" widget="datetime" />
+                                    <field string="Hasta:" name="end_date_medication" widget="datetime" invisible="is_lifetime_medication or is_prn"/>
+                                </group>
+                                <group col="4" colspan="4">
+                                    <field string="De por vida" name="is_lifetime_medication" widget="boolean_toggle" invisible="is_prn" />
+                                </group>
                             </group>
                         </group>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- View medical.medication search -->
+    <record id="view_medical_indication_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Indicación Médica de Medicamento</field>
+        <field name="model">medical.medication</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="residence_id" />
+                <filter string="Agrupado por doctor" name="group_by_user" 
+                        context="{'group_by':'user_id'}"/>
+                <filter string="Agrupado por residente" name="group_by_resident" 
+                        context="{'group_by':'resident_id'}"/>
+                <filter string="Activo/Inactivo" name="active_notactive" domain="[]" 
+                context="{'group_by':'active'}"/>
+                <filter string="Indicaciones activas" name="indication_general_active" domain="[('active','=',True)]" />
+                <filter string="Indicaciones no activas" name="indication_general_not_active" domain="[('active','=',False)]" />
+            </search>
         </field>
     </record>
 
@@ -77,7 +125,7 @@
         <field name="res_model">medical.medication</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[]</field>
-        <field name="context">{}</field>
+        <field name="context">{'active_test': False}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 No hay registros. Haga clic en un botón para agregar Indicación de medicamento.

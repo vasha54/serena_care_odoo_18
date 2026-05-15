@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="barthel_total_dependence"
+                model="barthel.state">
+            <field name="name">Dependencia total</field>
+            <field name="min_score">0</field>
+            <field name="max_score">20</field>
+        </record>
+
+        <record id="barthel_severe_dependence" model="barthel.state">
+            <field name="name">Dependencia severa</field>
+            <field name="min_score">21</field>
+            <field name="max_score">60</field>
+        </record>
+
+        <record id="barthel_moderate_dependence" model="barthel.state">
+            <field name="name">Dependencia moderada</field>
+            <field name="min_score">61</field>
+            <field name="max_score">90</field>
+        </record>
+
+        <record id="barthel_mild_dependence" model="barthel.state">
+            <field name="name">Dependencia leve</field>
+            <field name="min_score">91</field>
+            <field name="max_score">99</field>
+        </record>
+
+        <record id="barthel_total_independence" model="barthel.state">
+            <field name="name">Independencia total</field>
+            <field name="min_score">100</field>
+            <field name="max_score">100</field>
+        </record>
+    </data>
+</odoo>

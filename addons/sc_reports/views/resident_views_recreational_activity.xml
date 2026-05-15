@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View resident form -->
+    <record id="view_resident_form_recreational_activity_report"
+            model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Reporte Actividades Recreativas</field>
+        <field name="model">resident</field>
+        <field name="inherit_id"
+               ref="sc_recreational_activity.view_resident_form_recreational_activity"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='records_activitys_recreations']"
+                   position="before">
+                    <group string="Reportes">
+                        <group>
+                            <button name="action_activity_recreation_report_pdf"
+                                        string="Participación en actividades recreativas"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+
+                            <!-- <button name="action_activity_type_common_report_pdf"
+                                        string="Tipos de actividades más comunes"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/> -->
+                        </group>
+                        <group>
+                            <!-- <button name="action_activity_recreation_report_excel"
+                                        string="Participación en actividades recreativas"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-excel-o"/>
+
+                            <button name="action_activity_type_common_report_excel"
+                                        string="Tipos de actividades más comunes"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-excel-o"/> -->
+
+                        </group>
+                    </group>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View scalefrail.answer View List -->
+    <record id="view_scalefrail_answer_list" model="ir.ui.view">
+        <field name="name">Vista Lista Respuestas de las evaluaciones de FRAIL</field>
+        <field name="model">scalefrail.answer</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" delete="false">
+                <field name="assessment_id" />
+                <field name="user_id" />
+                <field name="resident_id" />
+                <field name="question_id" />
+                <field name="answer_select" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View scalefrail.answer form -->
+    <record id="view_scalefrail_answer_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Respuesta de las evaluaciones de FRAIL</field>
+        <field name="model">scalefrail.answer</field>
+        <field name="arch" type="xml">
+            <form string="Scalefrail Answer" create="false" edit="false" delete="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..." readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="assessment_id" readonly="1"/>
+                            <field name="user_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="question_statement" readonly="1"/>
+                            <field name="answer_select" readonly="1"/>
+                        </group>    
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View scalefrail.answer search -->
+    <record id="view_scalefrail_answer_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Respuesta de las evaluaciones de FRAIL</field>
+        <field name="model">scalefrail.answer</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- <group expand="1" string="Group By">
+                    <filter string="Name" name="name" domain="[]" context="{'group_by':'name'}"/>
+                </group> -->
+            </search>
+        </field>
+    </record>
+
+    <!-- Action scalefrail.answer -->
+    <record id="action_scalefrail_answer" model="ir.actions.act_window">
+        <field name="name">Respuestas de las evaluaciones de FRAIL</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scalefrail.answer</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay respuesta de las evaluaciones de FRAIL.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,5 +1,5 @@
 <odoo>
-    <data noupdate="1">
+    <data >
         <!-- Servicios -->
         <record id="service_medical_24h" model="residence_service">
             <field name="name">Atención Médica 24 horas</field>

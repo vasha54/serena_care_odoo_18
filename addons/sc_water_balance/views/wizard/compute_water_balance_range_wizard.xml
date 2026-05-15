@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View register.water.balance.wizard form -->
+    <record id="view_compute_water_balance_range_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard para Calcular el Balance Hídrico en un rango de fechas</field>
+        <field name="model">compute.water.balance.range.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cálculo de Balance Hídrico">
+                <sheet>
+                    <group string="Parámetros de búsqueda" col="4" colspan="4">
+                        <field name="resident_id" readonly="1" invisible="1"/>
+                        
+                        <group col="4" colspan="4">
+                            <field name="interval_type" 
+                                   string="Seleccionar intervalo"
+                                   widget="radio" 
+                                   class="oe_edit_only"/>
+                        </group>
+                        
+                        <!-- Grupo para intervalo personalizado -->
+                        <group col="4" colspan="4" invisible="interval_type != 'custom'">
+                            <group col="2" colspan="2">
+                                <field name="start_date_range" string="Desde"/>    
+                            </group>
+                            <group col="2" colspan="2">
+                                <field name="end_date_range" string="Hasta"/>    
+                            </group>
+                        </group>
+                        
+                        <!-- Grupo para intervalos predefinidos -->
+                        <group col="4" colspan="4" invisible="interval_type != 'custom'">
+                            <group col="2" colspan="2">
+                                <label for="start_date_range" string="Rango de fechas calculado:" class="o_form_label"/>
+                                <div>
+                                    <span class="text-muted">
+                                        <field name="start_date_range" readonly="1" nolabel="1"/>
+                                        hasta
+                                        <field name="end_date_range" readonly="1" nolabel="1"/>
+                                    </span>
+                                </div>
+                            </group>
+                            <group col="2" colspan="2">
+                                <field name="end_date_range" 
+                                       invisible="interval_type == 'custom'"
+                                       string="Fecha de referencia"/>
+                            </group>
+                        </group>
+                    </group>
+                    
+                    <!-- Sección de resultados -->
+                    <group string="Resultados" invisible="annotation_count == 0" col="4" colspan="4">
+                        <group colspan="4" col="4">    
+                            <group>
+                                <label for="annotation_count" string="Registros:" class="o_form_label"/>
+                                <field name="annotation_count" readonly="1" nolabel="1"/>
+                            </group>
+                            <group>
+                                <label for="total_income" string="Ingresos:" class="o_form_label"/>
+                                <field name="total_income" readonly="1" nolabel="1"/> ml
+                            </group>
+                            <group>
+                                <label for="total_expense" string="Egresos:" class="o_form_label"/>
+                                <field name="total_expense" readonly="1" nolabel="1"/> ml
+                            </group>  
+                            <group>
+                                <label for="balance" string="Balance:" class="o_form_label"/>
+                                <field name="balance" readonly="1" nolabel="1"/> ml
+                            </group>
+                        </group>
+                        <group colspan="4" col="4">
+                            <div class="row col-12">
+                                <span class="border border-dark rounded p-2 d-inline-block">
+                                    <label for="status_water_balance" string="Estado del balance hídrico:" class="o_form_label d-inline"/>
+                                    <h3 class="d-inline m-0 ml-2">
+                                        <field nolabel="1" name="status_water_balance" readonly="1"/>
+                                    </h3>
+                                </span>
+                            </div>
+                        </group>  
+                        <group string="Detalle de registros" col="4" colspan="4">
+                            <field name="annotation_ids" readonly="1" nolabel="1">
+                                <list>
+                                    <field name="create_date" string="Fecha"/>
+                                    <field name="route_id" string="Vía"/>
+                                    <field name="type_annotation" string="Tipo"/>
+                                    <field name="quantity" string="Cantidad (ml)"/>
+                                    <field name="notes" string="Observaciones"/>
+                                    <field name="user_id" string="Registrado por"/>
+                                </list>
+                            </field>
+                        </group>
+                    </group>
+                    
+                    <!-- Sección cuando no hay resultados -->
+                    <group string="Resultados" invisible="annotation_count != 0" col="4" colspan="4">
+                        <!-- Opción 1: Simple y minimalista -->
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center">
+                                <div class="alert alert-info mt-4" role="alert">
+                                    <i class="fa fa-info-circle me-2"></i>
+                                    No se encontraron registros para el rango de fechas seleccionado.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Opción 2: Más elaborada con icono grande -->
+                        <!-- 
+                        <div class="row justify-content-center align-items-center" style="min-height: 200px;">
+                            <div class="col-12 col-md-6 text-center">
+                                <i class="fa fa-search fa-4x text-muted mb-3"></i>
+                                <h4 class="text-muted">Sin resultados</h4>
+                                <p class="text-muted">
+                                    No se obtuvieron registros a partir de la consulta realizada.
+                                </p>
+                                <p class="text-muted small">
+                                    Intenta cambiar los parámetros de búsqueda.
+                                </p>
+                            </div>
+                        </div>
+                        -->
+                        
+                        <!-- Opción 3: Tipo dashboard card -->
+                        <!-- 
+                        <div class="card border-info">
+                            <div class="card-body text-center">
+                                <div class="display-1 text-muted mb-3">
+                                    <i class="fa fa-database"></i>
+                                </div>
+                                <h3 class="card-title text-info">Consulta sin resultados</h3>
+                                <p class="card-text text-muted">
+                                    No se encontraron registros de balance hídrico para los criterios especificados.
+                                </p>
+                                <div class="mt-4">
+                                    <span class="badge bg-light text-dark p-2">
+                                        <i class="fa fa-calendar me-1"></i>
+                                        Rango: 
+                                        <field name="start_date_range" readonly="1" nolabel="1"/>
+                                        al
+                                        <field name="end_date_range" readonly="1" nolabel="1"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </group>
+                    
+                    <footer>
+                        <button 
+                            name="action_compute_water_balance" 
+                            string="Calcular Balance" 
+                            type="object" 
+                            class="btn-primary"
+                            icon="fa-calculator"/>
+                        <button 
+                            string="Cerrar" 
+                            special="cancel" 
+                            class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

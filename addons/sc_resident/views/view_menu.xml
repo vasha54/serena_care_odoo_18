@@ -3,20 +3,31 @@
     <menuitem id="menu_serena_care_root_resident"
         name="Residentes"
         action="action_resident"
-        sequence="-4"
-        web_icon="sc_resident,static/description/icon.png"/>
+        sequence="-96"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_resident,static/src/img/menu_item_resident.png"/>
 
     <menuitem id="menu_resident_deleted"
         name="Residentes eliminados"
         action="action_resident_delete"
         parent="menu_serena_care_root_resident"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
         sequence="1"/>
 
     <menuitem 
         id="menu_allergy" 
-        name="Alergías" 
+        name="Alergias" 
         parent="menu_serena_care_root_resident" 
-        action="action_nomenclature_allergy" 
+        action="action_nomenclature_allergy"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse" 
+        sequence="2"/>
+
+    <menuitem
+        id="menu_addiction"
+        name="Adicciones"
+        parent="menu_serena_care_root_resident"
+        action="action_nomenclature_addiction"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
         sequence="2"/>
 
     <menuitem 
@@ -24,13 +35,23 @@
         name="Parentesco" 
         parent="menu_serena_care_root_resident" 
         action="action_family_kinship" 
-        sequence="3"/>
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+        sequence="4"/>
 
     <menuitem 
         id="menu_auth_level" 
         name="Nivel de autorización" 
         parent="menu_serena_care_root_resident" 
         action="action_auth_level" 
-        sequence="4"/>
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+        sequence="5"/>
+
+
+    <menuitem id="menu_serena_care_root_resident_family"
+        name="Familiares"
+        action="action_resident_family"
+        sequence="-4"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+        web_icon="sc_resident,static/src/img/item_menu_family.png"/>
 
 </odoo>

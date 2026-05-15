@@ -3,104 +3,153 @@
 
     <!-- View resident.family View List -->
     <record id="view_resident_family_list" model="ir.ui.view">
-        <field name="name">view.resident.family.list</field>
+        <field name="name">Vista Lista de los Familiares</field>
         <field name="model">resident.family</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
+                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
+                <field string="Foto" name="image_with_default" widget="image" width="50"/>
+                <field string="Nombre" name="name"/>
+                <field string="Dirección" name="address"/>
+                <field string="Móvil" name="mobile"/>
+                <field string="Correo electrónico" name="email"/>
+                <field name="resident_ids" widget="many2many_tags"/>
+                <field name="resident_str" column_invisible="1"/> 
+                <field name="kinship_str" column_invisible="1"/>
+                <field name="auth_level_str" column_invisible="1"/>
+                <button 
+                        name="action_view_details" 
+                        type="object" 
+                        icon="fa-eye" 
+                        class="btn btn-link"
+                        string=""
+                        title="Ver detalles"/>
+                <button 
+                        name="action_edit" 
+                        type="object" 
+                        icon="fa-pencil" 
+                        class="btn btn-link"
+                        string=""
+                        title="Editar"/>
+
+                <button 
+                        name="action_upload_avatar" 
+                        type="object" 
+                        icon="fa-photo" 
+                        class="btn btn-link"
+                        string=""
+                        title="Cambiar la foto"/>
+                <button 
+                        name="action_view_history" 
+                        type="object" 
+                        icon="fa-clock-o" 
+                        class="btn btn-link"
+                        string=""
+                        title="Historial del edición"/>
             </list>
         </field>
     </record>
 
     <!-- View resident.family form -->
     <record id="view_resident_family_form" model="ir.ui.view">
-        <field name="name">view.resident.family.form</field>
+        <field name="name">Vista Formulario del Familiar</field>
         <field name="model">resident.family</field>
         <field name="arch" type="xml">
-            <form string="Resident Family">
+            <form string="Formulario del Familiar">
                 <sheet>
-                    <field name="active" invisible="1" />
                             <field name="id" invisible="1" />
                             <field name="image_1920" widget="image" class="oe_avatar" 
                                 options='{"preview_image": "image_128"}' readonly="not active"/>
                             <div class="oe_title">
                                 <h1>
                                     <field string="Nombre" name="name" required="1"
-                                        placeholder="Nombre del residente" class="mb-0" 
+                                        placeholder="Nombre del familiar" class="mb-0" 
                                         readonly="not active"
                                         />
                                 </h1>
                             </div>
-
-                            <group col="2">
-                                <group string="Contacto">
-                                    <field name="phone" widget="phone" readonly="not active"/>
-                                    <field name="mobile" widget="phone" readonly="not active"/>
-                                    <field name="email" widget="email" readonly="not active"/>
+                            <group col="4" colspan="4">
+                                <field string="Activo" name="active" widget="boolean_toggle"/>    
+                            </group>
+                                
+                            <group col="4" colspan="4">
+                                <group string="Contacto" col="2" colspan="2">
+                                    <field string="Teléfono" name="phone" widget="phone" readonly="not active"/>
+                                    <field string="Móvil" name="mobile" widget="phone" readonly="not active" required="1"/>
+                                    <field name="email" widget="email" readonly="not active" required="1" />
+                                </group>
+                                <group string="Dirección" col="2" colspan="2">
+                                    <field name="partner_id" invisible="1"/>
+                                    <field name="address" nolabel="1" required="1" readonly="not active"/>
                                 </group>
                             </group>
-
-                            <group col="2">
-                                <group string="Dirección">
-                                    <group col="2">
-                                        <field name="country_id" placeholder="País" readonly="not active"/>
-                                        <field string="Estado" name="province_id" placeholder="Estado"
-                                                class="o_address_country" 
-                                                domain="[('country_id','=',country_id)]" readonly="not active"/>
-                                        <field string="Municipio" name="municipality_id"
-                                                class="o_address_state"
-                                                placeholder="Municipio"
-                                                domain="[('province_id','=',province_id)]" readonly="not active"/>
-                                        <field string="Ciudad" name="city" placeholder="Ciudad"
-                                                class="o_address_city" readonly="not active"/>
-                                        <field string="Código Postal" name="zip" placeholder="C.P." readonly="not active"/>
-                                    </group>
-                                    <group col="2">
-                                        <field string="Calle principal" name="street" placeholder="Calle principal" readonly="not active"/>
-                                        <field string="Entre Calle #1" name="street2" placeholder="Entre calle 1" readonly="not active"/>
-                                        <field name="street3" placeholder="Entre calle 2" readonly="not active"/>
-                                        <field name="street_number" placeholder="Número" readonly="not active"/>
-                                    </group>
-                                        
-                                </group>
-                                <group string="Información Adicional">
-                                    <field string="Notas" name="comment" placeholder="Notas adicionales..." readonly="not active"/>
-                                    <field name="partner_id" invisible="1"/>
-                                </group>
+                            <group col="4" colspan="4" string="Familiares residentes">
+                                <field name="resident_ids" widget="one2many" nolabel="1" required="1">
+                                    <list create="False">
+                                        <field name="is_contractor" readonly="1"/>
+                                        <field name="resident_id"/>
+                                        <field name="kinship_id" />
+                                        <field name="auth_level_ids" widget="many2many_tags" />
+                                    </list>
+                                </field>
                             </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <record id="view_resident_family_form_history_edit" model="ir.ui.view">
+        <field name="name">Vista Formulario del Familiar - Edición Histórico</field>
+        <field name="model">resident.family</field>
+        <field name="arch" type="xml">
+            <form string="Resident Family">
+                <sheet>
+                    <h2> Historial de cambios de los datos del familiar : <field name="name" nolabel="1"/> </h2>
+                </sheet>
+                <chatter reload_on_follower="True" />
+            </form>
+        </field>
+    </record>
+
     <!-- View resident.family search -->
     <record id="view_resident_family_search" model="ir.ui.view">
-        <field name="name">view.resident.family.search</field>
+        <field name="name">Vista Búsqueda del Familiar</field>
         <field name="model">resident.family</field>
         <field name="arch" type="xml">
             <search>
-                <field name="name" />
+                <field name="name"/>
+                <field name="address"/>
+                <field name="mobile"/>
+                <field name="email"/>
+                <field string="Nombre del residente" name="resident_str" />
+                <field string="Parentesco" name="kinship_str" />
+                <field string="Nivel de autorización" name="auth_level_str" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+                <filter string="Familiares activos" name="house_active" domain="[('active','=',True)]" />
+                <filter string="Familiares no activos" name="house_active" domain="[('active','=',False)]" />      
             </search>
         </field>
     </record>
 
     <!-- Action resident.family -->
     <record id="action_resident_family" model="ir.actions.act_window">
-        <field name="name">Resident Family</field>
+        <field name="name">Familiares de los residentes</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">resident.family</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[]</field>
-        <field name="context">{}</field>
+        <field name="context">{'active_test': False}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
-                There is no examples click here to add new Resident Family.
+                No se encontraron Contactos/Familiares que coincidan con el término de búsqueda
             </p>
         </field>
     </record>
 
     <record id="action_resident_family_form" model="ir.actions.act_window">
-        <field name="name">Resident Family</field>
+        <field name="name">Famliares de los Residentes</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">resident.family</field>
         <field name="view_mode">form</field>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View nomenclature.activity.type View List -->
+    <record id="view_nomenclature_activity_type_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista Tipos de Actividades Recreativas sin columna Activa</field>
+        <field name="model">nomenclature.activity.type</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="image" widget="image" class="oe_avatar"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_nomenclature_activity_type_list" model="ir.ui.view">
+        <field name="name">Vista Lista Tipos de Actividades Recreativas</field>
+        <field name="model">nomenclature.activity.type</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"
+                       width="60"/>
+                <field string="Imagen" name="image_with_default" widget="image" width="50"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View nomenclature.activity.type form -->
+    <record id="view_nomenclature_activity_type_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Tipo de Actividades Recreativas</field>
+        <field name="model">nomenclature.activity.type</field>
+        <field name="arch" type="xml">
+            <form string="Nomenclature Activity Type">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"
+                           required="1"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field string="Nombre" name="name" placeholder="Nombre..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View nomenclature.activity.type search -->
+    <record id="view_nomenclature_activity_type_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Tipo de Actividades Recreativas</field>
+        <field name="model">nomenclature.activity.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field string="Nombre de la actividad" name="name" />
+                <filter string="Tipo de actividad activa" name="type_activity_active"
+                        domain="[('active','=',True)]" />
+                <filter string="Tipo de actividad no activo" name="type_activity_not_active"
+                        domain="[('active','=',False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action nomenclature.activity.type -->
+    <record id="action_nomenclature_activity_type" model="ir.actions.act_window">
+        <field name="name">Tipos de actividades</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nomenclature.activity.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_recreational_activity.view_nomenclature_activity_type_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_recreational_activity.view_nomenclature_activity_type_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar Tipo de Actividad.
+            </p>
+        </field>
+    </record>
+
+</odoo>

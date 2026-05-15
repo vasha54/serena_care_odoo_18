@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View scalegds5.question View List -->
+    <record id="view_scalegds5_question_list" model="ir.ui.view">
+        <field name="name">Vista Lista Preguntas para GDS-5</field>
+        <field name="model">scalegds5.question</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="active" string="Activa" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="depression_answer" />
+                <field name="point_value" />
+                <field name="statement" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View scalegds5.question form -->
+    <record id="view_scalegds5_question_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Pregunta para GDS-5</field>
+        <field name="model">scalegds5.question</field>
+        <field name="arch" type="xml">
+            <form string="Scalegds5 Question">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Título ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Configuración">
+                            <field name="active" string="Activa" widget="boolean_toggle"/>
+                            <field name="depression_answer" />
+                            <field name="point_value" />
+                        </group>
+                        <group string="Enunciado">
+                            <field name="statement" nolabel="1" widget="textarea" rows="5" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View scalegds5.question search -->
+    <record id="view_scalegds5_question_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Pregunta para GDS-5</field>
+        <field name="model">scalegds5.question</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action scalegds5.question -->
+    <record id="action_scalegds5_question" model="ir.actions.act_window">
+        <field name="name">Preguntas GDS-5</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scalegds5.question</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar una nueva pregunta de GDS-5.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sc_template_report_layout" name="Plantilla de Cabecera de los Reportes (Header)">
+        <t t-set="current_date" t-value="datetime.datetime.now()"/>
+        <t t-set="website_url" t-value="context.get('website_url', False)"/>
+        <t t-set="date_user" t-value="context.get('date_user', False)"/>
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+        <div class="header">
+            <div class="row align-items-center" style="border-bottom: 1px solid black; padding-bottom: 4px;">
+                <div class="col-3">
+                    <t t-if="user and user.company_id and user.company_id.logo">
+                        <t t-set="logo_str"
+                           t-value="user.company_id.logo.decode('utf-8') if isinstance(user.company_id.logo, bytes) else user.company_id.logo"/>
+                        <img t-att-src="'data:image/png;base64,' + logo_str"
+                             style="max-height: 90px;"/>
+                    </t>
+                    <t t-else="">
+                        <div style="height: 90px; background-color: #f0f0f0;
+                                    display: flex; align-items: center; justify-content: center;">
+                            <span>Logo de la Compañía</span>
+                        </div>
+                    </t>
+                </div>
+
+                <div class="col-9 text-end">
+                    <h2 t-if="report_title">
+                        <t t-esc="report_title"/>
+                    </h2>
+                    <h2 t-else="">
+                        Reporte del Sistema SERENA - CARE
+                    </h2>
+                    <h4>
+                        <t t-esc="report_subtitle"/>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- CONTENT -->
+        <!-- ========================= -->
+        <div class="article o_report_layout_standard">
+            <style>
+
+                /* ===== CONTROL REAL DE MÁRGENES PDF ===== */
+                @page {
+                    margin-top: 12mm;
+                    margin-bottom: 15mm;
+                    margin-left: 12mm;
+                    margin-right: 12mm;
+                }
+
+                /* ===== ELIMINAR ESPACIOS AUTOMÁTICOS DE ODOO ===== */
+                .o_report_layout_standard .header {
+                    margin-bottom: 0 !important;
+                    padding-bottom: 0 !important;
+                }
+
+                .o_report_layout_standard .article {
+                    margin-top: 0 !important;
+                    padding-top: 0 !important;
+                }
+
+                /* ===== AJUSTE DE TÍTULOS HEADER ===== */
+                .header h2 {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+
+                .header h4 {
+                    margin: 2px 0 4px 0 !important;
+                    padding: 0 !important;
+                    font-weight: normal;
+                }
+
+                /* ===== SECCIONES ===== */
+                .section-title {
+                    font-weight: bold;
+                    color: #2c3e50;
+                    padding-bottom: 6px;
+                    margin-bottom: 16px;
+                    margin-top: 20px;
+                    position: relative;
+                }
+
+                .section-title::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 2px;
+                    width: 100%;
+                    background-color: #3498db;
+                }
+
+                .subsection-title {
+                    font-weight: bold;
+                    color: #2c3e50;
+                    font-size: 0.95rem;
+                    margin: 14px 0 10px 0;
+                    position: relative;
+                }
+
+                .subsection-title::after {
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    bottom: -2px;
+                    height: 1px;
+                    width: 80%;
+                    background-color: #b0b0b0;
+                }
+
+                .subsubsection-title {
+                    font-weight: bold;
+                    color: #4a5568;
+                    font-size: 0.85rem;
+                    margin: 10px 0 6px 0;
+                }
+            </style>
+
+            <!-- CONTENIDO DEL REPORTE -->
+            <t t-out="0"/>
+        </div>
+
+        <!-- ========================= -->
+        <!-- FOOTER -->
+        <!-- ========================= -->
+        <div class="footer o_standard_footer">
+            <div class="row text-center" style="border-top: 1px solid black; padding-top: 5px;">
+                <div class="col-4 text-start">
+                    <div>
+                        <strong>Solicitado por:</strong>
+                        <t t-esc="user.name"/>
+                    </div>
+                    <div t-if="user.login">
+                        <small><t t-esc="user.login"/></small>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div>
+                        <strong>Página:</strong>
+                        <span class="page"/> / <span class="topage"/>
+                    </div>
+                    <div t-if="date_user" style="margin-top: 3px;">
+                        <small><t t-esc="date_user"/></small>
+                    </div>
+                </div>
+
+                <div class="col-4 text-end">
+                    <strong>Reporte Generado por el Sistema Web SERENA - CARE</strong>
+                    <div style="margin-top: 3px;">
+                        <t t-if="website_url">
+                            <a t-att-href="website_url"
+                               target="_blank"
+                               style="font-size: 0.85em; color: #3498db; text-decoration: none;">
+                                <t t-esc="website_url"/>
+                            </a>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </template>
+
+</odoo>

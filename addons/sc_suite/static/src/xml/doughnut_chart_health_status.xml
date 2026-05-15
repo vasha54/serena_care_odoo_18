@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+  <t t-name="sc_suite.DoughnutChartHealthStatusTemplate">
+
+    <div class="card shadow-lg mb-3" style="background-color: #f7f6fb; color: #171a21 !important;">
+      <div class="card-body p-2">
+        <div class="row">
+          <div class="col-12 text-start">
+            <h6 class="fw-bold" style="margin-left:12px !important; color: #171a21 !important;">
+                                Estado General de los Pacientes
+            </h6>
+            <hr class="my-1"/>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-center text-center mb-0">
+          <div class="col-12 text-center">
+
+            <t t-if="state.loading">
+              <div class="text-center py-4">
+                <i class="fa fa-spinner fa-spin me-2"/>
+                Cargando datos…
+              </div>
+            </t>
+
+            <t t-elif="!state.hasData">
+              <div class="text-center text-muted py-4">
+                No hay datos disponibles
+              </div>
+            </t>
+            <t t-else="">
+              <div style="position: relative; height:250px; width:100%;">
+                <canvas t-ref="healthStatusDoughnutChart" id="healthStatusDoughnutChart" style="width: 100% !important; height: 100% !important"></canvas>
+              </div>
+            </t>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </t>
+</templates>

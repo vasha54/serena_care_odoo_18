@@ -15,11 +15,7 @@ class MedicalMedication(models.Model):
         compute="_compute_medicament_data",
         store=False,
     )
-    pharmaceutical_form_data = fields.Json(
-        string="Datos de la forma farmacéutica",
-        compute="_compute_pharmaceutical_form_data",
-        store=False,
-    )
+    
     route_data = fields.Json(
         string="Datos de la vía de administración",
         compute="_compute_route_data",
@@ -46,16 +42,6 @@ class MedicalMedication(models.Model):
                 ]
             )[0] 
 
-    @api.depends('pharmaceutical_form_id')
-    def _compute_pharmaceutical_form_data(self):
-        for record in self:
-            record.pharmaceutical_form_data = record.pharmaceutical_form_id.read(
-                [
-                    "id",
-                    "name",
-                ]
-            )[0]
-
     @api.depends('route_id')
     def _compute_route_data(self):
         for record in self:
@@ -79,10 +65,13 @@ class MedicalMedication(models.Model):
     @api.depends('frequency_unit')
     def _compute_frequency_unit_data(self):
         for record in self:
-            record.frequency_unit_data = record.frequency_unit.read(
-                [
-                    "id",
-                    "name",
-                ]
-            )[0]
+            if record.frequency_unit:
+                record.frequency_unit_data = record.frequency_unit.read(
+                    [
+                        "id",
+                        "name",
+                    ]
+                )[0]
+            else:
+                record.frequency_unit_data = False
     

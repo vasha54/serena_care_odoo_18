@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View nutrition.level View List -->
+    <record id="view_nutrition_level_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Niveles de Nutrición</field>
+        <field name="model">nutrition.level</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle" />
+                <field string="Valor cuantitativo (%)" name="percent" />
+                <field string="Nombre" name="name"/>
+                <field string="Descripción" name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View nutrition.level form -->
+    <record id="view_nutrition_level_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Nivel de Nutrición</field>
+        <field name="model">nutrition.level</field>
+        <field name="arch" type="xml">
+            <form string="Nutrition Level">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Activo" name="active" widget="boolean_toggle" />
+                            <field string="Valor cuantitativo (%)" name="percent" />
+                        </group>
+                        <group>
+                            <field name="description" rows="5" widget="textarea"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View nutrition.level search -->
+    <record id="view_nutrition_level_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Niveles de Nutrición</field>
+        <field name="model">nutrition.level</field>
+        <field name="arch" type="xml">
+            <search>
+                <field string="Nombre" name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action nutrition.level -->
+    <record id="action_nutrition_level" model="ir.actions.act_window">
+        <field name="name">Niveles de alimentación</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nutrition.level</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de niveles de alimentación.
+            </p>
+        </field>
+    </record>
+
+</odoo>

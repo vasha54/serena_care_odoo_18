@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_neurological_assessment"
+            name="Neurología"
+            sequence="-4"
+            action="action_neurological_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            web_icon="sc_neurological_assessment,static/src/img/menu_item.png"/>
+
+        <menuitem id="menu_neurological_assessment"
+            name="Evaluaciones neurológias"
+            sequence="1"
+            action="action_neurological_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_neurological_assessment"/>
+
+        <menuitem id="menu_neurological_state"
+            name="Estados neurológicos"
+            sequence="2"
+            action="action_neurological_state"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_neurological_assessment"/>
+
+        
+    </data>
+</odoo>

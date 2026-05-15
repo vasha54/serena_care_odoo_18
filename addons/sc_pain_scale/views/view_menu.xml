@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_pain_scale"
+            name="Dolores"
+            sequence="-4"
+            action="action_pain_scale"
+            web_icon="sc_pain_scale,static/src/img/menu_item.png"/>
+
+        
+
+        
+    </data>
+</odoo>

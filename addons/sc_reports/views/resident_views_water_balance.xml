@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_water_balance_report" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Reporte Balanace Hídrico</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_water_balance.view_resident_form_water_balance"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//group[@name='group_water_balance_calculate']" position="after">
+                    <group  string="Reporte" col="1" colspan="1">
+                            <group col="1" colspan="1">
+                                <button name="action_download_water_balance_pdf"
+                                        string="Balance hídrico (PDF)" 
+                                        type="object" 
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+                                
+                                <!-- <button name="action_download_water_balance_xlsx" 
+                                        type="object" 
+                                        string="Balance hídrico (Excel)" 
+                                        class="oe_stat_button"
+                                        icon="fa-file-excel-o"/> -->
+
+
+
+                            </group>
+                    </group>
+            </xpath>
+            <xpath expr="//notebook[@name='water_balance_records_graph']/*[1]" position="before">
+                <page invisible="1" string="Análisis Gráfico">
+                    <!-- Contenido de tu página aquí -->
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

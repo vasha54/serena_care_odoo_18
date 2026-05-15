@@ -1,4 +1,17 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_water_balance_route_manager,water_balance_route_manager,model_water_balance_route,base.group_user,1,1,1,1
-access_water_balance_annotation_manager,water_balance_annotation_manager,model_water_balance_annotation,base.group_user,1,1,1,1
-access_register_water_balance_wizard_manager,register_water_balance_wizard_manager,model_register_water_balance_wizard,base.group_user,1,1,1,1
+water_balance_route_admin,Vías de Ingreso/Egreso,model_water_balance_route,sc_group.gs_admin,1,1,1,0
+water_balance_route_gerente_salud,Vías de Ingreso/Egreso,model_water_balance_route,sc_group.gs_gerente_salud,1,1,1,0
+water_balance_route_enfermeria,Vías de Ingreso/Egreso,model_water_balance_route,sc_group.gs_enfermeria,1,1,1,0
+water_balance_annotation_admin,Anotación del balance hídrico,model_water_balance_annotation,sc_group.gs_admin,1,1,1,0
+water_balance_annotation_gerente_salud,Anotación del balance hídrico,model_water_balance_annotation,sc_group.gs_gerente_salud,1,1,1,0
+water_balance_annotation_enfermeria,Anotación del balance hídrico,model_water_balance_annotation,sc_group.gs_enfermeria,1,1,1,0
+register_water_balance_w_admin,Registrar anotación del balance hídrico,model_register_water_balance_wizard,sc_group.gs_admin,1,1,1,0
+register_water_balance_w_gerente_salud,Registrar anotación del balance hídrico,model_register_water_balance_wizard,sc_group.gs_gerente_salud,1,1,1,0
+register_water_balance_w_enfermeria,Registrar anotación del balance hídrico,model_register_water_balance_wizard,sc_group.gs_enfermeria,1,1,1,0
+compute_water_balance_range_w_admin,Calcular el balance hídrico en rango,model_compute_water_balance_range_wizard,sc_group.gs_admin,1,1,1,0
+compute_water_balance_range_w_gerente_salud,Calcular el balance hídrico en rango,model_compute_water_balance_range_wizard,sc_group.gs_gerente_salud,1,1,1,0
+compute_water_balance_range_w_enfermeria,Calcular el balance hídrico en rango,model_compute_water_balance_range_wizard,sc_group.gs_enfermeria,1,1,1,0
+water_balance_route_coordinator_nurse,Vías de Ingreso/Egreso,model_water_balance_route,sc_group.gs_coordinator_nurse,1,1,1,0
+water_balance_annotation_coordinator_nurse,Anotación del balance hídrico,model_water_balance_annotation,sc_group.gs_coordinator_nurse,1,1,1,0
+register_water_balance_w_coordinator_nurse,Registrar anotación del balance hídrico,model_register_water_balance_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+compute_water_balance_range_w_coordinator_nurse,Calcular el balance hídrico en rango,model_compute_water_balance_range_wizard,sc_group.gs_coordinator_nurse,1,1,1,0

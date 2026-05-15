@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_user_select_residences_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard Seleccionar las Residencias del Usuario</field>
+        <field name="model">res.user.select.residences.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Seleccionar Residencias">
+                <sheet>
+                    <!-- Alerta informativa -->
+                    <div class="alert alert-info mb-4" role="alert">
+                        <strong>Instrucciones:</strong> Selecciona las residencias que quieras filtrar la información. 
+                        Puedes usar los botones "Seleccionar Todas" o "Limpiar Selección" para facilitar el proceso.
+                    </div>
+                    
+                    <!-- Campos en layout de dos columnas -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="all_accessible_residences_ids" string="Residencias accesibles"/>
+                            <field name="all_accessible_residences_ids" 
+                                   widget="many2many_tags" 
+                                   readonly="1"/>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="selected_residences_ids" string="Residencias seleccionadas"/>
+                            <field name="selected_residences_ids" 
+                                   options="{'create': False}" 
+                                   widget="many2many_tags"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Área para botones de acción - Flotante a la derecha -->
+                    <div class="mt-4" style="border-top: 1px solid #dee2e6; padding-top: 15px;">
+                        <div class="float-right">
+                            
+                                <button name="action_clear_all" 
+                                        type="object" 
+                                        string="Limpiar Selección" 
+                                        class="btn"/>
+                                <button name="action_select_all" 
+                                        type="object" 
+                                        string="Seleccionar Todas" 
+                                        class="btn"/>
+                            
+                        </div>
+                        
+                    </div>
+                </sheet>
+                
+                <!-- Footer -->
+                <footer>
+                    <button name="action_update_selected_residences" 
+                            string="Aplicar Filtros" 
+                            type="object" 
+                            class="btn-primary"/>
+                    <button string="Cancelar" 
+                            special="cancel" 
+                            class="btn btn-secondary mr-2"/>
+                    
+                    <div class="clearfix"></div>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

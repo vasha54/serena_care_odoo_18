@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_hygiene_report" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Reporte Higiene</field>
+        <field name="model">resident</field>
+        <field name="inherit_id"
+               ref="sc_hygiene.view_resident_form_hygiene"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//group[@name='register_hygiene']" position="before">
+                    <group  string="Reporte" col="1" colspan="1">
+                            <group col="1" colspan="1">
+                                <button name="action_hygiene_report_pdf"
+                                        string="Historial de registros (PDF)" 
+                                        type="object" 
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+                            </group>
+                    </group>
+            </xpath>
+            
+        </field>
+    </record>
+
+</odoo>

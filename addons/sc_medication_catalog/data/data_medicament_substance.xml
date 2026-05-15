@@ -1,83 +1,118 @@
 <odoo>
     <data noupdate="1">
-        <!-- Active ingredients (Alopaticos) -->
-        <record id="substance_paracetamol" model="medicament.substance">
-            <field name="name">Paracetamol</field>
-        </record>
-        <record id="substance_ibuprofeno" model="medicament.substance">
-            <field name="name">Ibuprofeno</field>
-        </record>
-        <record id="substance_amoxicilina" model="medicament.substance">
-            <field name="name">Amoxicilina</field>
-        </record>
-        <record id="substance_metformina" model="medicament.substance">
-            <field name="name">Metformina</field>
-        </record>
-        <record id="substance_losartan" model="medicament.substance">
-            <field name="name">Losartan</field>
-        </record>
-        <record id="substance_insulina_glargina" model="medicament.substance">
-            <field name="name">Insulina Glargina</field>
-        </record>
-        
-        <!-- Herbolaria substances :cite[5] -->
-        <record id="substance_eucalipto" model="medicament.substance">
-            <field name="name">Eucalipto (Eucalyptus globulus)</field>
-        </record>
-        <record id="substance_gingko" model="medicament.substance">
-            <field name="name">Gingko Biloba</field>
-        </record>
-        <record id="substance_valeriana" model="medicament.substance">
-            <field name="name">Valeriana Officinalis</field>
-        </record>
-        
-        <!-- Excipients -->
-        <record id="substance_lactosa" model="medicament.substance">
-            <field name="name">Lactosa Monohidratada</field>
+        <!-- A -->
+        <record id="substance_vitamina_c" model="medicament.substance">
+            <field name="name">Ácido Ascórbico (Vitamina C)</field>
         </record>
         <record id="substance_almidon" model="medicament.substance">
             <field name="name">Almidón de Maíz</field>
         </record>
+        <record id="substance_amoxicilina" model="medicament.substance">
+            <field name="name">Amoxicilina</field>
+        </record>
+        <record id="substance_aminoacidos" model="medicament.substance">
+            <field name="name">Aminoácidos Esenciales</field>
+        </record>
+        <!-- B -->
+        <record id="substance_benzoatos" model="medicament.substance">
+            <field name="name">Benzoatos</field>
+        </record>
+        <!-- C -->
+        <record id="substance_calcio" model="medicament.substance">
+            <field name="name">Carbonato de Calcio</field>
+        </record>
+        <!-- D -->
+        <!-- E -->
+        <record id="substance_eucalipto" model="medicament.substance">
+            <field name="name">Eucalipto (Eucalyptus globulus)</field>
+        </record>
+        <!-- F -->
+        <record id="substance_fentanilo" model="medicament.substance">
+            <field name="name">Fentanilo</field>
+        </record>
+        <!-- G -->
         <record id="substance_gelatina" model="medicament.substance">
             <field name="name">Gelatina</field>
+        </record>
+        <record id="substance_gingko" model="medicament.substance">
+            <field name="name">Gingko Biloba</field>
         </record>
         <record id="substance_glicerina" model="medicament.substance">
             <field name="name">Glicerina</field>
         </record>
-        <record id="substance_sacarosa" model="medicament.substance">
-            <field name="name">Sacarosa</field>
+        <!-- H -->
+        <!-- I -->
+        <record id="substance_ibuprofeno" model="medicament.substance">
+            <field name="name">Ibuprofeno</field>
         </record>
-        <record id="substance_benzoatos" model="medicament.substance">
-            <field name="name">Benzoatos</field>
+        <record id="substance_insulina_glargina" model="medicament.substance">
+            <field name="name">Insulina Glargina</field>
         </record>
-        
-        <!-- Controlled substances (Fracción I-III) :cite[3] -->
-        <record id="substance_morfina" model="medicament.substance">
-            <field name="name">Morfina</field>
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <record id="substance_lactosa" model="medicament.substance">
+            <field name="name">Lactosa Monohidratada</field>
         </record>
-        <record id="substance_fentanilo" model="medicament.substance">
-            <field name="name">Fentanilo</field>
+        <record id="substance_losartan" model="medicament.substance">
+            <field name="name">Losartan</field>
         </record>
-        
-        <!-- Oncology/Huérfanos :cite[5] -->
+        <!-- M -->
         <record id="substance_imatinib" model="medicament.substance">
             <field name="name">Mesilato de Imatinib</field>
         </record>
+        <record id="substance_metformina" model="medicament.substance">
+            <field name="name">Metformina</field>
+        </record>
+        <record id="substance_morfina" model="medicament.substance">
+            <field name="name">Morfina</field>
+        </record>
+        <!-- N -->
         <record id="substance_nusinersen" model="medicament.substance">
             <field name="name">Nusinersen</field>
         </record>
+        <!-- O -->
+        <!-- P -->
+        <record id="substance_paracetamol" model="medicament.substance">
+            <field name="name">Paracetamol</field>
+        </record>
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <record id="substance_sacarosa" model="medicament.substance">
+            <field name="name">Sacarosa</field>
+        </record>
+        <!-- T -->
+        <!-- U -->
+        <!-- V -->
+        <record id="substance_valeriana" model="medicament.substance">
+            <field name="name">Valeriana Officinalis</field>
+        </record>
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+        <!-- Active ingredients (Alopaticos) -->
+        
+        
+        <!-- Herbolaria substances :cite[5] -->
+        
+        <!-- Excipients -->
+        
+        
+        <!-- Controlled substances (Fracción I-III) :cite[3] -->
+        
+        
+        
+        <!-- Oncology/Huérfanos :cite[5] -->
+        
+        
         
         <!-- Vitaminicos :cite[5] -->
-        <record id="substance_vitamina_c" model="medicament.substance">
-            <field name="name">Ácido Ascórbico (Vitamina C)</field>
-        </record>
-        <record id="substance_calcio" model="medicament.substance">
-            <field name="name">Carbonato de Calcio</field>
-        </record>
+        
+        
         
         <!-- Enteral nutrition :cite[5] -->
-        <record id="substance_aminoacidos" model="medicament.substance">
-            <field name="name">Aminoácidos Esenciales</field>
-        </record>
+        
     </data>
 </odoo>

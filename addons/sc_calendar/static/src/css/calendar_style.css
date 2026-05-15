@@ -1,0 +1,32 @@
+/* 1. Ocultar sección completa de All Day */
+        /*.fc .fc-timegrid-axis,*/
+        .fc .fc-timegrid-all-day {
+            display: none !important;
+        }
+        
+        /* 2. Ocultar header de All Day en vistas timeGrid */
+        /* .fc-timeGridWeek-view .fc-scrollgrid > thead > tr:nth-child(2),
+        .fc-timeGridWeek-view .fc-scrollgrid > thead > tr:nth-child(3), */
+        .fc-timeGridDay-view .fc-scrollgrid > thead > tr:first-child {
+            display: none !important;
+        }
+        
+        /* 3. Ocultar cuerpo de All Day */
+        /* .fc-timeGridWeek-view .fc-scrollgrid > tbody > tr:nth-child(2),
+        .fc-timeGridWeek-view .fc-scrollgrid > thead > tr:nth-child(3), */
+        .fc-timeGridDay-view .fc-scrollgrid > tbody > tr:first-child {
+            display: none !important;
+        }
+        
+        /* 4. Ajustar el área principal de tiempo */
+        /*.fc-timeGridWeek-view .fc-timegrid-body,*/
+        .fc-timeGridDay-view .fc-timegrid-body {
+            top: 0 !important;
+        }
+        
+        /* 5. Remover padding/margin del contenedor */
+        /*.fc-timeGridWeek-view .fc-timegrid-slots,*/
+        .fc-timeGridDay-view .fc-timegrid-slots {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }

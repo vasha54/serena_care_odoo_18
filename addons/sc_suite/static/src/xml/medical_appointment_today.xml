@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="sc_suite.MedicalAppointmentTodayTemplate">
+        <div class="card shadow-lg mb-3" style="background-color: #f7f6fb; color: #171a21 !important;">
+            <div class="card-body p-2">
+                <div class="row">
+                    <div class="col-12 text-start">
+                        <h6 class="fw-bold" style="margin-left:12px !important; color: #171a21 !important;">
+                                Consultas Médicas para Hoy
+                        </h6>
+                        <hr class="my-1"/>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-center text-center mb-0">
+                    <div class="col-12">
+                        <t t-if="state.loading">
+                            <div class="text-center py-4">
+                                <i class="fa fa-spinner fa-spin me-2"/>
+                Cargando datos…
+                            </div>
+                        </t>
+
+                        <t t-elif="!state.hasData">
+                            <div class="text-center text-muted py-4">
+                No hay consultas programadas para hoy.
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <div class="appointments-list">
+                                <t t-foreach="state.appointments" t-as="appoint" t-index="i_appoint" t-key="i_appoint">
+                                    <div class="appointment-item py-2 border-bottom mt-0 mb-0">
+                                        <div class="row align-items-center">
+                                            <!-- Hora -->
+                                            <div class="col-2 text-center">
+                                                <span class="time-badge badge" style="font-weight: 600;">
+                                                    <span t-esc="appoint.time"/>
+                                                </span>
+                                            </div>
+
+                                            <!-- Foto y Nombre del Residente -->
+                                            <div class="col-5">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="resident-avatar mr-2">
+                                                        <t t-if="appoint.has_avatar">
+                                                            <img t-att-src="appoint.url_avatar" alt="Residente" class="rounded-circle border" style="width: 45px; height: 45px; object-fit: cover;"/>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <img src="/web/image/sc_suite.photo_profile_default" alt="Residente" class="rounded-circle border" style="width: 45px; height: 45px; object-fit: cover;"/>
+                                                        </t>
+                                                    </div>
+                                                    <div class="resident-info text-left mx-3">
+                                                        <span class="d-block fw-bold" style="font-size: 0.9rem;">
+                                                            <span t-esc="appoint.resident_name"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Médico y Especialidad -->
+                                            <div class="col-5">
+                                                <div class="doctor-info">
+                                                    <div class="doctor-name mb-1 my-1">
+                                                        <span class="fw-bold" style="font-size: 0.85rem;">
+                                                            <span t-esc="appoint.doctor_name"/>
+                                                        </span>
+                                                    </div>
+                                                    <div class="specialty-badge">
+                                                        <span class="badge badge-info p-1" style="background-color: #6cd9e7ff; font-size: 0.65rem;">
+                                                            <span t-esc="appoint.specialty"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </t>
+
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </t>
+</templates>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_geriatric_assessment" model="ir.ui.view">
+        <field name="name">Vista Formulario Residente extendida Evaluaciones Geríatricas</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='notebook_evaluation']" position="inside">
+                <page name="tab_geriatric_norton_assessment" string="Norton" invisible="not id">
+                    <group  string="Evaluaciones">
+                        <field name="norton_assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date"/>
+                                <field string="Registrado" name="user_id" />
+                                <field name="risk_level" />
+                                <field name="total_score" />
+                                <field name="physical_condition" />
+                                <field name="mental_state" />
+                                <field name="activity" />
+                                <field name="mobility" />
+                                <field name="incontinence" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+
+                <page name="tab_geriatric_scale_frail_assessment" string="FRAIL" invisible="not id">
+                    <group  string="Evaluaciones">
+                        <field name="scalefrail_assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date"/>
+                                <field string="Registrado" name="user_id" />
+                                <field name="total_questions" width="180"/>
+                                <field name="total_score" width="180"/>
+                                <field name="scalefrail_state_display" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+
+                <page name="tab_geriatric_scale_gds5_assessment" string="GDS-5" invisible="not id">
+                    <group  string="Evaluaciones">
+                        <field name="scalegds5_assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date"/>
+                                <field string="Registrado" name="user_id" />
+                                <field name="total_questions" width="180"/>
+                                <field name="total_score" width="180"/>
+                                <field name="scalegds5_state_display" />
+                                <field name="clinic_note" />
+                             </list>
+                        </field>
+                    </group>
+                </page>
+
+                <page name="tab_geriatric_scale_sarcf_assessment"
+                      string="SARC-F" invisible="not id">
+                    <group  string="Evaluaciones">
+                        <field name="scalesarcf_assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date"/>
+                                <field string="Registrado" name="user_id" />
+                                <field name="total_questions" width="180"/>
+                                <field name="total_score" width="180"/>
+                                <field name="scalesarcf_state_display" />
+                                <field name="observations" />
+                             </list>
+                        </field>
+                    </group>
+                </page>
+
+                <page name="tab_geriatric_barthel_assessment"
+                      string="Barthel" invisible="not id">
+                    <group  string="Evaluaciones">
+                        <field name="barthel_assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date"/>
+                                <field string="Registrado" name="user_id" />
+                                <field name="total_questions" width="180"/>
+                                <field name="total_score" width="180"/>
+                                <field name="barthel_state_display" />
+                                <field name="observations" />
+                             </list>
+                        </field>
+                    </group>
+                </page>
+
+                <page name="tab_geriatric_lawtonbrody_assessment"
+                      string="Lawton-Brondy" invisible="not id">
+                    <group  string="Evaluaciones">
+                        <field name="lawtonbrody_assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date"/>
+                                <field string="Registrado" name="user_id" />
+                                <field name="total_questions" width="180"/>
+                                <field name="total_score" width="180"/>
+                                <field name="lawtonbrody_state_display" />
+                                <field name="observations" />
+                             </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

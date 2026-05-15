@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_clinic_history">
+        <t t-set="vital_signs" t-value="doc.vital_signs_ids"/>
+        <t t-set="neurologicals" t-value="doc.neurological_assessment_ids"/>
+        <t t-set="moods" t-value="doc.assessment_ids"/>
+        <t t-set="laboratory_files" t-value="doc.laboratory_file_ids"/>
+        <t t-set="nortons" t-value="doc.norton_assessment_ids"/>
+        <t t-set="scalefrails" t-value="doc.scalefrail_assessment_ids"/>
+        <t t-set="scalegds5s" t-value="doc.scalegds5_assessment_ids"/>
+        <t t-set="scalesarcfs" t-value="doc.scalesarcf_assessment_ids"/>
+        <t t-set="barthels" t-value="doc.barthel_assessment_ids"/>
+        <t t-set="lawtonbrodys" t-value="doc.lawtonbrody_assessment_ids"/>
+
+        <h5 class="section-title">2. Historial Clínico</h5>
+
+        <h6 class="subsection-title">Signos Vitales (Último registro)</h6>
+
+        <t t-if="vital_signs">
+            <t t-set="vsigns" t-value="vital_signs[0]"/>
+            <t t-esc="vsigns.general_status_resident_label"/>
+            <!-- <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Temperatura</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Tensión Arterial</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Frec. Cardiaca</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Frec. Respiratoria</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Peso (Kg)</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Oxigenación (%)</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Glucosa (mg/dL)</strong>
+                    </td>
+                    <td class="text-center">
+                        <strong>Fuerza de Presión (kg)</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <t t-esc="vsigns.date_user"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.temperature"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.blood_pressure"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.heart_rate"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.respiratory_rate"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.weight"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.oxygen_saturation"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.glucose"/>
+                    </td>
+                    <td class="text-center">
+                        <t t-esc="vsigns.grip_strength"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(vital_signs) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(vital_signs) - 1"/>
+ registros de Signos Vitales.
+                </p>
+            </t> -->
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Signos Vitales</p>
+        </t>
+
+
+        <h6 class="subsection-title">Estudios de Labotario (Último registro)</h6>
+
+        <t t-if="laboratory_files">
+            <t t-set="lab_file" t-value="laboratory_files[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Fichero</strong>
+                    </td>
+                    <td class="text-center" style="width:40%;">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:20%;">
+                        <t t-esc="lab_file.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:20%;">
+                        <t t-esc="lab_file.user_id.name"/>
+                    </td>
+                    <td class="text-start" style="width:20%;">
+                        <a t-att-href="lab_file.download_url" target="_blank" style="font-size: 0.85em; color: #3498db; text-decoration: none;">
+
+                            <t t-esc="lab_file.laboratory_filename"/>
+                        </a>
+                    </td>
+                    <td class="text-start" style="width:40%;">
+                        <t t-esc="lab_file.description"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(laboratory_files) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(laboratory_files) - 1"/>
+ registros de Estudios de Laboratorio.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene estudios de laboratorios asociados</p>
+        </t>
+
+
+        <h6 class="subsection-title">Norton (Último registro)</h6>
+
+        <t t-if="nortons">
+            <t t-set="norton" t-value="nortons[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Puntuación Total</strong>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:33%;">
+                        <t t-esc="norton.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.total_score"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Nivel de Riesgo</strong>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Estado Físico</strong>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Estado Mental</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.risk_level_label"/>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.physical_condition_label"/>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.mental_state_label"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Actividad</strong>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Movilidad</strong>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <strong>Incontinencia</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.activity_label"/>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.mobility_label"/>
+                    </td>
+                    <td class="text-center" style="width:33%;">
+                        <t t-esc="norton.incontinence_label"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(nortons) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(nortons) - 1"/>
+ registros de Evaluaciones del Norton.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de Norton</p>
+        </t>
+
+
+        <h6 class="subsection-title">FRAIL (Último registro)</h6>
+
+        <t t-if="scalefrails">
+            <t t-set="frail" t-value="scalefrails[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Cant. Preguntas</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Puntuación</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Estado de fragilidad"</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:20%;">
+                        <t t-esc="frail.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:20%;">
+                        <t t-esc="frail.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <t t-esc="frail.total_questions"/>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <t t-esc="frail.total_score"/>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <t t-esc="frail.scalefrail_state_display"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(scalefrails) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(scalefrails) - 1"/>
+ registros de Evaluaciones de la Escala de FRAIL.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de la Escala de FRAIL</p>
+        </t>
+
+
+        <h6 class="subsection-title">GDS-5 (Último registro)</h6>
+        <t t-if="scalegds5s">
+            <t t-set="gds5" t-value="scalegds5s[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Cant. Preguntas</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Puntuación</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Estado de ánimo</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Nota clínica</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="gds5.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="gds5.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="gds5.total_questions"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                         <t t-esc="gds5.total_score"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="gds5.scalegds5_state_display"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="gds5.clinic_note"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(scalegds5s) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(scalegds5s) - 1"/>
+ registros de Evaluaciones de la Escala GDS-5.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de la Escala de GDS-5</p>
+        </t>
+
+
+        <h6 class="subsection-title">SARC-F (Último registro)</h6>
+
+        <t t-if="scalesarcfs">
+            <t t-set="sarcf" t-value="scalesarcfs[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Cant. Preguntas</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Puntuación</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Resultado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Observación</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="sarcf.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="sarcf.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="sarcf.total_questions"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                         <t t-esc="sarcf.total_score"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="sarcf.scalesarcf_state_display"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="sarcf.observations"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(scalesarcfs) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(scalesarcfs) - 1"/>
+ registros de Evaluaciones de la Escala SARC-F.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de la Escala de SARC-F</p>
+        </t>
+
+
+        <h6 class="subsection-title">Barthel (Último registro)</h6>
+
+        <t t-if="barthels">
+            <t t-set="barthel" t-value="barthels[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Cant. Preguntas</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Puntuación</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Resultado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Observación</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="barthel.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="barthel.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="barthel.total_questions"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                         <t t-esc="barthel.total_score"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="barthel.barthel_state_display"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="barthel.observations"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(barthels) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(barthels) - 1"/>
+ registros de Evaluaciones de Barthel.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de Barthel</p>
+        </t>
+
+
+        <h6 class="subsection-title">Lawton-Brondy (Último registro)</h6>
+
+        <t t-if="lawtonbrodys">
+            <t t-set="lawtonbrody" t-value="lawtonbrodys[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Cant. Preguntas</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Puntuación</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Resultado</strong>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <strong>Observación</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="lawtonbrody.date_user"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="lawtonbrody.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="lawtonbrody.total_questions"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                         <t t-esc="lawtonbrody.total_score"/>
+                    </td>
+                    <td class="text-center" style="width:16%;">
+                        <t t-esc="lawtonbrody.lawtonbrody_state_display"/>
+                    </td>
+                    <td class="text-start" style="width:16%;">
+                        <t t-esc="lawtonbrody.observations"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(lawtonbrodys) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(lawtonbrodys) - 1"/>
+ registros de Evaluaciones de Lawton-Brondy.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de la Lawton-Brondy</p>
+        </t>
+
+        <h6 class="subsection-title">Ánimo (Último registro)</h6>
+
+        <t t-if="moods">
+            <t t-set="mood" t-value="moods[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Respuesta</strong>
+                    </td>
+                    <td class="text-center" style="width: 40%;">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width: 20%;">
+                        <t t-esc="mood.date_user"/>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <t t-esc="mood.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width: 30%;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <t t-if="mood.mood_state_id.image">
+                                <img t-att-src="'data:image/png;base64,' + mood.mood_state_id.image.decode('utf-8')" style="max-height: 32px; max-width: 32px; object-fit: contain;"/>
+                            </t>
+                            <span t-esc="mood.mood_state_id.name"/>
+                        </div>
+                    </td>
+                    <td class="text-center" style="width: 30%;">
+                        <t t-esc="mood.observations_clinic"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(moods) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(moods) - 1"/>
+ registros de Evaluaciones de Ánimo.
+                </p>
+            </t>
+
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones de Ánimos</p>
+        </t>
+
+        <h6 class="subsection-title">Neurológicas (Último registro)</h6>
+
+        <t t-if="neurologicals">
+            <t t-set="neuro" t-value="neurologicals[0]"/>
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Estado neurológico</strong>
+                    </td>
+                    <td class="text-center" style="width: 40%;">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" style="width: 20%;">
+                        <t t-esc="neuro.date_user"/>
+                    </td>
+                    <td class="text-start" style="width: 20%;">
+                        <t t-esc="neuro.user_id.name"/>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <t t-esc="neuro.neurological_state_id.name"/>
+                    </td>
+                    <td class="text-start" style="width: 40%;">
+                        <t t-esc="neuro.description"/>
+                    </td>
+                </tr>
+            </table>
+            <t t-if="len(neurologicals) > 1">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(neurologicals) - 1"/>
+ registros de Evaluaciones Neurológica.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p>El residente no tiene registros de Evaluaciones Neurológica</p>
+        </t>
+
+
+    </template>
+
+</odoo>

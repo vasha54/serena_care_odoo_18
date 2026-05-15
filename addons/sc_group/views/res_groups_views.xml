@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_res_groups_list_serena" model="ir.ui.view">
+        <field name="name">Vista Lista de Grupos</field>
+        <field name="model">res.groups</field>
+        <field name="arch" type="xml">
+            <list default_order="active desc">
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field string="Nombre" name="display_name"/>
+                <field string="Descripción" name="comment"/>
+                <field string="Fecha de creación" name="create_date"/>
+                <field string="Cantidad de usuarios" name="count_users" />
+                <button
+                        name="action_view_details"
+                        type="object"
+                        icon="fa-eye"
+                        class="btn btn-link"
+                        string=""
+                        title="Ver detalles"/>
+                <button
+                        name="action_edit"
+                        type="object"
+                        icon="fa-pencil"
+                        class="btn btn-link"
+                        string=""
+                        title="Editar"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View medicament.category form -->
+    <record id="view_res_groups_form_serena" model="ir.ui.view">
+        <field name="name">Vista Formulario de Grupo</field>
+        <field name="model">res.groups</field>
+        <field name="arch" type="xml">
+            <form string="Grupo de Usuario - Formulario" context="{'group_serena':True}">
+                <sheet>
+                    <group col="4">
+                        <field string="Categoría" name="category_id" default="module_category_sc_residency" readonly="1"/>
+                        <field string="Nombre" name="name"
+                               readonly="not active"/>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>
+                    </group>
+                    <notebook>
+                        <page string="Usuarios" name="users">
+                            <field name="users"
+                                   readonly="not active"
+                                   context="{'search_default_filter_no_share':1}">
+                                <list>
+                                    <field string="Nombre" name="name"
+                                           readonly="1"/>
+                                    <field string="Usuario" name="login"
+                                           readonly="1"/>
+                                    <field string="Última conexión"
+                                           name="login_date"
+                                           readonly="1"/>
+
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Heredado" name="inherit_groups">
+                            <label for="implied_ids" string="Los usuarios añadidos a este grupo se añadirán automáticamente a los siguientes grupos."/>
+                            <field name="implied_ids" readonly="not active"
+                                   domain="[('is_group_serena', '=', True)]"/>
+                        </page>
+                        <page string="Menus" name="menus">
+                            <field name="menu_access" readonly="not active"/>
+                        </page>
+                        <page string="Vista" name="views">
+                            <field name="view_access"
+                                   readonly="not active"
+                                   groups="base.group_system">
+                                <list>
+                                    <field name="priority" string="Secuencia"
+                                           widget="handle"/>
+                                    <field string="Nombre" name="name"/>
+                                    <field string="Tipo" name="type"/>
+                                    <field string="Modelo" name="model"/>
+                                    <field string="ID de XML" name="xml_id"
+                                           groups="base.group_no_one"/>
+                                    <field string="Hereda de la vista"
+                                           name="inherit_id"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Permisos" name="access_rights">
+                            <field name="model_access" readonly="not active">
+                                <list string="Access Rights" editable="top">
+                                    <field string="Nombre" name="name"/>
+                                    <field string="Modelo" name="model_id"/>
+                                    <field string="Leer" name="perm_read"/>
+                                    <field string="Modificar"
+                                           name="perm_write"/>
+                                    <field string="Crear" name="perm_create"/>
+                                    <field string="Eliminar"
+                                           name="perm_unlink"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Reglas de registro" name="record_rules">
+                            <field name="rule_groups" readonly="not active">
+                                <list string="Reglas de registro" editable="top">
+                                    <field string="Nombre" name="name"/>
+                                    <field string="Modelo" name="model_id"/>
+                                    <field string="Dominio"
+                                           name="domain_force"/>
+                                    <field string="Leer" name="perm_read"/>
+                                    <field string="Modificar"
+                                           name="perm_write"/>
+                                    <field string="Crear" name="perm_create"/>
+                                    <field string="Eliminar"
+                                           name="perm_unlink"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Descripción" name="notes">
+                            <field name="comment" readonly="not active"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View medicament.category search -->
+    <record id="view_res_groups_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Grupo</field>
+        <field name="model">res.groups</field>
+        <field name="arch" type="xml">
+            <search>
+                <field string="Nombre" name="name"/>
+                <field string="Descripción" name="comment"/>
+                <filter string="Roles activos" name="role_active"
+                        domain="[('active','=',True)]" />
+                <filter string="Roles no activos" name="role_not_active"
+                        domain="[('active','=',False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action medicament.category -->
+    <record id="action_res_groups_serena" model="ir.actions.act_window">
+        <field name="name">Roles registrados</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.groups</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_group_serena','=',True)]</field>
+        <field name="context">{'group_serena': True, 'active_test': False}</field>
+        <field name="search_view_id" ref="view_res_groups_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_res_groups_list_serena')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_res_groups_form_serena')})]"/>
+        
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay roles personalizados registrados en el sistema
+            </p>
+        </field>
+    </record>
+    
+
+</odoo>

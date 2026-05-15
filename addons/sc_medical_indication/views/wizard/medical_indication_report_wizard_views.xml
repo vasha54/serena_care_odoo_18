@@ -2,7 +2,7 @@
 <odoo>
 
     <record id="view_medical_indication_report_wizard" model="ir.ui.view">
-        <field name="name">medical.indication.report.wizard.form</field>
+        <field name="name">Vista Wizard de reporte de Indicación Médica</field>
         <field name="model">medical.indication.report.wizard</field>
         <field name="arch" type="xml">
             <form string="Generar Reporte de Indicaciones Médicas">

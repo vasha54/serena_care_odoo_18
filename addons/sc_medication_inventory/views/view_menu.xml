@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_medication_inventory"
+        name="Inventario de Medicamentos"
+        action="action_medication_inventory"
+        sequence="-4"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_medication_inventory,static/src/img/menu_item.png"/>
+
+    <menuitem id="menu_medication_inventory_operation"
+        name="Operaciones"
+        action="action_operation_inventory"
+        sequence="1"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        parent="menu_serena_care_root_medication_inventory"/>
+</odoo>

@@ -3,7 +3,7 @@
 
     <!-- View population.group View List -->
     <record id="view_population_group_list" model="ir.ui.view">
-        <field name="name">view.population.group.list</field>
+        <field name="name">Vista Lista Grupos Poblacional</field>
         <field name="model">population.group</field>
         <field name="arch" type="xml">
             <list>
@@ -14,7 +14,7 @@
 
     <!-- View population.group form -->
     <record id="view_population_group_form" model="ir.ui.view">
-        <field name="name">view.population.group.form</field>
+        <field name="name">Vista Formulario Grupo Poblacional</field>
         <field name="model">population.group</field>
         <field name="arch" type="xml">
             <form string="Population Group">
@@ -32,7 +32,7 @@
 
     <!-- View population.group search -->
     <record id="view_population_group_search" model="ir.ui.view">
-        <field name="name">view.population.group.search</field>
+        <field name="name">Vista Búsqueda Grupo Poblacional</field>
         <field name="model">population.group</field>
         <field name="arch" type="xml">
             <search>

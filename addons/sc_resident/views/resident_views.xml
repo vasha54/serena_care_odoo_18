@@ -3,25 +3,36 @@
 
     <!-- View resident View List -->
     <record id="view_resident_list" model="ir.ui.view">
-        <field name="name">view.resident.list</field>
+        <field name="name">Vista Lista de los Residentes</field>
         <field name="model">resident</field>
         <field name="arch" type="xml">
-            <list>
-                <field string="Activo" name="active" widget="boolean_toggle"/>
-                <field name="dni" string="DNI"/>
-                <field string="Nombre" name="name"/>
-                <field string="Sexo" name="sex_id" />
-                <field name="birth_date"/>
-                <field name="residence_id"/>
-                <field name="phone"/>
-                <field name="email"/>
+            <list default_order="active desc, name asc">
+                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
+                <field string="Imagen" name="image_with_default" widget="image" width="50"/>
+                <field string="Nombre" name="name" />
+                <field string="Residencia" name="residence_id"/>
+                <!-- <field string="Dirección" name="contact_address"/> -->
+                <button 
+                        name="action_view_details" 
+                        type="object" 
+                        icon="fa-eye" 
+                        class="btn btn-link"
+                        string=""
+                        title="Ver detalles"/>
+                <button 
+                        name="action_edit" 
+                        type="object" 
+                        icon="fa-pencil" 
+                        class="btn btn-link"
+                        string=""
+                        title="Editar"/>    
             </list>
         </field>
     </record>
 
     
     <record id="view_resident_list_delete" model="ir.ui.view">
-        <field name="name">view.resident.list.delete</field>
+        <field name="name">Vista Lista de los Residentes Eliminados</field>
         <field name="model">resident</field>
         <field name="inherit_id" ref="view_resident_list" /> 
         <field name="mode">primary</field>
@@ -36,10 +47,10 @@
 
     <!-- View resident form -->
     <record id="view_resident_form" model="ir.ui.view">
-        <field name="name">view.resident.form</field>
+        <field name="name">Vista Formulario del Residente</field>
         <field name="model">resident</field>
         <field name="arch" type="xml">
-            <form string="Resident" create="not is_deleted and active" edit="not is_deleted and active" delete="not is_deleted and active">
+            <form string="Formulario del Residente" create="not is_deleted and active" edit="not is_deleted and active" delete="not is_deleted and active">
                 <header>
                     
 
@@ -70,15 +81,53 @@
                                     <field name="residence_id" readonly="not active"/>
                                     <field string="Activo" name="active" widget="boolean_toggle"/>
                                 </group>
-                                <group string="Contacto">
-                                    <field name="phone" widget="phone" readonly="not active"/>
-                                    <field name="mobile" widget="phone" readonly="not active"/>
-                                    <field name="email" widget="email" readonly="not active"/>
+                                <group string="Contacto de un familiar" invisible="id">
+                                    <!-- <group col="2">
+                                        <field name="phone" widget="phone" readonly="not active"/>
+                                        <field name="mobile" widget="phone" readonly="not active"/>
+                                    </group>
+                                    <group col="2">
+                                        <field name="email" widget="email" readonly="not active"/>    
+                                    </group> -->
+                                    <group col="4" colspan="4"  invisible="id">
+                                        <group col="4" colspan="4" invisible="id">
+                                            <group col="3" colspan="3">
+                                                <div class="oe_title">
+                                                    <h3>
+                                                        <field string="Nombre del familiar" name="family_name" required="1" 
+                                                            placeholder="Nombre del familiar" class="mb-0" invisible="id"/>
+                                                    </h3>
+                                                </div>        
+                                            </group>
+                                            <group col="1"  colspan="1">
+                                                <field nolabel="1" name="family_image_1920" widget="image" class="oe_avatar" 
+                                                options='{"preview_image": "image_128"}' invisible="id"/>        
+                                            </group>
+                                        </group>
+                                        <group col="4" colspan="4" invisible="id">
+                                            <field name="is_contractor" required="1" invisible="id" />
+                                        </group>
+                                        <group string="Contacto" col="2" colspan="2" invisible="id">
+                                            <field string="Teléfono" name="family_phone" widget="phone" invisible="id"/>
+                                            <field string="Móvil" name="family_mobile" widget="phone" required="1" invisible="id"/>
+                                            <field string="Email" name="family_email" widget="email" required="1" invisible="id"/>
+                                            <field name="kinship_id" invisible="id" required="1"/>
+                                        </group>
+                                        <group string="Dirección" col="2" colspan="2" invisible="id">
+                                            <field name="family_address" rows="5" widget="textarea" invisible="id" 
+                                                nolabel="1" required="1" />
+                                        </group>
+                                        <group col="4" colspan="4" string="Niveles de autorización" invisible="id">
+                                            <field name="auth_level_ids" nolabel="1"  widget="many2many_tags" 
+                                                required="1" invisible="id"
+                                            />
+                                        </group>
+                                    </group>    
                                 </group>
                             </group>
 
                             <group col="2">
-                                <group string="Dirección">
+                                <!-- <group string="Dirección">
                                     <group col="2">
                                         <field name="country_id" placeholder="País" readonly="not active" required="1"/>
                                         <field string="Estado" name="province_id" placeholder="Estado"
@@ -100,12 +149,12 @@
                                         <field name="street_number" placeholder="Número" readonly="not active"/>
                                     </group>
                                         
-                                </group>
+                                </group> -->
                                 <group string="Información Adicional">
                                     <notebook>
-                                        <page name="allergys" string="Alergías">
-                                            <field name="allergy_ids" nolabel="1" widget="many2many_tags" 
-                                                    domain="[('active','=',True)]" readonly="not active"/>
+                                        <page name="diagnosis" string="Diagnóstico">
+                                            <field name="diagnosis" rows="7" widget="textarea" nolabel="1" 
+                                                    placeholder="Diagnóstico"  readonly="not active"/>
                                         </page>
                                         <page name="observations" string="Descripción">
                                             <field name="comment" widget="html" nolabel="1" 
@@ -127,17 +176,72 @@
                                     <field name="partner_id" invisible="1"/>
                                 </group>
                             </group>
+                            <group col="2">
+                                <group string="APNP">
+                                    <notebook>
+                                        <page name="allergys" string="Alergias">
+                                            <field name="allergy_ids" nolabel="1" domain="[('active','=',True)]" readonly="not active">
+                                                <list>
+                                                    <field name="name" nolabel="1"/>
+                                                </list>
+                                            </field>
+                                        </page>
+                                        <page name="addiction" string="Adicciones">
+                                            <field name="addiction_ids" nolabel="1" domain="[('active','=',True)]" readonly="not active">
+                                                <list>
+                                                    <field name="name" nolabel="1"/>
+                                                </list>
+                                            </field>
+                                        </page>
+                                    </notebook>
+                                </group>
+                                <group string="Antecedentes Heredofamiliares">
+                                    <notebook>
+                                        <page name="tab_mother" string="Madre">
+                                            <field name="mother_family_history" nolabel="1" rows="7" widget="textarea"/>
+                                        </page>
+                                        <page name="tab_father" string="Padre">
+                                            <field name="father_family_history" nolabel="1" rows="7" widget="textarea"/>
+                                        </page>
+                                    </notebook>
+                                </group>
+                            </group>
+                            <group col="2">
+                                <group string="Antecedentes personales patológicos">
+                                    <field name="personal_pathological_history" nolabel="1" widget="textarea" rows="7"/>
+                                </group>
+                                <group col="2" string="Antecedentes personales no patológicos">
+                                    <group>
+                                        <field name="is_biomass_exposure" />
+                                        <field name="is_smoking" />
+                                    </group>
+                                    <group>
+                                        <field name="is_alcoholism" />
+                                    </group>
+                                    <notebook>
+                                        <page name="tab_p3_p2_ao_co" string="P.3, P.2, A.O, C.O">
+                                            <field name="p3_p2_ao_co" widget="textarea" rows="3" nolabel="1"/>
+                                        </page>
+                                        <page name="tab_fur" string="FUR">
+                                            <field name="fur" widget="textarea" rows="3" nolabel="1"/>
+                                        </page>
+                                        <page name="tab_immunizations" string="Inmunizaciones">
+                                            <field name="immunizations" widget="textarea" rows="3" nolabel="1"/>
+                                        </page>
+                                    </notebook>
+                                </group>
+                            </group>
                         </page>
                         <page name="family" string="Familiares" invisible="not id">
                             <group colspan="4" col="4">
-                                <group name="name" string="Registrar familiar" col="2" colspan="2">
+                                <group name="group_register_family" string="Registrar familiar" col="2" colspan="2">
                                    <group>
                                         <button 
                                         name="open_register_new_family_for_resident_wizard" 
                                         string="Nuevo en el sistema" 
                                         type="object"
                                         class="btn-primary"
-                                        invisible="not id"/>
+                                        invisible="not id or show_actions_buttons"/>
                                    </group>
                                    <group>
                                         <button 
@@ -145,18 +249,47 @@
                                         string="Buscar en el sistema" 
                                         type="object"
                                         class="btn-primary"
-                                        invisible="not id"/>
+                                        invisible="not id or show_actions_buttons"/>
                                    </group>
                                 </group>
                             </group>
-                            <group colspan="4" col="4" string="Familiares">
+                            <group colspan="4" col="4" string="Familiares" name="list_familys">
                                 <field name="family_ids" widget="one2many" nolabel="1" required="1">
                                     <list create="False">
+                                        <field name="is_contractor" readonly="1"/>
                                         <field name="family_id"/>
                                         <field name="kinship_id" />
                                         <field name="auth_level_ids" widget="many2many_tags" />
+                                        <button 
+                                            name="action_view_details" 
+                                            type="object" 
+                                            icon="fa-eye" 
+                                            class="btn btn-link"
+                                            string=""
+                                            title="Ver detalles"/>
                                     </list>
                                 </field>
+                            </group>
+                        </page>
+                        <page name="medical_history" string="Historial Clínico" invisible="not id">
+                            <group>
+                                <notebook name="notebook_medical_history">
+                            
+                                </notebook>
+                            </group>
+                        </page>
+                        <page string="Seguimiento Diario" invisible="not id">
+                            <group>
+                                <notebook name="daily_follow_up">
+                                   
+                                </notebook>
+                            </group>
+                        </page>
+                        <page name="tab_evaluation" string="Evaluaciones" invisible="not id">
+                            <group name="group_notebook_evaluation">
+                                <notebook name="notebook_evaluation">
+                                   
+                                </notebook>
                             </group>
                         </page>
                     </notebook> 
@@ -166,7 +299,7 @@
     </record>
 
     <record id="view_resident_form_delete" model="ir.ui.view">
-        <field name="name">view.resident.list.delete</field>
+        <field name="name">Vista Formulario del Residente Eliminado</field>
         <field name="model">resident</field>
         <field name="inherit_id" ref="view_resident_form" />
         <field name="mode">primary</field>
@@ -181,18 +314,19 @@
 
     <!-- View resident search -->
     <record id="view_resident_search" model="ir.ui.view">
-        <field name="name">view.resident.search</field>
+        <field name="name">Vista Búsqueda de Residente</field>
         <field name="model">resident</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name" />
                 <group expand="1" string="Agrupar por">
-                    <filter string="Activo" name="active" domain="[]" context="{'group_by':'active'}"/>
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
                     <filter string="Estado" name="province_id" domain="[]" context="{'group_by':'province_id'}"/>
                     <filter string="Municipio" name="municipality_id" domain="[]" context="{'group_by':'municipality_id'}"/>
                     <filter string="Residencia" name="residence_id" domain="[]" context="{'group_by':'residence_id'}"/>
                 </group>
-                <filter name="inactive" string="Residentes inactivos" domain="[('active','=',False)]"/>
+                <filter string="Residentes activos" name="resident_active" domain="[('active','=',True)]" />
+                <filter string="Residentes no activos" name="resident_active" domain="[('active','=',False)]" />
             </search>
         </field>
     </record>
@@ -203,8 +337,8 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">resident</field>
         <field name="view_mode">list,form</field>
-        <field name="domain">[("is_deleted","=",False)]</field>
-        <field name="context">{}</field>
+        <field name="domain">[('is_deleted','=',False)]</field>
+        <field name="context">{'active_test': False}</field>
         <field name="search_view_id" ref="view_resident_search" />
         <field name="view_ids" eval="[ (5, 0, 0), 
             (0, 0, {'view_mode': 'list', 'view_id': ref('view_resident_list')}),
@@ -217,12 +351,12 @@
     </record>
 
     <record id="action_resident_delete" model="ir.actions.act_window">
-        <field name="name">Listado de residentes</field>
+        <field name="name">Listado de residentes elimminados</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">resident</field>
         <field name="view_mode">list,form</field>
-        <field name="domain">[("is_deleted","=",True)]</field>
-        <field name="context">{}</field>
+        <field name="domain">[('is_deleted','=',True)]</field>
+        <field name="context">{'active_test': False}</field>
         <field name="search_view_id" ref="view_resident_search" />
         <field name="view_ids" eval="[ (5, 0, 0), 
             (0, 0, {'view_mode': 'list', 'view_id': ref('view_resident_list_delete')}),

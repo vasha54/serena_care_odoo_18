@@ -46,16 +46,36 @@ ocurridos dentro de un rango de fechas)
     # any module necessary for this one to work correctly
     "depends": [
         "base",
+        "sc_base",
         "sc_group",
         "sc_residence",
+        "sc_resident",
+        "sc_uom",
         "sc_employee",
         "sc_vital_signs",
+        "sc_medical_indication",
+        "sc_medication_inventory",
         "sc_water_balance",
+        "sc_recreational_activity",
+        "sc_calendar",
+        "sc_nursing_notes",
+        "sc_medical_notes",
+        "sc_anomalies",
+        "sc_nutrition", 
+        "sc_care_plan",
+        "sc_mood",
+        "sc_hygiene",
+        "sc_neurological_assessment",
+        "sc_pain_scale",
+        "sc_geriatric_assessment",
+        "sc_general_condition_resident",
+        "sc_laboratory_study", 
     ],
     # always loaded
     "data": [
-        # 'security/ir.model.access.csv',
-        'data/ir_cron.xml',
+        "data/ir_cron.xml",
+        "views/res_config_settings_views.xml",
+        #"security/ir.model.access.csv"
     ],
     # only loaded in demonstration mode
     "demo": [],

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_header_report" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Reporte Integral</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/header" position="inside">
+                <button name="action_full_report_pdf"
+                        string="Reporte integral (PDF)"
+                        type="object"
+                        class="btn-primary"
+                        invisible="not id"
+                        icon="fa-file-pdf-o"/>
+
+
+
+                <!-- <button name="action_full_report_xlsx"
+                        type="object"
+                        string="Reporte integral (Excel)"
+                        class="btn-primary"
+                        invisible="not id"
+                        icon="fa-file-excel-o"/> -->
+
+               
+            </xpath>
+
+        </field>
+    </record>
+
+    
+
+</odoo>

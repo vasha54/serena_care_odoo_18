@@ -1,27 +1,38 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "sc_uom",
+    'name': "Serena Care - Unidades de Medida",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Gestión de categorías, unidades de medida y conversiones",
 
     'description': """
-Long description of module's purpose
+Sistema completo para la gestión de unidades de medida y conversiones.
+        
+Características principales:
+    - Gestión de categorías de unidades de medida
+    - Configuración de unidades base y secundarias
+    - Sistema de conversión avanzado entre unidades
+    - Factores de conversión personalizados
+    - Historial de conversiones
+    - Integración con productos y categorías
+    - Soporte para unidades compuestas
     """,
 
-    'author': "My Company",
-    'website': "https://www.yourcompany.com",
-
+    "author": "Serena Care Team",
+    "website": "https://www.serena-care.mx",
+    "license": "LGPL-3",
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
+    "version": "18.0.1.0.0",
+    'category': 'Inventory',
+    'license': 'LGPL-3',
     # any module necessary for this one to work correctly
     'depends': [
         'base',
         'uom',
         'product',
+        'sc_base',
+        'sc_group',
     ],
 
     # always loaded

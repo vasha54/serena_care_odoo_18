@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+medical_resident_state_admin,Lectura del Estado General del Residente,model_medical_resident_state,sc_group.gs_admin,1,0,0,0
+medical_resident_state_gerente_salud,Lectura del Estado General del Residente,model_medical_resident_state,sc_group.gs_gerente_salud,1,0,0,0
+medical_resident_state_enfermeria,Lectura del Estado General del Residente,model_medical_resident_state,sc_group.gs_enfermeria,1,0,0,0
+medical_resident_state_coordinator_nurse,Lectura del Estado General del Residente,model_medical_resident_state,sc_group.gs_coordinator_nurse,1,0,0,0

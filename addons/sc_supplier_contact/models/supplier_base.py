@@ -22,9 +22,10 @@ class SupplierBase(models.Model):
             ("laboratory", "Laboratorio"),
             ("specialist", "Especialista"),
             ("doctor", "Médico"),
+            ("other", "Otro"),
         ],
         string="Tipo de Proveedor",
-        required=True,
+        defaults='other',      
     )
     nomenclature_specialty_id = fields.Many2one(
         string="Especialidad",
@@ -38,6 +39,13 @@ class SupplierBase(models.Model):
         related='partner_id.parent_id',
         readonly=False,
         domain="[('is_supplier_sc', '=', True),('is_company','=',True),('active','=',True)]"
+    )
+    is_affiliate = fields.Boolean(string = "Afiliado", default=False)
+    discount = fields.Char(string = "Descuento")
+    category_id = fields.Many2one(
+        'supplier.category',
+        string='Categoría de Proveedor',
+        
     )
 
 
@@ -68,19 +76,13 @@ class SupplierBase(models.Model):
         # vals['partner_id'] = partner.id
 
         # Crear el registro de supplier.base
-        record = super(SupplierBase, self).create(vals)
+        records = super(SupplierBase, self).create(vals)
 
-        # Auditoría: crear registro en audit.log
-        self.env['audit.log'].sudo().create({
-            'name': f"Creación de proveedor {record.name or 'Nuevo'}",
-            'user_id': self.env.user.id,
-            'model_id': self.env['ir.model']._get_id('supplier.base'),
-            'record_id': record.id,
-            'action_type': 'create',
-            'details': f"Valores creados: {vals}",
-        })
+        # Crear log de auditoría para cada registro creado
+        for record in records:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'supplier.base', 'create')
+        return records
 
-        return record
 
     def write(self, vals):
         # Validar especialidad para doctor/specialist
@@ -109,49 +111,35 @@ class SupplierBase(models.Model):
             # # Actualizar el partner
             # self.partner_id.write(partner_vals)
 
-        # Capturar cambios antiguos para auditoría
-        old_values = {
-            record.id: {
-                field: getattr(record, field) for field in vals.keys() if hasattr(record, field)
-            } for record in self
-        }
-
-        # Escribir los cambios
-        result = super(SupplierBase, self).write(vals)
-
-        # Auditoría: crear registro en audit.log para cada registro modificado
+        # Guardar estado anterior para detectar cambios (opcional, mejora la calidad del detalle)
+        old_values = {}
         for record in self:
-            changes = []
-            for field in vals.keys():
-                if hasattr(record, field):
-                    old_val = old_values[record.id].get(field)
-                    new_val = getattr(record, field)
-                    if old_val != new_val:
-                        changes.append(f"{field}: {old_val} -> {new_val}")
-            
-            if changes:
-                self.env['audit.log'].sudo().create({
-                    'name': f"Modificación de proveedor {record.name}",
-                    'user_id': self.env.user.id,
-                    'model_id': self.env['ir.model']._get_id('supplier.base'),
-                    'record_id': record.id,
-                    'action_type': 'write',
-                    'details': "Cambios: " + "; ".join(changes),
-                })
-
+            old_values[record.id] = {
+                field: record[field] for field in vals if field in record._fields and not record._fields[field].compute
+            }
+        result = super().write(vals)
+        # Después de la escritura, crear logs con los campos modificados
+        for record in self:
+            changed_fields = []
+            for field, new_val in vals.items():
+                if field in old_values.get(record.id, {}):
+                    old_val = old_values[record.id][field]
+                    if old_val != record[field]:
+                        changed_fields.append(f"{field}: {old_val!r} -> {record[field]!r}")
+                else:
+                    # Campo no almacenado o no presente en el registro anterior, se registra igual
+                    changed_fields.append(f"{field}: {record[field]!r}")
+            if changed_fields:
+                details = "Campos modificados: " + "; ".join(changed_fields)
+            else:
+                details = "Modificación sin cambios detectados"
+            self.env['audit.log'].sudo().crud_audit_log(record, 'supplier.base', 'write', extra_details=details)
         return result
 
     def unlink(self):
         # Auditoría: crear registro en audit.log antes de eliminar
         for record in self:
-            self.env['audit.log'].sudo().create({
-                'name': f"Eliminación de proveedor {record.name}",
-                'user_id': self.env.user.id,
-                'model_id': self.env['ir.model']._get_id('supplier.base'),
-                'record_id': record.id,
-                'action_type': 'unlink',
-                'details': f"Registro eliminado: {record.name} (ID: {record.id})",
-            })
+            self.env['audit.log'].sudo().crud_audit_log(record, 'supplier.base', 'unlink')
         return self.action_soft_delete()
         
         

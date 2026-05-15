@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- View resident form -->
+        <record id="view_resident_form_medication_inventory_report" model="ir.ui.view">
+                <field name="name">Vista Formulario de Residente extendida Reporte Inventario Médico</field>
+                <field name="model">resident</field>
+                <field name="inherit_id" ref="sc_medication_inventory.view_resident_form_medication_inventory"/>
+                <field name="arch" type="xml">
+
+                        <xpath expr="//group[@name='group_operation']" position="after">
+                                <group string="Reporte">
+
+                                        <button name="action_medication_inventory_pdf" 
+                                                string="Inventario de medicamento" 
+                                                type="object" class="oe_stat_button" 
+                                                icon="fa-file-pdf-o"/>
+
+                                        <!-- <button name="action_medication_inventory_history_pdf" string="Historial de administración" type="object" class="oe_stat_button" icon="fa-file-pdf-o"/> -->
+
+                                        <!-- <button name="action_medication_inventory_stock_15percent_pdf" string="Alertas por stock (15%)" type="object" class="oe_stat_button" icon="fa-file-pdf-o"/> -->
+
+                                        <!-- <button name="action_medication_inventory_xlsx" type="object" string="Inventario de medicamento" class="oe_stat_button" icon="fa-file-excel-o"/>
+
+                                <button name="action_medication_inventory_history_xlsx" type="object" string="Historial de administración " class="oe_stat_button" icon="fa-file-excel-o"/>
+
+                                <button name="action_medication_inventory_stock_15percent_xlsx" string="Alertas por stock (15%) " type="object" class="oe_stat_button" icon="fa-file-excel-o"/> -->
+
+                                </group>
+                        </xpath>
+
+                </field>
+        </record>
+
+</odoo>

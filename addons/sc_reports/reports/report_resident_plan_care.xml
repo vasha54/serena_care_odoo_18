@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_resident_plan_care_document" t-name="sc_reports.report_resident_plan_care_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="report_title" t-value="'Reporte del Plan de Cuidado del Residente'"/>
+                <t t-set="report_subtitle" t-value=""/>
+                <t t-set="care_plan" t-value="doc.care_plan_id"/>
+                <t t-call="sc_reports.sc_template_report_layout">
+
+                    <t t-call="sc_reports.section_resident_info_basic"/>
+
+                    <div class="row">
+                        <div class="col-6 pe-1">
+                            <h5 class="section-title">Diagnóstico</h5>
+                            <p>
+                                <t t-esc="care_plan.diagnosis"/>
+                            </p>
+                        </div>
+
+                        <div class="col-6 ps-1">
+                            <h5 class="section-title">Nivel de Cuidado</h5>
+                            <p>
+                                <t t-esc="care_plan.care_level_id.name"/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Actividades de la Vida Diaria</h5>
+                        </div>
+                    </div>
+
+                    <table class="table table-sm mt-3">
+                        <t t-foreach="care_plan.plan_activity_ids" t-as="plan_activity">
+                            <tr>
+                                <th rowspan="4" class="text-center" style="width:10%">
+                                    <strong style="writing-mode: vertical-rl; text-orientation: mixed;">
+                                        <t t-esc="plan_activity.activity_id.name"/>
+                                    </strong>
+                                </th>
+                                <th class="text-center" style="width:16%">
+                                    <strong>Nivel de Dependencias</strong>
+                                </th>
+                                <th class="text-center" style="width:37%">
+                                    <strong>Acciones</strong>
+                                </th>
+                                <th class="text-center" style="width:37%">
+                                    <strong>Resultados</strong>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th rowspan="3" class="text-center" style="width:16%">
+                                    <t t-esc="plan_activity.dependency_level_id.name"/>
+                                </th>
+                                <th style="vertical-align: top;">
+                                    <ul>
+                                        <t t-foreach="plan_activity.action_ids" t-as="action">
+                                            <li>
+                                                <t t-esc="action.name"/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </th>
+                                <th style="vertical-align: top;">
+                                    <ul>
+                                        <t t-foreach="plan_activity.result_ids" t-as="result">
+                                            <li>
+                                                <t t-esc="result.name"/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-center" style="width:37%">
+                                    <strong>Obervaciones</strong>
+                                </th>
+                                <th class="text-center" style="width:37%">
+                                    <strong>Objetivos</strong>
+                                </th>
+                            </tr>
+                            <tr class="text-start">
+                                <th style="vertical-align: top;">
+                                    <ul>
+                                        <t t-foreach="plan_activity.observation_ids" t-as="observation">
+                                            <li>
+                                                <t t-esc="observation.name"/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </th>
+                                <th style="vertical-align: top;">
+                                    <ul>
+                                        <t t-foreach="plan_activity.goal_ids" t-as="goal">
+                                            <li>
+                                                <t t-esc="goal.name"/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </th>
+                            </tr>
+                        </t>
+                    </table>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+
+
+    <record id="report_resident_plan_care_pdf" model="ir.actions.report">
+        <field name="name">Reporte Plan de Cuidado del Residente</field>
+        <field name="model">resident</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_reports.report_resident_plan_care_document</field>
+        <field name="report_file">sc_reports.report_resident_plan_care_document</field>
+        <field name="print_report_name">'Reporte del Plan de Cuidado del Residente %s' % (object.name)</field>
+    </record>
+</odoo>

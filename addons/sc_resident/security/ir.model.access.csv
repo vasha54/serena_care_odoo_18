@@ -1,10 +1,45 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_resident_manager,resident_manager,model_resident,base.group_user,1,1,1,1
-access_reassign_resident_residence_wizard_manager,reassign_resident_residence_wizard_manager,model_reassign_resident_residence_wizard,base.group_user,1,1,1,1
-access_family_kinship_manager,family_kinship_manager,model_family_kinship,base.group_user,1,1,1,1
-access_auth_level_manager,auth_level_manager,model_auth_level,base.group_user,1,1,1,1
-access_resident_family_manager,resident_family_manager,model_resident_family,base.group_user,1,1,1,1
-access_relationship_resident_family_manager,relationship_resident_family_manager,model_relationship_resident_family,base.group_user,1,1,1,1
-access_register_new_family_resident_wizard_manager,register_new_family_resident_wizard_manager,model_register_new_family_resident_wizard,base.group_user,1,1,1,1
-access_search_new_family_resident_wizard_manager,search_new_family_resident_wizard_manager,model_search_new_family_resident_wizard,base.group_user,1,1,1,1
-access_nomenclature_allergy_manager,nomenclature_allergy_manager,model_nomenclature_allergy,base.group_user,1,1,1,1
+allergy_admin,Alergías de un residente,model_nomenclature_allergy,sc_group.gs_admin,1,1,1,0
+allergy_gerente_salud,Alergías de un residente,model_nomenclature_allergy,sc_group.gs_gerente_salud,1,1,1,0
+allergy_enfermeria,Alergías de un residente,model_nomenclature_allergy,sc_group.gs_enfermeria,1,0,0,0
+family_kinship_admin,Parentesco con el residente,model_family_kinship,sc_group.gs_admin,1,1,1,0
+family_kinship_gerente_salud,Parentesco con el residente,model_family_kinship,sc_group.gs_gerente_salud,1,0,0,0
+family_kinship_enfermeria,Parentesco con el residente,model_family_kinship,sc_group.gs_enfermeria,1,0,0,0
+auth_level_admin,Niveles de autorización,model_auth_level,sc_group.gs_admin,1,1,1,0
+auth_level_gerente_salud,Niveles de autorización,model_auth_level,sc_group.gs_gerente_salud,1,0,0,0
+auth_level_enfermeria,Niveles de autorización,model_auth_level,sc_group.gs_enfermeria,1,0,0,0
+addiction_admin,Adicciones del residente,model_nomenclature_addiction,sc_group.gs_admin,1,1,1,0
+addiction_gerente_salud,Adicciones del residente,model_nomenclature_addiction,sc_group.gs_gerente_salud,1,0,0,0
+addiction_enfermeria,Adicciones del residente,model_nomenclature_addiction,sc_group.gs_enfermeria,1,0,0,0
+resident_family_admin,Familiar del residente,model_resident_family,sc_group.gs_admin,1,1,1,0
+resident_family_gerente_salud,Familiar del residente,model_resident_family,sc_group.gs_gerente_salud,1,0,0,0
+resident_family_enfermeria,Familiar del residente,model_resident_family,sc_group.gs_enfermeria,1,0,0,0
+reassign_resident_residence_w_admin,Reasignar residente a residencia,model_reassign_resident_residence_wizard,sc_group.gs_admin,1,1,1,0
+reassign_resident_residence_w_gerente_salud,Reasignar residente a residencia,model_reassign_resident_residence_wizard,sc_group.gs_gerente_salud,1,1,1,0
+reassign_resident_residence_w_enfermeria,Reasignar residente a residencia,model_reassign_resident_residence_wizard,sc_group.gs_enfermeria,1,0,0,0
+relationship_resident_family_admin,Relación Residente-Familiar,model_relationship_resident_family,sc_group.gs_admin,1,1,1,0
+relationship_resident_family_gerente_salud,Relación Residente-Familiar,model_relationship_resident_family,sc_group.gs_gerente_salud,1,1,1,0
+relationship_resident_family_enfermeria,Relación Residente-Familiar,model_relationship_resident_family,sc_group.gs_enfermeria,1,0,0,0
+register_new_family_resident_w_admin,Registrar familiar del residente,model_register_new_family_resident_wizard,sc_group.gs_admin,1,1,1,0
+register_new_family_resident_w_gerente_salud,Registrar familiar del residente,model_register_new_family_resident_wizard,sc_group.gs_gerente_salud,1,1,1,0
+register_new_family_resident_w_enfermeria,Registrar familiar del residente,model_register_new_family_resident_wizard,sc_group.gs_enfermeria,1,0,0,0
+search_new_family_resident_w_admin,Buscar familiar del residente,model_search_new_family_resident_wizard,sc_group.gs_admin,1,1,1,0
+search_new_family_resident_w_gerente_salud,Buscar familiar del residente,model_search_new_family_resident_wizard,sc_group.gs_gerente_salud,1,1,1,0
+search_new_family_resident_w_enfermeria,Buscar familiar del residente,model_search_new_family_resident_wizard,sc_group.gs_enfermeria,1,0,0,0
+change_photo_family_w_admin,Cambiar la foto del familiar,model_change_photo_family_wizard,sc_group.gs_admin,1,1,1,0
+change_photo_family_w_gerente_salud,Cambiar la foto del familiar,model_change_photo_family_wizard,sc_group.gs_gerente_salud,1,1,1,0
+change_photo_family_w_enfermeria,Cambiar la foto del familiar,model_change_photo_family_wizard,sc_group.gs_enfermeria,1,0,0,0
+resident_admin,Residente,model_resident,sc_group.gs_admin,1,1,1,0
+resident_gerente_salud,Residente,model_resident,sc_group.gs_gerente_salud,1,1,1,0
+resident_enfermeria,Residente,model_resident,sc_group.gs_enfermeria,1,0,0,0
+allergy_coordinator_nurse,Alergías de un residente,model_nomenclature_allergy,sc_group.gs_coordinator_nurse,1,1,1,0
+family_kinship_coordinator_nurse,Parentesco con el residente,model_family_kinship,sc_group.gs_coordinator_nurse,1,1,1,0
+auth_level_coordinator_nurse,Niveles de autorización,model_auth_level,sc_group.gs_coordinator_nurse,1,1,1,0
+addiction_coordinator_nurse,Adicciones del residente,model_nomenclature_addiction,sc_group.gs_coordinator_nurse,1,1,1,0
+resident_family_coordinator_nurse,Familiar del residente,model_resident_family,sc_group.gs_coordinator_nurse,1,1,1,0
+reassign_resident_residence_w_coordinator_nurse,Reasignar residente a residencia,model_reassign_resident_residence_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+relationship_resident_family_coordinator_nurse,Relación Residente-Familiar,model_relationship_resident_family,sc_group.gs_coordinator_nurse,1,1,1,0
+register_new_family_resident_w_coordinator_nurse,Registrar familiar del residente,model_register_new_family_resident_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+search_new_family_resident_w_coordinator_nurse,Buscar familiar del residente,model_search_new_family_resident_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+change_photo_family_w_coordinator_nurse,Cambiar la foto del familiar,model_change_photo_family_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+resident_coordinator_nurse,Residente,model_resident,sc_group.gs_coordinator_nurse,1,1,1,0

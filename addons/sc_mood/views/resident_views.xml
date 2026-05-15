@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">Vista Formulario Residente extendida Evaluaciones de Ánimo</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='notebook_evaluation']" position="inside">
+                <page name="tab_mood" string="Ánimo" invisible="not id">
+                    <group  string="Evaluaciones">
+
+                        <field name="assessment_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="create_date desc" optional="show"  >
+                                <field string="Fecha" name="create_date"/>
+                                <field name="user_id" />
+                                <field string=" " name="image" widget="image"
+                                       width="28"/>
+                                <field string="Respuesta" name="mood_state_id"/>
+                                <field name="observations_clinic"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

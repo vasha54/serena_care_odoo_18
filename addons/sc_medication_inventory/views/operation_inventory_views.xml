@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View operation.inventory View List -->
+    <record id="view_operation_inventory_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Operaciones de Inventario de Medicamento</field>
+        <field name="model">operation.inventory</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc" create="false" edit="false" 
+                    delete="false"
+                    decoration-danger="operation_type == 'out'" 
+                    decoration-success="operation_type == 'in'">
+                <field string="Fecha/Hora" name="date"  width="100"/>
+                <field string="Tipo" name="operation_type"  width="100"/>
+                <field string="Registrado" name="user_id" width="100"/>
+                <field string="Medicamento" name="medication_id" width="100"/>
+                <field string="Cantidad" name="quantity_str" width="100"/>
+                <field string="Residente" name="resident_id" width="100"/>
+                <field string="Residencia" name="residence_id"  width="100"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View operation.inventory form -->
+    <record id="view_operation_inventory_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Operación de Inventario de Medicamento</field>
+        <field name="model">operation.inventory</field>
+        <field name="arch" type="xml">
+            <form string="Operation Inventory" create="false" edit="false" delete="false">
+                <sheet>
+                    <group >
+                        <group>
+                            <field string="Fecha" name="date" />
+                            <field string="Registrado" name="user_id" />
+                            <field string="Operación" name="operation_type" />
+                        </group>
+                        <group>
+                            <field name="resident_id" />
+                            <field name="medication_id" />
+                            <field name="quantity_str" />
+                            <field string="Familiar" name="family_id" invisible="operation_type == 'out'" />
+                            <field string="Familiar disponible" name="available_family_ids" 
+                                    invisible="1" domain="[('id', 'in', available_family_ids)]" />
+                        </group>
+                    </group>
+                    <group string="Motivos de la operación">
+                        <field name="reason" nolabel="1" rows="7" widget="textarea"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View operation.inventory search -->
+    <record id="view_operation_inventory_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Operación de Inventario de Medicamento</field>
+        <field name="model">operation.inventory</field>
+        <field name="arch" type="xml">
+            <search>
+                    <field name="residence_id"/>
+                    <filter string="Hoy" name="today" 
+                        domain="[('date','&gt;=', context_today().start_of('day')), 
+                        ('date','&lt;=', context_today().end_of('day'))]"/>
+                    <filter string="Últimos 7 días" name="last_week" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=7))]"/>
+                    <filter string="Último mes" name="last_month" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=30))]"/>
+                    <filter string="Último año" name="last_year" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=365))]"/>
+                    <filter string="Rango de fechas" name="date_range" 
+                        date="date"/>
+                    <group expand="1" string="Agrupar por">
+                        <filter string="Agrupado por mes" name="group_by_month" 
+                            context="{'group_by':'date:month'}"/>
+                        <filter string="Agrupado por usuario" name="group_by_user" domain="[]" 
+                                context="{'group_by':'user_id'}"/>
+                        <filter string="Agrupado por residente" name="group_by_resident" domain="[]"
+                                    context="{'group_by':'resident_id'}"/>
+                        <filter string="Agrupado por medicamento" name="group_by_medicament" domain="[]"
+                                    context="{'group_by':'medication_id'}"/>
+                        <filter string="Agrupado por operación" name="group_by_operation"  domain="[]"
+                                    context="{'group_by':'operation_type'}"/>
+                        <filter string="Agrupado por residencia" name="group_by_residence"  domain="[]"
+                                    context="{'group_by':'residence_id'}"/>
+                    </group>
+                    <filter string="Operaciones de entrada" name="operation_in" 
+                                    domain="[('operation_type','=','in')]"/>
+                    <filter string="Operaciones de salida" name="operation_out" 
+                                    domain="[('operation_type','=','out')]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action operation.inventory -->
+    <record id="action_operation_inventory" model="ir.actions.act_window">
+        <field name="name">Operaciones en el Inventario de Medicamentos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">operation.inventory</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ninguna operación registrada.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_report_operation_inventory_pdf" model="ir.actions.report">
+        <field name="name">Reporte de Operaciones (PDF)</field>
+        <field name="model">operation.inventory</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_medication_inventory.report_operation_inventory</field>
+        <field name="print_report_name">'Reporte_Operaciones_Inventario_%s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_operation_inventory"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="action_report_operation_inventory_xlsx" model="ir.actions.server">
+        <field name="name">Reporte de Operaciones (Excel)</field>
+        <field name="model_id" ref="model_operation_inventory"/>
+        <field name="binding_model_id" ref="model_operation_inventory"/>
+        <field name="binding_type">report</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.export_xlsx()
+        </field>
+    </record>
+
+</odoo>

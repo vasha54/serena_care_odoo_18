@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_hygiene"
+            name="Higiene"
+            sequence="-4"
+            action="action_hygiene"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            web_icon="sc_hygiene,static/src/img/menu_item.png"/>
+
+        <menuitem id="menu_hygiene"
+            name="Higiene"
+            sequence="1"
+            action="action_hygiene"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_hygiene"/>
+
+        <menuitem id="menu_type_hygiene"
+            name="Tipos de higiene"
+            sequence="2"
+            action="action_hygiene_type"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_hygiene"/>
+
+        <menuitem id="menu_type_evacuation"
+            name="Tipos de evacuación"
+            sequence="2"
+            action="action_evacuation_type"
+            groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_hygiene"/>
+
+        
+    </data>
+</odoo>

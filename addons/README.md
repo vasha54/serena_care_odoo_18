@@ -9,13 +9,20 @@
 
 Sigue estos pasos para integrar todos los addons de este repositorio en tu instalación de Odoo 18:
 
-### 1. Clonar el repositorio
+
+### 1. Instalación de las dependencias
+```bash
+sudo apt-get install python3-pip python3-jwt python3-yaml
+pip3 install pyyaml
+```
+
+### 2. Clonar el repositorio
 ```bash
 sudo mkdir -p /opt/odoo/addons
 sudo git clone https://github.com/idoogroupdev/serena-care-odoo.git /opt/odoo/addons/serena_care_odoo
 ```
 
-### 2. Configurar odoo.conf
+### 3. Configurar odoo.conf
 Edita tu archivo de configuración de Odoo (generalmente en `/etc/odoo/odoo.conf`) y agrega la ruta al repositorio en `addons_path`:
 
 ```ini
@@ -27,16 +34,14 @@ addons_path = /ruta/a/tus/addons/actuales, /opt/odoo/addons/serena_care_odoo
 Ejemplo completo:
 ```ini
 [options]
-addons_path = /usr/lib/python3/dist-packages/odoo/addons, 
-              /opt/odoo/custom_addons, 
-              /opt/odoo/addons/serena_care_odoo
+addons_path = /usr/lib/python3/dist-packages/odoo/addons,/opt/odoo/custom_addons,/opt/odoo/addons/serena_care_odoo
 db_host = localhost
 db_port = 5432
 db_user = odoo
 db_password = contraseña
 ```
 
-### 3. Estructura del repositorio
+### 4. Estructura del repositorio
 Los módulos deben estar organizados en subdirectorios dentro del repositorio:
 ```
 /opt/odoo/addons/serena_care_odoo/
@@ -51,18 +56,18 @@ Los módulos deben estar organizados en subdirectorios dentro del repositorio:
 └── ...
 ```
 
-### 4. Asignar permisos (Linux)
+### 5. Asignar permisos (Linux)
 ```bash
 sudo chown -R odoo:odoo /opt/odoo/addons/serena_care_odoo
 sudo chmod -R 755 /opt/odoo/addons/serena_care_odoo
 ```
 
-### 5. Reiniciar el servicio Odoo
+### 6. Reiniciar el servicio Odoo
 ```bash
 sudo systemctl restart odoo
 ```
 
-### 6. Instalar los módulos
+### 7. Instalar los módulos
 1. Accede a tu instancia de Odoo como administrador
 2. Ve a **Aplicaciones → Actualizar lista de aplicaciones**
 3. Busca los nuevos módulos usando sus nombres técnicos
@@ -74,12 +79,7 @@ sudo systemctl restart odoo
 
 ### Para múltiples repositorios
 ```ini
-addons_path = 
-    /ruta/odoo/core,
-    /ruta/addons/community,
-    /ruta/addons/enterprise,
-    /opt/odoo/addons/serena_care_odoo,
-    /opt/odoo/otro-repositorio
+addons_path = /ruta/odoo/core,/ruta/addons/community,/ruta/addons/enterprise,/opt/odoo/addons/serena_care_odoo,/opt/odoo/otro-repositorio
 ```
 
 ### Configuración recomendada para Docker
@@ -132,6 +132,15 @@ cd /opt/odoo/addons/serena_care_odoo
 sudo git pull origin main
 sudo systemctl restart odoo
 ```
+
+En caso que falle puedes utilizar esta variante
+```bash
+cd /opt/odoo/addons/serena_care_odoo
+sudo git fetch origin
+sudo git reset --hard origin/main
+sudo systemctl restart odoo
+```
+
 Luego actualiza los módulos en Odoo (**Aplicaciones → Actualizar**)
 
 ---

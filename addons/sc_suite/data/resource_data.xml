@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="img_build_construction" model="ir.attachment">
+            <field name="name">Sitio en construcción</field>
+            <field name="datas" type="base64" file="sc_suite/static/src/img/build_construction.png"/>
+            <field name="res_model">ir.ui.view</field>
+            <field name="public" eval="True"/>
+        </record>
+        <record id="photo_profile_default" model="ir.attachment">
+            <field name="name">Foto de perfil por defecto</field>
+            <field name="datas" type="base64" file="sc_suite/static/src/img/photo_profile_default.png"/>
+            <field name="res_model">ir.ui.view</field>
+            <field name="public" eval="True"/>
+        </record>   
+    </data>
+</odoo>

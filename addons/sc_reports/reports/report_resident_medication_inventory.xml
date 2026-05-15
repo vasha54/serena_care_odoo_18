@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_resident_medication_inventory_document" t-name="sc_reports.report_resident_medication_inventory_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="report_title" t-value="'Reporte del Inventario de los Medicamentos del Residente'"/>
+                <t t-set="report_subtitle" t-value=""/>
+                <t t-set="operations_inventory" t-value="context.get('operations_inventory', False)"/>
+                <t t-set="medication_inventory" t-value="doc.medication_inventory_ids"/>
+                <t t-call="sc_reports.sc_template_report_layout">
+
+                    <t t-call="sc_reports.section_resident_info_basic"/>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Inventario</h5>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+
+                            <t t-if="medication_inventory">
+
+                                <table class="table table-sm mt-3">
+                                    <tr>
+                                        <td style="width:35%">
+                                            <strong>Medicamento</strong>
+                                        </td>
+                                        <td style="width:35%">
+                                            <strong>Forma Farmacéutica</strong>
+                                        </td>
+                                        <td style="width:30%">
+                                            <strong>Cantidad disponible</strong>
+                                        </td>
+                                    </tr>
+                                    <t t-foreach="medication_inventory" t-as="inventory">
+                                        <tr>
+                                            <td style="width:35%">
+                                                <t t-esc="inventory.medicament_id.name"/>
+                                            </td>
+                                            <td style="width:35%">
+                                                <t t-esc="inventory.pharmaceutical_form"/>
+                                            </td>
+                                            <td style="width:30%">
+                                                <t t-esc="inventory.quantity_str"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+
+
+                            </t>
+                            <t t-else="">
+                                <p class="text-center">El residente no tiene Inventario de Medicamento</p>
+                            </t>
+
+                        </div>
+                    </div>
+
+                    <!-- <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Operaciones</h5>
+                        </div>
+                    </div> -->
+
+
+                    <!-- <t t-if="operations_inventory">
+                        <t t-foreach="operations_inventory" t-as="operations">
+                            <div class="row mt-4">
+                                <div class="col-12 pe-1 ps-1">
+                                    <h6 class="subsection-title">
+                                        <t t-esc="operations.get('name_medicament')"/>
+                                    </h6>
+                                </div>
+                            </div>
+
+
+                            <div class="row mt-3">
+                                <div class="col-12 pe-1 ps-1">
+                                    <table class="table table-sm mt-3">
+                                        <tr>
+                                            <td class="text-center">
+                                                <strong>Fecha</strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <strong>Tipo</strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <strong>Registrado</strong>
+                                            </td>
+                                            <td class="text-center">
+                                                <strong>Cantidad</strong>
+                                            </td>
+                                        </tr>
+                                        <t t-foreach="operations.get('operations')" t-as="operation">
+                                            <tr>
+                                                <td style="width:20%"> <t t-esc="operation.get('date')"/> </td>
+                                                <td class="text-center" style="width:10%"> <t t-esc="operation.get('operation_type_label')"/> </td>
+                                                <td> <t t-esc="operation.get('user_id')"/> </td>
+                                                <td> <t t-esc="operation.get('quantity_str')"/> </td>
+                                            </tr>
+                                        </t>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <div class="row mt-5">
+                            <p class="text-center">Sobre los Inventarios de Medicamento del Residente no se ha realizado ninguna operación</p>
+                        </div>
+                    </t> -->
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="report_resident_medication_inventory_pdf" model="ir.actions.report">
+        <field name="name">Reporte del Inventario de los Medicamentos del Residente</field>
+        <field name="model">resident</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_reports.report_resident_medication_inventory_document</field>
+        <field name="report_file">sc_reports.report_resident_medication_inventory_document</field>
+        <field name="print_report_name">'Reporte del Inventario de los Medicamentos del Residente %s' % (object.name)</field>
+    </record>
+</odoo>

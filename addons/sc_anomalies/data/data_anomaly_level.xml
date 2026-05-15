@@ -1,0 +1,45 @@
+<odoo>        
+    <data noupdate="1">
+        <!-- A -->
+        <!-- B -->
+        <!-- C -->
+        <record id="alevel_critical" model="anomaly.level">
+            <field name="name">Crítica</field>
+            <field name="color">#FF0000</field>
+            <field name="sequence">3</field>
+        </record>
+        <!-- D -->
+        <!-- E -->
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <record id="alevel_mild" model="anomaly.level">
+            <field name="name">Leve</field>
+            <field name="color">#00FF00</field>
+            <field name="sequence">1</field>
+        </record>
+        <!-- M -->
+        <record id="alevel_moderate" model="anomaly.level">
+            <field name="name">Moderada</field>
+            <field name="color">#FFA500</field>
+            <field name="sequence">2</field>
+        </record>
+        <!-- N -->
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <!-- T -->
+        <!-- U -->
+        <!-- V -->
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>

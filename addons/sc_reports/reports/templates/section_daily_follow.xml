@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_daily_follow">
+        <t t-set="medical_notes" t-value="doc.medical_notes_ids" />
+        <t t-set="nursing_notes" t-value="doc.nursing_notes_ids" />
+
+
+        <h5 class="section-title">4. Seguimiento médico</h5>
+
+        <h6 class="subsection-title">Notas Médica (Últimos 5 registros)</h6>
+
+        <t t-if="medical_notes">
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:20%">
+                        <strong>Fechas</strong>
+                    </td>
+                    <td class="text-start" style="width:30%">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-start" style="width:50%">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <t t-foreach="medical_notes[:5]" t-as="note">
+                    <tr>
+                        <td>
+                            <t t-esc="note.date_user"/>
+                        </td>
+                        <td>
+                            <t t-esc="note.user_id.name"/>
+                        </td>
+                        <td>
+                            <t t-esc="note.description"/>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+            <t t-if="len(medical_notes) > 5">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(medical_notes) - 5"/>
+ Notas de Médica.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p class="text-center">El residente no tiene Notas de Médica</p>
+        </t>
+
+        <!-- <h6 class="subsection-title">Notas de Enfermerías (Últimos 5 registros)</h6>
+
+        <t t-if="nursing_notes">
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:20%">
+                        <strong>Fechas</strong>
+                    </td>
+                    <td class="text-start" style="width:30%">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-start" style="width:50%">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <t t-foreach="nursing_notes[:5]" t-as="note">
+                    <tr>
+                        <td>
+                            <t t-esc="note.date_user"/>
+                        </td>
+                        <td>
+                            <t t-esc="note.user_id.name"/>
+                        </td>
+                        <td>
+                            <t t-esc="note.description"/>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+            <t t-if="len(nursing_notes) > 5">
+                <p class="text-muted text-center">
+                            Hay <t t-esc="len(nursing_notes) - 5"/>
+ Notas de Enfermería.
+                </p>
+            </t>
+        </t>
+        <t t-else="">
+            <p class="text-center">El residente no tiene Notas de Enfermería</p>
+        </t> -->
+
+    </template>
+
+
+
+</odoo>

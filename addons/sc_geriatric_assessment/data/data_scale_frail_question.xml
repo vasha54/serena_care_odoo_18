@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Question 1 -->
+        <record id="scalefrail_question_1" model="scalefrail.question">
+            <field name="name">Pregunta 1</field>
+            <field name="statement">¿Tiene dificultad para subir un tramo de escaleras sin detenerse ?</field>
+        </record>
+        <!-- Question 2 -->
+        <record id="scalefrail_question_2" model="scalefrail.question">
+            <field name="name">Pregunta 2</field>
+            <field name="statement">¿Tiene dificultad para caminar 100 metros sin detenerse?</field>
+        </record>
+        <!-- Question 3 -->
+        <record id="scalefrail_question_3" model="scalefrail.question">
+            <field name="name">Pregunta 3</field>
+            <field name="statement">¿Se siente cansado la mayor parte del tiempo?</field>
+        </record>
+        <!-- Question 4 -->
+        <record id="scalefrail_question_4" model="scalefrail.question">
+            <field name="name">Pregunta 4</field>
+            <field name="statement">¿Tiene 5 o más enfermedades crónicas diagnosticadas?</field>
+        </record>
+        <!-- Question 5 -->
+        <record id="scalefrail_question_5" model="scalefrail.question">
+            <field name="name">Pregunta 5</field>
+            <field name="statement">¿Ha perdido más de 5 kg o el 5% de su peso en los últimos 6 meses sin intentarlo?</field>
+        </record>
+    </data>
+</odoo>

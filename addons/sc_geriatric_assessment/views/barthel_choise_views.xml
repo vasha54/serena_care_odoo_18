@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View barthel.choise View List -->
+    <record id="view_barthel_choise_list" model="ir.ui.view">
+        <field name="name">Vista Lista Opciones de Respuesta a las Preguntas de Evaluación de Barthel</field>
+        <field name="model">barthel.choise</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field string="Puntuación" name="value"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View barthel.choise form -->
+    <record id="view_barthel_choise_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Opción de Respuesta a las Preguntas de Evaluación de Barthel</field>
+        <field name="model">barthel.choise</field>
+        <field name="arch" type="xml">
+            <form string="Scalesarcf Choise">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name"
+                                   placeholder="Nombre de la opción..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Puntuación" name="value"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View barthel.choise search -->
+    <record id="view_barthel_choise_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Opción de Respuesta a las Preguntas de Evaluación de Barthel</field>
+        <field name="model">barthel.choise</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action barthel.choise -->
+    <record id="action_barthel_choise" model="ir.actions.act_window">
+        <field name="name">Opciones de respuestas de las preguntas de Barthel
+        </field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">barthel.choise</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar una nueva
+                opción de respuesta de Barthel.
+            </p>
+        </field>
+    </record>
+
+</odoo>

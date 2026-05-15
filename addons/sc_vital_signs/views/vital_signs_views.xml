@@ -3,12 +3,13 @@
 
     <!-- View vital.signs list -->
     <record id="view_vital_signs_list" model="ir.ui.view">
-        <field name="name">view.vital.signs.list</field>
+        <field name="name">Vista Lista de Registros de Signos Vitales</field>
         <field name="model">vital.signs</field>
         <field name="arch" type="xml">
             <list default_order="date desc"  create="false" delete="false">
                 <field name="date"/> 
                 <field name="resident_id"/>
+                <field string="Residencia" name="residence_id"/>
                 <field name="user_id"/> 
                 <field name="temperature"/>
                 <field name="blood_pressure"/>
@@ -17,6 +18,7 @@
                 <field name="weight"/>
                 <field name="oxygen_saturation"/>
                 <field name="glucose"/>
+                <field name="grip_strength"/>
             </list>
         </field>
     </record>
@@ -25,7 +27,7 @@
 
     <!-- View vital.signs form -->
     <record id="view_vital_signs_form" model="ir.ui.view">
-        <field name="name">view.vital.signs.form</field>
+        <field name="name">Vista Formulario de Registro de Signo Vital</field>
         <field name="model">vital.signs</field>
         <field name="arch" type="xml">
             <form string="Vital Signs" create="false" delete="false" >
@@ -46,6 +48,7 @@
                                 <field string="Frec. Cardiaca" name="heart_rate"/>
                                 <field string="Frec. Respiratoria" name="respiratory_rate"/>
                                 <field name="weight"/>
+                                <field name="grip_strength"/>
                         </group>
                         <group>
                                 <field name="systolic" />
@@ -64,11 +67,12 @@
 
     <!-- View vital.signs search -->
     <record id="view_vital_signs_search" model="ir.ui.view">
-        <field name="name">view.vital.signs.search</field>
+        <field name="name">Vista Búsqueda de Registro de Signo Vital</field>
         <field name="model">vital.signs</field>
         <field name="arch" type="xml">
             <search>
                 <field name="date"/>
+                <field string="Residencia" name="residence_id"/>
                 <field name="temperature"/>
                 <field name="heart_rate"/>
                 <field name="respiratory_rate"/>
@@ -98,6 +102,7 @@
     </record>
 
     <!-- Action vital.signs -->
+                action_vital_signs
     <record id="action_vital_signs" model="ir.actions.act_window">
         <field name="name">Listado de signos vitales</field>
         <field name="type">ir.actions.act_window</field>

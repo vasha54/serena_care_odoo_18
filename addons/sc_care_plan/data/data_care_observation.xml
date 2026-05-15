@@ -1,0 +1,170 @@
+<odoo>        
+    <data noupdate="1">
+        <!-- A -->
+        <record id="care_obs_1" model="care.observation">
+            <field name="name">Alto riesgo de ahogamiento.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_obs_2" model="care.observation">
+            <field name="name">Asegurar que la ropa se encuentre en sitio correcto.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- B -->
+        <!-- C -->
+        <record id="care_obs_3" model="care.observation">
+            <field name="name">Control y evaluación de toma de alimentos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- D -->
+        <record id="care_obs_4" model="care.observation">
+            <field name="name">Desorientación.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <record id="care_obs_5" model="care.observation">
+            <field name="name">Demencia.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- E -->
+        <record id="care_obs_6" model="care.observation">
+            <field name="name">Estado físico.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing'),ref('sc_care_plan.type_avd_ambulation_transfer'),ref('sc_care_plan.type_avd_emunctories'),ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_obs_7" model="care.observation">
+            <field name="name">Estado neurológico.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing'),ref('sc_care_plan.type_avd_ambulation_transfer'),ref('sc_care_plan.type_avd_eating'),ref('sc_care_plan.type_avd_emunctories'),ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_obs_8" model="care.observation">
+            <field name="name">Errores de juicio al comer.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <record id="care_obs_9" model="care.observation">
+            <field name="name">Imposibilidad para llevar el alimento a la boca.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_obs_10" model="care.observation">
+            <field name="name">Imposibilitado para realizar acción alguna.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_obs_11" model="care.observation">
+            <field name="name">Imposibilidad física.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing'),ref('sc_care_plan.type_avd_ambulation_transfer'),ref('sc_care_plan.type_avd_emunctories'),ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_obs_12" model="care.observation">
+            <field name="name">Imposibilidad neurológica.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing'),ref('sc_care_plan.type_avd_ambulation_transfer'),ref('sc_care_plan.type_avd_emunctories'),ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <record id="care_obs_13" model="care.observation">
+            <field name="name">Limitación física.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <record id="care_obs_14" model="care.observation">
+            <field name="name">Limitación neurológica.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- M -->
+        <record id="care_obs_15" model="care.observation">
+            <field name="name">Mantener las medidas de seguridad para evitar accidentes.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <!-- N -->
+        <record id="care_obs_16" model="care.observation">
+            <field name="name">Negativa de la vía oral.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <record id="care_obs_17" model="care.observation">
+            <field name="name">Respetar la intimidad.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing'),ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'), ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_obs_18" model="care.observation">
+            <field name="name">Riesgo de caída, raspadura y daños cutáneos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- S -->
+        <!-- T -->
+        <!-- U -->
+        <!-- V -->
+        <record id="care_obs_19" model="care.observation">
+            <field name="name">Verificar que se haya realizado aseo adecuadamente.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_obs_20" model="care.observation">
+            <field name="name">Verificar el patrón de evacuaciones y diuresis.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>

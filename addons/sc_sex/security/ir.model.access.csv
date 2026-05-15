@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_res_sex_manager,res_sex_manager,model_res_sex,base.group_user,1,1,1,1
+res_sex_admin,Gestión de Sexos,model_res_sex,sc_group.gs_admin,1,1,1,0
+res_sex_gerente_salud,Lectura de Sexos,model_res_sex,sc_group.gs_gerente_salud,1,0,0,0
+res_sex_enfermeria,Lectura de Sexos,model_res_sex,sc_group.gs_enfermeria,1,0,0,0
+res_sex_coordinator_nurse,Gestión de Sexos,model_res_sex,sc_group.gs_coordinator_nurse,1,1,1,0

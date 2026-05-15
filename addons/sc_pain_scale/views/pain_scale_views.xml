@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View pain.scale View List -->
+    <record id="view_pain_scale_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Escalas de Dolor</field>
+        <field name="model">pain.scale</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc" create="false" edit="false" delete="false">
+                <field string="Fecha" name="date"/>
+                <field string="Registrado" name="user_id" />
+                <field string="Residente" name="resident_id" />
+                <field name="residence_id" />
+                <field string="Valor cuantitativo del dolor" name="value_pain" />
+                <field string="Valor cualitativo del dolor" name="pain_status" />
+                <field string="Descripción" name="description" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View pain.scale form -->
+    <record id="view_pain_scale_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Escala de Dolor</field>
+        <field name="model">pain.scale</field>
+        <field name="arch" type="xml">
+            <form string="Pain Scale" create="false" edit="false" delete="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" readonly="1"/>
+                            <field string="Registrado" name="user_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field string="Valor cuantitativo del dolor" name="value_pain" readonly="1"/>
+                            <field string="Valor cualitativo del dolor" name="pain_status" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Descripción" >
+                        <field name="description" nolabel="1" widget="textarea" rows="7" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View pain.scale search -->
+    <record id="view_pain_scale_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Escala de Dolor</field>
+        <field name="model">pain.scale</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="date"/>
+                <field name="residence_id" />
+                                
+                <filter string="Hoy" name="today" 
+                        domain="[('date','&gt;=', context_today().start_of('day')), 
+                        ('date','&lt;=', context_today().end_of('day'))]"/>
+                <filter string="Últimos 7 días" name="last_week" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=7))]"/>
+                <filter string="Último mes" name="last_month" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=30))]"/>
+                <filter string="Último año" name="last_year" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=365))]"/>
+                <filter string="Rango de fechas" name="date_range" 
+                        date="date"/>
+                <filter string="Agrupado por mes" name="group_by_month" 
+                        context="{'group_by':'date:month'}"/>
+                <filter string="Agrupado por usuario" name="group_by_user" 
+                                context="{'group_by':'user_id'}"/>
+                <filter string="Agrupado por residente" name="group_by_resident" 
+                                context="{'group_by':'resident_id'}"/>
+                <filter string="Agrupado por valor cualitativo" name="group_by_pain_status" 
+                                context="{'group_by':'pain_status'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action pain.scale -->
+    <record id="action_pain_scale" model="ir.actions.act_window">
+        <field name="name">Dolores</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">pain.scale</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registro de dolores en residentes
+            </p>
+        </field>
+    </record>
+
+</odoo>

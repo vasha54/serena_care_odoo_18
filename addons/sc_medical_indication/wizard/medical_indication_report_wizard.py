@@ -34,7 +34,7 @@ class MedicalIndicationReportWizard(models.TransientModel):
         # Obtener las indicaciones ordenadas por fecha descendente
         indications = self.env['unified.medical.indication'].search([
             ('resident_id', '=', self.resident_id.id)
-        ], order='date desc', limit=self.quantity)
+        ], order='create_date desc', limit=self.quantity)
         
         if not indications:
             raise UserError(_('No hay indicaciones médicas para este residente.'))
@@ -45,7 +45,7 @@ class MedicalIndicationReportWizard(models.TransientModel):
         for ind in indications:
             indication_type_label = selection_dict.get(ind.indication_type, '')
             indications_data.append({
-                'date': ind.date.strftime('%Y-%m-%d %H:%M') if ind.date else '',
+                'create_date': ind.create_date.strftime('%Y-%m-%d %H:%M') if ind.create_date else '',
                 'doctor': ind.user_id.name or '',
                 'type': indication_type_label,
                 'note': ind.note or 'Sin detalles',  # Asegúrate de que este campo existe

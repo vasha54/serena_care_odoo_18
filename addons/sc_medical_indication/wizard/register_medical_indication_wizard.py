@@ -34,8 +34,8 @@ class RegisterMedicalIndicationWizard(models.TransientModel):
         self.ensure_one()
         MedicalIndication = self.env['medical.indication'].sudo()
         MedicalIndication.create({
-            'date': self.date,
             'user_id': self.user_id.id,
             'resident_id': self.current_resident_id.id,
             'note': self.note,
+            'active': True,
         })

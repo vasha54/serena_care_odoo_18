@@ -3,12 +3,12 @@
     
     <!-- View resident form -->
     <record id="view_resident_form_vital_signs" model="ir.ui.view">
-        <field name="name">view.resident.form</field>
+        <field name="name">Vista Formulario Residente extendida Signos Vitales</field>
         <field name="model">resident</field>
         <field name="inherit_id" ref="sc_resident.view_resident_form"/>
         <field name="arch" type="xml">
             
-            <xpath expr="//page[@name='general']" position="after">
+            <xpath expr="//notebook[@name='notebook_medical_history']" position="inside">
                 <page name="vital_signs" string="Signos Vitales" invisible="not id">
                     <group  string="Registros">
 
@@ -22,6 +22,7 @@
                                 <field name="weight" width="100"/>
                                 <field name="oxygen_saturation" width="100"/>
                                 <field name="glucose" width="100"/>
+                                <field name="grip_strength" width="100"/>            
                             </list>
                         </field>
                     </group>

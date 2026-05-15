@@ -25,7 +25,14 @@ Desarrollado específicamente para Serena Care, líder en cuidado especializado 
     'category': 'Healthcare',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sc_base', 'sc_group', 'sc_sex', 'sc_residence'],
+    'depends': [
+        'base', 
+        'mail',
+        'sc_base', 
+        'sc_group', 
+        'sc_sex', 
+        'sc_residence',
+    ],
 
     # always loaded
     "data": [
@@ -33,11 +40,13 @@ Desarrollado específicamente para Serena Care, líder en cuidado especializado 
         "data/data_ir_cron.xml",
         "data/data_kinship.xml",
         "data/data_nomenclature_allergy.xml",
-        "data/data_residents.xml",
+        "data/data_nomenclature_addiction.xml",
+        # "data/data_residents.xml",
         "security/ir.model.access.csv",
         "views/auth_level_views.xml",
         "views/family_kinship_views.xml",
         "views/nomenclature_allergy_views.xml",
+        "views/nomenclature_addiction_views.xml",
         "views/relationship_resident_family_views.xml",
         "views/residence_house_views.xml",
         "views/resident_family_views.xml",
@@ -45,7 +54,8 @@ Desarrollado específicamente para Serena Care, líder en cuidado especializado 
         "views/view_menu.xml",
         "views/wizard/reassign_resident_residence_wizard_views.xml",
         "views/wizard/register_new_family_resident_wizard_views.xml",
-        "views/wizard/search_new_family_resident_wizard_views.xml"
+        "views/wizard/search_new_family_resident_wizard_views.xml",
+        "views/wizard/change_photo_family_wizard_views.xml",
     ],
     # only loaded in demonstration mode
     'demo': [],

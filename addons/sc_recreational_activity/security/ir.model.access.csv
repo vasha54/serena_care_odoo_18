@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+nomenclature_activity_type_admin,Gestión de los tipos de actividades,model_nomenclature_activity_type,sc_group.gs_admin,1,1,1,0
+nomenclature_activity_type_gerente_salud,Lectura de los tipos de actividades,model_nomenclature_activity_type,sc_group.gs_gerente_salud,1,0,0,0
+nomenclature_activity_type_enfermeria,Gestión de los tipos de actividades,model_nomenclature_activity_type,sc_group.gs_enfermeria,1,1,1,0
+recreational_activity_admin,Gestión de los registros de actividades,model_recreational_activity,sc_group.gs_admin,1,1,1,0
+recreational_activity_gerente_salud,Lectura de los registros de actividades,model_recreational_activity,sc_group.gs_gerente_salud,1,0,0,0
+recreational_activity_enfermeria,Gestión de los registros de actividades,model_recreational_activity,sc_group.gs_enfermeria,1,1,1,0
+resident_recreation_activity_admin,Gestión de la relación actividades-residentes,model_resident_recreation_activity_rel,sc_group.gs_admin,1,1,1,0
+resident_recreation_activity_gerente_salud,Lectura de la relación actividades-residentes,model_resident_recreation_activity_rel,sc_group.gs_gerente_salud,1,0,0,0
+resident_recreation_activity_enfermeria,Gestión de la relación actividades-residentes,model_resident_recreation_activity_rel,sc_group.gs_enfermeria,1,1,1,0
+activity_filter_report_wizard_admin,Acceso al Wizard de Filtros de Reporte,model_activity_filter_report_wizard,sc_group.gs_admin,1,1,1,0
+activity_filter_report_wizard_gerente_salud,Acceso al Wizard de Filtros de Reporte,model_activity_filter_report_wizard,sc_group.gs_gerente_salud,1,1,1,0
+activity_filter_report_wizard_enfermeria,Acceso al Wizard de Filtros de Reporte,model_activity_filter_report_wizard,sc_group.gs_enfermeria,1,1,1,0
+nomenclature_activity_type_coordinator_nurse,Gestión de los tipos de actividades,model_nomenclature_activity_type,sc_group.gs_coordinator_nurse,1,1,1,0
+recreational_activity_coordinator_nurse,Gestión de los registros de actividades,model_recreational_activity,sc_group.gs_coordinator_nurse,1,1,1,0
+resident_recreation_activity_coordinator_nurse,Gestión de la relación actividades-residentes,model_resident_recreation_activity_rel,sc_group.gs_coordinator_nurse,1,1,1,0
+activity_filter_report_wizard_coordinator_nurse,Acceso al Wizard de Filtros de Reporte,model_activity_filter_report_wizard,sc_group.gs_coordinator_nurse,1,1,1,0

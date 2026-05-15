@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_serena_care_root_medical_notes"
+        name="Notas médicas"
+        action="action_medical_note"
+        sequence="-4"
+        web_icon="sc_medical_notes,static/src/img/item_menu.png"/>
+
+    
+
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_nutrition" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Nutrición</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='daily_follow_up']" position="inside">
+                <page name="tab_nutrition" string="Alimentación" invisible="not id">
+
+                    <notebook name="nutrition_records_graph">
+                        <page name="record_nutrition_list"  string="Registros">
+                            <field name="nutrition_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                                <list default_order="date desc" optional="show"  >
+                                    <field string="Fecha" name="date" width="120"/>
+                                    <field string="Registrado" name="user_id"/>
+                                    <field string="Nivel de alimentación" name="nutrition_level_id" />
+                                    <field string="Descripción" name="description"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View resident form -->
+    <record id="view_resident_form_geriatric_neurological_assesstement_report"
+            model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendidad Reportes de Evaluaciones</field>
+        <field name="model">resident</field>
+        <field name="inherit_id"
+               ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='group_notebook_evaluation']"
+                   position="before">
+                    <group string="Reportes">
+                        
+                            <button name="action_geriatric_neurological_assessment_report_pdf"
+                                        string="Historial de registros"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+                    </group>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Escala de Dolor</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='daily_follow_up']" position="inside">
+                <page name="tab_pain_scale" string="Dolores" invisible="not id">
+                    <group  string="Registros">
+
+                        <field name="pain_scale_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" optional="show"  >
+                                <field string="Fecha" name="date" width="140px"/>
+                                <field string="Registrado" name="user_id" width="200px"/>
+                                <field string="Valor cuantitativo" name="value_pain" width="150px"/>
+                                <field string="Valor cualitativo" name="pain_status" width="140px"/>
+                                <field string="Descripción" name="description"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="nstate_patient_alert" model="neurological.state">
+            <field name="name">Alerta</field>
+            <field name="description">Paciente está alerta</field>
+            <field name="color">#519a21</field>
+            <field name="acronym">A</field>
+        </record>
+        
+        <record id="nstate_patient_verbal" model="neurological.state">
+            <field name="name">Verbal</field>
+            <field name="description">El paciente responde a la estimulación verbal</field>
+            <field name="color">#b8b800</field>
+            <field name="acronym">V</field>
+        </record>
+        
+        <record id="nstate_patient_responds_painful_stimuli" model="neurological.state">
+            <field name="name">Dolor</field>
+            <field name="description">El paciente responde a estímulos dolorosos</field>
+            <field name="color">#e64d10</field>
+            <field name="acronym">D</field>
+        </record>
+        
+        <record id="nstate_patient_not_answer" model="neurological.state">
+            <field name="name">Inconciente</field>
+            <field name="description">El paciente no responde</field>
+            <field name="color">#cf2927</field>
+            <field name="acronym">I</field>
+        </record>
+        
+    </data>
+</odoo>

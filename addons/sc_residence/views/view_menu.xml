@@ -3,18 +3,21 @@
     <menuitem id="menu_serena_care_root_residence_house"
         name="Residencias"
         action="action_residence_house"
-        sequence="-5"
-        web_icon="sc_residence,static/description/icon.png"/>
+        sequence="-97"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_residence,static/src/img/item_menu.png"/>
 
     <menuitem id="menu_residence_service"
         name="Servicios de residencia"
         action="action_residence_service"
         sequence="1"
+        groups="sc_group.gs_admin"
         parent="menu_serena_care_root_residence_house"/>
 
     <menuitem id="menu_residence_house_deleted"
         name="Residencias eliminadas"
         action="action_residence_house_deleted"
         sequence="100"
+        groups="sc_group.gs_admin"
         parent="menu_serena_care_root_residence_house"/>
 </odoo>

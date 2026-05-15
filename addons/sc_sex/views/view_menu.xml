@@ -4,5 +4,6 @@
         name="Sexos"
         action="action_res_sex"
         sequence="-1"
-        web_icon="sc_sex,static/description/icon.png"/>
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+        web_icon="sc_sex,static/src/img/menu_item.png"/>
 </odoo>

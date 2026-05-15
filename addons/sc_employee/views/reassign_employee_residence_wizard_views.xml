@@ -4,7 +4,7 @@
 
     <!-- View reassign.employee.residence.wizard form -->
     <record id="view_reassign_employee_residence_wizard_form" model="ir.ui.view">
-        <field name="name">view.reassign.employee.residence.wizard.form</field>
+        <field name="name">Vista Wizard Reasignar Empleados a la Residencia</field>
         <field name="model">reassign.employee.residence.wizard</field>
         <field name="arch" type="xml">
             <form string="Reasignar Registros B">

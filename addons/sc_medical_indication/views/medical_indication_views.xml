@@ -3,20 +3,22 @@
 
     <!-- View medical.indication View List -->
     <record id="view_medical_indication_list" model="ir.ui.view">
-        <field name="name">view.medical.indication.list</field>
+        <field name="name">Vista Lista de Indicaciones Médicas General</field>
         <field name="model">medical.indication</field>
         <field name="arch" type="xml">
-            <list default_order="create_date desc">
+            <list default_order="active desc, create_date desc">
+                <field name="active" widget="boolean_toggle"/>
                 <field string="Fecha/Hora" name="create_date"/>
                 <field name="user_id"/>
                 <field name="resident_id"/>
+                <field name="residence_id" />
                 <field name="note" />
             </list>
         </field>
     </record>
 
     <record id="view_medical_indication_form" model="ir.ui.view">
-        <field name="name">view.medical.indication.form</field>
+        <field name="name">Vista Formulario de Indicación Médica General</field>
         <field name="model">medical.indication</field>
         <field name="arch" type="xml">
             <form string="Medical Indication">
@@ -25,6 +27,7 @@
                         <group>
                             <field name="resident_id" />
                             <field name="user_id" readonly="1" />
+                            <field name="active" widget="boolean_toggle"/>
                         </group>
                         <group>
                             <group string="Indicación" col="2" colspan="2">
@@ -39,14 +42,19 @@
 
     <!-- View medical.indication search -->
     <record id="view_medical_indication_search" model="ir.ui.view">
-        <field name="name">view.medical.indication.search</field>
+        <field name="name">Vista Búsqueda de Indicación Médica General</field>
         <field name="model">medical.indication</field>
         <field name="arch" type="xml">
             <search>
+                <field name="residence_id" />
                 <filter string="Agrupado por doctor" name="group_by_user" 
                         context="{'group_by':'user_id'}"/>
                 <filter string="Agrupado por residente" name="group_by_resident" 
                         context="{'group_by':'resident_id'}"/>
+                <filter string="Activo/Inactivo" name="active_notactive" domain="[]" 
+                context="{'group_by':'active'}"/>
+                <filter string="Indicaciones activas" name="indication_general_active" domain="[('active','=',True)]" />
+                <filter string="Indicaciones no activas" name="indication_general_not_active" domain="[('active','=',False)]" />
             </search>
         </field>
     </record>
@@ -58,7 +66,7 @@
         <field name="res_model">medical.indication</field>
         <field name="view_mode">list,form</field>
         <field name="domain">[]</field>
-        <field name="context">{}</field>
+        <field name="context">{'active_test': False}</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 No hay registros. Haga clic en un botón para agregar Indicación General.

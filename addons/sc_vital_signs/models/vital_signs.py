@@ -9,12 +9,18 @@ class VitalSigns(models.Model):
     _name = 'vital.signs'
     _description = 'Signos Vitales'
     _inherit = ['mail.thread', 'mail.activity.mixin']  # Agregar para tracking
+    _order = 'date desc'
     
     resident_id = fields.Many2one(
         'resident', 
         string='Residente',
         required=True,
         ondelete='restrict',
+    )
+    residence_id =  fields.Many2one(
+        string="Residencia",
+        related='resident_id.residence_id', 
+        readonly=True
     )
     user_id = fields.Many2one(
         'res.users', 
@@ -44,6 +50,11 @@ class VitalSigns(models.Model):
     )
     history_change = fields.Html(compute='_compute_history_change', sanitize=False,
     strip_style=False, store=False)
+
+    @api.depends('resident_id')
+    def _compute_display_name(self):
+        for r in self:
+            r.display_name = f"Registro de los signos vitales de {r.resident_id.name}"
     
     @api.depends('message_ids')
     def _compute_history_change(self):
@@ -127,3 +138,17 @@ class VitalSigns(models.Model):
         """Obtener lista de campos con tracking activado"""
         return [name for name, field in self._fields.items() 
                 if getattr(field, 'tracking', False)]
+        
+    def unlink(self):
+        # Antes de eliminar, crear logs para cada registro
+        for record in self:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'vital.signs', 'unlink')
+        return super().unlink()
+    
+    @api.model
+    def create(self, values):
+        records = super().create(values)
+        # Crear log de auditoría para cada registro creado
+        for record in records:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'vital.signs', 'create')
+        return records

@@ -3,7 +3,7 @@
 
     <!-- View pharmaceutical.form View List -->
     <record id="view_pharmaceutical_form_list" model="ir.ui.view">
-        <field name="name">view.pharmaceutical.form.list</field>
+        <field name="name">Vista Lista Formas Farmaceútica</field>
         <field name="model">pharmaceutical.form</field>
         <field name="arch" type="xml">
             <list>
@@ -14,7 +14,7 @@
 
     <!-- View pharmaceutical.form form -->
     <record id="view_pharmaceutical_form_form" model="ir.ui.view">
-        <field name="name">view.pharmaceutical.form.form</field>
+        <field name="name">Vista Formulario Forma Farmaceútica</field>
         <field name="model">pharmaceutical.form</field>
         <field name="arch" type="xml">
             <form string="Pharmaceutical Form">
@@ -32,7 +32,7 @@
 
     <!-- View pharmaceutical.form search -->
     <record id="view_pharmaceutical_form_search" model="ir.ui.view">
-        <field name="name">view.pharmaceutical.form.search</field>
+        <field name="name">Vista Búsqueda Forma Farmaceútica</field>
         <field name="model">pharmaceutical.form</field>
         <field name="arch" type="xml">
             <search>

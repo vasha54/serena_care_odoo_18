@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--
+            Hereda la plantilla 'web.login_layout' y utiliza XPath
+            para localizar y reemplazar el div del footer.
+        -->
+        <template id="remove_login_footer" inherit_id="web.login_layout">
+            <xpath expr="//div[hasclass('login-footer') or @t-if='not disable_footer']" position="replace">
+                <!-- Este contenido reemplazará la sección objetivo, dejándola vacía -->
+            </xpath>
+        </template>
+
+        <template id="remove_superuser_button" inherit_id="web.login">
+            <xpath expr="//button[contains(@class, 'btn-link') and contains(@class, 'btn-sm') and @type='submit' and @name='redirect']" position="replace">
+                <!-- Se reemplaza con nada, eliminando el botón -->
+            </xpath>
+             <!-- <xpath expr="//a[contains(@class, 'btn-link') and contains(@href, 'web/signup')]" position="replace"/> -->
+        </template>
+
+        <template id="login_page_change_email_label" inherit_id="web.login">
+            <!-- 
+                This XPath looks for a <label> element whose 'for' attribute equals 'login'.
+                This label is typically the one for the email/username field.
+            -->
+            <xpath expr="//label[@for='login']" position="replace">
+                <label for="login" class="form-label">Usuario</label>
+            </xpath>
+        </template>
+    </data>
+</odoo>

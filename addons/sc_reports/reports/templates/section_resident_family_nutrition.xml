@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_resident_family_nutrition">
+        <t t-set="nutrition_averages" t-value="context.get('wizard_nutrition_averages')"/>
+        <t t-set="nutritions" t-value="context.get('wizard_assessment_nutritions')"/>
+        <h5 class="section-title">Alimentación</h5>
+        <h6 class="subsection-title">Media nutricional</h6>
+
+        <div class="row mt-3">
+
+            <div class="col-12 pe-1 ps-1">
+                <t t-if="nutrition_averages">
+                    <table class="table table-sm mt-3">
+                        <tr>
+                            <t t-foreach="nutrition_averages" t-as="item">
+                                <td class="text-center">
+                                    <strong>
+                                        <t t-esc="item['date']"/>
+                                    </strong>
+                                </td>
+                            </t>
+                        </tr>
+                        <tr>
+                            <t t-foreach="nutrition_averages" t-as="item">
+                                <td class="text-center">
+                                    <t t-esc="item['average_percent']"/>
+                                    
+%
+                                </td>
+                            </t>
+                        </tr>
+                    </table>
+                </t>
+                <t t-else="">
+                    <p class="text-center">El residente no tiene ningún registro de Nutrición en el período para poder determinar la media nutricional</p>
+                </t>
+            </div>
+        </div>
+
+        <!-- <h6 class="subsection-title">Registros</h6>
+
+        <div class="row mt-3">
+
+            <div class="col-12 pe-1 ps-1">
+                <t t-if="nutritions">
+                    <table class="table table-sm mt-3">
+                        <tr>
+                            <td class="text-center" style="width:25%;">
+                                <strong>Fecha</strong>
+                            </td>
+                            <td class="text-center" style="width:25%;">
+                                <strong>Registrado</strong>
+                            </td>
+                            <td class="text-center" style="width:25%;">
+                                <strong>Nivel de alimentación</strong>
+                            </td>
+                            <td class="text-center" style="width:25%;">
+                                <strong>Descripción</strong>
+                            </td>
+                        </tr>
+                        <t t-foreach="nutritions" t-as="nut_record">
+                            <tr>
+                                <td class="text-center" style="width:25%;">
+                                    <t t-esc="nut_record['date']" />
+                                </td>
+                                <td class="text-start" style="width:25%;">
+                                    <t t-esc="nut_record['user']" />
+                                </td>
+                                <td class="text-start" style="width:25%;">
+                                    <t t-esc="nut_record['level']" />
+                                </td>
+                                <td class="text-start" style="width:25%;">
+                                    <t t-esc="nut_record['description']" />
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                </t>
+                <t t-else="">
+                    <p class="text-center">El residente no tiene ningún registro de Nutrición en el período</p>
+                </t>
+            </div>
+        </div> -->
+
+    </template>
+
+</odoo>

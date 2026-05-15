@@ -11,6 +11,7 @@ class UnifiedMedicalIndication(models.Model):
     _name = 'unified.medical.indication'
     _description = 'Indicaciones Médicas Unificadas'
     _auto = False  # Vista SQL, no crea tabla física
+    _order = "create_date desc"
 
     indication_id = fields.Integer(string='ID')
     indication_type = fields.Selection([
@@ -21,6 +22,7 @@ class UnifiedMedicalIndication(models.Model):
     user_id = fields.Many2one('res.users', string='Doctor')
     resident_id = fields.Many2one('resident', string='Residente')
     note = fields.Text(string='Indicación')
+    residence_id = fields.Many2one('residence_house', string='Residencia')
 
     def init(self):
         tools.drop_view_if_exists(self.env.cr, self._table)
@@ -33,7 +35,8 @@ class UnifiedMedicalIndication(models.Model):
                     create_date,
                     user_id,
                     resident_id,
-                    note
+                    note,
+                    residence_id
                 FROM medical_indication
                 UNION ALL
                 SELECT 
@@ -43,15 +46,17 @@ class UnifiedMedicalIndication(models.Model):
                     create_date,
                     user_id,
                     resident_id,
-                    note
+                    note,
+                    residence_id
                 FROM medical_medication
             )
         """)
 
-    @api.model
     def open_record(self):
+        _logger.info(
+            f"open_record called on {self.id} - type {self.indication_type}")
         return self.action_open_indication()
-    
+
     def action_open_indication(self):
         self.ensure_one()
         target = self.env.context.get('open_target', 'current')

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="scalesarcf_choise_none" model="scalesarcf.choise">
+            <field name="name">Ninguna</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="scalesarcf_choise_some" model="scalesarcf.choise">
+            <field name="name">Alguna</field>
+            <field name="value">1</field>
+        </record>
+
+        <record id="scalesarcf_choise_lot_or_unable" model="scalesarcf.choise">
+            <field name="name">Mucha o incapaz</field>
+            <field name="value">2</field>
+        </record>
+    </data>
+</odoo>

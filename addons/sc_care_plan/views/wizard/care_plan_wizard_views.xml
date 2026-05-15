@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   
+    <!-- View care.plan.wizard form -->
+    <record id="view_care_plan_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard Registro de Plan de Cuidado</field>
+        <field name="model">care.plan.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Crear Plan de Cuidado">
+                <group>
+                    <field name="resident_id" required="1" readonly="1"/>
+                </group>
+                <group>
+                    <group string="Diagnóstico">
+                        <field name="diagnosis" nolabel="1" rows="3" widget="textarea"/>
+                    </group>
+                    <group string="Nivel de cuidado">
+                        <field name="care_level_id" nolabel="1" required="1"/>
+                    </group>
+                </group>
+                <group string="Actividades del Plan">
+                    <field name="activity_line_ids" nolabel="1"
+                           context="{'default_wizard_id': id}">
+                        <list editable="bottom" string="Actividades">
+                            <field name="activity_id" required="1"/>
+                            <field name="dependency_level_id" required="1"/>
+                            <field name="action_ids" widget="many2many_tags" 
+                                   context="{'tree_view_ref': 'sc_care_plan.view_care_action_list_without_active'}"
+                                   domain="[('active','=',True),('activity_type_ids','in',activity_id),('dependency_level_ids','in',dependency_level_id)]" required="1"/>
+                            <field name="observation_ids" widget="many2many_tags" 
+                                   domain="[('active','=',True),('activity_type_ids','in',activity_id),('dependency_level_ids','in',dependency_level_id)]" required="1"/>
+                            <field name="result_ids" widget="many2many_tags" 
+                                   domain="[('active','=',True),('activity_type_ids','in',activity_id),('dependency_level_ids','in',dependency_level_id)]" required="1"/>
+                            <field name="goal_ids" widget="many2many_tags" 
+                                   domain="[('active','=',True),('activity_type_ids','in',activity_id),('dependency_level_ids','in',dependency_level_id)]" required="1"/>
+                        </list>
+                    </field>
+                </group>
+                <footer>
+                    <button name="action_create_care_plan" string="Crear Plan" type="object" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

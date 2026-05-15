@@ -1,0 +1,257 @@
+<odoo>
+    <data noupdate="1">
+        <!-- A -->
+        <record id="care_action_1" model="care.action">
+            <field name="name">Aseo de genitales las veces necesarias.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_2" model="care.action">
+            <field name="name">Aseo dental 3 veces al día.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_3" model="care.action">
+            <field name="name">Aplicación de crema corporal.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_4" model="care.action">
+            <field name="name">Aseo de genitales.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_5" model="care.action">
+            <field name="name">Afeitar</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <!-- B -->
+        <!-- C -->
+        <record id="care_action_6" model="care.action">
+            <field name="name">Colocar cinturon de seguridad.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_7" model="care.action">
+            <field name="name">Colocar esencia/ perfume.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_8" model="care.action">
+            <field name="name">Cambio de pañal.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming'),ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_9" model="care.action">
+            <field name="name">Corte de uñas cada sábado.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_10" model="care.action">
+            <field name="name">Cepillar y peinar cabello.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming'),ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+       <record id="care_action_11" model="care.action">
+            <field name="name">Cuidador revisa que el Residente lleve lo necesario para el Mantener la piel en óptimas condiciones de limpieza e hidratación baño.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+       <record id="care_action_12" model="care.action">
+            <field name="name">Cuidador vigila y asiste a Residente.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- D -->
+        <!-- E -->
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <record id="care_action_13" model="care.action">
+            <field name="name">Limpieza de oídos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_14" model="care.action">
+            <field name="name">Llevar al baño y sentarlo en taza.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_15" model="care.action">
+            <field name="name">Llevar al baño y sentarlo en taza (Resid. Se asea solo).</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- M -->
+        <record id="care_action_16" model="care.action">
+            <field name="name">Motivar la ingesta de líquidos y alimentos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_17" model="care.action">
+            <field name="name">Monitoreo y registro de evacuaciones y diuresis.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_18" model="care.action">
+            <field name="name">Maquillar.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_19" model="care.action">
+            <field name="name">Motivar a que se realice.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- N -->
+        <record id="care_action_20" model="care.action">
+            <field name="name">No dejar solo al Residente mientras este alerta.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <!-- O -->
+        <!-- P -->
+        <record id="care_action_21" model="care.action">
+            <field name="name">Proporcionar botón de llamado.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <record id="care_action_22" model="care.action">
+            <field name="name">Proporcionar lo necesario.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <record id="care_action_23" model="care.action">
+            <field name="name">Promover la movilidad.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'), ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_action_24" model="care.action">
+            <field name="name">Postura adecuada durante y después de la comida.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_eating')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'), ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_action_25" model="care.action">
+            <field name="name">Preguntar si fue al baño y verificar lavado de manos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- Q -->
+        <!-- R -->
+        <record id="care_action_26" model="care.action">
+            <field name="name">Respetar la intimidad.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_body_hygiene')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'), ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_action_27" model="care.action">
+            <field name="name">Rectificar aseo adecuado de genitales y manos.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_emunctories')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <!-- S -->
+        <!-- T -->
+        <record id="care_action_28" model="care.action">
+            <field name="name">Traslado en silla de ruedas y/o andador.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total')])]"/>
+        </record>
+        <!-- U -->
+        <record id="care_action_29" model="care.action">
+            <field name="name">Uso de ropa y zapatos adecuados.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_dressing')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_total'), ref('sc_care_plan.dlevel_half'), ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- V -->
+        <record id="care_action_30" model="care.action">
+            <field name="name">Vigilar al Residente durante su traslado.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_half')])]"/>
+        </record>
+        <record id="care_action_31" model="care.action">
+            <field name="name">Verificar periódicamente la localización del Residente.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_ambulation_transfer')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <record id="care_action_32" model="care.action">
+            <field name="name">Verificar que se haya realizado de manera adecuada.</field>
+            <field name="activity_type_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.type_avd_grooming')])]"/>
+            <field name="dependency_level_ids"
+                   eval="[(6, 0, [ref('sc_care_plan.dlevel_low')])]"/>
+        </record>
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+        
+        
+        
+    </data>
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_resident_geriatric_neurological_assessment_document" t-name="sc_reports.report_resident_geriatric_neurological_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="report_title" t-value="'Reporte de las Evaluaciones Geríatricas y Neurológicas del Residente'"/>
+                <t t-set="report_subtitle" t-value=""/>
+                <t t-call="sc_reports.sc_template_report_layout">
+
+                    <t t-call="sc_reports.section_resident_info_basic"/>
+
+                    <t t-call="sc_reports.section_resident_record_norton"/>
+                    <t t-call="sc_reports.section_resident_record_frail"/>
+                    <t t-call="sc_reports.section_resident_record_gsd5"/>
+                    <t t-call="sc_reports.section_resident_record_sarcf"/>
+                    <t t-call="sc_reports.section_resident_record_barthel"/>
+                    <t t-call="sc_reports.section_resident_record_lawton_brondy"/>
+                    <t t-call="sc_reports.section_resident_record_mood"/>
+                    <t t-call="sc_reports.section_resident_record_neurological"/>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="report_resident_geriatric_neurological_assessment_pdf" model="ir.actions.report">
+        <field name="name">Reporte de las evaluaciones Neurológicas y Geríatricas del Residente</field>
+        <field name="model">resident</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_reports.report_resident_geriatric_neurological_assessment_document</field>
+        <field name="report_file">sc_reports.report_resident_geriatric_neurological_assessment_document</field>
+        <field name="print_report_name">'Reporte de las evaluaciones Neurológicas y Geríatricas del Residente %s' % (object.name)</field>
+    </record>
+</odoo>

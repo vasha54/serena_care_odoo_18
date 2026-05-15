@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View scalefrail.assessment View List -->
+    <record id="view_scalefrail_assessment_list" model="ir.ui.view">
+        <field name="name">Vista Lista Evaluaciones de FRAIL</field>
+        <field name="model">scalefrail.assessment</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc" create="false" edit="false" delete="false">
+                <field string="Fecha" name="date"/>
+                <field name="user_id" />
+                <field name="resident_id" />
+                <field string="Residencia" name="residence_id"/>
+                <field name="total_questions" width="180"/>
+                <field name="total_score" width="180"/>
+                <field name="scalefrail_state_display" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View scalefrail.assessment form -->
+    <record id="view_scalefrail_assessment_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Evaluación de FRAIL</field>
+        <field name="model">scalefrail.assessment</field>
+        <field name="arch" type="xml">
+            <form string="Scalefrial Assessment" create="false" edit="false" delete="false">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" />
+                            <field string="Realizado" name="user_id" />
+                        </group>
+                        <group>
+                            <field name="total_questions" />
+                            <field name="total_score" />
+                            <field name="scalefrail_state_display" />
+                        </group>
+                    </group>
+                    <group string="Preguntas">
+                        <field name="question_answers"  nolabel="1">
+                            <list>
+                                <field name="question_statement" />
+                                <field name="answer_select" />
+                            </list>
+                        </field>
+                    </group>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View scalefrail.assessment search -->
+    <record id="view_scalefrail_assessment_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Evaluación de FRAIL</field>
+        <field name="model">scalefrail.assessment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="scalefrail_state_display" />
+                <field name="residence_id"/>
+                <group expand="1" string="Evaluación">
+                    <filter string="Evaluación" name="filter_evaluation" domain="[]" context="{'group_by':'scalefrail_state_display'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action scalefrail.assessment -->
+    <record id="action_scalefrail_assessment" model="ir.actions.act_window">
+        <field name="name">Evaluaciones FRAIL</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">scalefrail.assessment</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registro de evaluaciones FRAIL.
+            </p>
+        </field>
+    </record>
+
+</odoo>

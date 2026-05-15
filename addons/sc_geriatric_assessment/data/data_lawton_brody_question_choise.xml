@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="lawtonbrody_choise_unable" model="lawtonbrody.choise">
+            <field name="name">Incapaz</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="lawtonbrody_choise_not_very_capable_1"
+                model="lawtonbrody.choise">
+            <field name="name">Poco capaz</field>
+            <field name="value">1</field>
+        </record>
+
+        <record id="lawtonbrody_choise_half_capable_0"
+                model="lawtonbrody.choise">
+            <field name="name">Medio capaz</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="lawtonbrody_choise_very_capable"
+                model="lawtonbrody.choise">
+            <field name="name">Muy capaz</field>
+            <field name="value">1</field>
+        </record>
+
+
+        <record id="lawtonbrody_choise_not_very_capable_0"
+                model="lawtonbrody.choise">
+            <field name="name">Poco capaz</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="lawtonbrody_choise_half_capable_1"
+                model="lawtonbrody.choise">
+            <field name="name">Medio capaz</field>
+            <field name="value">1</field>
+        </record>
+
+
+        <record id="lawtonbrody_choise_capable_1"
+                model="lawtonbrody.choise">
+            <field name="name">Capaz</field>
+            <field name="value">1</field>
+        </record>
+    </data>
+</odoo>

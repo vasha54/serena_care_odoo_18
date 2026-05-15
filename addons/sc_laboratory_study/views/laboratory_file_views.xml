@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View laboratory.file View List -->
+    <record id="view_laboratory_file_list" model="ir.ui.view">
+        <field name="name">Vista Lista Estudios de Laboratorio</field>
+        <field name="model">laboratory.file</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="date" width="120"/>
+                <field name="resident_id" />
+                <field name="residence_id" />
+                <field name="user_id" />
+                <field name="laboratory_filename" />
+                <field name="description" /> 
+            </list>
+        </field>
+    </record>
+
+    <!-- View laboratory.file form -->
+    <record id="view_laboratory_file_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Estudio de Laboratorio</field>
+        <field name="model">laboratory.file</field>
+        <field name="arch" type="xml">
+            <form string="Laboratory File">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_id" readonly="1" />
+                            <field name="laboratory_filename" required="1" />
+                        </group>
+                        <group>
+                            <separator string="Archivo de Laboratorio"/>
+
+                            <!-- Campo de subida -->
+                            <field name="laboratory_file"
+                                filename="laboratory_filename"
+                                widget="binary"
+                                options="{'accepted_file_extensions': '.pdf,.png,.jpg,.jpeg'}"/>
+
+                            <!-- ================= IMAGEN ================= -->
+                            <group invisible="not is_image_file">
+                                <field name="laboratory_file"
+                                    widget="image"
+                                    class="oe_avatar"
+                                    options="{'preview_image': 'laboratory_file'}"/>
+                            </group>
+
+                            <!-- ================= PDF ================= -->
+                            <group invisible="not is_pdf_file">
+                                <field name="laboratory_attachment_id"
+                                    widget="pdf_viewer"/>
+                            </group>
+
+                            <!-- ================= DESCARGA ================= -->
+                            <group invisible="is_image_file or is_pdf_file">
+                                <field name="laboratory_attachment_id"
+                                    readonly="1"/>
+                            </group>
+                            
+                            <!-- Campos auxiliares (ocultos) -->
+                            <field name="laboratory_filename" invisible="1"/>
+                            <field name="laboratory_attachment_id" invisible="1"/>
+                            <field name="is_image_file" invisible="1"/>
+                            <field name="is_pdf_file" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Descripción">
+                        <field name="description" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_laboratory_file_form_wizard" model="ir.ui.view">
+        <field name="name">Vista Wizard Formulario Estudio de Laboratorio</field>
+        <field name="model">laboratory.file</field>
+        <field name="arch" type="xml">
+            <form string="Laboratory File">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" placeholder="Name..." readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_id" readonly="1" />
+                            <field name="laboratory_filename" required="1" />
+                        </group>
+                        <group>
+                            <separator string="Archivo de Laboratorio"/>
+
+                            <!-- Campo de subida -->
+                            <field name="laboratory_file"
+                                filename="laboratory_filename"
+                                widget="binary"
+                                options="{'accepted_file_extensions': '.pdf,.png,.jpg,.jpeg'}"/>
+
+                            <!-- ================= IMAGEN ================= -->
+                            <group invisible="not is_image_file">
+                                <field name="laboratory_file"
+                                    widget="image"
+                                    class="oe_avatar"
+                                    options="{'preview_image': 'laboratory_file'}"/>
+                            </group>
+
+                            <!-- ================= PDF ================= -->
+                            <group invisible="not is_pdf_file">
+                                <field name="laboratory_attachment_id"
+                                    widget="pdf_viewer"/>
+                            </group>
+
+                            <!-- ================= DESCARGA ================= -->
+                            <group invisible="is_image_file or is_pdf_file">
+                                <field name="laboratory_attachment_id"
+                                    readonly="1"/>
+                            </group>
+                            
+                            <!-- Campos auxiliares (ocultos) -->
+                            <field name="laboratory_filename" invisible="1"/>
+                            <field name="laboratory_attachment_id" invisible="1"/>
+                            <field name="is_image_file" invisible="1"/>
+                            <field name="is_pdf_file" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Descripción">
+                        <field name="description" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View laboratory.file search -->
+    <record id="view_laboratory_file_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Estudio de Laboratorio</field>
+        <field name="model">laboratory.file</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="residence_id" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action laboratory.file -->
+    <record id="action_laboratory_file" model="ir.actions.act_window">
+        <field name="name">Estudios de Laboratorios</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">laboratory.file</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registro de estudios de laboratorios
+            </p>
+        </field>
+    </record>
+
+</odoo>

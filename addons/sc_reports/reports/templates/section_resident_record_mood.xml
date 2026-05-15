@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_resident_record_mood">
+        <t t-set="records" t-value="doc.assessment_ids"/>
+        <h5 class="section-title mt-0 pt-0">Evaluación de Ánimo</h5>
+
+        <h6 class="subsection-title">Registros</h6>
+        <t t-if="records">
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Respuesta</strong>
+                    </td>
+                    <td class="text-center" style="width: 40%;">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <t t-foreach="records" t-as="r">
+                    <tr>
+                        <td class="text-center" style="width: 20%;">
+                            <t t-esc="r.date_user"/>
+                        </td>
+                        <td class="text-center" style="width: 20%;">
+                            <t t-esc="r.user_id.name"/>
+                        </td>
+                        <td class="text-center" style="width: 30%;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                                <t t-if="r.mood_state_id.image">
+                                    <img t-att-src="'data:image/png;base64,' + r.mood_state_id.image.decode('utf-8')" style="max-height: 32px; max-width: 32px; object-fit: contain;"/>
+                                </t>
+                                <span t-esc="r.mood_state_id.name"/>
+                            </div>
+                        </td>
+                        <td class="text-center" style="width: 30%;">
+                            <t t-esc="r.observations_clinic"/>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+        </t>
+
+        <t t-else="">
+            <p>El residente no tiene registros de evaluación de Ánimo</p>
+        </t>
+    </template>
+
+</odoo>

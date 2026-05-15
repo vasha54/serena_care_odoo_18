@@ -5,26 +5,84 @@
 
     <!-- View register.medical.medication.wizard form -->
     <record id="view_register_medical_medication_wizard_form" model="ir.ui.view">
-        <field name="name">view.register.medical.medication.wizard.form</field>
+        <field name="name">Vista Wizard-Formulario registrar Indicación Médica de Medicamentos</field>
         <field name="model">register.medical.medication.wizard</field>
         <field name="arch" type="xml">
             <form string="Register Medical Medication Wizard">
                 <sheet>
-                    <group col="2" colspan="2">
-                        <group>
-                            <field name="current_resident_id" readonly="1"  />
-                            <field name="user_id" readonly="1" />
-                            <field name="date" readonly="1" />
-                            <field name="medicament_id" required="1"/>
-                            <field name="pharmaceutical_form_id" required="1"/>
-                            <field name="route_id" required="1"/>
+                    <div class="oe_title">
+                        <label for="current_resident_id"/>
+                        <h1>
+                            <field name="current_resident_id" readonly="1"/> 
+                        </h1>
+
+                    </div>
+                    <div class="oe_subtitle">
+                        <h3>
+                            <field name="user_id" readonly="1" invisible="1"/> 
+                        </h3>
+                        
+                    </div>
+                    <group col="12" colspan="12">
+                        <group col="4" colspan="4">
+                            <group string="Medicamento" col="4" colspan="4">
+                                <group col="4" colspan="4">
+                                    <field name="medicament_id" required="1" placeholder="Seleccione" options="{'no_create': False, 'no_create_edit': False, 'create_edit': True}"/>
+                                </group>
+                                <group col="4" colspan="4">                                
+                                    <field name="pharmaceutical_form" required="1" readonly="1"/>
+                                </group>
+                                <group col="4" colspan="4">    
+                                    <field name="route_id" required="1"  placeholder="Seleccione"/>
+                                </group> 
+                                <group col="4" colspan="4">    
+                                    <field name="is_prn" widget="boolean_toggle"/>
+                                </group>        
+                            </group>
+                           
                         </group>
-                        <group>
-                            <field name="dosage" required="1" rows="4" widget="textarea"/>
-                            <field name="concentration" required="1" rows="4" widget="textarea"/>
-                            <field name="duration" required="1" rows="4" widget="textarea"/>
+                        <group col="4" colspan="4">
+                            <group string="Dosis" col="4" colspan="4">
+                                <group col="2" colspan="2">
+                                    <label for='dosage_amount' string="Cantidad"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <label for='dosage_unit' string="Unidad"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="dosage_amount" nolabel="1"/>    
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="dosage_unit"  nolabel="1" placeholder="Seleccione unidad" options="{'no_create': True}"/>/>    
+                                </group>
+                            </group>
+                            <group string="Suministrar cada" col="4" colspan="4" invisible="is_prn">
+                                <group col="2" colspan="2">
+                                    <label for='frequency_amount' string="Valor"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <label for='frequency_unit' string="Unidad"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="frequency_amount"  nolabel="1" required="not is_prn"/>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="frequency_unit"  nolabel="1" placeholder="Seleccione unidad de tiempo" required="not is_prn" options="{'no_create': True}"/>/>
+                                </group>
+                            </group>
+                            
+                        </group>
+                        <group string="Período de medicación" col="4" colspan="4"> 
+                            <group col="4" colspan="4">        
+                                <field string="Desde:" name="start_date_medication" widget="datetime" />
+                                <field string="Hasta:" name="end_date_medication" widget="datetime" invisible="is_lifetime_medication or is_prn"/>
+                            </group>
+                            <group col="4" colspan="4">
+                                <field string="De por vida" name="is_lifetime_medication" widget="boolean_toggle" invisible="is_prn"/>
+                            </group>
                         </group>
                     </group>
+                    
                     <footer>
                         <button 
                             name="action_register_medical_medication" 

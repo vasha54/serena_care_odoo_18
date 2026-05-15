@@ -15,3 +15,8 @@ class DashboardController(http.Controller):
         }
         
         return request.render('sc_suite.dashboard_template', values)
+
+    @http.route('/web/binary/company_logo', type='http', auth="none")
+    def company_logo(self, db=None, **kwargs):
+        # Lógica para servir tu logo personalizado
+        return request.redirect('/sc_suite/static/img/serena_care.png')

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_medication_inventory">
+    
+        <t t-set="medication_inventory" t-value="doc.medication_inventory_ids"/>
+        
+
+        <div class="row mt-0">
+            <div class="col-12 pe-1 ps-1">
+
+                <t t-if="medication_inventory">
+
+                    <table class="table table-sm mt-3">
+                        <tr>
+                            <td style="width:35%">
+                                <strong>Medicamento</strong>
+                            </td>
+                            <td style="width:35%">
+                                <strong>Forma Farmacéutica</strong>
+                            </td>
+                            <td style="width:30%">
+                                <strong>Cantidad disponible</strong>
+                            </td>
+                        </tr>
+                        <t t-foreach="medication_inventory" t-as="inventory">
+                            <tr>
+                                <td style="width:35%">
+                                    <t t-esc="inventory.medicament_id.name"/>
+                                </td>
+                                <td style="width:35%">
+                                    <t t-esc="inventory.pharmaceutical_form"/>
+                                </td>
+                                <td style="width:30%">
+                                    <t t-esc="inventory.quantity_str"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+
+
+                </t>
+                <t t-else="">
+                    <p class="text-center">El residente no tiene Inventario de Medicamento</p>
+                </t>
+
+            </div>
+        </div>
+    </template>
+
+    <template id="section_medication_indication">
+    
+        <t t-set="medical_indication" t-value="doc.medical_indication_ids"/>
+        
+
+        <div class="row mt-0">
+            <div class="col-12 pe-1 ps-1">
+
+                <t t-if="medical_indication">
+
+                    <table class="table table-sm mt-3">
+                        <tr>
+                            <td class="text-center" style="width:15%">
+                                <strong>Fecha</strong>
+                            </td>
+                            <td class="text-start"  style="width:30%">
+                                <strong>Registrado</strong>
+                            </td>
+                            <td class="text-center"  style="width:15%">
+                                <strong>Tipo de Indicación</strong>
+                            </td>
+                            <td class="text-start"  style="width:45%">
+                                <strong>Indicación</strong>
+                            </td>
+                        </tr>
+                        <t t-foreach="medical_indication" t-as="indication">
+                            <tr>
+                                <td class="text-center" style="width:15%">
+                                    <t t-esc="indication.date_user"/>
+                                </td>
+                                <td class="text-start"  style="width:30%">
+                                    <t t-esc="indication.user_id.name"/>
+                                </td>
+                                <td class="text-center"  style="width:15%">
+                                    <t t-esc="indication.indication_type_label"/>
+                                </td>
+                                <td class="text-start"  style="width:45%">
+                                    <t t-esc="indication.note"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+
+
+                </t>
+                <t t-else="">
+                    <p class="text-center">El residente no tiene Indicaciones Médicas</p>
+                </t>
+
+            </div>
+        </div>
+    </template>
+
+    <template id="section_medication_inventory_indication">
+        <h5 class="section-title">3. Indicaciones médicas e Inventario Médico</h5>
+
+        <h6 class="subsection-title">Indicaciones Médicas</h6>
+
+        <t t-call="sc_reports.section_medication_indication"/>
+
+        <h6 class="subsection-title">Inventario Médico</h6>
+
+        <t t-call="sc_reports.section_medication_inventory"/>
+    </template>
+
+</odoo>

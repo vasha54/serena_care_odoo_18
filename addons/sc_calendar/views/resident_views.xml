@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Nota de Calendario</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="action_open_create_note_wizard"
+                        string="Registrar nota"
+                        type="object"
+                        invisible="not id"
+                        icon="fa-calendar-plus-o"
+                        class="btn-primary"
+                        groups="sc_group.gs_admin,sc_group.gs_enfermeria"
+                        />
+
+                <button name="%(sc_calendar.action_calendar_note_wizard)d"
+                        type="action"
+                        string="Ver Calendario"
+                        class="btn-primary"
+                        invisible="not id"
+                        icon="fa-calendar"
+                        groups="sc_group.gs_admin,sc_group.gs_enfermeria,sc_group.gs_gerente_salud"         
+                        aria-label="Ver notas en el calendario"/>
+            </xpath>
+            <!-- <xpath expr="//page[@name='family']" position="after">
+                <page name="tab_calendar" string="Calendario" invisible="not id">
+                    
+                    <group  string="Anotaciones" col="4" colspan="4">
+                        
+                        <field name="calendar_notes_ids" nolabel="1">
+                            <list default_order="start_date desc">
+                                <field name="start_date" />
+                                <field name="date_vaca" />
+                                <field name="user_id" />
+                                <field name="name" />
+                                <field name="description" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath> -->
+        </field>
+    </record>
+
+</odoo>

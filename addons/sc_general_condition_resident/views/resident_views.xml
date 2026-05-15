@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">Vista Formulario Residente extendida Estado General</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='daily_follow_up']" position="inside">
+                <page name="tab_gemeral_status" string="Estado General" class="fw-bolder" invisible="not id">
+                    <group  string="Registros">
+
+                        <field name="medical_resident_state_ids" nolabel="1" options="{'create':false, 'edit':false, 'delete':false}">
+                            <list default_order="date desc" 
+                                decoration-danger="general_status_int == 0"
+                                decoration-warning="general_status_int == 1"
+                                decoration-success="general_status_int == 2"
+                                decoration-muted="general_status_int not in (0, 1, 2)">
+                                <field string="Fecha/Hora" name="date"/>
+                                <field string="Evaluación General" name="general_status" width="150"/>
+                                <field name="status_anomaly_id" width="150"/>
+                                <field name="status_pain_scale_id" width="150"/>
+                                <field name="status_neurological_assessment_id" width="150"/>
+                                <field name="status_vital_signs_id" width="150"/>
+                                <field name="general_status_int" column_invisible="1" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

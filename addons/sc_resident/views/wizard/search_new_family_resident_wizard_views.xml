@@ -5,14 +5,15 @@
 
     <!-- View search.new.family.resident.wizard form -->
     <record id="view_search_new_family_resident_wizard_form" model="ir.ui.view">
-        <field name="name">view.search.new.family.resident.wizard.form</field>
+        <field name="name">Vista Dialogo Buscar Nuevo Familiar al Residente</field>
         <field name="model">search.new.family.resident.wizard</field>
         <field name="arch" type="xml">
             <form string="Search New Family Resident Wizard">
                 <sheet>
                    <group col="2">
                         <group name="label_family" string="Persona">
-                            <field name="family_id" nolabel="1" required="1"/>
+                            <field name="family_id" nolabel="1" required="1" domain="[('active','=',True)]"/>
+                            <field name="is_contractor"  />
                         </group>
                         <group name="label_kinship" string="Parentesco" >
                             <field name="kinship_id" nolabel="1" required="1"/>

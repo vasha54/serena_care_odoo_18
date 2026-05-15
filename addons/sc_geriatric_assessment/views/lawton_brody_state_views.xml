@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View lawtonbrody.state View List -->
+    <record id="view_lawtonbrody_state_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Estados de Lawton-Brody</field>
+        <field name="model">lawtonbrody.state</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="active" string="Activo" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="min_score" width="180"/>
+                <field name="max_score" width="180"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View lawtonbrody.state form -->
+    <record id="view_lawtonbrody_state_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Estado de Lawton-Brody</field>
+        <field name="model">lawtonbrody.state</field>
+        <field name="arch" type="xml">
+            <form string="Scalesarcf State">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre..."/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field string="Activo" name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="min_score" />
+                                <field name="max_score" />
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View lawtonbrody.state search -->
+    <record id="view_lawtonbrody_state_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Estado de Lawton-Brody</field>
+        <field name="model">lawtonbrody.state</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action lawtonbrody.state -->
+    <record id="action_lawtonbrody_state" model="ir.actions.act_window">
+        <field name="name">Estados de Lawton-Brody</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lawtonbrody.state</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar un nuevo estado
+                de Lawton-Brody.
+            </p>
+        </field>
+    </record>
+
+</odoo>

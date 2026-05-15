@@ -1,0 +1,97 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+norton_assessment_admin,Gestión de la evaluaciones Norton,model_norton_assessment,sc_group.gs_admin,1,1,1,0
+norton_assessment_gerente_salud,Lectura de la evaluaciones Norton,model_norton_assessment,sc_group.gs_gerente_salud,1,0,0,0
+norton_assessment_enfermeria,Gestión de la evaluaciones Norton,model_norton_assessment,sc_group.gs_enfermeria,1,1,1,0
+scalefrail_question_admin,Gestión de las preguntas de la Escala de FRAIL,model_scalefrail_question,sc_group.gs_admin,1,1,1,0
+scalefrail_question_gerente_salud,Lectura de las preguntas de la Escala de FRAIL,model_scalefrail_question,sc_group.gs_gerente_salud,1,0,0,0
+scalefrail_question_enfermería,Lectura de las preguntas de la Escala de FRAIL,model_scalefrail_question,sc_group.gs_enfermeria,1,0,0,0
+scalefrail_answer_admin,Gestión de las respuestas a las preguntas de Escala FRAIL ,model_scalefrail_answer,sc_group.gs_admin,1,1,1,0
+scalefrail_answer_gerente_salud,Lectura de las respuestas a las preguntas de Escala FRAIL ,model_scalefrail_answer,sc_group.gs_gerente_salud,1,0,0,0
+scalefrail_answer_enfermeria,Gestión de las respuestas a las preguntas de Escala FRAIL ,model_scalefrail_answer,sc_group.gs_enfermeria,1,1,1,0
+scalefrail_assessment_admin,Gestión de las evaluación de Escala FRAIL,model_scalefrail_assessment,sc_group.gs_admin,1,1,1,0
+scalefrail_assessment_gerente_salud,Lectura de las evaluación de Escala FRAIL,model_scalefrail_assessment,sc_group.gs_gerente_salud,1,0,0,0
+scalefrail_assessment_enfermeria,Gestión de las evaluación de Escala FRAIL,model_scalefrail_assessment,sc_group.gs_enfermeria,1,1,1,0
+scalefrail_state_admin,Gestión de los estados de la Escala FRAIL,model_scalefrail_state,sc_group.gs_admin,1,1,1,0
+scalefrail_state_gerente_salud,Lectura de los estados de la Escala FRAIL,model_scalefrail_state,sc_group.gs_gerente_salud,1,0,0,0
+scalefrail_state_enfermeria,Lectura de los estados de la Escala FRAIL,model_scalefrail_state,sc_group.gs_enfermeria,1,0,0,0
+scalegds5_state_admin,Gestión de los estados de la Escala GDS-5,model_scalegds5_state,sc_group.gs_admin,1,1,1,0
+scalegds5_state_gerente_salud,Lectura de los estados de la Escala GDS-5,model_scalegds5_state,sc_group.gs_gerente_salud,1,0,0,0
+scalegds5_state_enfermeria,Lectura de los estados de la Escala GDS-5,model_scalegds5_state,sc_group.gs_enfermeria,1,0,0,0
+scalegds5_question_admin,Gestión de las preguntas de la Escala GDS-5,model_scalegds5_question,sc_group.gs_admin,1,1,1,0
+scalegds5_question_gerente_salud,Lectura de las preguntas de la Escala GDS-5,model_scalegds5_question,sc_group.gs_gerente_salud,1,0,0,0
+scalegds5_question_enfermeria,Lectura de las preguntas de la Escala GDS-5,model_scalegds5_question,sc_group.gs_enfermeria,1,0,0,0
+scalegds5_answer_admin,Gestión de las respuestas de la Escala GDS-5,model_scalegds5_answer,sc_group.gs_admin,1,1,1,0
+scalegds5_answer_gerente_salud,Lectura de las respuestas de la Escala GDS-5,model_scalegds5_answer,sc_group.gs_gerente_salud,1,0,0,0
+scalegds5_answer_enfermeria,Gestión de las respuestas de la Escala GDS-5,model_scalegds5_answer,sc_group.gs_enfermeria,1,1,1,0
+scalegds5_assessment_admin,Gestión de la evaluación de la Escala GDS-5,model_scalegds5_assessment,sc_group.gs_admin,1,1,1,0
+scalegds5_assessment_gerente_salud,Lectura de la evaluación de la Escala GDS-5,model_scalegds5_assessment,sc_group.gs_gerente_salud,1,0,0,0
+scalegds5_assessment_enfermeria,Gestión de la evaluación de la Escala GDS-5,model_scalegds5_assessment,sc_group.gs_enfermeria,1,1,1,0
+scalesarcf_choise_admin,Gestión de las opciones en la Escala SARC-F,model_scalesarcf_choise,sc_group.gs_admin,1,1,1,0
+scalesarcf_choise_gerente_salud,Lectura de las opciones en la Escala SARC-F,model_scalesarcf_choise,sc_group.gs_gerente_salud,1,0,0,0
+scalesarcf_choise_enfermeria,Lectura de las opciones en la Escala SARC-F,model_scalesarcf_choise,sc_group.gs_enfermeria,1,0,0,0
+scalesarcf_question_admin,Gestión de las preguntas en la Escala SARC-F,model_scalesarcf_question,sc_group.gs_admin,1,1,1,0
+scalesarcf_question_gerente_salud,Lectura de las preguntas en la Escala SARC-F,model_scalesarcf_question,sc_group.gs_gerente_salud,1,0,0,0
+scalesarcf_question_enfeermeria,Lectura de las preguntas en la Escala SARC-F,model_scalesarcf_question,sc_group.gs_enfermeria,1,0,0,0
+scalesarcf_state_admin,Gestión de los estados de la Escala SARC-F,model_scalesarcf_state,sc_group.gs_admin,1,1,1,0
+scalesarcf_state_gerente_salud,Lectura de los estados de la Escala SARC-F,model_scalesarcf_state,sc_group.gs_gerente_salud,1,0,0,0
+scalesarcf_state_enfermería,Lectura de los estados de la Escala SARC-F,model_scalesarcf_state,sc_group.gs_enfermeria,1,0,0,0
+scalesarcf_answer_admin,Gestión de las preguntas de la Escala SARC-F,model_scalesarcf_answer,sc_group.gs_admin,1,1,1,0
+scalesarcf_answer_gerente_salud,Lectura de las preguntas de la Escala SARC-F,model_scalesarcf_answer,sc_group.gs_gerente_salud,1,0,0,0
+scalesarcf_answer_enfermeria,Gestión de las preguntas de la Escala SARC-F,model_scalesarcf_answer,sc_group.gs_enfermeria,1,1,1,0
+scalesarcf_assessment_admin,Gestión de las evaluaciones de Escala SARC-F,model_scalesarcf_assessment,sc_group.gs_admin,1,1,1,0
+scalesarcf_assessment_gerente_salud,Lectura de las evaluaciones de Escala SARC-F,model_scalesarcf_assessment,sc_group.gs_gerente_salud,1,0,0,0
+scalesarcf_assessment_enfermería,Gestión de las evaluaciones de Escala SARC-F,model_scalesarcf_assessment,sc_group.gs_enfermeria,1,1,1,0
+barthel_choise_admin,Gestión de las opciones de Barthel,model_barthel_choise,sc_group.gs_admin,1,1,1,0
+barthel_choise_gerente_salud,Lectura de las opciones de Barthel,model_barthel_choise,sc_group.gs_gerente_salud,1,0,0,0
+barthel_choise_enfermeria,Lectura de las opciones de Barthel,model_barthel_choise,sc_group.gs_enfermeria,1,0,0,0
+barthel_question_admin,Gestión de las preguntas de Barthel,model_barthel_question,sc_group.gs_admin,1,1,1,0
+barthel_question_gerente_salud,Lectura de las preguntas de Barthel,model_barthel_question,sc_group.gs_gerente_salud,1,0,0,0
+barthel_question_enfermeria,Lectura de las preguntas de Barthel,model_barthel_question,sc_group.gs_enfermeria,1,0,0,0
+barthel_state_admin,Gestión de los estados de Barthel,model_barthel_state,sc_group.gs_admin,1,1,1,0
+barthel_state_gerente_salud,Lectura de los estados de Barthel,model_barthel_state,sc_group.gs_gerente_salud,1,0,0,0
+barthel_state_enfermeria,Lectura de los estados de Barthel,model_barthel_state,sc_group.gs_enfermeria,1,0,0,0
+barthel_answer_admin,Gestión de las respuestas de Barthel,model_barthel_answer,sc_group.gs_admin,1,1,1,0
+barthel_answer_gerente_salud,Lectura de las respuestas de Barthel,model_barthel_answer,sc_group.gs_gerente_salud,1,0,0,0
+barthel_answer_enfermeria,Gestión de las respuestas de Barthel,model_barthel_answer,sc_group.gs_enfermeria,1,1,1,0
+barthel_assessment_admin,Gestión de las evaluaciones Barthel,model_barthel_assessment,sc_group.gs_admin,1,1,1,0
+barthel_assessment_gerente_salud,Lectura de las evaluaciones Barthel,model_barthel_assessment,sc_group.gs_gerente_salud,1,0,0,0
+barthel_assessment_enfermeria,Gestión de las evaluaciones Barthel,model_barthel_assessment,sc_group.gs_enfermeria,1,1,1,0
+lawtonbrody_choise_admin,Gestión de las opciones Lawton-Brody,model_lawtonbrody_choise,sc_group.gs_admin,1,1,1,0
+lawtonbrody_choise_gerente_salud,Lectura de las opciones Lawton-Brody,model_lawtonbrody_choise,sc_group.gs_gerente_salud,1,0,0,0
+lawtonbrody_choise_enfermeria,Lectura de las opciones Lawton-Brody,model_lawtonbrody_choise,sc_group.gs_enfermeria,1,0,0,0
+lawtonbrody_question_admin,Gestión de las preguntas Lawton-Brody,model_lawtonbrody_question,sc_group.gs_admin,1,1,1,0
+lawtonbrody_question_gerente_salud,Lectura de las preguntas Lawton-Brody,model_lawtonbrody_question,sc_group.gs_gerente_salud,1,0,0,0
+lawtonbrody_question_enfermeria,Lectura de las preguntas Lawton-Brody,model_lawtonbrody_question,sc_group.gs_enfermeria,1,0,0,0
+lawtonbrody_state_manager,Gestión de los estados Lawton-Brody,model_lawtonbrody_state,sc_group.gs_admin,1,1,1,0
+lawtonbrody_state_manager,Lectura de los estados Lawton-Brody,model_lawtonbrody_state,sc_group.gs_gerente_salud,1,0,0,0
+lawtonbrody_state_manager,Lectura de los estados Lawton-Brody,model_lawtonbrody_state,sc_group.gs_enfermeria,1,0,0,0
+lawtonbrody_answer_admin,Gestión de las respuestas Lawton-Brody,model_lawtonbrody_answer,sc_group.gs_admin,1,1,1,0
+lawtonbrody_answer_gerente_salud,Lectura de las respuestas Lawton-Brody,model_lawtonbrody_answer,sc_group.gs_gerente_salud,1,0,0,0
+lawtonbrody_answer_enfermeria,Gestión de las respuestas Lawton-Brody,model_lawtonbrody_answer,sc_group.gs_enfermeria,1,1,1,0
+lawtonbrody_assessment_admin,Gestión de evaluaciones de Lawton-Brody,model_lawtonbrody_assessment,sc_group.gs_admin,1,1,1,0
+lawtonbrody_assessment_gerente_salud,Lectura de evaluaciones de Lawton-Brody,model_lawtonbrody_assessment,sc_group.gs_gerente_salud,1,0,0,0
+lawtonbrody_assessment_enfermeria,Gestión de evaluaciones de Lawton-Brody,model_lawtonbrody_assessment,sc_group.gs_enfermeria,1,1,1,0
+norton_assessment_coordinator_nurse,Gestión de la evaluaciones Norton,model_norton_assessment,sc_group.gs_coordinator_nurse,1,1,1,0
+scalefrail_question_coordinator_nurse,Gestión de las preguntas de la Escala de FRAIL,model_scalefrail_question,sc_group.gs_coordinator_nurse,1,1,1,0
+scalefrail_answer_coordinator_nurse,Gestión de las respuestas a las preguntas de Escala FRAIL ,model_scalefrail_answer,sc_group.gs_coordinator_nurse,1,1,1,0
+scalefrail_assessment_coordinator_nurse,Gestión de las evaluación de Escala FRAIL,model_scalefrail_assessment,sc_group.gs_coordinator_nurse,1,1,1,0
+scalefrail_state_coordinator_nurse,Gestión de los estados de la Escala FRAIL,model_scalefrail_state,sc_group.gs_coordinator_nurse,1,1,1,0
+scalegds5_state_coordinator_nurse,Gestión de los estados de la Escala GDS-5,model_scalegds5_state,sc_group.gs_coordinator_nurse,1,1,1,0
+scalegds5_question_coordinator_nurse,Gestión de las preguntas de la Escala GDS-5,model_scalegds5_question,sc_group.gs_coordinator_nurse,1,1,1,0
+scalegds5_answer_coordinator_nurse,Gestión de las respuestas de la Escala GDS-5,model_scalegds5_answer,sc_group.gs_coordinator_nurse,1,1,1,0
+scalegds5_assessment_coordinator_nurse,Gestión de la evaluación de la Escala GDS-5,model_scalegds5_assessment,sc_group.gs_coordinator_nurse,1,1,1,0
+scalesarcf_choise_coordinator_nurse,Gestión de las opciones en la Escala SARC-F,model_scalesarcf_choise,sc_group.gs_coordinator_nurse,1,1,1,0
+scalesarcf_question_coordinator_nurse,Gestión de las preguntas en la Escala SARC-F,model_scalesarcf_question,sc_group.gs_coordinator_nurse,1,1,1,0
+scalesarcf_state_coordinator_nurse,Gestión de los estados de la Escala SARC-F,model_scalesarcf_state,sc_group.gs_coordinator_nurse,1,1,1,0
+scalesarcf_answer_coordinator_nurse,Gestión de las preguntas de la Escala SARC-F,model_scalesarcf_answer,sc_group.gs_coordinator_nurse,1,1,1,0
+scalesarcf_assessment_coordinator_nurse,Gestión de las evaluaciones de Escala SARC-F,model_scalesarcf_assessment,sc_group.gs_coordinator_nurse,1,1,1,0
+barthel_choise_coordinator_nurse,Gestión de las opciones de Barthel,model_barthel_choise,sc_group.gs_coordinator_nurse,1,1,1,0
+barthel_question_coordinator_nurse,Gestión de las preguntas de Barthel,model_barthel_question,sc_group.gs_coordinator_nurse,1,1,1,0
+barthel_state_coordinator_nurse,Gestión de los estados de Barthel,model_barthel_state,sc_group.gs_coordinator_nurse,1,1,1,0
+barthel_answer_coordinator_nurse,Gestión de las respuestas de Barthel,model_barthel_answer,sc_group.gs_coordinator_nurse,1,1,1,0
+barthel_assessment_coordinator_nurse,Gestión de las evaluaciones Barthel,model_barthel_assessment,sc_group.gs_coordinator_nurse,1,1,1,0
+lawtonbrody_choise_coordinator_nurse,Gestión de las opciones Lawton-Brody,model_lawtonbrody_choise,sc_group.gs_coordinator_nurse,1,1,1,0
+lawtonbrody_question_coordinator_nurse,Gestión de las preguntas Lawton-Brody,model_lawtonbrody_question,sc_group.gs_coordinator_nurse,1,1,1,0
+lawtonbrody_state_coordinator_nurse,Gestión de los estados Lawton-Brody,model_lawtonbrody_state,sc_group.gs_coordinator_nurse,1,1,1,0
+lawtonbrody_answer_coordinator_nurse,Gestión de las respuestas Lawton-Brody,model_lawtonbrody_answer,sc_group.gs_coordinator_nurse,1,1,1,0
+lawtonbrody_assessment_coordinator_nurse,Gestión de evaluaciones de Lawton-Brody,model_lawtonbrody_assessment,sc_group.gs_coordinator_nurse,1,1,1,0

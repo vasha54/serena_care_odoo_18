@@ -1,2 +1,18 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_reassign_employee_residence_wizard_manager,reassign_employee_residence_wizard_manager,model_reassign_employee_residence_wizard,base.group_user,1,1,1,1
+hr_employee_gs_admin,Gestión de los Empleados,model_hr_employee,sc_group.gs_admin,1,1,1,0
+hr_department_gs_admin,Gestión de los Departamentos,hr.model_hr_department,sc_group.gs_admin,1,1,1,0
+hr_job_gs_admin,Gestión de las Ocupaciones,hr.model_hr_job,sc_group.gs_admin,1,1,1,0
+res_partner_gs_admin,Gestión de los Contactos de Empleado,base.model_res_partner,sc_group.gs_admin,1,1,1,0
+hr_employee_gs_gerente_salud,Lectura de los Empleados,model_hr_employee,sc_group.gs_gerente_salud,1,0,0,0
+hr_employee_gs_enfermeria,Lectura de los Empleados,model_hr_employee,sc_group.gs_enfermeria,1,0,0,0
+reassign_employee_residence,Reasignar empleado a residencia,model_reassign_employee_residence_wizard,sc_group.gs_admin,1,1,1,0
+change_photo_employee,Cambiar foto de empleado,model_change_photo_employee_wizard,sc_group.gs_admin,1,1,1,0
+hr_employee_certificate,Gestión de los certificados,model_hr_employee_certificate,sc_group.gs_admin,1,1,1,0
+res_user_select_residences_wizard_admin,res_user_select_residences_wizard_manager,model_res_user_select_residences_wizard,sc_group.gs_admin,1,1,1,1
+res_user_select_residences_wizard_gerente_salud,res_user_select_residences_wizard_manager,model_res_user_select_residences_wizard,sc_group.gs_gerente_salud,1,1,1,1
+res_user_select_residences_wizard_enfermeria,res_user_select_residences_wizard_manager,model_res_user_select_residences_wizard,sc_group.gs_enfermeria,1,1,1,1
+hr_employee_gs_coordinator_nurse,Gestión de los Empleados,model_hr_employee,sc_group.gs_coordinator_nurse,1,1,1,0
+hr_department_gs_coordinator_nurse,Gestión de los Departamentos,hr.model_hr_department,sc_group.gs_coordinator_nurse,1,1,1,0
+hr_job_gs_coordinator_nurse,Gestión de las Ocupaciones,hr.model_hr_job,sc_group.gs_coordinator_nurse,1,1,1,0
+res_partner_gs_coordinator_nurse,Gestión de los Contactos de Empleado,base.model_res_partner,sc_group.gs_coordinator_nurse,1,1,1,0
+res_user_select_residences_wizard_coordinator_nurse,res_user_select_residences_wizard_manager,model_res_user_select_residences_wizard,sc_group.gs_coordinator_nurse,1,1,1,1

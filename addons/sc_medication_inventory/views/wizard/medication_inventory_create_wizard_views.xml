@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   
+
+    <!-- View medication.inventory.create.wizard form -->
+    <record id="view_medication_inventory_create_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard-Formulario para crear Inventario de Medicamento</field>
+        <field name="model">medication.inventory.create.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Crear Inventario de Medicamento">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group col="4" colspan="4">
+                        <group col="2" colspan="2" string="Medicamento">
+                            <field string="Medicamento" name="medicament_id" required="1"/>
+                            <field string="Forma farmacéutica" name="pharmaceutical_form" required="1"/>
+                            <field string="Unidad de medida" name="uom_id" required="1" options="{'no_create': True}"/>
+                        </group>
+                        <group col="2" colspan="2" string="Cantidades">
+                            <field string="Advertir cuando alcance" name="warning_quantity" required="1"/>
+                            <field string="Alertar cuando alcance" name="alert_quantity" required="1"/>
+                            <field string="Cantidad inicial" name="init_quantity" required="1"/>
+                            <field string="Familiar que provee cantidad" name="family_id" required="1"
+                                   options="{'always_reload': True, 'no_create':True, 'no_open':True}"/>
+                        </group>
+                    </group>
+                    <group string="Motivos del medicamento" col="4" colspan="4">
+                        <field name="reason_inventory" nolabel="1" required="1" rows="7" widget="textarea"/>
+                    </group>
+                    <footer>
+                        <button 
+                            name="action_register_medication_inventory" 
+                            string="Crear inventario" 
+                            type="object" 
+                            class="btn-primary"/>
+                        <button 
+                            string="Cancelar" 
+                            special="cancel" 
+                            class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+</odoo>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_serena_care_root_geriatric_assessment"
+            name="Geriatría"
+            sequence="-4"
+            action="action_norton_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            web_icon="sc_geriatric_assessment,static/src/img/item_menu.png"/>
+
+
+
+        <menuitem id="menu_norton_assessment"
+            name="Norton"
+            sequence="1"
+            action="action_norton_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_geriatric_assessment"/>
+
+
+
+        <menuitem id="menu_scale_frail"
+            name="FRAIL"
+            sequence="2"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_geriatric_assessment"/>
+
+        <menuitem id="menu_scale_frail_assessment"
+            name="Evaluaciones de FRAIL"
+            sequence="1"
+            action="action_scalefrail_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_frail"/>
+        
+        <menuitem id="menu_scale_frail_answer"
+            name="Respuestas de FRAIL"
+            sequence="2"
+            action="action_scalefrail_answer"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_frail"/>
+
+        <menuitem id="menu_scale_frail_question"
+            name="Preguntas de FRAIL"
+            sequence="3"
+            action="action_scalefrail_question"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_frail"/>
+
+        <menuitem id="menu_scale_frail_state"
+            name="Estados de FRAIL"
+            sequence="4"
+            action="action_scalefrail_state"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_frail"/>
+
+
+
+        <menuitem id="menu_scale_gds5"
+            name="GDS-5"
+            sequence="3"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_geriatric_assessment"/>
+
+        <menuitem id="menu_scale_gds5_assessment"
+            name="Evaluaciones de GDS-5"
+            sequence="1"
+            action="action_scalegds5_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_gds5"/>
+
+        <menuitem id="menu_scale_gds5_answer"
+            name="Respuestas de GDS-5"
+            sequence="2"
+            action="action_scalegds5_answer"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_gds5"/>
+
+        <menuitem id="menu_scale_gds5_question"
+            name="Preguntas de GDS-5"
+            sequence="3"
+            action="action_scalegds5_question"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_gds5"/>
+
+        <menuitem id="menu_scale_gds5_state"
+            name="Estados de GDS-5"
+            sequence="4"
+            action="action_scalegds5_state"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_gds5"/>
+
+
+        <menuitem id="menu_scale_sarcf"
+            name="SARC-F"
+            sequence="4"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_geriatric_assessment"/>
+
+        <menuitem id="menu_scale_sarcf_assessment"
+            name="Evaluaciones de SARC-F"
+            sequence="1"
+            action="action_scalesarcf_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_sarcf"/>
+
+        <menuitem id="menu_scale_sarcf_anwser"
+            name="Repuestas de SARC-F"
+            sequence="2"
+            action="action_scalesarcf_answer"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_sarcf"/>
+
+        <menuitem id="menu_scale_sarcf_question"
+            name="Preguntas de SARC-F"
+            sequence="3"
+            action="action_scalesarcf_question"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_sarcf"/>
+
+        <menuitem id="menu_scale_sarcf_state"
+            name="Estados de SARC-F"
+            sequence="4"
+            action="action_scalesarcf_state"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_scale_sarcf"/>
+
+        <menuitem id="menu_barthel"
+            name="Barthel"
+            sequence="4"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_geriatric_assessment"/>
+
+        <menuitem id="menu_barthel_assessment"
+            name="Evaluaciones de Barthel"
+            sequence="1"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            action="action_barthel_assessment"
+            parent="menu_barthel"/>
+
+        <menuitem id="menu_barthel_anwser"
+            name="Repuestas de Barthel"
+            sequence="2"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            action="action_barthel_answer"
+            parent="menu_barthel"/>
+
+        <menuitem id="menu_barthel_question"
+            name="Actividades de Barthel"
+            sequence="3"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            action="action_barthel_question"
+            parent="menu_barthel"/>
+
+        <menuitem id="menu_barthel_state"
+            name="Interpretación de Barthel"
+            sequence="4"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            action="action_barthel_state"
+            parent="menu_barthel"/>
+
+        <menuitem id="menu_lawtonbrody"
+            name="Lawton-Brody"
+            sequence="4"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_serena_care_root_geriatric_assessment"/>
+
+        <menuitem id="menu_lawtonbrody_assessment"
+            name="Evaluaciones de Lawton-Brody"
+            sequence="1"
+            action="action_lawtonbrody_assessment"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_lawtonbrody"/>
+
+        <menuitem id="menu_lawtonbrody_anwser"
+            name="Repuestas de Lawton-Brody"
+            sequence="2"
+            action="action_lawtonbrody_answer"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+            parent="menu_lawtonbrody"/>
+
+        <menuitem id="menu_lawtonbrody_question"
+            name="Actividades de Lawton-Brody"
+            sequence="3"
+            action="action_lawtonbrody_question"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            parent="menu_lawtonbrody"/>
+
+        <menuitem id="menu_lawtonbrody_state"
+            name="Interpretación de Lawton-Brody"
+            sequence="4"
+            groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+            action="action_lawtonbrody_state"
+            parent="menu_lawtonbrody"/>
+
+    </data>
+</odoo>

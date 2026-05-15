@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_resident_water_balance_document" t-name="sc_reports.report_resident_medication_inventory_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="report_title" t-value="'Reporte del Balance Hídrico del Residente'"/>
+                <t t-set="report_subtitle" t-value=""/>
+                <t t-set="water_balances" t-value="doc.water_balance_ids"/>
+                <t t-set="by_day" t-value="context.get('by_day', False)"/>
+                <t t-set="income_by_route" t-value="context.get('income_by_route', False)"/>
+                <t t-set="expense_by_route" t-value="context.get('expense_by_route', False)"/>
+                <t t-set="days" t-value="context.get('days', False)"/>
+                <t t-call="sc_reports.sc_template_report_layout">
+
+                    <t t-call="sc_reports.section_resident_info_basic"/>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Balance General</h5>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12 pe-1 ps-1">
+                            <table class="table table-sm mt-3">
+                                <tr>
+                                    <td class="text-center" style="width: 50%;">
+                                        <strong>Total del balance hídrico (ml)</strong>
+                                    </td>
+                                    <td class="text-center" style="width: 50%;">
+                                        <strong>Estado del balance hídrico</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center" style="width: 50%;">
+                                        <t t-esc="doc.total_water_balance"/>
+                                    </td>
+                                    <td class="text-center" style="width: 50%;">
+                                        <t t-esc="doc.status_water_balance_label"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Resumen por día</h5>
+                        </div>
+                    </div>
+
+
+                    <div class="row mt-3">
+                        <t t-if="days">
+                            <div class="col-12 pe-1 ps-1">
+                                <table class="table table-sm mt-3">
+                                    <tr>
+                                        <td class="text-center" style="width: 20%;">
+                                            <strong>Día</strong>
+                                        </td>
+                                        <td class="text-center" style="width: 20%;">
+                                            <strong>Ingresos (ml)</strong>
+                                        </td>
+                                        <td class="text-center" style="width: 20%;">
+                                            <strong>Egresos (ml)</strong>
+                                        </td>
+                                        <td class="text-center" style="width: 20%;">
+                                            <strong>Diferencia (ml)</strong>
+                                        </td>
+                                        <td class="text-center" style="width: 20%;">
+                                            <strong>Estado</strong>
+                                        </td>
+                                    </tr>
+                                    <t t-foreach="days" t-as="d">
+                                        <tr>
+                                            <td class="text-center" style="width: 20%;">
+                                                <t t-esc="d['date']"/>
+                                            </td>
+                                            <td class="text-center" style="width: 20%;">
+                                                <t t-esc="d['income']"/>
+                                            </td>
+                                            <td class="text-center" style="width: 20%;">
+                                                <t t-esc="d['expense']"/>
+                                            </td>
+                                            <td class="text-center" style="width: 20%;">
+                                                <t t-esc="d['difference']"/>
+                                            </td>
+                                            <td class="text-center" style="width: 20%;">
+                                                <t t-esc="d['status']"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <p class="text-center">El residente no tiene ningún registro de Balance Hídrico.</p>
+                        </t>
+                    </div>
+
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Ingresos por vía</h5>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <t t-if="income_by_route">
+                            <div class="col-12 pe-1 ps-1">
+                                <table class="table table-sm mt-3">
+                                    <tr>
+                                        <tr>
+                                            <td class="text-center" style="width: 50%;">
+                                                <strong>Vía</strong>
+                                            </td>
+                                            <td class="text-center" style="width: 50%;">
+                                                <strong>Total (ml)</strong>
+                                            </td>
+                                        </tr>
+                                    </tr>
+                                    <t t-foreach="income_by_route.items()" t-as="ir">
+                                        <tr>
+                                            <td class="text-center" style="width: 50%;">
+                                                <t t-esc="ir[0]"/>
+                                            </td>
+                                            <td class="text-center" style="width: 50%;">
+                                                <t t-esc="ir[1]"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <p class="text-center">El residente no tiene ningún registro de ingreso en Balance Hídrico.</p>
+                        </t>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Egresos por vía</h5>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <t t-if="expense_by_route">
+                            <div class="col-12 pe-1 ps-1">
+                                <table class="table table-sm mt-3">
+                                    <tr>
+                                        <tr>
+                                            <td class="text-center" style="width: 50%;">
+                                                <strong>Vía</strong>
+                                            </td>
+                                            <td class="text-center" style="width: 50%;">
+                                                <strong>Total (ml)</strong>
+                                            </td>
+                                        </tr>
+                                    </tr>
+                                    <t t-foreach="expense_by_route.items()" t-as="ir">
+                                        <tr>
+                                            <td class="text-center" style="width: 50%;">
+                                                <t t-esc="ir[0]"/>
+                                            </td>
+                                            <td class="text-center" style="width: 50%;">
+                                                <t t-esc="ir[1]"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </div>
+                        </t>
+                        <t t-else="">
+                            <p class="text-center">El residente no tiene ningún registro de egreso en  Balance Hídrico.</p>
+                        </t>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-12 pe-1 ps-1">
+                            <h5 class="section-title">Registros</h5>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+
+                        <div class="col-12 pe-1 ps-1">
+                            <t t-if="water_balances">
+                                <table class="table table-sm mt-3">
+                                    <tr>
+                                        <td class="text-center" style="width:16%;">
+                                            <strong>Fecha</strong>
+                                        </td>
+                                        <td class="text-center" style="width:16%;">
+                                            <strong>Registrado</strong>
+                                        </td>
+                                        <td class="text-center" style="width:10%;">
+                                            <strong>Tipo</strong>
+                                        </td>
+                                        <td class="text-center" style="width:16%;">
+                                            <strong>Vía de Ingreso/Egreso</strong>
+                                        </td>
+                                        <td class="text-center" style="width:10%;">
+                                            <strong>Cantidad (ml)</strong>
+                                        </td>
+                                        <td class="text-center" style="width:26%;">
+                                            <strong>Observaciones</strong>
+                                        </td>
+                                    </tr>
+                                    <t t-foreach="water_balances" t-as="water_record">
+                                        <tr>
+                                            <td class="text-center" style="width:16%;">
+                                                <t t-esc="water_record.date_user" />
+                                            </td>
+                                            <td class="text-start" style="width:16%;">
+                                                <t t-esc="water_record.user_id.name" />
+                                            </td>
+                                            <td class="text-center" style="width:10%;">
+                                                <t t-esc="water_record.type_annotation_label" />
+                                            </td>
+                                            <td class="text-center" style="width:16%;">
+                                                <t t-esc="water_record.route_id.name" />
+                                            </td>
+                                            <td class="text-center" style="width:10%;">
+                                                <t t-esc="water_record.quantity" />
+                                            </td>
+                                            <td class="text-start" style="width:26%;">
+                                                <t t-esc="water_record.notes" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </t>
+                            <t t-else="">
+                                <p class="text-center">El residente no tiene ningún registro de Balance Hídrico.</p>
+                            </t>
+                        </div>
+                    </div>
+
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="report_resident_water_balance_pdf" model="ir.actions.report">
+        <field name="name">Reporte del Balance Hídrico del Residente</field>
+        <field name="model">resident</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_reports.report_resident_water_balance_document</field>
+        <field name="report_file">sc_reports.report_resident_water_balance_document</field>
+        <field name="print_report_name">'Reporte del Balance Hídrico del Residente %s' % (object.name)</field>
+    </record>
+</odoo>

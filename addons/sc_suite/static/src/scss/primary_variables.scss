@@ -1,0 +1,98 @@
+// Paletas de colores para Serena Care Suite
+$o-color-palettes: (
+    'triada-armoniosa': (
+        'o-color-1': #5f2e7f,    // Púrpura principal
+        'o-color-2': #f4701e,    // Naranja acento
+        'o-color-3': #4ea83d,    // Verde secundario
+        'o-color-4': #f8f9fa,    // Fondo claro
+        'o-color-5': #212529,    // Texto oscuro
+        
+        // Combinaciones de colores
+        'o-cc1-bg': #f8f9fa,
+        'o-cc1-text': #212529,
+        'o-cc1-headings': #5f2e7f,
+        'o-cc1-link': #f4701e,
+        'o-cc1-btn-primary': #5f2e7f,
+        'o-cc1-btn-secondary': #f4701e,
+    ),
+    
+    'purpura-naranja': (
+        'o-color-1': #5f2e7f,    // Púrpura principal
+        'o-color-2': #f4701e,    // Naranja secundario
+        'o-color-3': #8a5cb6,    // Púrpura claro
+        'o-color-4': #ffffff,    // Fondo blanco
+        'o-color-5': #333333,    // Texto oscuro
+        
+        // Combinaciones de colores
+        'o-cc1-bg': #ffffff,
+        'o-cc1-text': #333333,
+        'o-cc1-headings': #5f2e7f,
+        'o-cc1-link': #f4701e,
+        'o-cc1-btn-primary': #5f2e7f,
+        'o-cc1-btn-secondary': #f4701e,
+    ),
+    
+    'purpura-verde': (
+        'o-color-1': #5f2e7f,    // Púrpura principal
+        'o-color-2': #4ea83d,    // Verde secundario
+        'o-color-3': #7b4caa,    // Púrpura medio
+        'o-color-4': #f5f7f9,    // Fondo gris claro
+        'o-color-5': #2c3e50,    // Texto azul oscuro
+        
+        // Combinaciones de colores
+        'o-cc1-bg': #f5f7f9,
+        'o-cc1-text': #2c3e50,
+        'o-cc1-headings': #5f2e7f,
+        'o-cc1-link': #4ea83d,
+        'o-cc1-btn-primary': #5f2e7f,
+        'o-cc1-btn-secondary': #4ea83d,
+    ),
+    
+    'purpura-degradado': (
+        'o-color-1': #5f2e7f,    // Púrpura base
+        'o-color-2': #7b4caa,    // Púrpura medio
+        'o-color-3': #462761,    // Púrpura oscuro
+        'o-color-4': #f8f5fc,    // Fondo púrpura muy claro
+        'o-color-5': #2d1b40,    // Texto púrpura oscuro
+        
+        // Combinaciones de colores
+        'o-cc1-bg': #f8f5fc,
+        'o-cc1-text': #2d1b40,
+        'o-cc1-headings': #5f2e7f,
+        'o-cc1-link': #7b4caa,
+        'o-cc1-btn-primary': #5f2e7f,
+        'o-cc1-btn-secondary': #7b4caa,
+    ),
+    
+    'naranja-degradado': (
+        'o-color-1': #f4701e,    // Naranja principal
+        'o-color-2': #ff8e45,    // Naranja claro
+        'o-color-3': #d45c08,    // Naranja oscuro
+        'o-color-4': #fff5eb,    // Fondo naranja muy claro
+        'o-color-5': #5c3006,    // Texto marrón oscuro
+        
+        // Combinaciones de colores
+        'o-cc1-bg': #fff5eb,
+        'o-cc1-text': #5c3006,
+        'o-cc1-headings': #f4701e,
+        'o-cc1-link': #ff8e45,
+        'o-cc1-btn-primary': #f4701e,
+        'o-cc1-btn-secondary': #ff8e45,
+    ),
+    
+    'verde-degradado': (
+        'o-color-1': #4ea83d,    // Verde principal
+        'o-color-2': #75c467,    // Verde claro
+        'o-color-3': #368526,    // Verde oscuro
+        'o-color-4': #f2f9f1,    // Fondo verde muy claro
+        'o-color-5': #1e441a,    // Texto verde oscuro
+        
+        // Combinaciones de colores
+        'o-cc1-bg': #f2f9f1,
+        'o-cc1-text': #1e441a,
+        'o-cc1-headings': #4ea83d,
+        'o-cc1-link': #75c467,
+        'o-cc1-btn-primary': #4ea83d,
+        'o-cc1-btn-secondary': #75c467,
+    )
+) !default;

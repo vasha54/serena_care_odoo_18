@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="serena_care_dashboard_action" model="ir.actions.client">
+        <field name="name">Dashboard General</field>
+        <field name="tag">serena_care_dashboard_tag</field>
+    </record>
+    <menuitem 
+            name="Dashboard General" id="sc_dashboard"      
+            sequence="-10000" 
+            action="serena_care_dashboard_action"
+            groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria"
+            web_icon="sc_suite,static/src/img/icon_dashboard.png"
+    />
+
+</odoo>

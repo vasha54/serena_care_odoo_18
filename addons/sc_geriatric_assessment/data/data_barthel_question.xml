@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Question 1 -->
+        <record id="barthel_question_eat" model="barthel.question">
+            <field name="name">Comer</field>
+            <field name="order">1</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_incapable'),ref('barthel_choise_partial_help'),ref('barthel_choise_independent')])]" />
+        </record>
+
+        <!-- Question 2 -->
+        <record id="barthel_question_to_move" model="barthel.question">
+            <field name="name">Trasladarse (silla - cama)</field>
+            <field name="order">2</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_dependent'),ref('barthel_choise_much_help'),ref('barthel_choise_minimun_help'),ref('barthel_choise_independent_i')])]" />
+        </record>
+
+        <!-- Question 3 -->
+        <record id="barthel_question_personal_hygiene" model="barthel.question">
+            <field name="name">Aseo personal</field>
+            <field name="order">3</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_dependent'),ref('barthel_choise_independent_ii')])]" />
+        </record>
+
+        <!-- Question 4 -->
+        <record id="barthel_question_to_use_toilet"
+                model="barthel.question">
+            <field name="name">Usar el retrete</field>
+            <field name="order">4</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_dependent'),ref('barthel_choise_help'),ref('barthel_choise_independent')])]" />
+        </record>
+
+        <!-- Question 5 -->
+        <record id="barthel_question_to_take_shower" model="barthel.question">
+            <field name="name">Bañarse o ducharse</field>
+            <field name="order">5</field>
+            <field name="choise_ids" eval="[(6,0,[ref('barthel_choise_dependent'),ref('barthel_choise_independent_ii')])]" />
+        </record>
+
+        <!-- Question 6 -->
+        <record id="barthel_question_to_move_on_surface"
+                model="barthel.question">
+            <field name="name">Desplazarse en superficie</field>
+            <field name="order">6</field>
+            <field name="choise_ids" eval="[(6,0,[ref('barthel_choise_immobile'),ref('barthel_choise_chair'),ref('barthel_choise_leve_help'),ref('barthel_choise_independent_i')])]" />
+        </record>
+
+        <!-- Question 7 -->
+        <record id="barthel_question_to_go_up_down_stairs"
+                model="barthel.question">
+            <field name="name">Subir y bajar escaleras</field>
+            <field name="order">7</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_incapable'),ref('barthel_choise_help'),ref('barthel_choise_independent')])]" />
+        </record>
+
+        <!-- Question 8 -->
+        <record id="barthel_question_dressed"
+                model="barthel.question">
+            <field name="name">Vestirse</field>
+            <field name="order">8</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_dependent'),ref('barthel_choise_help'),ref('barthel_choise_independent')])]" />
+        </record>
+
+        <!-- Question 9 -->
+        <record id="barthel_question_stool_control"
+                model="barthel.question">
+            <field name="name">Control de heces</field>
+            <field name="order">9</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_incontinent'),ref('barthel_choise_occasional'),ref('barthel_choise_continent')])]" />
+        </record>
+
+        <!-- Question 10 -->
+        <record id="barthel_question_urine_control"
+                model="barthel.question">
+            <field name="name">Control de orina</field>
+            <field name="order">10</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('barthel_choise_incontinent'),ref('barthel_choise_occasional'),ref('barthel_choise_continent')])]" />
+        </record>
+
+    </data>
+</odoo>

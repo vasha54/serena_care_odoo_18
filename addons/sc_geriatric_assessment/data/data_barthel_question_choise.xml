@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Comer -->
+        <record id="barthel_choise_incapable" model="barthel.choise">
+            <field name="name">Incapaz</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="barthel_choise_partial_help" model="barthel.choise">
+            <field name="name">Ayuda parcial</field>
+            <field name="value">5</field>
+        </record>
+
+        <record id="barthel_choise_independent" model="barthel.choise">
+            <field name="name">Independiente</field>
+            <field name="value">10</field>
+        </record>
+
+
+        <!-- Trasladarse -->
+        <record id="barthel_choise_dependent" model="barthel.choise">
+            <field name="name">Dependiente</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="barthel_choise_much_help" model="barthel.choise">
+            <field name="name">Mucha ayuda</field>
+            <field name="value">5</field>
+        </record>
+
+        <record id="barthel_choise_minimun_help" model="barthel.choise">
+            <field name="name">Ayuda mínima</field>
+            <field name="value">10</field>
+        </record>
+
+        <record id="barthel_choise_independent_i" model="barthel.choise">
+            <field name="name">Independiente</field>
+            <field name="value">15</field>
+        </record>
+
+
+        <!-- Aseo personal -->
+        <record id="barthel_choise_independent_ii" model="barthel.choise">
+            <field name="name">Independiente</field>
+            <field name="value">5</field>
+        </record>
+
+
+        <!-- Control de orina y Control de heces -->
+        <record id="barthel_choise_incontinent" model="barthel.choise">
+            <field name="name">Incontinente</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="barthel_choise_occasional" model="barthel.choise">
+            <field name="name">Ocasional</field>
+            <field name="value">5</field>
+        </record>
+
+        <record id="barthel_choise_continent" model="barthel.choise">
+            <field name="name">Continente</field>
+            <field name="value">10</field>
+        </record>
+
+
+        <!-- Desplazarse en superficie -->
+        <record id="barthel_choise_immobile" model="barthel.choise">
+            <field name="name">Inmóvil</field>
+            <field name="value">0</field>
+        </record>
+
+        <record id="barthel_choise_chair" model="barthel.choise">
+            <field name="name">En silla</field>
+            <field name="value">5</field>
+        </record>
+
+        <record id="barthel_choise_leve_help" model="barthel.choise">
+            <field name="name">Ayuda leve</field>
+            <field name="value">10</field>
+        </record>
+
+        <!-- Subir y bajar escaleras -->
+        <record id="barthel_choise_help" model="barthel.choise">
+            <field name="name">Ayuda</field>
+            <field name="value">5</field>
+        </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </data>
+</odoo>

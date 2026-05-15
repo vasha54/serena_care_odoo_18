@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_medical_notes" model="ir.ui.view">
+        <field name="name">Vista Formulario Residente extendida Notas Médicas</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='notebook_medical_history']" position="inside">
+                <page name="tab_medical_notes" string="Notas Médicas" invisible="not id">
+                    <group  string="Notas">
+
+                        <field name="medical_notes_ids" nolabel="1"
+                               context="{'default_resident_id': id, 'resident_readonly': True}">
+                            <list default_order="date desc" optional="show"  >
+                                <field name="date" width="120"/>
+                                <field string="Registrado" name="user_id"/>
+                                <field string="Descripción" name="description"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

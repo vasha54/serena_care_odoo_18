@@ -2,9 +2,21 @@
 <odoo>
 
     <!-- View nomenclature.specialty.supplier View List -->
-    <record id="view_nomenclature_specialty_supplier_list" model="ir.ui.view">
-        <field name="name">view.nomenclature.specialty.supplier.list</field>
+    <record id="view_nomenclature_specialty_supplier_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de las Especialidades de los Proovedores inactivos</field>
         <field name="model">nomenclature.specialty.supplier</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_nomenclature_specialty_supplier_list" model="ir.ui.view">
+        <field name="name">Vista Lista de las Especialidades de los Proovedores</field>
+        <field name="model">nomenclature.specialty.supplier</field>
+        <field name="priority">2</field>
         <field name="arch" type="xml">
             <list>
                 <field string="Activo" name="active" widget="boolean_toggle"/>
@@ -15,7 +27,7 @@
 
     <!-- View nomenclature.specialty.supplier form -->
     <record id="view_nomenclature_specialty_supplier_form" model="ir.ui.view">
-        <field name="name">view.nomenclature.specialty.supplier.form</field>
+        <field name="name">Vista Formulario de la Especialidad de los Proovedores</field>
         <field name="model">nomenclature.specialty.supplier</field>
         <field name="arch" type="xml">
             <form string="Nomenclature Specialty Supplier">
@@ -36,7 +48,7 @@
 
     <!-- View nomenclature.specialty.supplier search -->
     <record id="view_nomenclature_specialty_supplier_search" model="ir.ui.view">
-        <field name="name">view.nomenclature.specialty.supplier.search</field>
+        <field name="name">Vista Búsqueda de la Especialidad de los Proovedores</field>
         <field name="model">nomenclature.specialty.supplier</field>
         <field name="arch" type="xml">
             <search>
@@ -51,6 +63,10 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">nomenclature.specialty.supplier</field>
         <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_supplier_contact.view_nomenclature_specialty_supplier_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_supplier_contact.view_nomenclature_specialty_supplier_form')}),]" />
         <field name="domain">[]</field>
         <field name="context">{}</field>
         <field name="help" type="html">

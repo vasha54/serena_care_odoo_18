@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+
+  <t t-name="sc_suite.SerenaCareDashboard">
+    <div class="container-fluid" style="height: 100vh; overflow-y: auto; margin-bottom:30px; padding-bottom: 20px;">
+      <main id="main" class="main">
+
+
+        <section class="section dashboard">
+
+          <div class="row">
+            <div class="col-xxl-3 col-lg-3 col-md-6">
+              <CardInfoResidents/>
+            </div>
+
+            <div class="col-xxl-3 col-lg-3 col-md-6">
+              <CardInfoAverageAge/>
+            </div>
+
+            <!-- <div class="col-xxl-20p col-lg-20p col-md-6">
+              <CardInfoTimeResidence/>
+            </div> -->
+
+            <div class="col-xxl-3 col-lg-3 col-md-6">
+              <CardInfoSexDistribution/>
+            </div>
+
+            <div class="col-xxl-3 col-lg-3 col-md-6">
+              <CardFilterResidence/>
+            </div>
+
+          </div>
+
+          <div class="row mt-3">
+
+            <div class="col-xxl-6 col-lg-6 col-md-6">
+              <BarChartWeekAppointments labels="chartData.labels" data="[20,20,20,20,10,10]" colors="chartData.colors" />
+            </div>
+
+            <div class="col-xxl-6 col-lg-6 col-md-6">
+              <PieChartDistributionAge labels="chartData.labels" data="[20,20,20,20,10,10]" colors="chartData.colors" />
+            </div>
+
+          </div>
+
+          <div class="row mt-3">
+
+            <div class="col-xxl-4 col-lg-4 col-md-4">
+              <DoughnutChartHealthStatus labels="healthStatusData.labels" data="healthStatusData.data" colors="healthStatusData.colors" title="healthStatusData.title"/>
+            </div>
+
+            <div class="col-xxl-8 col-lg-8 col-md-8">
+              <MedicalAppointmentToday/>
+            </div>
+
+          </div>
+
+        </section>
+
+      </main>
+      <footer id="footer" class="footer">
+        <div class="copyright">
+              &#169; Copyright <strong>
+          <span>Serena Care</span>
+        </strong>. Todos los derechos reservados
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+            Diseñado por        <a target="_blank" href="https://www.idoogroup.com">IdooGroup</a>
+      </div>
+    </footer>
+    <div style="min-height:20px"></div>
+  </div>
+
+</t>
+
+
+
+</templates>

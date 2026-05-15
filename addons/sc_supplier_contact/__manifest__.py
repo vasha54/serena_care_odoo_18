@@ -24,11 +24,14 @@
     # always loaded
     "data": [
         "data/data_nomenclature_specialty_supplier.xml",
+        "data/data_category_supplier.xml",
+        "data/data_supplier_base.xml",
         "security/ir.model.access.csv",
-        "templates/supplier_report.xml",
         "views/nomenclature_specialty_supplier_views.xml",
         "views/supplier_base_views.xml",
+        "views/supplier_category_views.xml",
         "views/views_menu.xml",
+        "templates/supplier_report.xml"
     ],
     # only loaded in demonstration mode
     "demo": [],

@@ -1,0 +1,39 @@
+<odoo>        
+    <data noupdate="1">
+        <!-- A -->
+        <!-- B -->
+        <record id="clevel_low" model="care.level">
+            <field name="name">Bajo</field>
+        </record>
+        <!-- C -->
+        <!-- D -->
+        <!-- E -->
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <!-- M -->
+        <record id="clevel_half" model="care.level">
+            <field name="name">Medio</field>
+        </record>
+        <!-- N -->
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <!-- T -->
+        <record id="clevel_total" model="care.level">
+            <field name="name">Total</field>
+        </record>
+        <!-- U -->
+        <!-- V -->
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>

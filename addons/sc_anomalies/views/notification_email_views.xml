@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View notification.email View List -->
+    <record id="view_notification_email_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Correos de Notificación</field>
+        <field name="model">notification.email</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="email" widget="email"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View notification.email form -->
+    <record id="view_notification_email_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Correo de Notificación</field>
+        <field name="model">notification.email</field>
+        <field name="arch" type="xml">
+            <form string="Notification Email">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="email"/>
+                        <h1>
+                            <field name="email" placeholder="Correo electrónico" widget="email"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View notification.email search -->
+    <record id="view_notification_email_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Correo de Notificación</field>
+        <field name="model">notification.email</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="email"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action notification.email -->
+    <record id="action_notification_email" model="ir.actions.act_window">
+        <field name="name">Correos electrónicos a notificar</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">notification.email</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ejemplos, haga clic aquí para agregar un nuevo correo electrónico de notificación.
+            </p>
+        </field>
+    </record>
+
+</odoo>

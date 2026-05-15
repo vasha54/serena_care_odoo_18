@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sc_uom_sc_uom,sc_uom.sc_uom,model_sc_uom_sc_uom,base.group_user,1,1,1,1
+sc_uom_admin,Gestión de las categorías y unidades de medidas,model_sc_uom_sc_uom,sc_group.gs_admin,1,1,1,0
+sc_uom_gerente_salud,Lectura de las categorías y unidades de medidas,model_sc_uom_sc_uom,sc_group.gs_gerente_salud,1,0,0,0
+sc_uom_enfermeria,Lectura de las categorías y unidades de medidas,model_sc_uom_sc_uom,sc_group.gs_enfermeria,1,0,0,0
+sc_uom_coordinator_nurse,Gestión de las categorías y unidades de medidas,model_sc_uom_sc_uom,sc_group.gs_coordinator_nurse,1,1,1,0

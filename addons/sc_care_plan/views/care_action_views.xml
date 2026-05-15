@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View care.action View List -->
+    <record id="view_care_action_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de las Acciones del Plan de Cuidado</field>
+        <field name="model">care.action</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list create="false">
+                <field name="name"/>
+                <field name="activity_type_ids" widget="many2many_tags"/>
+                <field name="dependency_level_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_care_action_list" model="ir.ui.view">
+        <field name="name">Vista Lista de las Acciones del Plan de Cuidado columna Activo</field>
+        <field name="model">care.action</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="activity_type_ids" widget="many2many_tags"/>
+                <field name="dependency_level_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    
+
+    <!-- View care.action form -->
+    <record id="view_care_action_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de la Acción del Plan de Cuidado</field>
+        <field name="model">care.action</field>
+        <field name="arch" type="xml">
+            <form string="Care Action">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>
+                        <field name="activity_type_ids" widget="many2many_tags" required="1"/>
+                        <field name="dependency_level_ids" widget="many2many_tags" requerid="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View care.action search -->
+    <record id="view_care_action_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de las Acciones del Plan de Cuidado</field>
+        <field name="model">care.action</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+                <filter string="Acciones activas" name="activity_type_active" domain="[('active','=',True)]" />
+                <filter string="Acciones no activas" name="activity_type_not_active" domain="[('active','=',False)]" />
+                
+            </search>
+        </field>
+    </record>
+
+    <!-- Action care.action -->
+    <record id="action_care_action" model="ir.actions.act_window">
+        <field name="name">Acciones de cuidado</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">care.action</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_care_plan.view_care_action_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_care_plan.view_care_action_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ejemplos, haga clic aquí para agregar una nueva Acción de Cuidado.
+            </p>
+        </field>
+    </record>
+
+</odoo>

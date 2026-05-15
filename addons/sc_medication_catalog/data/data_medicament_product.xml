@@ -1,0 +1,719 @@
+<odoo>
+    <data noupdate="1">
+        <!-- A -->
+        <record id="medi_1" model="medicament.product">
+            <field name="name">ACEITE DE ALMENDRAS DULCES</field>
+            <field name="code">010.000.0701.00</field>
+            <field name="pharmaceutical_form">Líquido</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 100 ml</field>
+            <field name="indications">Emoliente y protector cutáneo, Xerosis, Dermatitis irritativa</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_14" model="medicament.product">
+            <field name="name">ALANTOINA Y ALQUITRÁN DE HULLA</field>
+            <field name="code">010.000.0702.00</field>
+            <field name="pharmaceutical_form">Crema o Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 50 g</field>
+            <field name="indications">Psoriasis, Dermatitis seborreica, Eccema</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_24" model="medicament.product">
+            <field name="name">AMLODIPINO</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Bloquedores de los canales de calcio</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Norvax, Cordiax 5</field>
+            <field name="composicion"></field>
+            <field name="dosage">5 mg</field>
+        </record>
+        <record id="medi_35" model="medicament.product">
+            <field name="name">ATENOLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Tenormin</field>
+            <field name="composicion"></field>
+            <field name="dosage">50 mg</field>
+        </record>
+        <record id="medi_36" model="medicament.product">
+            <field name="name">ATENOLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Tenormin</field>
+            <field name="composicion"></field>
+            <field name="dosage">50 mg</field>
+        </record>
+        <record id="medi_57" model="medicament.product">
+            <field name="name">ÁCIDO ETACRíNICO</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos de asa</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Edecrin</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_58" model="medicament.product">
+            <field name="name">AMILORIDA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form"></field>
+            <field name="category">Diuréticos ahorradores de K</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Midamor</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- B -->
+        <record id="medi_11" model="medicament.product">
+            <field name="name">BETAMETASONA</field>
+            <field name="code">010.000.0720.00</field>
+            <field name="pharmaceutical_form">Crema o Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatitis severa, Psoriasis</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_15" model="medicament.product">
+            <field name="name">BAÑO COLOIDE</field>
+            <field name="code">010.000.0705.00</field>
+            <field name="pharmaceutical_form">Polvo</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 200 g</field>
+            <field name="indications">Prurito, Dermatitis atópica, Xerosis</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_30" model="medicament.product">
+            <field name="name">BISOPROLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Concor, Sig</field>
+            <field name="composicion"></field>
+            <field name="dosage">2.5 mg</field>
+        </record>
+        <record id="medi_31" model="medicament.product">
+            <field name="name">BISOPROLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Concor, Sig</field>
+            <field name="composicion"></field>
+            <field name="dosage">5 mg</field>
+        </record>
+        <record id="medi_32" model="medicament.product">
+            <field name="name">BISOPROLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Concor, Sig</field>
+            <field name="composicion"></field>
+            <field name="dosage">10 mg</field>
+        </record>
+        <record id="medi_40" model="medicament.product">
+            <field name="name">BUMETANIDA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos de asa</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Bumex</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- C -->
+        <record id="medi_13" model="medicament.product">
+            <field name="name">CLIOQUINOL</field>
+            <field name="code">010.000.0708.00</field>
+            <field name="pharmaceutical_form">Crema o Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatitis sobreinfectadas, Infecciones cutáneas bacterianas y fúngicas</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_21" model="medicament.product">
+            <field name="name">CALCIPOTRIOL</field>
+            <field name="code">010.000.0721.00</field>
+            <field name="pharmaceutical_form">Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Psoriasis en placas</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_37" model="medicament.product">
+            <field name="name">CARVEDILOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation">Envase con 14 tabletas.</field>
+            <field name="indications">Insuficiencia cardiaca.</field>
+            <field name="brand_commercial">Dilatrend</field>
+            <field name="composicion">Cada tableta contiene:
+ - Carvedilol  6.250 mg.</field>
+            <field name="dosage">6.25 mgOral
+ - Adultos: Dosis inicial 3.125 mg cada 12 horas durante dos semanas.
+Si es bien tolerada incrementar a 6.25 mg cada 12 horas
+durante dos semanas, y si la tolerancia persiste, mantener
+esta dosis a largo plazo.</field>
+        </record>
+        <record id="medi_38" model="medicament.product">
+            <field name="name">CARVEDILOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Dilatrend</field>
+            <field name="composicion"></field>
+            <field name="dosage">12.5 mg</field>
+        </record>
+        <record id="medi_42" model="medicament.product">
+            <field name="name">CAPTORIL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Inhibidores de la ECA</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Catox</field>
+            <field name="composicion"></field>
+            <field name="dosage">25 mg</field>
+        </record>
+        <record id="medi_45" model="medicament.product">
+            <field name="name">CANDESARTAN</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Atacand</field>
+            <field name="composicion"></field>
+            <field name="dosage">16 mg</field>
+        </record>
+        <record id="medi_55" model="medicament.product">
+            <field name="name">CLORTALIDONA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos tiazídicos</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage">50 mg</field>
+        </record>
+
+        <!-- D -->
+        <!-- E -->
+        <record id="medi_29" model="medicament.product">
+            <field name="name">ENALAPRIL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Inhibidores de la ECA</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Vasotec</field>
+            <field name="composicion"></field>
+            <field name="dosage">10 mg</field>
+        </record>
+        <record id="medi_39" model="medicament.product">
+            <field name="name">ESPIRONOLACTONA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form"></field>
+            <field name="category">Diuréticos ahorradores de K</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Aldactone, Carospir</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_44" model="medicament.product">
+            <field name="name">EPLERENONA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Diuréticos ahorradores de K</field>
+            <field name="category"></field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Inspra</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- F -->
+        <record id="medi_10" model="medicament.product">
+            <field name="name">FLUOROURACILO</field>
+            <field name="code">010.000.0723.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Queratosis actínicas, Carcinoma basocelular superficial</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_16" model="medicament.product">
+            <field name="name">FLUOCINOLONA</field>
+            <field name="code">010.000.0709.00</field>
+            <field name="pharmaceutical_form">Crema o Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatitis inflamatorias, Eccemas, Psoriasis</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_50" model="medicament.product">
+            <field name="name">FUROSEMIDA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos de asa</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Lasix</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- G -->
+
+        <!-- H -->
+        <record id="medi_9" model="medicament.product">
+            <field name="name">HIGROPLEX</field>
+            <field name="code">010.000.0724.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 50 g</field>
+            <field name="indications">Xerosis severa, Hiperqueratosis, Ictiosis</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_17" model="medicament.product">
+            <field name="name">HIDROCORTISONA</field>
+            <field name="code">010.000.0710.00</field>
+            <field name="pharmaceutical_form">Crema o Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatitis leve a moderada, Eccemas, Prurito</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_41" model="medicament.product">
+            <field name="name">HIDROCLOROTIAZIDA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos tiazídicos</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage">25 mg</field>
+        </record>
+
+        <!-- I -->
+        <record id="medi_8" model="medicament.product">
+            <field name="name">IMIQUIMOD</field>
+            <field name="code">010.000.0725.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 12 sobres unidosis</field>
+            <field name="indications">Verrugas genitales, Queratosis actínicas</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_18" model="medicament.product">
+            <field name="name">ISOCONAZOL</field>
+            <field name="code">010.000.0712.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatomicosis, Candidiasis cutánea</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_43" model="medicament.product">
+            <field name="name">INDAPAMIDA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos tiazídicos</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_48" model="medicament.product">
+            <field name="name">IRBESARTAN</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Avapro</field>
+            <field name="composicion"></field>
+            <field name="dosage">150 mg</field>
+        </record>
+        
+
+        <!-- J -->
+
+        <!-- K -->
+
+        <!-- L -->
+        <record id="medi_7" model="medicament.product">
+            <field name="name">LECITINA VEGETAL</field>
+            <field name="code">010.000.0727.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 50 g</field>
+            <field name="indications">Xerosis, Piel seca, Emoliente</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_26" model="medicament.product">
+            <field name="name">LERCANIDIPINO</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Bloquedores de los canales de calcio</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Zanidip</field>
+            <field name="composicion"></field>
+            <field name="dosage">10 mg</field>
+        </record>
+        <record id="medi_33" model="medicament.product">
+            <field name="name">LOSARTAN</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Cozaar</field>
+            <field name="composicion"></field>
+            <field name="dosage">25 mg</field>
+        </record>
+        <record id="medi_34" model="medicament.product">
+            <field name="name">LOSARTAN</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Cozaar</field>
+            <field name="composicion"></field>
+            <field name="dosage">50 mg</field>
+        </record>
+        <record id="medi_53" model="medicament.product">
+            <field name="name">LISINOPRIL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Inhibidores de la ECA</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Likenil</field>
+            <field name="composicion"></field>
+            <field name="dosage">10 mg</field>
+        </record>
+
+        <!-- M -->
+        <record id="medi_6" model="medicament.product">
+            <field name="name">METOXALENO</field>
+            <field name="code">010.000.0728.00</field>
+            <field name="pharmaceutical_form">Solución</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 ml</field>
+            <field name="indications">Vitíligo, Psoriasis (PUVAterapia)</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_19" model="medicament.product">
+            <field name="name">MICONAZOL</field>
+            <field name="code">010.000.0713.00</field>
+            <field name="pharmaceutical_form">Crema o Polvo</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatomicosis, Candidiasis cutánea</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_46" model="medicament.product">
+            <field name="name">METORPOLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Lopressor</field>
+            <field name="composicion"></field>
+            <field name="dosage">100 mg</field>
+        </record>
+        <record id="medi_56" model="medicament.product">
+            <field name="name">METOLAZONA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos tiazídicos</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        
+        <!-- N -->
+        <record id="medi_25" model="medicament.product">
+            <field name="name">NIFEDIPINO</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Bloquedores de los canales de calcio</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Cordilat</field>
+            <field name="composicion"></field>
+            <field name="dosage">30 mg</field>
+        </record>
+
+        <!-- O -->
+        <record id="medi_12" model="medicament.product">
+            <field name="name">ÓXIDO DE ZINC</field>
+            <field name="code">010.000.0715.00</field>
+            <field name="pharmaceutical_form">Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 50</field>
+            <field name="indications">Dermatitis del pañal, Escoceduras, Protección cutánea</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- P -->
+        <record id="medi_5" model="medicament.product">
+            <field name="name">PIMECROLIMUS</field>
+            <field name="code">010.000.0731.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Dermatitis atópica moderada a severa</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_20" model="medicament.product">
+            <field name="name">PERMETRINA</field>
+            <field name="code">010.000.0716.00</field>
+            <field name="pharmaceutical_form">Crema o Loción</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 60 g</field>
+            <field name="indications">Escabiosis, Pediculosis</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_54" model="medicament.product">
+            <field name="name">PROPRANOLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Inderalici</field>
+            <field name="composicion"></field>
+            <field name="dosage">40 mg</field>
+        </record>
+
+        <!-- Q -->
+
+        <!-- R -->
+
+        <!-- S -->
+        <record id="medi_4" model="medicament.product">
+            <field name="name">SECUKINUMAB</field>
+            <field name="code">010.000.0732.00</field>
+            <field name="pharmaceutical_form">Solución Inyectable</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 1 jeringa prellenada</field>
+            <field name="indications">Psoriasis en placas moderada a severa</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_22" model="medicament.product">
+            <field name="name">SULFADIAZINA DE PLATA</field>
+            <field name="code">010.000.0733.00</field>
+            <field name="pharmaceutical_form">Crema</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 50 g</field>
+            <field name="indications">Quemaduras, Prevención de infecciones en heridas</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- T -->
+        <record id="medi_3" model="medicament.product">
+            <field name="name">TACALCITOL</field>
+            <field name="code">010.000.0734.00</field>
+            <field name="pharmaceutical_form">Pomada</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Psoriasis en placas</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_27" model="medicament.product">
+            <field name="name">TELMISARTAN</field>
+            <field name="code">010.000.2540.00</field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation">Envase con 30 tabletas.</field>
+            <field name="indications">Hipertensión arterial esencial.</field>
+            <field name="brand_commercial">Micardis</field>
+            <field name="composicion">Cada tableta contiene:
+- Telmisartán 40mg
+            </field>
+            <field name="dosage">Oral.
+Adultos:
+- 40 mg cada 24 horas.
+            </field>
+        </record>
+        <record id="medi_28" model="medicament.product">
+            <field name="name">TELMISARTAN, HIDROCLOROTIAZIDA</field>
+            <field name="code">010.000.2542.00</field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation">Envase con 14 tabletas.</field>
+            <field name="indications">Hipertensión arterial esencial.</field>
+            <field name="brand_commercial">Micardis</field>
+            <field name="composicion">Cada tableta contiene:
+- Telmisartán 80mg
+- Hidroclorotiazida 12.5 mg
+            </field>
+            <field name="dosage">Oral.
+Adultos:
+- 80 mg-12.5 mg cada 24 horas.
+            </field>
+        </record>
+        <record id="medi_23" model="medicament.product">
+            <field name="name">TRETINOÍNA</field>
+            <field name="code">010.000.0735.00</field>
+            <field name="pharmaceutical_form">Crema o Gel</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 30 g</field>
+            <field name="indications">Acné vulgar, Fotoenvejecimiento</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_49" model="medicament.product">
+            <field name="name">TIMOLOL</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Gotas</field>
+            <field name="category">Betabloqueadores</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Horex</field>
+            <field name="composicion"></field>
+            <field name="dosage">0.5 %</field>
+        </record>
+        <record id="medi_51" model="medicament.product">
+            <field name="name">TORASEMIDA</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">Diuréticos de asa</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Soaanz</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+        <record id="medi_59" model="medicament.product">
+            <field name="name">TRIAMTERENO</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form"></field>
+            <field name="category">Diuréticos ahorradores de K</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Dyrenium</field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- U -->
+        <record id="medi_2" model="medicament.product">
+            <field name="name">USTEKINUMAB</field>
+            <field name="code">010.000.0736.00</field>
+            <field name="pharmaceutical_form">Solución Inyectable</field>
+            <field name="category">Dermatología</field>
+            <field name="others_details_presentation">Envase con 1 jeringa prellenada</field>
+            <field name="indications">Psoriasis en placas moderada a severa</field>
+            <field name="brand_commercial"></field>
+            <field name="composicion"></field>
+            <field name="dosage"></field>
+        </record>
+
+        <!-- V -->
+        <record id="medi_52" model="medicament.product">
+            <field name="name">VALSARTAN</field>
+            <field name="code"></field>
+            <field name="pharmaceutical_form">Tableta</field>
+            <field name="category">ARA II</field>
+            <field name="others_details_presentation"></field>
+            <field name="indications"></field>
+            <field name="brand_commercial">Diovan</field>
+            <field name="composicion"></field>
+            <field name="dosage">80 mg</field>
+        </record>
+
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>
+
+
+<!-- <record id="medi_60" model="medicament.product">
+    <field name="name"></field>
+    <field name="code"></field>
+    <field name="pharmaceutical_form"></field>
+    <field name="category"></field>
+    <field name="others_details_presentation"></field>
+    <field name="indications"></field>
+    <field name="brand_commercial"></field>
+    <field name="composicion"></field>
+    <field name="dosage"></field>
+</record> -->

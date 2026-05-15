@@ -3,7 +3,7 @@
 
     <!-- View medicament.substance View List -->
     <record id="view_medicament_substance_list" model="ir.ui.view">
-        <field name="name">view.medicament.substance.list</field>
+        <field name="name">Vista Lista Principios activo o excipiente</field>
         <field name="model">medicament.substance</field>
         <field name="arch" type="xml">
             <list>
@@ -14,7 +14,7 @@
 
     <!-- View medicament.substance form -->
     <record id="view_medicament_substance_form" model="ir.ui.view">
-        <field name="name">view.medicament.substance.form</field>
+        <field name="name">Vista Formulario Principio activo o excipiente</field>
         <field name="model">medicament.substance</field>
         <field name="arch" type="xml">
             <form string="Medicament Substance">
@@ -32,7 +32,7 @@
 
     <!-- View medicament.substance search -->
     <record id="view_medicament_substance_search" model="ir.ui.view">
-        <field name="name">view.medicament.substance.search</field>
+        <field name="name">Vista Búsqueda Principio activo o excipiente</field>
         <field name="model">medicament.substance</field>
         <field name="arch" type="xml">
             <search>

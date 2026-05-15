@@ -18,7 +18,7 @@
 
     <!-- View unified.medical.indication View List -->
     <record id="view_unified_medical_indication_list" model="ir.ui.view">
-    <field name="name">view.unified.medical.indication.list</field>
+    <field name="name">Vista Lista de las Indicaciones Médicas</field>
     <field name="model">unified.medical.indication</field>
     <field name="arch" type="xml">
         <list default_order="create_date desc" create="false" edit="false" delete="false">
@@ -30,6 +30,7 @@
             <field string="Fecha/Hora" name="create_date" />
             <field name="user_id" />
             <field name="resident_id" />
+            <!-- <field name="residence_id" /> -->
             <field name="indication_type" string="Tipo de indicación" />
             <field name="note" />
         </list>
@@ -40,10 +41,11 @@
 
     <!-- View unified.medical.indication search -->
     <record id="view_unified_medical_indication_search" model="ir.ui.view">
-        <field name="name">unified.medical.indication.search</field>
+        <field name="name">Vista Búsqueda de Indicación Médica</field>
         <field name="model">unified.medical.indication</field>
         <field name="arch" type="xml">
             <search>
+                <!-- <field name="residence_id" /> -->
                 <filter name="filter_type" string="Tipo" context="{'group_by':'indication_type'}"/>
                 <filter name="general" string="General" domain="[('indication_type','=','general')]"/>
                 <filter name="medication" string="Medicamento" domain="[('indication_type','=','medication')]"/>
@@ -53,6 +55,10 @@
                         context="{'group_by':'user_id'}"/>
                 <filter string="Agrupado por residente" name="group_by_resident" 
                         context="{'group_by':'resident_id'}"/>
+                <!-- <filter string="Activo/Inactivo" name="active_notactive" domain="[]" 
+                context="{'group_by':'active'}"/>
+                <filter string="Indicaciones activas" name="indication_unified_active" domain="[('active','=',True)]" />
+                <filter string="Indicaciones no activas" name="indication_unified_not_active" domain="[('active','=',False)]" /> -->
             </search>
         </field>
     </record>
@@ -64,6 +70,7 @@
         <field name="view_mode">list</field>
         <field name="view_id" ref="view_unified_medical_indication_list"/>
         <field name="search_view_id" ref="view_unified_medical_indication_search"/>
+        <!-- <field name="context">{'active_test': False}</field> -->
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No hay registros. Haga clic en un botón para agregar Indicaciones Médicas.

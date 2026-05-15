@@ -1,0 +1,45 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+activity_type_admin,Gestión de los tipos de actividades del plan de cuidado,model_activity_type,sc_group.gs_admin,1,1,1,0
+activity_type_gerente_salud,Lectura de los tipos de actividades del plan de cuidado,model_activity_type,sc_group.gs_gerente_salud,1,0,0,0
+activity_type_enferemria,Lectura de los tipos de actividades del plan de cuidado,model_activity_type,sc_group.gs_enfermeria,1,0,0,0
+care_action_admin,Gestión de las acciones del plan de cuidado,model_care_action,sc_group.gs_admin,1,1,1,0
+care_action_gerente_salud,Lectura de las acciones del plan de cuidado,model_care_action,sc_group.gs_gerente_salud,1,0,0,0
+care_action_enfermeria,Lectura de las acciones del plan de cuidado,model_care_action,sc_group.gs_enfermeria,1,0,0,0
+care_goal_admin,Gestión de los objetivos del plan de cuidados,model_care_goal,sc_group.gs_admin,1,1,1,0
+care_goal_gerente_salud,Lectura de los objetivos del plan de cuidados,model_care_goal,sc_group.gs_gerente_salud,1,0,0,0
+care_goal_enfermeria,Lectura de los objetivos del plan de cuidados,model_care_goal,sc_group.gs_enfermeria,1,0,0,0
+care_observation_admin,Gestión de las observaciones del plan de cuidados,model_care_observation,sc_group.gs_admin,1,1,1,0
+care_observation_gerente_salud,Lectura de las observaciones del plan de cuidados,model_care_observation,sc_group.gs_gerente_salud,1,0,0,0
+care_observation_enfermeria,Lectura de las observaciones del plan de cuidados,model_care_observation,sc_group.gs_enfermeria,1,0,0,0
+care_result_admin,Gestión de los resultados del plan de cuidados,model_care_result,sc_group.gs_admin,1,1,1,0
+care_result_gerente_salud,Lectura de los resultados del plan de cuidados,model_care_result,sc_group.gs_gerente_salud,1,0,0,0
+care_result_enfermeria,Lectura de los resultados del plan de cuidados,model_care_result,sc_group.gs_enfermeria,1,0,0,0
+dependency_level_admin,Gestión de los niveles de dependencia del plan de cuidados,model_dependency_level,sc_group.gs_admin,1,1,1,0
+dependency_level_gerente_salud,Lectura de los niveles de dependencia del plan de cuidados,model_dependency_level,sc_group.gs_gerente_salud,1,0,0,0
+dependency_level_enfermeria,Lectura de los niveles de dependencia del plan de cuidados,model_dependency_level,sc_group.gs_enfermeria,1,0,0,0
+care_level_admin,Gestión de los niveles del plan de cuidados,model_care_level,sc_group.gs_admin,1,1,1,0
+care_level_gerente,Lectura de los niveles del plan de cuidados,model_care_level,sc_group.gs_gerente_salud,1,0,0,0
+care_level_enfermeria,Lectura de los niveles del plan de cuidados,model_care_level,sc_group.gs_enfermeria,1,0,0,0
+care_plan_activity_admin,Gestión de las actividades del plan de cuidados,model_care_plan_activity,sc_group.gs_admin,1,1,1,0
+care_plan_activity_gerente_salud,Lectura de las actividades del plan de cuidados,model_care_plan_activity,sc_group.gs_gerente_salud,1,0,0,0
+care_plan_activity_enfermeria,Lectura de las actividades del plan de cuidados,model_care_plan_activity,sc_group.gs_enfermeria,1,0,0,0
+care_plan_admin,Gestión de los planes de cuidado,model_care_plan,sc_group.gs_admin,1,1,1,0
+care_plan_gerente_salud,Lectura de los planes de cuidado,model_care_plan,sc_group.gs_gerente_salud,1,0,0,0
+care_plan_enfermeria,Lectura de los planes de cuidado,model_care_plan,sc_group.gs_enfermeria,1,0,0,0
+care_plan_wizard_admin,Gestión de Asistente para Crear Plan de Cuidado,model_care_plan_wizard,sc_group.gs_admin,1,1,1,0
+care_plan_wizard_gerente_salud,Lectura de Asistente para Crear Plan de Cuidado,model_care_plan_wizard,sc_group.gs_gerente_salud,1,0,0,0
+care_plan_wizard_enfermeria,Lectura de Asistente para Crear Plan de Cuidado,model_care_plan_wizard,sc_group.gs_enfermeria,1,0,0,0
+care_plan_wizard_line_admin,Gestión de Línea de Actividad para el Asistente de Plan de Cuidado,model_care_plan_wizard_line,sc_group.gs_admin,1,1,1,0
+care_plan_wizard_line_gerente_salud,Lectura de Línea de Actividad para el Asistente de Plan de Cuidado,model_care_plan_wizard_line,sc_group.gs_gerente_salud,1,0,0,0
+care_plan_wizard_line_enfermeria,Lectura de Línea de Actividad para el Asistente de Plan de Cuidado,model_care_plan_wizard_line,sc_group.gs_enfermeria,1,0,0,0
+activity_type_coordinator_nurse,Gestión de los tipos de actividades del plan de cuidado,model_activity_type,sc_group.gs_coordinator_nurse,1,1,1,0
+care_action_coordinator_nurse,Gestión de las acciones del plan de cuidado,model_care_action,sc_group.gs_coordinator_nurse,1,1,1,0
+care_goal_coordinator_nurse,Gestión de los objetivos del plan de cuidados,model_care_goal,sc_group.gs_coordinator_nurse,1,1,1,0
+care_observation_coordinator_nurse,Gestión de las observaciones del plan de cuidados,model_care_observation,sc_group.gs_coordinator_nurse,1,1,1,0
+care_result_coordinator_nurse,Gestión de los resultados del plan de cuidados,model_care_result,sc_group.gs_coordinator_nurse,1,1,1,0
+dependency_level_coordinator_nurse,Gestión de los niveles de dependencia del plan de cuidados,model_dependency_level,sc_group.gs_coordinator_nurse,1,1,1,0
+care_level_coordinator_nurse,Gestión de los niveles del plan de cuidados,model_care_level,sc_group.gs_coordinator_nurse,1,1,1,0
+care_plan_activity_coordinator_nurse,Gestión de las actividades del plan de cuidados,model_care_plan_activity,sc_group.gs_coordinator_nurse,1,1,1,0
+care_plan_coordinator_nurse,Gestión de los planes de cuidado,model_care_plan,sc_group.gs_coordinator_nurse,1,1,1,0
+care_plan_wizard_coordinator_nurse,Gestión de Asistente para Crear Plan de Cuidado,model_care_plan_wizard,sc_group.gs_coordinator_nurse,1,1,1,0
+care_plan_wizard_line_coordinator_nurse,Gestión de Línea de Actividad para el Asistente de Plan de Cuidado,model_care_plan_wizard_line,sc_group.gs_coordinator_nurse,1,1,1,0

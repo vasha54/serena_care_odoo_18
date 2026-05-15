@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View barthel.state View List -->
+    <record id="view_barthel_state_list" model="ir.ui.view">
+        <field name="name">Vista Lista Estados de Barthel</field>
+        <field name="model">barthel.state</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="active" string="Activo" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="min_score" width="180"/>
+                <field name="max_score" width="180"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View barthel.state form -->
+    <record id="view_barthel_state_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Estado de Barthel</field>
+        <field name="model">barthel.state</field>
+        <field name="arch" type="xml">
+            <form string="Scalesarcf State">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre..."/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field string="Activo" name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="min_score" />
+                                <field name="max_score" />
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View barthel.state search -->
+    <record id="view_barthel_state_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Estado de Barthel</field>
+        <field name="model">barthel.state</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action barthel.state -->
+    <record id="action_barthel_state" model="ir.actions.act_window">
+        <field name="name">Estados de Barthel</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">barthel.state</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar un nuevo estado
+                de Barthel.
+            </p>
+        </field>
+    </record>
+
+</odoo>

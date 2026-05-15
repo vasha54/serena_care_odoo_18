@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="section_resident_info_basic">
+        <div class="row">
+            <div class="col-3 align-content-center align-items-center">
+                <img t-att-src="'data:image/png;base64,' + doc.image_with_default.decode('utf-8')" style="width: 100%; height: auto; object-fit: cover;" class="img-fluid rounded-circle"/>
+            </div>
+            <div class="col-9 ps-0 d-flex align-items-center pe-5" style="margin-left:15px">
+
+                <table class="table table-borderless  m-0">
+                    <colgroup>
+                        <col style="width: 25%;"/>
+                        <col style="width: 25%;"/>
+                        <col style="width: 25%;"/>
+                        <col style="width: 25%;"/>
+                    </colgroup>
+                    <tbody>
+                        <!-- Fila Nombre -->
+                        <tr>
+                            <td class="text-end p-1">
+                                <strong>Nombre:</strong>
+                            </td>
+                            <td colspan="3" class="text-start p-1">
+                                <t t-esc="doc.name"/>
+                            </td>
+                        </tr>
+
+                        <!-- Fila Edad/DNI -->
+                        <tr>
+                            <td class="text-end p-1">
+                                <strong>DNI:</strong>
+                            </td>
+                            <td class="p-1">
+                                <t t-esc="doc.dni"/>
+                            </td>
+                            <td class="text-end p-1">
+                                <strong>Edad:</strong>
+                            </td>
+                            <td class="p-1">
+                                <t t-esc="doc.age"/>
+                            </td>
+                        </tr>
+
+                        <!-- Fila Sexo/Peso -->
+                        <tr>
+                            <td class="text-end p-1">
+                                <strong>Sexo:</strong>
+                            </td>
+                            <td class="p-1">
+                                <t t-esc="doc.sex_id.name"/>
+                            </td>
+                            <td class="text-end p-1">
+                                <strong>Peso:</strong>
+                            </td>
+                            <td class="p-1">
+                                <t t-esc="doc.weight"/>
+ Kg
+                            </td>
+                        </tr>
+
+                        <!-- Fila Residencia -->
+                        <tr>
+                            <td class="text-end p-1">
+                                <strong>Residencia:</strong>
+                            </td>
+                            <td colspan="3" class="text-start p-1">
+                                <t t-esc="doc.residence_id.name"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </template>
+</odoo>

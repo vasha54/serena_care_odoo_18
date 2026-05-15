@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View residence_employee View List -->
+    <record id="view_residence_employee_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Empleados</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <list default_order="name asc" create="false">
+                <field string="Activo" name="active" widget="boolean_toggle" width="80"/>
+                <field string="Foto" name="image_with_default" widget="image" width="50"/>
+                <field string="Nombre" name="name"/>
+                <field string="Correo Electrónico"  name="work_email" />
+                <field string="Residencia" name="residence_display" />
+                <field string="Roles" name="serena_group_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_open': True}"/>
+                <field name="group_names" column_invisible="1" />
+                <button 
+                        name="action_view_details" 
+                        type="object" 
+                        icon="fa-eye" 
+                        class="btn btn-link"
+                        string=""
+                        title="Ver detalles"/>
+                <button 
+                        name="action_edit" 
+                        type="object" 
+                        icon="fa-pencil" 
+                        class="btn btn-link"
+                        string=""
+                        title="Editar"/>
+                <button 
+                        name="action_upload_avatar" 
+                        type="object" 
+                        icon="fa-photo" 
+                        class="btn btn-link"
+                        string=""
+                        title="Cambiar la foto"/>
+                <button 
+                        name="action_upload_certificate" 
+                        type="object" 
+                        icon="fa-upload" 
+                        class="btn btn-link"
+                        string=""
+                        title="Subir certificado"/>
+                <button 
+                        name="action_preview_cv" 
+                        type="object" 
+                        icon="fa-file" 
+                        class="btn btn-link"
+                        string=""
+                        title="Ver CV"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View residence_employee form -->
+    <record id="view_residence_employee_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Empleado</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <form string="Residence_employee" context="{'employee_serena_care':True}" create="false">
+                <field name="user_id" invisible="1"/>
+                <field name="image_128" invisible="1"/>
+                <sheet>
+                    <field name="avatar_128" invisible="1"/>
+                    <field name="image_1920" widget="image" class="oe_avatar m-0" options="{&quot;zoom&quot;: true, &quot;preview_image&quot;:&quot;avatar_128&quot;}"/>
+                     <div class="oe_title">
+                        <label string="Nombre" for="name"/>
+                        <h1><field name="name"  placeholder="e.g. John Doe" required="1"/></h1>
+                        
+                    </div>
+                        
+                        <notebook>
+                            <page name="page_information_personal" string="Información Personal">
+                                <group>
+                                    <group>
+                                        <field name="birth_date" readonly="not active" required="1"/>
+                                        <field string="Edad:" name="age" readonly="1"/>
+                                        <field name="dni" string="DNI" required="1" readonly="not active"/>
+                                        <field string="Sexo" name="sex_id" readonly="not active" required="1"/>
+                                        <field string="Teléfono" name="work_phone" />
+                                        <field string="Correo electrónico" name="work_email" />
+                                        <field string="Activo" name="active" widget="boolean_toggle"/>
+                                    </group>
+                                    <group string="Descripción" >
+                                        <field name="description" widget="html" nolabel="1" 
+                                                        placeholder="Descripción"  readonly="not active"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="page_job" string="Centro de trabajo">
+                                <group>
+                                    <field name="alternative_residences_ids" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field name="residence_id" widget="many2one_tags" options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field string="Departamento"  name="department_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field string="Ocupación" name="job_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                                </group>
+                            </page>
+                            <page string="Dirección">
+                                <group>
+                                    <group>
+                                        <field string="País" name="country_id"
+                                           placeholder="País" readonly="not active" required="1"/>
+                                        <field string="Estado" name="province_id" placeholder="Estado"
+                                                    class="o_address_country" required="1"
+                                                    domain="[('country_id','=',country_id)]" readonly="not active"/>
+                                        <field string="Municipio" name="municipality_id"
+                                                    class="o_address_state"
+                                                    placeholder="Municipio" required="1"
+                                                    domain="[('province_id','=',province_id)]" readonly="not active"/>
+                                        <field string="Ciudad" name="city" placeholder="Ciudad"
+                                                    class="o_address_city" readonly="not active" required="1"/>
+                                        <field string="Código Postal" name="zip" placeholder="C.P." readonly="not active"/>
+                                    </group>
+                                    <group>
+                                        <field string="Calle principal" name="street" placeholder="Calle principal"
+                                                    required="1" readonly="not active"/>
+                                        <field string="Entre calle #1" name="street2" placeholder="Entre calle 1" readonly="not active"/>
+                                        <field name="street3" placeholder="Entre calle 2" readonly="not active"/>
+                                        <field name="street_number" placeholder="Número" readonly="not active"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Curriculum Vitae y Certificados">
+                                <group col="12" colspan="12">
+                                    <!-- Columna izquierda (1/3) para el CV -->
+                                    <group string="Curriculum Vitae" col="4" colspan="4">
+                                        <div class="alert alert-info" invisible="cv_attachment_id != False">
+                                            <i class="fa fa-info-circle"/> No hay CV cargado
+                                        </div>
+                                        <group invisible="cv_attachment_id == False" col="4" colspan="4">
+                                            <label for="cv_attachment_id" string="CV actual:"/>
+                                             <group col="1">
+                                                <button type="object"
+                                                        name="action_preview_cv" 
+                                                        class="btn btn-primary mr-2"
+                                                        icon="fa-eye"/>
+                                             </group>
+                                             <group col="1">
+                                                <button type="object" 
+                                                        name="action_download_cv" 
+                                                        class="btn btn-secondary mr-2"
+                                                        icon="fa-download"/>
+                                             </group>
+                                            <group col="1">
+                                                <field name="show_delete_button_cv" invisible="1"/>
+                                                <button invisible="show_delete_button_cv" name="unlink_cv_attachment" 
+                                                        type="object" 
+                                                        class="btn btn-danger"
+                                                        confirm="¿Está seguro de que quiere eliminar el CV?"
+                                                        icon="fa-trash"/>
+                                             </group>
+                                        </group>
+                                        <group invisible="cv_attachment_id == False" col="4" colspan="4">
+                                                <small>
+                                                    <i class="fa fa-file"/> 
+                                                    <field name="cv_attachment_id" readonly="1"/>
+                                                </small>
+                                        </group>
+                                        <group invisible="cv_attachment_id != False" col="4" colspan="4">
+                                            <label invisible="cv_attachment_id != False" for="cv_file" string="O subir nuevo CV:"/>
+                                            <field name="cv_filename" invisible="1"/>
+                                            <field name="cv_file" nolabel="1"
+                                                filename="cv_filename" 
+                                                widget="binary"
+                                                options="{'accepted_file_extensions': ['pdf']}"
+                                                string="Subir CV"
+                                                invisible="cv_attachment_id != False" />
+                                        </group>
+                                    </group>
+                                    
+                                    <!-- Columna derecha (2/3) para certificados en kanban -->
+                                    <group string="Certificados" col="8" colspan="8">
+                                        <field name="certificate_ids" nolabel="1" mode="kanban">
+                                            <kanban>
+                                                <field name="name"/>
+                                                <field name="institution"/>
+                                                <field name="issue_date"/>
+                                                <field name="expiration_date"/>
+                                                <field name="is_valid"/>
+                                                <field name="certificate_attachment_id" />
+                                                <field name="certificate_filename" />
+                                                <field name="certificate_file" />
+                                                <field name="description" />
+                                                
+                                                <templates>
+                                                    <t t-name="kanban-box">
+                                                        <div class="oe_kanban_global_click o_kanban_record"
+                                                            t-att-class="record.is_valid.value ? 'border-left border-success' : 'border-left border-danger'"
+                                                            style="border-left-width: 4px !important;">
+                                                            
+                                                            <div class="d-flex align-items-start">
+                                                                <!-- Icono -->
+                                                                <div class="mr-2" style="flex: 0 0 35px;">
+                                                                    <div class="text-center" 
+                                                                        t-att-class="record.is_valid.value ? 'text-success' : 'text-danger'"
+                                                                        style="font-size: 22px;">
+                                                                        <i class="fa fa-certificate"/>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <!-- Contenido -->
+                                                                <div style="flex: 1;">
+                                                                    <!-- Título -->
+                                                                    <div class="mb-1">
+                                                                        <strong style="font-size: 14px;"><field name="name"/></strong>
+                                                                    </div>
+                                                                    
+                                                                    <!-- Información -->
+                                                                    <div style="font-size: 12px;">
+                                                                        <div class="mb-1 text-muted">
+                                                                            <i class="fa fa-building mr-1"></i>
+                                                                            <field name="institution"/>
+                                                                        </div>
+                                                                        
+                                                                        <div class="d-flex justify-content-between text-muted mb-1">
+                                                                            <span>
+                                                                                <i class="fa fa-calendar-plus-o mr-1"></i>
+                                                                                <field name="issue_date"/>
+                                                                            </span>
+                                                                            <span>
+                                                                                <i class="fa fa-calendar-times-o mr-1"></i>
+                                                                                <field name="expiration_date"/>
+                                                                            </span>
+                                                                        </div>
+                                                                        
+                                                                        <div class="text-muted mb-2">
+                                                                            <span>
+                                                                                <i class="fa fa-file mr-1"></i>
+                                                                                <field name="description" />
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    
+                                                                </div>
+                                                                
+                                                                <!-- Estado -->
+                                                                <div class="ml-2">
+                                                                    <span t-if="record.is_valid.value" 
+                                                                        class="badge badge-success">Válido</span>
+                                                                    <span t-else="" 
+                                                                        class="badge badge-danger">Expirado</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                </templates>
+                                            </kanban>
+                                        </field>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>                          
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View residence_employee search -->
+    <record id="view_residence_employee_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Empleados</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"  string="Nombre" />
+                <field name="email" string="Correo" />
+                <field name="group_names" string="Rol" />
+                
+                <filter name="filter_inactive" string="Empleados inactivos" domain="[('active','=',False)]"/>
+                <filter name="filter_active" string="Empleados activos" domain="[('active','=',True)]"/>
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+        
+    <!-- Action residence_employee -->
+    <record id="action_residence_employee" model="ir.actions.act_window">
+        <field name="name">Listado de los empleados</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[("is_employee_sc","=",True),("is_deleted","=",False)]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="search_view_id" ref="view_residence_employee_search" />
+        <field name="view_ids" eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_residence_employee_list')}), 
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_residence_employee_form')})]"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de Empleados.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action residence_employee_departament -->
+    <record id="action_residence_employee_departament" model="ir.actions.act_window">
+        <field name="name">Listado de los departamentos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.department</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nuevo Departamento.
+            </p>
+        </field>
+    </record>
+
+     <!-- Action residence_employee_job -->
+    <record id="action_residence_employee_job" model="ir.actions.act_window">
+        <field name="name">Listado de ocupaciones</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.job</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros haga clic aquí para agregar nueva Ocupaciones.
+            </p>
+        </field>
+    </record>
+</odoo>

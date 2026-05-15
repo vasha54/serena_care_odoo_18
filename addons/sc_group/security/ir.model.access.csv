@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+res_groups_admin,Gestión de roles,base.model_res_groups,sc_group.gs_admin,1,1,1,0
+res_groups_coordinator_nurse,Lectura de roles,base.model_res_groups,sc_group.gs_coordinator_nurse,1,0,0,0
+res_groups_gerente_salud,Lectura de roles,base.model_res_groups,sc_group.gs_gerente_salud,1,0,0,0
+res_groups_enfermeria,Lectura de roles,base.model_res_groups,sc_group.gs_enfermeria,1,0,0,0
+audit_log_admin,Lectura de registros (Log),model_audit_log,sc_group.gs_admin,1,0,0,0
+audit_log_gerente_salud,Lectura de registros (Log),model_audit_log,sc_group.gs_gerente_salud,1,0,0,0
+audit_log_enfermeria,Lectura de registros (Log),model_audit_log,sc_group.gs_enfermeria,1,0,0,0
+audit_log_coordinator_nurse,Lectura de registros (Log),model_audit_log,sc_group.gs_coordinator_nurse,1,0,0,0

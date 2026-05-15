@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View care.observation View List -->
+    <record id="view_care_observation_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de Observaciones en Plan de Cuidado</field>
+        <field name="model">care.observation</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="activity_type_ids" widget="many2many_tags" required="1"/> 
+                <field name="dependency_level_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_care_observation_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Observaciones en Plan de Cuidado columna activo</field>
+        <field name="model">care.observation</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="activity_type_ids" widget="many2many_tags" required="1"/> 
+                <field name="dependency_level_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    
+
+    <!-- View care.observation form -->
+    <record id="view_care_observation_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Observación en Plan de Cuidado</field>
+        <field name="model">care.observation</field>
+        <field name="arch" type="xml">
+            <form string="Care Observation">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/> 
+                        <field name="activity_type_ids" widget="many2many_tags"/>
+                        <field name="dependency_level_ids" widget="many2many_tags" required="1"/>                    
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View care.observation search -->
+    <record id="view_care_observation_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Observación en Plan de Cuidado</field>
+        <field name="model">care.observation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+                <filter string="Observaciones activas" name="observation_active" domain="[('active','=',True)]" />
+                <filter string="Oservaciones no activas" name="observation_not_active" domain="[('active','=',False)]" />
+                
+            </search>
+        </field>
+    </record>
+
+    <!-- Action care.observation -->
+    <record id="action_care_observation" model="ir.actions.act_window">
+        <field name="name">Observaciones en el cuidado</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">care.observation</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+            eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_care_plan.view_care_observation_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_care_plan.view_care_observation_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ejemplos, haga clic aquí para agregar una nueva Observación
+            </p>
+        </field>
+    </record>
+
+</odoo>

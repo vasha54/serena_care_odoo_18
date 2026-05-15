@@ -1,9 +1,22 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_medical_indication_user,medical_indication_user,model_medical_indication,base.group_user,1,1,1,1
-access_medical_medication_user,medical_medication_user,model_medical_medication,base.group_user,1,1,1,1
-access_unified_medical_indication_user,unified_medical_indication_user,model_unified_medical_indication,base.group_user,1,1,1,1,1
-access_register_medical_indication_wizard_user,register_medical_indication_wizard_user,model_register_medical_indication_wizard,base.group_user,1,1,1,1
-access_register_medical_medication_wizard_user,register_medical_medication_wizard_user,model_register_medical_medication_wizard,base.group_user,1,1,1,1
-access_medical_indication_report_wizard_user,medical_indication_report_wizard_user,model_medical_indication_report_wizard,base.group_user,1,1,1,1
-
-
+medical_indication_admin,Gestión de la indicación médica,model_medical_indication,sc_group.gs_admin,1,1,1,1
+medical_indication_gerente_salud,Gestión de la indicación médica,model_medical_indication,sc_group.gs_gerente_salud,1,1,1,1
+medical_indication_enfermeria,Lectura de la indicación médica,model_medical_indication,sc_group.gs_enfermeria,1,0,0,0
+medical_medication_admin,Gestión de la indicación médica de medicamento,model_medical_medication,sc_group.gs_admin,1,1,1,1
+medical_medication_gerente_salud,Gestión de la indicación médica de medicamento,model_medical_medication,sc_group.gs_gerente_salud,1,1,1,1
+medical_medication_enfermeria,Lectura de la indicación médica de medicamento,model_medical_medication,sc_group.gs_enfermeria,1,0,0,0
+unified_medical_indication_admin,Gestión de la indicación médica genérica,model_unified_medical_indication,sc_group.gs_admin,1,1,1,0
+unified_medical_indication_gerente_salud,Gestión de la indicación médica genérica,model_unified_medical_indication,sc_group.gs_gerente_salud,1,1,1,0
+unified_medical_indication_enfermeria,Lectura de la indicación médica genérica,model_unified_medical_indication,sc_group.gs_enfermeria,1,0,0,0
+medical_indication_coordinator_nurse,Gestión de la indicación médica,model_medical_indication,sc_group.gs_coordinator_nurse,1,1,1,0
+medical_medication_coordinator_nurse,Gestión de la indicación médica de medicamento,model_medical_medication,sc_group.gs_coordinator_nurse,1,1,1,0
+unified_medical_indication_coordinator_nurse,Gestión de la indicación médica genérica,model_unified_medical_indication,sc_group.gs_coordinator_nurse,1,1,1,0
+register_medical_indication_wizard_admin,Registrar indicación médica desde wizard,model_register_medical_indication_wizard,sc_group.gs_admin,1,1,1,1
+register_medical_indication_wizard_gerente_salud,Registrar indicación médica desde wizard,model_register_medical_indication_wizard,sc_group.gs_gerente_salud,1,1,1,1
+register_medical_indication_wizard_coordinator_nurse,Registrar indicación médica desde wizard,model_register_medical_indication_wizard,sc_group.gs_coordinator_nurse,1,1,1,1
+register_medical_medication_wizard_admin,Registrar indicación médica de medicamento desde wizard,model_register_medical_medication_wizard,sc_group.gs_admin,1,1,1,1
+register_medical_medication_wizard_gerente_salud,Registrar indicación médica de medicamento desde wizard,model_register_medical_medication_wizard,sc_group.gs_gerente_salud,1,1,1,1
+register_medical_medication_wizard_coordinator_nurse,Registrar indicación médica de medicamento desde wizard,model_register_medical_medication_wizard,sc_group.gs_coordinator_nurse,1,1,1,1
+medical_indication_report_wizard_admin,Generar reporte de indicaciones médicas de wizard,model_medical_indication_report_wizard,sc_group.gs_admin,1,1,1,1
+medical_indication_report_wizard_gerente_salud,Generar reporte de indicaciones médicas de wizard,model_medical_indication_report_wizard,sc_group.gs_gerente_salud,1,1,1,1
+medical_indication_report_wizard_coordinator_nurse,Generar reporte de indicaciones médicas de wizard,model_medical_indication_report_wizard,sc_group.gs_coordinator_nurse,1,1,1,1

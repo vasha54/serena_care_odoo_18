@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View care.level View List -->
+    <record id="view_care_level_list_without_active" model="ir.ui.view">
+        <field name="name">Vista Lista de los Niveles de los Planes de Cuidado</field>
+        <field name="model">care.level</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_care_level_list" model="ir.ui.view">
+        <field name="name">Vista Lista de los Niveles de los Planes de Cuidado columna Activo</field>
+        <field name="model">care.level</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"/> 
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View care.level form -->
+    <record id="view_care_level_form" model="ir.ui.view">
+        <field name="name">Vista Formulario del Nivel de los Planes de Cuidado</field>
+        <field name="model">care.level</field>
+        <field name="arch" type="xml">
+            <form string="care Level">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>                    
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View care.level search -->
+    <record id="view_care_level_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Niveles de Planes de Cuidado</field>
+        <field name="model">care.level</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+                <filter string="Nivel de Dependencia activos" name="result_active" domain="[('active','=',True)]" />
+                <filter string="Nivel de Dependencia no activos" name="result_not_active" domain="[('active','=',False)]" />
+                
+            </search>
+        </field>
+    </record>
+
+    <!-- Action care.level -->
+    <record id="action_care_level" model="ir.actions.act_window">
+        <field name="name">Niveles de cuidado</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">care.level</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+            eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_care_plan.view_care_level_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_care_plan.view_care_level_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ejemplos, haga clic aquí para agregar un nuevo nivel de cuidado.
+            </p>
+        </field>
+    </record>
+
+</odoo>

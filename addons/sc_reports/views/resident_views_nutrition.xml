@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_nutrtion_report" model="ir.ui.view">
+        <field name="name">Vista Formulario de Residente extendida Reporte Nutrición</field>
+        <field name="model">resident</field>
+        <field name="inherit_id"
+               ref="sc_nutrition.view_resident_form_nutrition"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='nutrition_records_graph']"
+                   position="before">
+                    <group string="Reporte">
+                        <group>
+                                <button name="action_nutrition_report_pdf"
+                                        string="Historial de registros (PDF)"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/>
+
+
+
+                                <!-- <button
+                                        name="action_percentage_summary_nutrition_period_pdf"
+                                        string="Resumen porcentual por período (PDF)"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-pdf-o"/> -->
+                        </group>
+                        <!-- <group>
+                                <button
+                                        name="action_nutrition_record_history_xlsx"
+                                        type="object" 
+                                        string="Historial de registros (Excel)"
+                                        class="oe_stat_button"
+                                        icon="fa-file-excel-o"/>
+                                <button
+                                        name="action_percentage_summary_nutrition_period_xlsx"
+                                        string="Resumen porcentual por período (Excel)"
+                                        type="object"
+                                        class="oe_stat_button"
+                                        icon="fa-file-excel-o"/>
+                        </group> -->
+
+                    </group>
+            </xpath>
+            <xpath expr="//notebook[@name='nutrition_records_graph']/*[1]" position="before">
+                <!-- <page string="Análisis Gráfico"> -->
+                    <!-- Contenido de tu página aquí -->
+                <!-- </page> -->
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

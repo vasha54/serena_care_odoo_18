@@ -3,7 +3,7 @@
 
     <!-- View medicament.dosage View List -->
     <record id="view_medicament_dosage_list" model="ir.ui.view">
-        <field name="name">view.medicament.dosage.list</field>
+        <field name="name">Vista Lista Dosis de Medicamento</field>
         <field name="model">medicament.dosage</field>
         <field name="arch" type="xml">
             <list>
@@ -14,7 +14,7 @@
 
     <!-- View medicament.dosage form -->
     <record id="view_medicament_dosage_form" model="ir.ui.view">
-        <field name="name">view.medicament.dosage.form</field>
+        <field name="name">Vista Formulario Dosis de Medicamento</field>
         <field name="model">medicament.dosage</field>
         <field name="arch" type="xml">
             <form string="Medicament Dosage">
@@ -32,7 +32,7 @@
 
     <!-- View medicament.dosage search -->
     <record id="view_medicament_dosage_search" model="ir.ui.view">
-        <field name="name">view.medicament.dosage.search</field>
+        <field name="name">Vista Búsqueda Dosis de Medicamento</field>
         <field name="model">medicament.dosage</field>
         <field name="arch" type="xml">
             <search>

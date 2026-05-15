@@ -1,0 +1,26 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Servicios -->
+        <record id="category_spa_wellness" model="supplier.category">
+            <field name="name">Bienestar y Spa</field>
+            <field name="description"></field>
+            <field name="active">True</field>
+        </record>
+        <record id="category_medical_service" model="supplier.category">
+            <field name="name">Servicios Médicos</field>
+            <field name="description"></field>
+            <field name="active">True</field>
+        </record>
+        <record id="category_others" model="supplier.category">
+            <field name="name">Otra</field>
+            <field name="description"></field>
+            <field name="active">True</field> 
+        </record>
+        <record id="category_without_category" model="supplier.category">
+            <field name="name">Sin categoría</field>
+            <field name="description"></field>
+            <field name="active">True</field> 
+        </record>
+        
+    </data>
+</odoo> 

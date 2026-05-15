@@ -1,0 +1,29 @@
+/* sc_suite/static/src/css/themes/purpura-degradado.css */
+:root {
+    --o-color-1: #5f2e7f;    /* Púrpura base */
+    --o-color-2: #7b4caa;    /* Púrpura medio */
+    --o-color-3: #462761;    /* Púrpura oscuro */
+    --o-color-4: #f8f5fc;    /* Fondo púrpura muy claro */
+    --o-color-5: #2d1b40;    /* Texto púrpura oscuro */
+    
+    --o-brand-primary: var(--o-color-1);
+    --o-brand-secondary: var(--o-color-2);
+    --o-brand-optional: var(--o-color-3);
+    --o-brand-light: var(--o-color-4);
+    --o-brand-dark: var(--o-color-5);
+    
+    --o-main-bg-color: var(--o-color-4);
+    --o-main-text-color: var(--o-color-5);
+    --o-header-bg-color: var(--o-color-1);
+    --o-header-text-color: white;
+    --o-link-color: var(--o-color-2);
+    --o-button-primary-bg: var(--o-color-1);
+    --o-button-primary-text: white;
+    --o-button-secondary-bg: var(--o-color-2);
+    --o-button-secondary-text: white;
+}
+
+.o_main_navbar {
+    background-color: var(--o-header-bg-color) !important;
+    color: var(--o-header-text-color) !important;
+}

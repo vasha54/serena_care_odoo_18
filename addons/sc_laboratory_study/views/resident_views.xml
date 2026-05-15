@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_vital_signs" model="ir.ui.view">
+        <field name="name">Vista Formulario Residente extendida Estudios de Laboratorios</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='notebook_medical_history']" position="inside">
+                <page name="laboratory_study" string="Estudios de Laboratorio" invisible="not id">
+
+                    <group>
+                        <button 
+                        name="action_upload_laboraty_study" 
+                        type="object" 
+                        icon="fa-upload" 
+                        class="btn btn-primary"
+                        string="Subir Nuevo Estudio de Laboratorio"
+                        title="Subir Nuevo Estudio de Laboratorio"/>
+                    </group>
+                    <group  string="Registros">
+
+                        <field name="laboratory_file_ids" readonly="1" options="{'create':false, 'delete':false, 'edit':false}" nolabel="1">
+                            <list default_order="date desc" optional="show">
+                                <field name="date" width="120"/>
+                                <field name="user_id" />
+                                <field name="laboratory_filename" />
+                                <field name="description" />     
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

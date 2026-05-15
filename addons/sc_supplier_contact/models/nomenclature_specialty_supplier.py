@@ -29,9 +29,9 @@ class NomenclatureSpecialtySupplier(models.Model):
         slug = cleaned.replace(" ", "-")
         return slug.lower()
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        for vals in vals_list:
+    @api.model
+    def create(self, values):
+        for vals in values:
             vals['name'] = vals.get('name', '')
             existing_record_slug = self.search(
                 [
@@ -44,9 +44,11 @@ class NomenclatureSpecialtySupplier(models.Model):
                 raise ValidationError(
                     f"Una especialidad con nombre '{vals['name']}' ya existe."
                 )
-
-
-        return super().create(vals_list)
+        records = super().create(values)
+        # Crear log de auditoría para cada registro creado
+        for record in records:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'nomenclature.specialty.supplier', 'create')
+        return records
 
     def write(self, vals):
         if "name" in vals:
@@ -63,8 +65,29 @@ class NomenclatureSpecialtySupplier(models.Model):
                 raise ValidationError(
                     f"Una especialidad con nombre '{vals['name']}' ya existe."
                 )
-
-        return super().write(vals)
+        old_values = {}
+        for record in self:
+            old_values[record.id] = {
+                field: record[field] for field in vals if field in record._fields and not record._fields[field].compute
+            }
+        result = super().write(vals)
+        # Después de la escritura, crear logs con los campos modificados
+        for record in self:
+            changed_fields = []
+            for field, new_val in vals.items():
+                if field in old_values.get(record.id, {}):
+                    old_val = old_values[record.id][field]
+                    if old_val != record[field]:
+                        changed_fields.append(f"{field}: {old_val!r} -> {record[field]!r}")
+                else:
+                    # Campo no almacenado o no presente en el registro anterior, se registra igual
+                    changed_fields.append(f"{field}: {record[field]!r}")
+            if changed_fields:
+                details = "Campos modificados: " + "; ".join(changed_fields)
+            else:
+                details = "Modificación sin cambios detectados"
+            self.env['audit.log'].sudo().crud_audit_log(record, 'nomenclature.specialty.supplier', 'write', extra_details=details)
+        return result
 
     def unlink(self):
         for record in self:
@@ -74,6 +97,9 @@ class NomenclatureSpecialtySupplier(models.Model):
                     _("No se puede eliminar la especialidad %s porque está siendo utilizado en:\n- %s") % 
                     (record.name, "\n- ".join(suppliers))
                 )
+        # Antes de eliminar, crear logs para cada registro
+        for record in self:
+            self.env['audit.log'].sudo().crud_audit_log(record, 'nomenclature.specialty.supplier', 'unlink')
         return super().unlink()
 
     def toggle_active(self):

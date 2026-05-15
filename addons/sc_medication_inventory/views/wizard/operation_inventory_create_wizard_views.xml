@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- View operation.inventory.create.wizard form -->
+    <record id="view_operation_inventory_create_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard-Formulario de crear Operación de Inventario</field>
+        <field name="model">operation.inventory.create.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Operation Inventory Create Wizard">
+                <sheet>
+                    <group col="4" colspan="4">
+                        <field string="Residente" name="resident_id" readonly="1" invisible="1"/>
+                    </group>
+                    <group col="4" colspan="4" string="Inventario">
+                        <field nolabel="1" name="medication_inventory_id" required="1" 
+                                domain="[('resident_id', '=', resident_id)]"
+                                options="{'always_reload': True, 'no_create':True, 'no_open':True}"/>
+                    </group>
+                    <group col="4" colspan="4" string="Familiar que suministra" invisible="operation_type == 'out'">
+                        <field nolabel="1" name="family_id" required="operation_type == 'in'"
+                               options="{'always_reload': True, 'no_create':True, 'no_open':True}"/>
+                    </group>
+                    <group col="4" colspan="4">
+                        <group col="2" colspan="2" string="Medicamento">
+                            <field string="Medicamento" name="medicament_id" required="1"/>
+                            <field string="Forma farmacéutica" name="pharmaceutical_form" required="1"/>
+                            
+                        </group>
+                        <group col="2" colspan="2" string="Actualización">
+                            <field string="Unidad de medida" name="uom_id" required="1" options="{'no_create': True}"/>
+                            <field string="Cantidad a agregar" name="quantity" required="1" invisible="operation_type == 'out'"/>
+                            <field string="Cantidad a disminuir" name="quantity" required="1" invisible="operation_type == 'in'"/>
+                        </group>
+                    </group>
+                    <group string="Motivos de la actualización" col="4" colspan="4">
+                        <field name="reason" nolabel="1" required="1" rows="7" widget="textarea"/>
+                    </group>
+                    <footer>
+                        <button 
+                            name="action_register_operation_inventory" 
+                            string="Actualizar inventario" 
+                            type="object" 
+                            class="btn-primary"/>
+                        <button 
+                            string="Cancelar" 
+                            special="cancel" 
+                            class="btn-secondary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

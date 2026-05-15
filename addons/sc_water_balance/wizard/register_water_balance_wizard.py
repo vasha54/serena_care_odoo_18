@@ -38,6 +38,11 @@ class RegisterWaterBalanceWizard(models.TransientModel):
     )
     quantity = fields.Float(string="Cantidad (ml)", digits=(3, 1), required=True)
     notes = fields.Text(string="Observaciones")
+    date = fields.Datetime(
+        string='Fecha/Hora', 
+        default=fields.Datetime.now,
+        required=True
+    )
 
     def action_register_annotation(self):
         self.ensure_one()
@@ -50,5 +55,6 @@ class RegisterWaterBalanceWizard(models.TransientModel):
                 "type_annotation": self.type_annotation,
                 "quantity": self.quantity,
                 "notes": self.notes,
+                "date": self.date,
             }
         )

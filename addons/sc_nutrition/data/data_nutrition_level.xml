@@ -1,0 +1,42 @@
+<odoo>        
+    <data noupdate="1">
+        <!-- A -->
+        <!-- B -->
+        <!-- C -->
+        <record id="nlevel_full" model="nutrition.level">
+            <field name="name">Completo</field>
+            <field name="percent">100</field>
+        </record>
+        <!-- D -->
+        <!-- E -->
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <record id="nlevel_half" model="nutrition.level">
+            <field name="name">Mitad</field>
+            <field name="percent">50</field>
+        </record>
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <!-- M -->
+        <!-- N -->
+        <record id="nlevel_nothing_little" model="nutrition.level">
+            <field name="name">Nada o Poco</field>
+            <field name="percent">0</field>
+        </record>
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <!-- T -->
+        <!-- U -->
+        <!-- V -->
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>

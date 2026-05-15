@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+nursing_note_admin,Gestión de Notas de Enfermerías,model_nursing_note,sc_group.gs_admin,1,1,1,0
+nursing_note_gerente_salud,Lectura de Notas de Enfermerías,model_nursing_note,sc_group.gs_gerente_salud,1,0,0,0
+nursing_note_enfermeria,Gestión de Notas de Enfermerías,model_nursing_note,sc_group.gs_enfermeria,1,1,1,0
+nursing_note_coordinator_nurse,Gestión de Notas de Enfermerías,model_nursing_note,sc_group.gs_coordinator_nurse,1,1,1,0

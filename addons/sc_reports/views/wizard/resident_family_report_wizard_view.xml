@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_resident_family_report_wizard" model="ir.ui.view">
+        <field name="name">Vista Wizard para Informe de Familiares</field>
+        <field name="model">resident.family.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generar informe de familiares">
+                <group>
+                    <group>
+                        <field name="date_start" />    
+                    </group>
+                    <group>
+                        <field name="date_end" />    
+                    </group>
+                </group>
+                <group string="Observaciones / Notas">
+                    <field nolabel="1" name="notes" widget="textarea"/>
+                </group>
+                <footer>
+                    <button name="action_print_report" type="object" string="Generar informe" class="btn-primary"/>
+                    <button string="Cancelar" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

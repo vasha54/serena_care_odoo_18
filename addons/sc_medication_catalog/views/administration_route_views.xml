@@ -3,7 +3,7 @@
 
     <!-- View administration.route View List -->
     <record id="view_administration_route_list" model="ir.ui.view">
-        <field name="name">view.administration.route.list</field>
+        <field name="name">Vista Lista Vías de Administración del Medicamento</field>
         <field name="model">administration.route</field>
         <field name="arch" type="xml">
             <list>
@@ -14,7 +14,7 @@
 
     <!-- View administration.route form -->
     <record id="view_administration_route_form" model="ir.ui.view">
-        <field name="name">view.administration.route.form</field>
+        <field name="name">Vista Formulario Vía de Administración del Medicamento</field>
         <field name="model">administration.route</field>
         <field name="arch" type="xml">
             <form string="Administration Route">
@@ -32,7 +32,7 @@
 
     <!-- View administration.route search -->
     <record id="view_administration_route_search" model="ir.ui.view">
-        <field name="name">view.administration.route.search</field>
+        <field name="name">Vista Búsqueda Vía de Administración del Medicamento</field>
         <field name="model">administration.route</field>
         <field name="arch" type="xml">
             <search>

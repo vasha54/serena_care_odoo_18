@@ -1,0 +1,39 @@
+<odoo>        
+    <data noupdate="1">
+        <!-- A -->
+        <!-- B -->
+        <record id="htype_bow_hygiene" model="hygiene.type">
+            <field name="name">Evacuar</field>
+        </record>
+        <!-- C -->
+        <!-- D -->
+        <!-- E -->
+        <!-- F -->
+        <!-- G -->
+        <!-- H -->
+        <!-- I -->
+        <!-- J -->
+        <!-- K -->
+        <!-- L -->
+        <!-- M -->
+        <!-- N -->
+        <!-- O -->
+        <!-- P -->
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <record id="htype_sleep_hygiene" model="hygiene.type">
+            <field name="name">Sueño</field>
+        </record>
+        <!-- T -->
+        <record id="htype_toilet_hygiene" model="hygiene.type">
+            <field name="name">Aseo</field>
+        </record>
+        <!-- U -->
+        <!-- V -->
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
+    </data>
+</odoo>

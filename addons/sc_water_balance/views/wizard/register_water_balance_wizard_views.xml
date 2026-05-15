@@ -5,7 +5,7 @@
 
     <!-- View register.water.balance.wizard form -->
     <record id="view_register_water_balance_wizard_form" model="ir.ui.view">
-        <field name="name">view.register.water.balance.wizard.form</field>
+        <field name="name">Vista de Wizard para Registrar anotación en el Balance Hídrico</field>
         <field name="model">register.water.balance.wizard</field>
         <field name="arch" type="xml">
             <form string="Register water Balance Wizard">

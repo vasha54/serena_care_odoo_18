@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+pain_scale_admin,Gestión de evaluaciones de dolores,model_pain_scale,sc_group.gs_admin,1,1,1,0
+pain_scale_enfermeria,Gestión de evaluaciones de dolores,model_pain_scale,sc_group.gs_enfermeria,1,1,1,0
+pain_scale_gerente_salud,Lectura de evaluaciones de dolores,model_pain_scale,sc_group.gs_gerente_salud,1,0,0,0
+pain_scale_coordinator_nurse,Gestión de evaluaciones de dolores,model_pain_scale,sc_group.gs_coordinator_nurse,1,1,1,0

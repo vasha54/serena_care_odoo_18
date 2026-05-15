@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sc_web_sc_web,sc_web.sc_web,model_sc_web_sc_web,base.group_user,1,1,1,1

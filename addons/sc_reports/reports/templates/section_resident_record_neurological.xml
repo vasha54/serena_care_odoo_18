@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_resident_record_neurological" >
+        <t t-set="records" t-value="doc.neurological_assessment_ids"/>
+        <h5 class="section-title mt-0 pt-0">Evaluación de Neurológica</h5>
+
+        <h6 class="subsection-title">Registros</h6>
+        <t t-if="records">
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width: 20%;">
+                        <strong>Estado neurológico</strong>
+                    </td>
+                    <td class="text-center" style="width: 40%;">
+                        <strong>Descripción</strong>
+                    </td>
+                </tr>
+                <t t-foreach="records" t-as="r">
+                    <tr>
+                        <td class="text-center" style="width: 20%;">
+                            <t t-esc="r.date_user"/>
+                        </td>
+                        <td class="text-start" style="width: 20%;">
+                            <t t-esc="r.user_id.name"/>
+                        </td>
+                        <td class="text-center" style="width: 20%;">
+                            <t t-esc="r.neurological_state_id.name"/>
+                        </td>
+                        <td class="text-start" style="width: 40%;">
+                            <t t-esc="r.description"/>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+        </t>
+        
+        <t t-else="">
+            <p>El residente no tiene registros de evaluación de Neurológica</p>
+        </t>
+    </template>
+
+</odoo>

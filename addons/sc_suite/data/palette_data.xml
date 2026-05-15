@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="triada-armoniosa" model="website.theme">
+            <field name="name">triada-armoniosa</field>
+            <field name="color_palette">{
+                        "color-1": "#5f2e7f",    
+                        "color-2": "#f4701e",    
+                        "color-3": "#4ea83d",    
+                        "color-4": "#f8f9fa",    
+                        "color-5": "#212529" 
+            }</field>
+        </record>
+
+        <record id="purpura-naranja" model="website.theme">
+            <field name="name">purpura-naranja</field>
+            <field name="color_palette">{
+                        "color-1": "#5f2e7f",    
+                        "color-2": "#f4701e",    
+                        "color-3": "#8a5cb6",    
+                        "color-4": "#ffffff", 
+                        "color-5": "#333333" 
+            }</field>
+        </record>
+
+        <record id="purpura-verde" model="website.theme">
+            <field name="name">purpura-verde</field>
+            <field name="color_palette">{
+                        "color-1": "#5f2e7f",    
+                        "color-2": "#4ea83d",    
+                        "color-3": "#7b4caa",    
+                        "color-4": "#f5f7f9",    
+                        "color-5": "#2c3e50",    
+            }</field>
+        </record>
+
+        <record id="purpura-degradado" model="website.theme">
+            <field name="name">purpura-degradado</field>
+            <field name="color_palette">{
+                        "color-1": "#5f2e7f",   
+                        "color-2": "#7b4caa",   
+                        "color-3": "#462761",   
+                        "color-4": "#f8f5fc",   
+                        "color-5": "#2d1b40"
+            }</field>
+        </record>
+
+        <record id="naranja-degradado" model="website.theme">
+            <field name="name">naranja-degradado</field>
+            <field name="color_palette">{
+                        "color-1": "#f4701e", 
+                        "color-2": "#ff8e45", 
+                        "color-3": "#d45c08", 
+                        "color-4": "#fff5eb", 
+                        "color-5": "#5c3006" 
+            }</field>
+        </record>
+
+        <record id="verde-degradado" model="website.theme">
+            <field name="name">verde-degradado</field>
+            <field name="color_palette">{
+                        "color-1": "#4ea83d",
+                        "color-2": "#75c467",
+                        "color-3": "#368526",
+                        "color-4": "#f2f9f1",
+                        "color-5": "#1e441a"
+            }</field>
+        </record>
+
+    </data>
+</odoo>

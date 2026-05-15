@@ -33,10 +33,9 @@ Módulo especializado para residencias que permite:
 
     # always loaded
     "data": [
-        "data/data_vital_signs.xml",
         "security/ir.model.access.csv",
-        "views/vital_signs_views.xml",
         "views/resident_views.xml",
+        "views/vital_signs_views.xml",
         "views/view_menu.xml",
     ],
     # only loaded in demonstration mode

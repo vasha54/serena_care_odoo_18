@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="section_resident_record_frail">
+        <t t-set="records" t-value="doc.scalefrail_assessment_ids"/>
+        <h5 class="section-title mt-0 pt-0">Evaluación de FRAIL</h5>
+
+        <h6 class="subsection-title">Registros</h6>
+        <t t-if="records">
+            <table class="table table-sm mt-3">
+                <tr>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Fecha</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Registrado</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Cant. Preguntas</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Puntuación</strong>
+                    </td>
+                    <td class="text-center" style="width:20%;">
+                        <strong>Estado de fragilidad"</strong>
+                    </td>
+                </tr>
+                <t t-foreach="records" t-as="r">
+                    <tr>
+                        <td class="text-center" style="width:20%;">
+                            <t t-esc="r.date_user"/>
+                        </td>
+                        <td class="text-start" style="width:20%;">
+                            <t t-esc="r.user_id.name"/>
+                        </td>
+                        <td class="text-center" style="width:20%;">
+                            <t t-esc="r.total_questions"/>
+                        </td>
+                        <td class="text-center" style="width:20%;">
+                            <t t-esc="r.total_score"/>
+                        </td>
+                        <td class="text-center" style="width:20%;">
+                            <t t-esc="r.scalefrail_state_display"/>
+                        </td>
+                    </tr>
+                </t>
+            </table>
+        </t>
+
+        <t t-else="">
+            <p>El residente no tiene registros de evaluación de FRAIL</p>
+        </t>
+    </template>
+
+</odoo>

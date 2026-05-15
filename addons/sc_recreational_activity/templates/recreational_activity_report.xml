@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_recreational_activity">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Reporte de Actividades Recreativas</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fecha/Hora</th>
+                                <th>Tipo</th>
+                                <th>Registrado</th>
+                                <th>Residentes</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="docs" t-as="activity">
+                                <td><span t-esc="activity._convert_to_iso(activity.date_execution)"/></td>
+                                <td><span t-field="activity.activity_type_id.name"/></td>
+                                <td><span t-field="activity.user_id.name"/></td>
+                                <td><span t-field="activity.residents_str"/></td>
+                                <td><span t-field="activity.description"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="recreational_activity_pdf_report_resident">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h2>Reporte de Actividades Recreativas</h2>
+                    
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <strong>Fecha de generación:</strong> 
+                            <span t-esc="generation_date"/>
+                        </div>
+                        <div class="col-6">
+                            <strong>Período:</strong> 
+                            <span t-esc="date_start"/> - <span t-esc="date_end"/>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <strong>Tipos de actividad:</strong> 
+                            <span t-esc="', '.join(activity_types)"/>
+                        </div>
+                    </div>
+                    
+                    <t t-foreach="activities" t-as="activity">
+                        <div class="activity-section" style="margin-bottom: 20px; padding: 10px; border: 1px solid #ddd;">
+                            <h4>
+                                <span t-esc="activity['activity_name']"/>
+                                - 
+                                <span t-esc="activity['date_execution']"/>
+                            </h4>
+                            
+                            <p><strong>Descripción:</strong> <span t-esc="activity['description']"/></p>
+                            <p><strong>Registrado por:</strong> <span t-esc="activity['registered_by']"/></p>
+                            
+                            <h5>Residentes participantes:</h5>
+                            <ul>
+                                <li>
+                                    <span t-esc="activity['resident']"/>
+                                </li>
+                            </ul>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_recreational_activity_pdf_resident" model="ir.actions.report">
+        <field name="name">Reporte de Actividades Recreativas</field>
+        <field name="model">activity.filter.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">sc_recreational_activity.recreational_activity_pdf_report_resident</field>
+        <field name="report_file">sc_recreational_activity.recreational_activity_pdf_report_resident</field>
+        <field name="binding_model_id" ref="model_activity_filter_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    
+
+</odoo>

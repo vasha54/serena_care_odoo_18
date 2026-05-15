@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View mood.state View List -->
+    <record id="view_mood_state_list" model="ir.ui.view">
+        <field name="name">Vista Lista Estados de Ánimo</field>
+        <field name="model">mood.state</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="active" string="Activo" widget="boolean_toggle"
+                       width="60"/>
+                <field string=" " name="image" widget="image"
+                       width="30"/>
+                <field string="Orden" name="order"/>
+                <field name="name"/>
+
+            </list>
+        </field>
+    </record>
+
+    <!-- View mood.state form -->
+    <record id="view_mood_state_form" model="ir.ui.view">
+        <field name="name">Vista Formulario Estado de Ánimo</field>
+        <field name="model">mood.state</field>
+        <field name="arch" type="xml">
+            <form string="Mood State">
+                <sheet>
+                    <field name="image" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre..."/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field string="Activo" name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field string="Orden" name="order"/>
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View mood.state search -->
+    <record id="view_mood_state_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda Estado de Ánimo</field>
+        <field name="model">mood.state</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action mood.state -->
+    <record id="action_mood_state" model="ir.actions.act_window">
+        <field name="name">Estados de ánimo</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mood.state</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros, haga clic aquí para agregar un nuevo estado de ánimo.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--    <menuitem id="menu_report_dashboard" -->
+<!--        name="Reportes" -->
+<!--        action="action_report_dashboard"-->
+<!--        sequence="-4"-->
+<!--        web_icon="sc_reports,static/description/icon.png" />-->
+
+</odoo>

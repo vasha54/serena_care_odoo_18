@@ -3,13 +3,14 @@
 
     <!-- View water.balance.annotation View List -->
     <record id="view_water_balance_annotation_list" model="ir.ui.view">
-        <field name="name">view.water.balance.annotation.list</field>
+        <field name="name">Vista Lista de los Registros al Balance Hídrico</field>
         <field name="model">water.balance.annotation</field>
         <field name="arch" type="xml">
-            <list default_order="create_date desc">
-                <field string="Fecha/Hora" name="create_date"/>
+            <list default_order="date desc">
+                <field string="Fecha/Hora" name="date"/>
                 <field string="Registrado" name="user_id"/>
                 <field string="Residente" name="resident_id"/>
+                <field string="Residencia" name="residence_id"/>
                 <field name="type_annotation" />
                 <field name="route_id" />
                 <field name="quantity" />
@@ -20,7 +21,7 @@
 
     <!-- View water.balance.annotation form -->
     <record id="view_water_balance_annotation_form" model="ir.ui.view">
-        <field name="name">view.water.balance.annotation.form</field>
+        <field name="name">Vista Formulario del Registro al Balance Hídrico</field>
         <field name="model">water.balance.annotation</field>
         <field name="arch" type="xml">
             <form string="water Balance Annotation">
@@ -51,16 +52,17 @@
 
     <!-- View water.balance.annotation search -->
     <record id="view_water_balance_annotation_search" model="ir.ui.view">
-        <field name="name">view.water.balance.annotation.search</field>
+        <field name="name">Vista Búsqueda del Registro al Balance Hídrico</field>
         <field name="model">water.balance.annotation</field>
         <field name="arch" type="xml">
             <search>
-                <field name="create_date"/>
-                <field name="quantity"/>
+                <field name="residence_id" />
+                
+                <field name="date"/>
                                 
                 <filter string="Hoy" name="today" 
-                        domain="[('create_date','&gt;=', context_today().start_of('day')), 
-                        ('create_date','&lt;=', context_today().end_of('day'))]"/>
+                        domain="[('date','&gt;=', context_today().start_of('day')), 
+                        ('date','&lt;=', context_today().end_of('day'))]"/>
                 <filter string="Últimos 7 días" name="last_week" 
                         domain="[('create_date','&gt;=', context_today() - datetime.timedelta(days=7))]"/>
                 <filter string="Último mes" name="last_month" 
@@ -75,6 +77,8 @@
                                 context="{'group_by':'user_id'}"/>
                 <filter string="Agrupado por residente" name="group_by_resident" 
                                 context="{'group_by':'resident_id'}"/>
+                <filter string="Agrupado por residencia" name="group_by_residence" 
+                                context="{'group_by':'residence_id'}"/>
             </search>
         </field>
     </record>

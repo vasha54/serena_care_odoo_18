@@ -1,71 +1,183 @@
 <odoo>
     <data noupdate="1">
         <!-- Categorías principales según Cuadro Básico 2018 -->
-        <record id="categoria_medicamentos_alopaticos" model="medicament.category">
-            <field name="name">Medicamentos alopáticos</field>
+        <record id="cat_med_analgesia" model="product.category">
+            <field name="name">Analgesia</field>
+            <field name="is_medicament_category">True</field>
         </record>
         
-        <!-- Grupos terapéuticos según Cuadro Básico 2018 -->
-        <record id="grupo_analgesicos" model="medicament.category">
-            <field name="name">Analgésicos y antipiréticos</field>
+        <record id="cat_med_analgesia_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_analgesia" />
         </record>
-        <record id="grupo_antibioticos" model="medicament.category">
-            <field name="name">Antibióticos y quimioterapéuticos</field>
+
+        <record id="cat_med_analgesia_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_analgesia" />
         </record>
-        <record id="grupo_antiinflamatorios" model="medicament.category">
-            <field name="name">Antiinflamatorios no esteroideos</field>
-        </record>
-        <record id="grupo_antihipertensivos" model="medicament.category">
-            <field name="name">Antihipertensivos</field>
-        </record>
-        <record id="grupo_antidiabeticos" model="medicament.category">
-            <field name="name">Antidiabéticos</field>
-        </record>
-        
-        <!-- Categorías especiales del Catálogo 2018 -->
-        <record id="categoria_medicamentos_controlados" model="medicament.category">
-            <field name="name">Medicamentos controlados</field>
-        </record>
-        <record id="categoria_medicamentos_biologicos" model="medicament.category">
-            <field name="name">Biológicos</field>
-        </record>
-        <record id="categoria_medicamentos_herbolarios" model="medicament.category">
-            <field name="name">Medicamentos herbolarios</field>
+
+
+        <record id="cat_med_anestesia" model="product.category">
+            <field name="name">Anestesia</field>
+            <field name="is_medicament_category">True</field>
         </record>
         
-        <!-- Subgrupos para medicamentos controlados -->
-        <record id="subgrupo_psicotropos" model="medicament.category">
-            <field name="name">Psicotrópicos (Fracción III)</field>
+        <record id="cat_med_anestesia_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_anestesia" />
         </record>
-        <record id="subgrupo_estupefacientes" model="medicament.category">
-            <field name="name">Estupefacientes (Fracción II)</field>
+
+        <record id="cat_med_anestesia_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_anestesia" />
         </record>
-        
-        <!-- Categorías de alto impacto en salud pública -->
-        <record id="categoria_vacunas" model="medicament.category">
-            <field name="name">Vacunas</field>
-        </record>
-        <record id="categoria_antivirales" model="medicament.category">
-            <field name="name">Antivirales</field>
-        </record>
-        <record id="categoria_antirretrovirales" model="medicament.category">
-            <field name="name">Antirretrovirales</field>
-        </record>
-        
-        <!-- Categorías de soporte vital -->
-        <record id="categoria_hemoderivados" model="medicament.category">
-            <field name="name">Hemoderivados</field>
-        </record>
-        <record id="categoria_soluciones_inyectables" model="medicament.category">
-            <field name="name">Soluciones inyectables</field>
+
+
+        <record id="cat_med_cardiología" model="product.category">
+            <field name="name">Cardiología</field>
+            <field name="is_medicament_category">True</field>
         </record>
         
-        <!-- Categorías complementarias -->
-        <record id="categoria_medicamentos_huerfanos" model="medicament.category">
-            <field name="name">Medicamentos huérfanos</field>
+        <record id="cat_med_cardiología_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_cardiología" />
         </record>
-        <record id="categoria_medicamentos_esenciales" model="medicament.category">
-            <field name="name">Medicamentos esenciales</field>
+
+        <record id="cat_med_cardiología_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_cardiología" />
+        </record>
+
+
+        <record id="cat_med_dermatología" model="product.category">
+            <field name="name">Dermatología</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_dermatología_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_dermatología" />
+        </record>
+
+        <record id="cat_med_dermatología_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_dermatología" />
+        </record>
+
+
+        <record id="cat_med_endocrinología_metabolismo" model="product.category">
+            <field name="name">Endocrinología y Metabolismo</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_endocrinología_metabolismo_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_endocrinología_metabolismo" />
+        </record>
+
+        <record id="cat_med_endocrinología_metabolismo_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_endocrinología_metabolismo" />
+        </record>
+
+
+        <record id="cat_med_enfermedades_infecciosas_parasitarias" model="product.category">
+            <field name="name">Enfermedades Infecciosas y Parasitarias</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_enfermedades_infecciosas_parasitarias_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_enfermedades_infecciosas_parasitarias" />
+        </record>
+
+        <record id="cat_med_enfermedades_infecciosas_parasitarias_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_enfermedades_infecciosas_parasitarias" />
+        </record>
+
+
+        <record id="cat_med_enfermedades_inmunoalergicas" model="product.category">
+            <field name="name">Enfermedades Inmunoalérgicas</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_enfermedades_inmunoalergicas_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_enfermedades_inmunoalergicas" />
+        </record>
+
+        <record id="cat_med_enfermedades_inmunoalergicas_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_enfermedades_inmunoalergicas" />
+        </record>
+
+
+        <record id="cat_med_gastroenterologia" model="product.category">
+            <field name="name">Gastroenterología</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_gastroenterologia_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_gastroenterologia" />
+        </record>
+
+        <record id="cat_med_gastroenterologia_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_gastroenterologia" />
+        </record>
+
+
+        <record id="cat_med_gineco-obstetricia" model="product.category">
+            <field name="name">Gineco-obstetricia</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_gineco-obstetricia_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_gineco-obstetricia" />
+        </record>
+
+        <record id="cat_med_gineco-obstetricia_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_gineco-obstetricia" />
+        </record>
+
+
+        <record id="cat_med_hematologia" model="product.category">
+            <field name="name">Hematología</field>
+            <field name="is_medicament_category">True</field>
+        </record>
+        
+        <record id="cat_med_hematologia_bas" model="product.category">
+            <field name="name">Cuadro Básico</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_hematologia" />
+        </record>
+
+        <record id="cat_med_hematologia_cat" model="product.category">
+            <field name="name">Catálogo</field>
+            <field name="is_medicament_category">True</field>
+            <field name="parent_id" ref="cat_med_hematologia" />
         </record>
     </data>
 </odoo>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Question 1 -->
+        <record id="scalesarcf_question_1" model="scalesarcf.question">
+            <field name="name">Strength</field>
+            <field name="sub_name">(fuerza)</field>
+            <field name="letter">S</field>
+            <field name="order">1</field>
+            <field name="statement">¿Qué tanta dificultad tiene para lenvantar objetos pesados (como 5kg)?</field>
+            <field name="choise_ids" eval="[(6,0,[ref('scalesarcf_choise_none'),ref('scalesarcf_choise_some'),ref('scalesarcf_choise_lot_or_unable')])]" />
+        </record>
+
+        <!-- Question 2 -->
+        <record id="scalesarcf_question_2" model="scalesarcf.question">
+            <field name="name">Assistance walking</field>
+            <field name="sub_name">(asistencia para caminar)</field>
+            <field name="letter">A</field>
+            <field name="order">2</field>
+            <field name="statement">¿Qué tanta ayuda necesita para caminar entre una habitación y otra?</field>
+            <field name="choise_ids" eval="[(6,0,[ref('scalesarcf_choise_none'),ref('scalesarcf_choise_some'),ref('scalesarcf_choise_lot_or_unable')])]" />
+        </record>
+
+        <!-- Question 3 -->
+        <record id="scalesarcf_question_3" model="scalesarcf.question">
+            <field name="name">Rise from a chair</field>
+            <field name="sub_name">(levantarse de una silla)</field>
+            <field name="letter">R</field>
+            <field name="order">3</field>
+            <field name="statement">¿Tiene dificultades para moverse, vestirse, alimentarse o realizar tareas cotidianas?</field>
+            <field name="choise_ids" eval="[(6,0,[ref('scalesarcf_choise_none'),ref('scalesarcf_choise_some'),ref('scalesarcf_choise_lot_or_unable')])]" />
+        </record>
+
+        <!-- Question 4 -->
+        <record id="scalesarcf_question_4" model="scalesarcf.question">
+            <field name="name">Climb stairs</field>
+            <field name="sub_name">(subir escaleras)</field>
+            <field name="letter">C</field>
+            <field name="order">4</field>
+            <field name="statement">¿Se ha sentido triste, ansioso o aislado?¿Tiene cambios de humor frecuentes?</field>
+            <field name="choise_ids" eval="[(6,0,[ref('scalesarcf_choise_none'),ref('scalesarcf_choise_some'),ref('scalesarcf_choise_lot_or_unable')])]" />
+        </record>
+
+        <!-- Question 5 -->
+        <record id="scalesarcf_question_5" model="scalesarcf.question">
+            <field name="name">Fails</field>
+            <field name="sub_name">(caídas)</field>
+            <field name="letter">F</field>
+            <field name="order">5</field>
+            <field name="statement">¿Ha perdido peso recientemente?¿Tiene poco apetito o signos de desnutrición ?</field>
+            <field name="choise_ids" eval="[(6,0,[ref('scalesarcf_choise_none'),ref('scalesarcf_choise_some'),ref('scalesarcf_choise_lot_or_unable')])]" />
+        </record>
+    </data>
+</odoo>

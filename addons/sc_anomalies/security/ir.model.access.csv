@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+anomaly_level_admin,Gestión de los niveles de anomalías,model_anomaly_level,sc_group.gs_admin,1,1,1,0
+anomaly_level_gerente_salud,Lectura de los niveles de anomalías,model_anomaly_level,sc_group.gs_gerente_salud,1,0,0,0
+anomaly_level_enfermería,Gestión de los niveles de anomalías,model_anomaly_level,sc_group.gs_enfermeria,1,1,1,0
+anomaly_admin,Gestión de las evaluaciones de anomalías,model_anomaly,sc_group.gs_admin,1,1,1,0
+anomaly_gerente_salud,Lectura de las evaluaciones de anomalías,model_anomaly,sc_group.gs_gerente_salud,1,0,0,0
+anomaly_enfermería,Gestión de las evaluaciones de anomalías,model_anomaly,sc_group.gs_enfermeria,1,1,1,0
+notification_email_anomaly_admin,Gestión de los correos de notificación de anomalías,model_notification_email,sc_group.gs_admin,1,1,1,1
+notification_email_anomaly_user,Lectura de los correos de notificación de anomalías,model_notification_email,sc_group.gs_user,1,0,0,0
+anomaly_level_coordinator_nurse,Gestión de los niveles de anomalías,model_anomaly_level,sc_group.gs_coordinator_nurse,1,1,1,0
+anomaly_coordinator_nurse,Gestión de las evaluaciones de anomalías,model_anomaly,sc_group.gs_coordinator_nurse,1,1,1,0
+notification_email_anomaly_coordinator_nurse,Gestión de los correos de notificación de anomalías,model_notification_email,sc_group.gs_coordinator_nurse,1,1,1,1

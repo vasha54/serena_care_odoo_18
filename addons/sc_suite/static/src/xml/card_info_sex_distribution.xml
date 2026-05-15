@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="sc_suite.CardInfoSexDistributionTemplate">
+        <div class="card shadow-sm mb-2" style="background-color: #6e67b5; color: white !important;">
+            <div class="card-body p-2">
+                <!-- <div class="row align-items-center justify-content-center text-center mb-0">
+                    <div class="col-4 text-center">
+                        <i class="fa fa-male me-2 img-fluid rounded-circle" style="max-height: 80px; width: auto; font-size: xxx-large;"></i>
+                    </div>
+                    <div class="col-2 text-start mt-3">
+                        <span class="fw-bold display-7" style="color:white!important;">
+                            <t t-esc="state.residentsMale"/>
+                        </span>
+                    </div>
+                    <div class="col-4 text-center">
+                        <i class="fa fa-female me-2 img-fluid rounded-circle" style="max-height: 80px; width: auto; font-size: xxx-large;"></i>
+                    </div>
+                    <div class="col-2 text-start mt-3">
+                        <span class="fw-bold display-7" style="color:white!important;">
+                            <t t-esc="state.residentsFemale"/>
+                        </span>
+                    </div>
+                </div> -->
+
+                <div class="row align-items-center justify-content-center text-center mb-2 mt-1">
+                    <div class="col-4 text-center">
+                        <i class="fa fa-male me-2 img-fluid rounded-circle" style="max-height: 80px; width: auto; font-size: xx-large;"></i>
+                    </div>
+                    <div class="col-8 text-end mt-1">
+                        <span class="fw-bold " style="color:white!important;  font-size: x-large;">
+                            <t t-esc="state.residentsMale"/>
+                        </span>
+                        <span class="fw-bold display-10" style="color:white!important;"> hombres</span>
+                    </div>
+                </div>
+
+                <div class="row align-items-center justify-content-center text-center mt-2 mb-1">
+                    <div class="col-4 text-center">
+                        <i class="fa fa-female me-2 img-fluid rounded-circle" style="max-height: 80px; width: auto; font-size: xx-large;"></i>
+                    </div>
+                    <div class="col-8 text-end mt-1">
+                        <span class="fw-bold" style="color:white!important;font-size: x-large;">
+                            <t t-esc="state.residentsFemale"/>
+                        </span>
+                        <span class="fw-bold display-10" style="color:white!important;"> mujeres</span>
+                    </div>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col-12 text-center">
+                        <hr class="my-1" style="border-color: white !important; background-color: white !important; opacity: 1;"/>
+                        <span class="fw-bold display-10" style="color:white!important;">
+                                Distribución por sexo
+                        </span>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </t>
+</templates>

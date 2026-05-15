@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Adicciones comunes en adultos mayores -->
+
+        <!-- ========== ADICCIONES A SUSTANCIAS ========== -->
+        <!-- Alcohol y Tabaco -->
+        <record id="addiction_alcohol" model="nomenclature.addiction">
+            <field name="name">Alcohol</field>
+        </record>
+        <record id="addiction_nicotine" model="nomenclature.addiction">
+            <field name="name">Nicotina (Tabaco)</field>
+        </record>
+        <record id="addiction_caffeine" model="nomenclature.addiction">
+            <field name="name">Cafeína</field>
+        </record>
+
+        <!-- Medicamentos y Fármacos -->
+        <record id="addiction_benzodiazepines" model="nomenclature.addiction">
+            <field name="name">Benzodiacepinas</field>
+        </record>
+        <record id="addiction_opioids" model="nomenclature.addiction">
+            <field name="name">Opioides</field>
+        </record>
+        <record id="addiction_sleeping_pills" model="nomenclature.addiction">
+            <field name="name">Pastillas para dormir</field>
+        </record>
+        <record id="addiction_painkillers" model="nomenclature.addiction">
+            <field name="name">Analgésicos</field>
+        </record>
+        <record id="addiction_antidepressants" model="nomenclature.addiction">
+            <field name="name">Antidepresivos</field>
+        </record>
+
+        <!-- Otras Sustancias -->
+        <record id="addiction_cannabis" model="nomenclature.addiction">
+            <field name="name">Cannabis</field>
+        </record>
+        <record id="addiction_prescription_drugs" model="nomenclature.addiction">
+            <field name="name">Medicamentos con receta</field>
+        </record>
+
+        <!-- ========== ADICCIONES CONDUCTUALES ========== -->
+        <!-- Juego y Apuestas -->
+        <record id="addiction_gambling" model="nomenclature.addiction">
+            <field name="name">Juego de azar</field>
+        </record>
+        <record id="addiction_lottery" model="nomenclature.addiction">
+            <field name="name">Lotería y raspaditas</field>
+        </record>
+        <record id="addiction_bingo" model="nomenclature.addiction">
+            <field name="name">Bingo</field>
+        </record>
+
+        <!-- Tecnología y Medios -->
+        <record id="addiction_television" model="nomenclature.addiction">
+            <field name="name">Televisión</field>
+        </record>
+        <record id="addiction_internet" model="nomenclature.addiction">
+            <field name="name">Internet</field>
+        </record>
+        <record id="addiction_smartphone" model="nomenclature.addiction">
+            <field name="name">Teléfono móvil</field>
+        </record>
+        <record id="addiction_video_games" model="nomenclature.addiction">
+            <field name="name">Videojuegos</field>
+        </record>
+
+        <!-- Compras y Alimentación -->
+        <record id="addiction_shopping" model="nomenclature.addiction">
+            <field name="name">Compras compulsivas</field>
+        </record>
+        <record id="addiction_sugar" model="nomenclature.addiction">
+            <field name="name">Azúcar y dulces</field>
+        </record>
+        <record id="addiction_chocolate" model="nomenclature.addiction">
+            <field name="name">Chocolate</field>
+        </record>
+        <record id="addiction_coffee" model="nomenclature.addiction">
+            <field name="name">Café</field>
+        </record>
+
+        <!-- ========== ADICCIONES ESPECÍFICAS ADULTOS MAYORES ========== -->
+        <record id="addiction_medical_appointments" model="nomenclature.addiction">
+            <field name="name">Citas médicas (hipocondría)</field>
+        </record>
+        <record id="addiction_self_medication" model="nomenclature.addiction">
+            <field name="name">Automedicación</field>
+        </record>
+        <record id="addiction_alternative_medicine" model="nomenclature.addiction">
+            <field name="name">Medicina alternativa</field>
+        </record>
+        <record id="addiction_herbal_remedies" model="nomenclature.addiction">
+            <field name="name">Remedios herbales</field>
+        </record>
+
+        <!-- ========== ADICCIONES SOCIALES ========== -->
+        <record id="addiction_social_clubs" model="nomenclature.addiction">
+            <field name="name">Clubes sociales</field>
+        </record>
+        <record id="addiction_bingo_halls" model="nomenclature.addiction">
+            <field name="name">Salones de bingo</field>
+        </record>
+        <record id="addiction_religious_activities" model="nomenclature.addiction">
+            <field name="name">Actividades religiosas</field>
+        </record>
+
+        <!-- ========== OTRAS ADICCIONES ========== -->
+        <record id="addiction_cleaning" model="nomenclature.addiction">
+            <field name="name">Limpieza compulsiva</field>
+        </record>
+        <record id="addiction_order" model="nomenclature.addiction">
+            <field name="name">Orden excesivo</field>
+        </record>
+        <record id="addiction_news" model="nomenclature.addiction">
+            <field name="name">Noticias y periódicos</field>
+        </record>
+        <record id="addiction_radio" model="nomenclature.addiction">
+            <field name="name">Radio</field>
+        </record>
+
+
+    </data>
+</odoo>

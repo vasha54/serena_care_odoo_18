@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View activity.type View List -->
+    <record id="view_activity_type_list" model="ir.ui.view">
+        <field name="name">Vista Lista Tipos de Actividades</field>
+        <field name="model">activity.type</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_activity_type_list_colum_active" model="ir.ui.view">
+        <field name="name">Vista Lista Tipos de Actividades Diaria columna activo</field>
+        <field name="model">activity.type</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <list>
+                <field string="Activo" name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- View activity.type form -->
+    <record id="view_activity_type_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Tipos de Actividad Diaria</field>
+        <field name="model">activity.type</field>
+        <field name="arch" type="xml">
+            <form string="Activity Type">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1>
+                            <field name="name" placeholder="Nombre ..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field string="Activo" name="active" widget="boolean_toggle"/>                    
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View activity.type search -->
+    <record id="view_activity_type_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Tipos deActividades Diarias</field>
+        <field name="model">activity.type</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <group expand="1" string="Agrupar por">
+                    <filter string="Activo/Inactivo" name="active_notactive" domain="[]" context="{'group_by':'active'}"/>
+                </group>
+                <filter string="Tipos de actividades activas" name="activity_type_active" domain="[('active','=',True)]" />
+                <filter string="Tipos de actividades no activas" name="activity_type_not_active" domain="[('active','=',False)]" />
+                
+            </search>
+        </field>
+    </record>
+
+    <!-- Action activity.type -->
+    <record id="action_activity_type" model="ir.actions.act_window">
+        <field name="name">Tipos de actividades</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">activity.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids"
+        eval="[ (5, 0, 0), 
+            (0, 0, {'view_mode': 'list', 'view_id': ref('sc_care_plan.view_activity_type_list_colum_active')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('sc_care_plan.view_activity_type_form')}),]" />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay ejemplos, haga clic aquí para agregar un nuevo Tipo de Actividad.
+            </p>
+        </field>
+    </record>
+
+</odoo>

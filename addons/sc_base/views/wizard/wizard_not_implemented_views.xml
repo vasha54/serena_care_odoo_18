@@ -1,0 +1,24 @@
+<!-- views/wizard_not_implemented_views.xml -->
+<odoo>
+    <record id="view_not_implemented_wizard_form" model="ir.ui.view">
+        <field name="name">Dialogo de funcionalidad áun no implementada en el sistema</field>
+        <field name="model">not.implemented.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Funcionalidad no disponible">
+                <sheet>
+                    <group>
+                        <div class="alert alert-warning" role="alert">
+                            <i class="fa fa-exclamation-triangle mr-2" aria-hidden="true"/>
+                            <span>
+                                <field name="message"/>
+                            </span>
+                        </div>
+                    </group>
+                    <footer>
+                       
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

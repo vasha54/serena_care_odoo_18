@@ -3,7 +3,7 @@
 
     <!-- View reassign.resident.residence.wizard form -->
     <record id="view_reassign_resident_residence_wizard_form" model="ir.ui.view">
-        <field name="name">view.reassign.resident.residence.wizard.form</field>
+        <field name="name">Vista Dialogo Reasignar Residentes a Nueva Residencias</field>
         <field name="model">reassign.resident.residence.wizard</field>
         <field name="arch" type="xml">
             <form string="Reasignar Registros B">

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- View anomaly View List -->
+    <record id="view_anomaly_list" model="ir.ui.view">
+        <field name="name">Vista Lista de Anomalías</field>
+        <field name="model">anomaly</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc" create="false" edit="false" delete="false">
+                <field string="Fecha" name="date"/>
+                <field string="Registrado" name="user_id" />
+                <field string="Residente" name="resident_id" />
+                <field string="Residencia" name="residence_id"/>
+                <field string="Nivel de anomalía" name="anomaly_level_id" />
+                <field string="Descripción" name="description" />
+            </list>
+        </field>
+    </record>
+
+    <!-- View anomaly form -->
+    <record id="view_anomaly_form" model="ir.ui.view">
+        <field name="name">Vista Formulario de Anomalía</field>
+        <field name="model">anomaly</field>
+        <field name="arch" type="xml">
+            <form string="Nota de enfermería">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="resident_id"/>
+                        <h1>
+                            <field name="resident_id" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field string="Fecha" name="date" readonly="1"/>
+                            <field string="Nivel" name="anomaly_level_id" readonly="1" />
+                        </group>
+                        <group>
+                            <field string="Registrado" name="user_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Descripción" >
+                        <field name="description" nolabel="1" widget="textarea" rows="7" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- View anomaly search -->
+    <record id="view_anomaly_search" model="ir.ui.view">
+        <field name="name">Vista Búsqueda de Anomalía</field>
+        <field name="model">anomaly</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="date"/>
+                <field name="residence_id"/>
+                                
+                <filter string="Hoy" name="today" 
+                        domain="[('date','&gt;=', context_today().start_of('day')), 
+                        ('date','&lt;=', context_today().end_of('day'))]"/>
+                <filter string="Últimos 7 días" name="last_week" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=7))]"/>
+                <filter string="Último mes" name="last_month" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=30))]"/>
+                <filter string="Último año" name="last_year" 
+                        domain="[('date','&gt;=', context_today() - datetime.timedelta(days=365))]"/>
+                <filter string="Rango de fechas" name="date_range" 
+                        date="date"/>
+                <filter string="Agrupado por mes" name="group_by_month" 
+                        context="{'group_by':'date:month'}"/>
+                <filter string="Agrupado por usuario" name="group_by_user" 
+                                context="{'group_by':'user_id'}"/>
+                <filter string="Agrupado por residente" name="group_by_resident" 
+                                context="{'group_by':'resident_id'}"/>
+                <filter string="Agrupado por nivel" name="group_by_level" 
+                                context="{'group_by':'anomaly_level_id'}"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action anomaly -->
+    <record id="action_anomaly" model="ir.actions.act_window">
+        <field name="name">Anomalías</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">anomaly</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No hay registros de anomalías.
+            </p>
+        </field>
+    </record>
+
+</odoo>

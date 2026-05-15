@@ -1,0 +1,24 @@
+<odoo>        
+    <data noupdate="1">
+        <record id="email_acazarez" model="notification.email">
+            <field name="email">acazares@serenacare.net</field>
+            <field name="active">True</field>
+        </record>
+        <record id="email_anguianocp95" model="notification.email">
+            <field name="email">anguianocp95@gmail.com</field>
+            <field name="active">True</field>
+        </record>
+        <record id="email_cgutierrez" model="notification.email">
+            <field name="email">cgutierrez@serenacare.net</field>
+            <field name="active">True</field>
+        </record>
+        <record id="email_eperez" model="notification.email">
+            <field name="email">eperez@serenacare.net</field>
+            <field name="active">True</field>
+        </record> 
+        <record id="email_mtorres" model="notification.email">
+            <field name="email">mtorres@serenacare.net</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

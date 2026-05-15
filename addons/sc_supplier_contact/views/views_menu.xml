@@ -4,23 +4,34 @@
         name="Red Médica"
         action="action_supplier_base"
         sequence="-3"
-        web_icon="sc_supplier_contact,static/description/icon.png"/>
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
+        web_icon="sc_supplier_contact,static/src/img/item_menu.png"/>
 
     <menuitem id="menu_residence_supplier_contact"
         name="Proveedores"
         action="action_supplier_base"
         sequence="1"
+        groups="sc_group.gs_admin,sc_group.gs_gerente_salud,sc_group.gs_enfermeria,sc_group.gs_coordinator_nurse"
         parent="menu_serena_care_root_supplier_contact"/>
 
     <menuitem id="menu_residence_supplier_contact_deleted"
         name="Proveedores eliminados"
         action="action_supplier_base_deleted"
         sequence="3"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
         parent="menu_serena_care_root_supplier_contact"/>
 
     <menuitem id="menu_residence_nomenclature_specialty_supplier"
         name="Especialidades de los proveedores"
         action="action_nomenclature_specialty_supplier"
         sequence="2"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
+        parent="menu_serena_care_root_supplier_contact"/>
+
+    <menuitem id="menu_residence_category_supplier"
+        name="Categorías de los proveedores"
+        action="action_supplier_category"
+        sequence="2"
+        groups="sc_group.gs_admin,sc_group.gs_coordinator_nurse"
         parent="menu_serena_care_root_supplier_contact"/>
 </odoo>

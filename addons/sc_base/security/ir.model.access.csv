@@ -1,5 +1,18 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_res_country_mx_manager,res_country_mx_manager,model_res_country_mx,base.group_user,1,1,1,1
-access_res_province_mx_manager,res_province_mx_manager,model_res_province_mx,base.group_user,1,1,1,1
-access_res_municipality_mx_manager,res_municipality_mx_manager,model_res_municipality_mx,base.group_user,1,1,1,1
-access_audit_log_manager,audit_log_manager,model_audit_log,base.group_system,1,0,0,0
+res_country_mx_admin,Gestión de países,model_res_country_mx,sc_group.gs_admin,1,1,1,0
+res_country_mx_gerente_salud,Lectura de países,model_res_country_mx,sc_group.gs_gerente_salud,1,0,0,0
+res_country_mx_enfermeria,Lectura de países,model_res_country_mx,sc_group.gs_enfermeria,1,0,0,0
+res_province_mx_admin,Gestión de provincias,model_res_province_mx,sc_group.gs_admin,1,1,1,0
+res_province_mx_gerente_salud,Lectura de provincias,model_res_province_mx,sc_group.gs_gerente_salud,1,0,0,0
+res_province_mx_enfermeria,Lectura de provincias,model_res_province_mx,sc_group.gs_enfermeria,1,0,0,0
+res_municipality_mx_admin,Gestión de los municipios,model_res_municipality_mx,sc_group.gs_admin,1,1,1,0
+res_municipality_mx_gerente_salud,Lectura de los municipios,model_res_municipality_mx,sc_group.gs_gerente_salud,1,0,0,0
+res_municipality_mx_enfermeria,Lectura de los municipios,model_res_municipality_mx,sc_group.gs_enfermeria,1,0,0,0
+access_not_implemented_wizard_manager,not_implemented_wizard_manager,model_not_implemented_wizard,base.group_user,1,1,1,1
+res_users_admin,Gestión de usuarios,base.model_res_users,sc_group.gs_admin,1,1,1,0
+res_users_gerente_salud,Lectura de usuarios,base.model_res_users,sc_group.gs_gerente_salud,1,1,0,0
+res_users_enfermeria,Lectura de usuarios,base.model_res_users,sc_group.gs_enfermeria,1,1,0,0
+res_country_mx_coordinator_nurse,Gestión de países,model_res_country_mx,sc_group.gs_coordinator_nurse,1,1,1,0
+res_province_mx_coordinator_nurse,Gestión de provincias,model_res_province_mx,sc_group.gs_coordinator_nurse,1,1,1,0
+res_municipality_mx_coordinator_nurse,Gestión de los municipios,model_res_municipality_mx,sc_group.gs_coordinator_nurse,1,1,1,0
+res_users_coordinator_nurse,Gestión de usuarios,base.model_res_users,sc_group.gs_coordinator_nurse,1,1,1,0

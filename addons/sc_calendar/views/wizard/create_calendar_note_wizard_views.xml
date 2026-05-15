@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_create_calendar_note_wizard_form" model="ir.ui.view">
+        <field name="name">Vista Wizard para Crear Nota de Calendario</field>
+        <field name="model">create.calendar.note.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add Calendar Note">
+                <sheet>
+                    
+                    <group>
+                        <group>
+                            <field string="Título" name="name" />
+                            <field name="event_type" />
+                        </group>
+                        <group>
+                            <field name="start_date" />
+                        </group>
+                    </group>
+                    <group name="group_doctor" string="Cita médica con:" invisible="event_type != 'appointment_doctor'"
+                    >
+                        <group>
+                            <field name="doctor_id" required="event_type == 'appointment_doctor' "/>
+                        </group>
+                        <group>
+                            <field name="specialty_doctor" />
+                        </group>
+                    </group>
+                    <group string="Descripción">
+                        <field name="description" widget="textarea" nolabel="1" rows="4" required="1"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_create_calendar_note" string="Registrar" type="object" class="btn-primary"/>
+                    <button string="Cancelar" special="cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

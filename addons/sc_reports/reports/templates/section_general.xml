@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="section_general">
+        <t t-set="familys" t-value="doc.family_ids"/>
+
+        <h5 class="section-title mt-0 pt-0">1. Información General</h5>
+
+        <t t-call="sc_reports.section_resident_info_basic"/>
+
+        <h6 class="subsection-title">Información Adicional</h6>
+
+        <p>
+            <strong> Diagnóstico: </strong>
+            <t t-if="doc.diagnosis">
+                <t t-esc="doc.diagnosis"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> Descripción: </strong>
+            <t t-if="doc.comment">
+                <t t-esc="doc.comment"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> Observaciones: </strong>
+            <t t-if="doc.observations">
+                <t t-esc="doc.observations"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> Riesgo de caída: </strong>
+            <t t-if="doc.risk_falling">
+                <t t-esc="doc.risk_falling"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> Riesgo de UPP: </strong>
+            <t t-if="doc.risk_upp">
+                <t t-esc="doc.risk_upp"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <h6 class="subsection-title">APN</h6>
+
+        <div class="row">
+            <div class="col-6">
+                <strong>Alergías:</strong>
+                <t t-if="doc.allergy_ids">
+                    <ul>
+                        <t t-foreach="doc.allergy_ids" t-as="allergy">
+                            <li>
+                                <t t-esc="allergy.name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </t>
+                <t t-else="">
+                    <p>No tiene alergías registradas</p>
+                </t>
+            </div>
+            <div class="col-6">
+                <strong>Adicciones:</strong>
+                <t t-if="doc.addiction_ids">
+                    <ul>
+                        <t t-foreach="doc.addiction_ids" t-as="addiction">
+                            <li>
+                                <t t-esc="addiction.name"/>
+                            </li>
+                        </t>
+                    </ul>
+                </t>
+                <t t-else="">
+                    <p>No tiene adicciones registradas</p>
+                </t>
+            </div>
+        </div>
+
+        <h6 class="subsection-title">Antecedentes Heredofamiliares</h6>
+
+        <p>
+            <strong> Madre: </strong>
+            <t t-if="doc.mother_family_history">
+                <t t-esc="doc.mother_family_history"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> Padre: </strong>
+            <t t-if="doc.father_family_history">
+                <t t-esc="doc.father_family_history"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <h6 class="subsection-title">Antecedentes personales patológicos</h6>
+
+        <p>
+            <t t-if="doc.personal_pathological_history">
+                <t t-esc="doc.personal_pathological_history"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <h6 class="subsection-title">Antecedentes personales no patológicos</h6>
+
+        <table class="table table-sm mt-3 mb-3">
+            <tr>
+                <td class="text-center" style="width:33%;">
+                   <strong>Exposición a Biomasas</strong>
+                </td>
+                <td class="text-center" style="width:33%;">
+                    <strong>Tabaquismo</strong>
+                </td>
+                <td class="text-center" style="width:33%;">
+                    <strong>Alcoholismo</strong>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="text-center" style="width:33%;">
+                    <t t-if="doc.is_biomass_exposure">
+                        Sí
+                    </t>
+                    <t t-else="">
+                        No
+                    </t>
+                </td>
+                <td class="text-center" style="width:33%;">
+                    <t t-if="doc.is_smoking">
+                        Sí
+                    </t>
+                    <t t-else="">
+                        No
+                    </t>
+                </td>
+                <td class="text-center" style="width:33%;">
+                    <t t-if="doc.is_alcoholism">
+                        Sí
+                    </t>
+                    <t t-else="">
+                        No
+                    </t>
+                </td>
+            </tr>
+
+        </table>
+
+        <p>
+            <strong> P.3, P.2, A.O, C.O: </strong>
+            <t t-if="doc.p3_p2_ao_co">
+                <t t-esc="doc.p3_p2_ao_co"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> FUR: </strong>
+            <t t-if="doc.fur">
+                <t t-esc="doc.fur"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <p>
+            <strong> Inmunizaciones: </strong>
+            <t t-if="doc.immunizations">
+                <t t-esc="doc.immunizations"/>
+            </t>
+            <t t-else="">
+                -
+            </t>
+        </p>
+
+        <h6 class="subsection-title">Familiares</h6>
+
+        <div class="row mt-0">
+            <div class="col-12 pe-1 ps-1">
+
+                <t t-if="familys">
+
+                    <table class="table table-sm mt-3">
+                        <tr>
+                            <td class="text-center" style="width:15%">
+                                <strong>Contratante</strong>
+                            </td>
+                            <td class="text-start" style="width:30%">
+                                <strong>Nombre</strong>
+                            </td>
+                            <td class="text-start" style="width:20%">
+                                <strong>Parentesco</strong>
+                            </td>
+                            <td class="text-start" style="width:35%">
+                                <strong>Niveles de autorización</strong>
+                            </td>
+                        </tr>
+                        <t t-foreach="familys" t-as="family">
+                            <tr>
+                                <td class="text-center" style="width:15%">
+                                    <t t-if="family.is_contractor">
+                                        Sí
+                                    </t>
+                                    <t t-else="">
+                                        No
+                                    </t>
+                                </td>
+                                <td class="text-start" style="width:30%">
+                                    <t t-esc="family.family_id.name"/>
+                                </td>
+                                <td class="text-start" style="width:20%">
+                                    <t t-esc="family.kinship_id.name"/>
+                                </td>
+                                <td class="text-start" style="width:35%; vertical-align: top;">
+                                    <ul>
+                                        <t t-foreach="family.auth_level_ids" t-as="auth_level">
+                                            <li>
+                                                <t t-esc="auth_level.name"/>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+
+
+                </t>
+                <t t-else="">
+                    <p class="text-center">El residente no tiene familiares registrado</p>
+                </t>
+
+            </div>
+        </div>
+
+    </template>
+</odoo> 

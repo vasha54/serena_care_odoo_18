@@ -1,0 +1,29 @@
+/* sc_suite/static/src/css/themes/naranja-degradado.css */
+:root {
+    --o-color-1: #f4701e;    /* Naranja principal */
+    --o-color-2: #ff8e45;    /* Naranja claro */
+    --o-color-3: #d45c08;    /* Naranja oscuro */
+    --o-color-4: #fff5eb;    /* Fondo naranja muy claro */
+    --o-color-5: #5c3006;    /* Texto marrón oscuro */
+    
+    --o-brand-primary: var(--o-color-1);
+    --o-brand-secondary: var(--o-color-2);
+    --o-brand-optional: var(--o-color-3);
+    --o-brand-light: var(--o-color-4);
+    --o-brand-dark: var(--o-color-5);
+    
+    --o-main-bg-color: var(--o-color-4);
+    --o-main-text-color: var(--o-color-5);
+    --o-header-bg-color: var(--o-color-1);
+    --o-header-text-color: white;
+    --o-link-color: var(--o-color-2);
+    --o-button-primary-bg: var(--o-color-1);
+    --o-button-primary-text: white;
+    --o-button-secondary-bg: var(--o-color-2);
+    --o-button-secondary-text: white;
+}
+
+.o_main_navbar {
+    background-color: var(--o-header-bg-color) !important;
+    color: var(--o-header-text-color) !important;
+}

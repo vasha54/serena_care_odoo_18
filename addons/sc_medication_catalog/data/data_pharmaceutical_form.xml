@@ -1,98 +1,278 @@
 <odoo>
     <data noupdate="1">
-        <!-- Formas orales sólidas -->
+        <!-- A -->
+        <!-- B -->
+        <!-- C -->
+        <record id="pharma_form_capsula" model="pharmaceutical.form">
+            <field name="name">Capsula</field>
+        </record>
+        <record id="pharma_form_capsula_microesferas_acido_resistentes" model="pharmaceutical.form">
+            <field name="name">Capsula (con microesferas ácido resistentes)</field>
+        </record>
+        <record id="pharma_form_capsula_comprimido" model="pharmaceutical.form">
+            <field name="name">Capsula o Comprimido</field>
+        </record>
+        <record id="pharma_form_capsula_perla" model="pharmaceutical.form">
+            <field name="name">Capsula o Perla</field>
+        </record>
+        <record id="pharma_form_capsula_comprimido_tableta_recubierta" model="pharmaceutical.form">
+            <field name="name">Capsula, Comprimido o  Tableta Recubierta</field>
+        </record>
+        <record id="pharma_form_capsula_tableta_masticable" model="pharmaceutical.form">
+            <field name="name">Capsula o Tableta Masticable</field>
+        </record>
+        <record id="pharma_form_capsula_gelatina_blanda" model="pharmaceutical.form">
+            <field name="name">Capsula de Gelatina Blanda</field>
+        </record>
+        <record id="pharma_form_capsula_granulos_capas_enterica" model="pharmaceutical.form">
+            <field name="name">Capsula con Granulos con Capas Enterica</field>
+        </record>
+        <record id="pharma_form_capsula_polvo_inhalacion" model="pharmaceutical.form">
+            <field name="name">Capsula con Polvo para Inhalacion</field>
+        </record>
+        <record id="pharma_form_capsula_liberacion_retardada" model="pharmaceutical.form">
+            <field name="name">Capsula de Liberación Retardada</field>
+        </record>
+        <record id="pharma_form_capsula_gracea_capa_enterica" model="pharmaceutical.form">
+            <field name="name">Capsula o Gracea con Capa Enterica</field>
+        </record>
+        <record id="pharma_form_crema" model="pharmaceutical.form">
+            <field name="name">Crema</field>
+        </record>
+        <record id="pharma_form_crema_gel" model="pharmaceutical.form">
+            <field name="name">Crema o Gel</field>
+        </record>
+        <record id="pharma_form_crema_5percent" model="pharmaceutical.form">
+            <field name="name">Crema al 5%</field>
+        </record>
+        <record id="pharma_form_crema_urguento" model="pharmaceutical.form">
+            <field name="name">Crema o Urgüento</field>
+        </record>
+        <record id="pharma_form_crema_pomada" model="pharmaceutical.form">
+            <field name="name">Crema o Pomada</field>
+        </record>
+        <record id="pharma_form_crema_locion" model="pharmaceutical.form">
+            <field name="name">Crema o Loción</field>
+        </record>
+        <record id="pharma_form_crema_polvo" model="pharmaceutical.form">
+            <field name="name">Crema o Polvo</field>
+        </record>
+        <record id="pharma_form_crema_vaginal" model="pharmaceutical.form">
+            <field name="name">Crema Vaginal</field>
+        </record>
         <record id="pharma_form_comprimido" model="pharmaceutical.form">
-            <field name="name">COMPRIMIDO</field>
+            <field name="name">Comprimido</field>
+        </record>
+        <record id="pharma_form_comprimido_efervescente" model="pharmaceutical.form">
+            <field name="name">Comprimido Efervescente</field>
+        </record>
+        <record id="pharma_form_comprimido_liberacion_prolongada" model="pharmaceutical.form">
+            <field name="name">Comprimido de Liberación Prolongada</field>
         </record>
         <record id="pharma_form_comprimido_recubierto" model="pharmaceutical.form">
-            <field name="name">COMPRIMIDO RECUBIERTO</field>
+            <field name="name">Comprimido Recubierto</field>
         </record>
-        <record id="pharma_form_liberacion_prolongada" model="pharmaceutical.form">
-            <field name="name">COMPRIMIDO DE LIBERACIÓN PROLONGADA</field>
+        <!-- D -->
+        <!-- E -->
+        <record id="pharma_form_emulsion_inyectable" model="pharmaceutical.form">
+            <field name="name">Emulsión Inyectable</field>
         </record>
-        <record id="pharma_form_sublingual" model="pharmaceutical.form">
-            <field name="name">COMPRIMIDO SUBLINGUAL</field>
+        <record id="pharma_form_emulsion_dermica" model="pharmaceutical.form">
+            <field name="name">Emulsión Dermica</field>
         </record>
-        <record id="pharma_form_capsula_dura" model="pharmaceutical.form">
-            <field name="name">CÁPSULA DURA</field>
+        <record id="pharma_form_elixir" model="pharmaceutical.form">
+            <field name="name">Elixir</field>
         </record>
-        <record id="pharma_form_capsula_blanda" model="pharmaceutical.form">
-            <field name="name">CÁPSULA BLANDA</field>
+        <!-- F -->
+        <!-- G -->
+        <record id="pharma_form_gel" model="pharmaceutical.form">
+            <field name="name">Gel</field>
         </record>
-        <record id="pharma_form_liberacion_modificada" model="pharmaceutical.form">
-            <field name="name">CÁPSULA DE LIBERACIÓN MODIFICADA</field>
+        <record id="pharma_form_gragea" model="pharmaceutical.form">
+            <field name="name">Gragea</field>
         </record>
-        
-        <!-- Formas orales líquidas -->
+        <record id="pharma_form_gragea_tableta" model="pharmaceutical.form">
+            <field name="name">Gragea o Tableta</field>
+        </record>
+        <record id="pharma_form_gragea_comprimido_recubierto" model="pharmaceutical.form">
+            <field name="name">Gragea o Comprimido Recubierto</field>
+        </record>
+        <record id="pharma_form_gragea_tableta_recubierta" model="pharmaceutical.form">
+            <field name="name">Gragea o Tableta Recubierta</field>
+        </record>
+        <record id="pharma_form_gragea_capa_enterica_tableta_liberacion_prologangada" model="pharmaceutical.form">
+            <field name="name">Gragea con Capa Enterica o Tableta de Liberación Prolongada</field>
+        </record>
+        <record id="pharma_form_granulado" model="pharmaceutical.form">
+            <field name="name">Granulado</field>
+        </record>
+        <record id="pharma_form_granulado_oral" model="pharmaceutical.form">
+            <field name="name">Granulado Oral</field>
+        </record>
+        <!-- H -->
+        <!-- I -->
+        <record id="pharma_form_implante" model="pharmaceutical.form">
+            <field name="name">Implante</field>
+        </record>
+        <!-- J -->
+        <record id="pharma_form_jabon" model="pharmaceutical.form">
+            <field name="name">Jabón</field>
+        </record>
         <record id="pharma_form_jarabe" model="pharmaceutical.form">
-            <field name="name">JARABE</field>
+            <field name="name">Járabe</field>
+        </record>
+        <!-- K -->
+        <!-- L -->
+        <record id="pharma_form_liquido" model="pharmaceutical.form">
+            <field name="name">Líquido</field>
+        </record>
+        <record id="pharma_form_liquido_solucion" model="pharmaceutical.form">
+            <field name="name">Líquido o Solución</field>
+        </record>
+        <record id="pharma_form_locion" model="pharmaceutical.form">
+            <field name="name">Loción</field>
+        </record>
+        <record id="pharma_form_locion_dermico_gel_dermico" model="pharmaceutical.form">
+            <field name="name">Loción Dermica o Gel Dermico</field>
+        </record>
+        <!-- M -->
+        <!-- N -->
+        <!-- O -->
+        <record id="pharma_form_ovulo" model="pharmaceutical.form">
+            <field name="name">Óvulo</field>
+        </record>
+        <record id="pharma_form_ovulo_tableta_vaginal" model="pharmaceutical.form">
+            <field name="name">Óvulo o Tableta Vaginal</field>
+        </record>
+        <record id="pharma_form_ovulo_liberacion_prologanda" model="pharmaceutical.form">
+            <field name="name">Óvulo de Liberación Prolongada</field>
+        </record>
+        <!-- P -->
+        <record id="pharma_form_pasta" model="pharmaceutical.form">
+            <field name="name">Pasta</field>
+        </record>
+        <record id="pharma_form_parche" model="pharmaceutical.form">
+            <field name="name">Parche</field>
+        </record>
+        <record id="pharma_form_polvo" model="pharmaceutical.form">
+            <field name="name">Polvo</field>
+        </record>
+        <record id="pharma_form_pomada" model="pharmaceutical.form">
+            <field name="name">Pomada</field>
+        </record>
+        <!-- Q -->
+        <!-- R -->
+        <!-- S -->
+        <record id="pharma_form_solucion" model="pharmaceutical.form">
+            <field name="name">Solución</field>
+        </record>
+        <record id="pharma_form_solucion_suspension_inyectable" model="pharmaceutical.form">
+            <field name="name">Solución o Suspensión Inyectable</field>
+        </record>
+        <record id="pharma_form_solucion_10percent" model="pharmaceutical.form">
+            <field name="name">Solución al 10%</field>
+        </record>
+        <record id="pharma_form_solucion_inyectable" model="pharmaceutical.form">
+            <field name="name">Solución Inyectable</field>
+        </record>
+        <record id="pharma_form_solucion_inyectable_1percent" model="pharmaceutical.form">
+            <field name="name">Solución Inyectable al 1%</field>
+        </record>
+        <record id="pharma_form_solucion_inyectable_2percent" model="pharmaceutical.form">
+            <field name="name">Solución Inyectable al 2%</field>
+        </record>
+        <record id="pharma_form_solucion_inyectable_5percent" model="pharmaceutical.form">
+            <field name="name">Solución Inyectable al 5%</field>
+        </record>
+        <record id="pharma_form_solucion_nasal" model="pharmaceutical.form">
+            <field name="name">Solución Nasal</field>
+        </record>
+        <record id="pharma_form_solucion_nebulizador" model="pharmaceutical.form">
+            <field name="name">Solución para Nebulizador</field>
+        </record>
+        <record id="pharma_form_solucion_oral" model="pharmaceutical.form">
+            <field name="name">Solución Oral</field>
+        </record>
+        <record id="pharma_form_solucion_topica" model="pharmaceutical.form">
+            <field name="name">Solución Tópica</field>
+        </record>
+        <record id="pharma_form_solucion_emulsion_inyectable" model="pharmaceutical.form">
+            <field name="name">Solución o Emulsión Inyectable</field>
+        </record>
+        <record id="pharma_form_suspension" model="pharmaceutical.form">
+            <field name="name">Suspensión</field>
+        </record>
+        <record id="pharma_form_suspension_aerosol" model="pharmaceutical.form">
+            <field name="name">Suspensión Aerosol</field>
+        </record>
+        <record id="pharma_form_suspension_aerosol_nasal" model="pharmaceutical.form">
+            <field name="name">Suspensión en Aerosol Nasal</field>
+        </record>
+        <record id="pharma_form_suspension_dermica" model="pharmaceutical.form">
+            <field name="name">Suspensión Dermica</field>
         </record>
         <record id="pharma_form_suspension_oral" model="pharmaceutical.form">
-            <field name="name">SUSPENSIÓN ORAL</field>
+            <field name="name">Suspensión Oral</field>
         </record>
-        <record id="pharma_form_sobre_polvo" model="pharmaceutical.form">
-            <field name="name">SOBRE (POLVO)</field>
+        <record id="pharma_form_suspension_inyectable" model="pharmaceutical.form">
+            <field name="name">Suspensión Inyectable</field>
         </record>
-        <record id="pharma_form_gotas_orales" model="pharmaceutical.form">
-            <field name="name">GOTAS ORALES</field>
+        <record id="pharma_form_suspension_inhalacion" model="pharmaceutical.form">
+            <field name="name">Suspensión para Inhalación</field>
         </record>
-        
-        <!-- Formas parenterales -->
-        <record id="pharma_form_solucion_inyectable" model="pharmaceutical.form">
-            <field name="name">SOLUCIÓN INYECTABLE</field>
+        <record id="pharma_form_suspension_inyectable_liberacion_prolongada" model="pharmaceutical.form">
+            <field name="name">Suspensión Inyectable de Liberación Prolongada</field>
         </record>
-        <record id="pharma_form_liofilizado" model="pharmaceutical.form">
-            <field name="name">LIOFILIZADO PARA RECONSTITUCIÓN</field>
+        <record id="pharma_form_suspension_rectal" model="pharmaceutical.form">
+            <field name="name">Suspensión Rectal</field>
         </record>
-        
-        <!-- Formas tópicas y dérmicas -->
-        <record id="pharma_form_crema" model="pharmaceutical.form">
-            <field name="name">CREMA</field>
-        </record>
-        <record id="pharma_form_unguento" model="pharmaceutical.form">
-            <field name="name">UNGÜENTO</field>
-        </record>
-        <record id="pharma_form_gel_topico" model="pharmaceutical.form">
-            <field name="name">GEL TÓPICO</field>
-        </record>
-        <record id="pharma_form_parche_transdermico" model="pharmaceutical.form">
-            <field name="name">PARCHE TRANSDÉRMICO</field>
-        </record>
-        <record id="pharma_form_gotas_oticas" model="pharmaceutical.form">
-            <field name="name">GOTAS ÓTICAS</field>
-        </record>
-        <record id="pharma_form_gotas_oftalmicas" model="pharmaceutical.form">
-            <field name="name">GOTAS OFTÁLMICAS</field>
-        </record>
-        
-        <!-- Formas inhaladas -->
-        <record id="pharma_form_aerosol_presurizado" model="pharmaceutical.form">
-            <field name="name">AEROSOL PRESURIZADO</field>
-        </record>
-        <record id="pharma_form_solucion_nebulizar" model="pharmaceutical.form">
-            <field name="name">SOLUCIÓN PARA NEBULIZAR</field>
-        </record>
-        
-        <!-- Formas especializadas -->
         <record id="pharma_form_supositorio" model="pharmaceutical.form">
-            <field name="name">SUPOSITORIO</field>
+            <field name="name">Supositorio</field>
         </record>
-        <record id="pharma_form_ovulo" model="pharmaceutical.form">
-            <field name="name">ÓVULO</field>
+        <!-- T -->
+        <record id="pharma_form_tableta" model="pharmaceutical.form">
+            <field name="name">Tableta</field>
         </record>
-        <record id="pharma_form_tintura" model="pharmaceutical.form">
-            <field name="name">TINTURA</field>
+        <record id="pharma_form_tableta_capa_enterica" model="pharmaceutical.form">
+            <field name="name">Tableta con Capa Enterica</field>
         </record>
-        <record id="pharma_form_extracto_estandarizado" model="pharmaceutical.form">
-            <field name="name">EXTRACTO ESTANDARIZADO</field>
+        <record id="pharma_form_tableta_liberacion_prolongada" model="pharmaceutical.form">
+            <field name="name">Tableta de Liberación Prolongada</field>
         </record>
+        <record id="pharma_form_tableta_o_capsula" model="pharmaceutical.form">
+            <field name="name">Tableta o Capsula</field>
+        </record>
+        <record id="pharma_form_tableta_o_capsula_liberacion_prolongada" model="pharmaceutical.form">
+            <field name="name">Tableta o Capsula de Liberación Prolongada</field>
+        </record>
+        <record id="pharma_form_tableta_o_gragea" model="pharmaceutical.form">
+            <field name="name">Tableta o Gragea</field>
+        </record>
+        <record id="pharma_form_tableta_o_gragea_liberacion_prolongada" model="pharmaceutical.form">
+            <field name="name">Tableta o Gragea de Liberación Prolongada</field>
+        </record>
+        <record id="pharma_form_tableta_soluble_o_efervescente" model="pharmaceutical.form">
+            <field name="name">Tableta Soluble o Efervescente</field>
+        </record>
+        <record id="pharma_form_tableta_sublingual" model="pharmaceutical.form">
+            <field name="name">Tableta Sublingual</field>
+        </record>
+        <record id="pharma_form_tableta_masticable" model="pharmaceutical.form">
+            <field name="name">Tableta Masticable</field>
+        </record>
+        <record id="pharma_form_tableta_recubierta" model="pharmaceutical.form">
+            <field name="name">Tableta Recubierta</field>
+        </record>
+        <!-- U -->
+        <record id="pharma_form_urguento" model="pharmaceutical.form">
+            <field name="name">Urgüento</field>
+        </record>
+        <!-- V -->
+        <!-- W -->  
+        <!-- X -->
+        <!-- Y -->
+        <!-- Z -->
         
-        <!-- Formas pediátricas -->
-        <record id="pharma_form_suspension_pediatrica" model="pharmaceutical.form">
-            <field name="name">SUSPENSIÓN PEDIÁTRICA</field>
-        </record>
-        <record id="pharma_form_gel_bucal" model="pharmaceutical.form">
-            <field name="name">GEL BUCAL</field>
-        </record>
+        
     </data>
 </odoo>

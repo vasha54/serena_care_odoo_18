@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <template id="section_resident_family_extra_information">
+        <t t-set="notes" t-value="context.get('wizard_notes')"/>
+        <h5 class="section-title">Notas / Observaciones</h5>
+
+        <t t-if="notes">
+            <p class="text-start"><t t-esc="notes"/></p>
+        </t>
+        <t t-else="">
+            <p class="text-center">No existe ninguna observación o nota referente al residente en el período.</p>
+        </t>
+    </template>
+
+</odoo>

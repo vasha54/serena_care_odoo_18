@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- View resident form -->
+    <record id="view_resident_form_recreational_activity" model="ir.ui.view">
+        <field name="name">Vista de Formulario Residente extendida Actividades Recreativas</field>
+        <field name="model">resident</field>
+        <field name="inherit_id" ref="sc_resident.view_resident_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook[@name='daily_follow_up']" position="inside">
+                <page name="tab_recreational_activity" string="Actividades Recreativas" invisible="not id">
+
+                    <group name="records_activitys_recreations"  string="Registros">
+
+                        <field name="activitys_recreations_ids" readonly="1" options="{'create':false, 'edit':false ,'delete':false}" nolabel="1">
+                            <list default_order="date_execution desc" optional="show" export_xlsx="true" export_csv="true">
+                                <field string="Fecha/Hora" name="date_execution"/>
+                                <field string="Registrado" name="user_id"/>
+                                <field name="activity_type_id" />
+                                <field name="description" />
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

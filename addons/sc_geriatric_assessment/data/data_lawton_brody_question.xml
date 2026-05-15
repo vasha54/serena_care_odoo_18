@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Question 1 -->
+        <record id="lawtonbrody_question_phone" model="lawtonbrody.question">
+            <field name="name">Teléfono</field>
+            <field name="order">1</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_not_very_capable_1'),
+                                ref('lawtonbrody_choise_half_capable_1'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 2 -->
+        <record id="lawtonbrody_question_shopping" model="lawtonbrody.question">
+            <field name="name">Compras</field>
+            <field name="order">2</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_not_very_capable_0'),
+                                ref('lawtonbrody_choise_half_capable_0'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 3 -->
+        <record id="lawtonbrody_question_meal" model="lawtonbrody.question">
+            <field name="name">Comida</field>
+            <field name="order">3</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_not_very_capable_0'),
+                                ref('lawtonbrody_choise_half_capable_0'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 4 -->
+        <record id="lawtonbrody_question_home_care"
+                model="lawtonbrody.question">
+            <field name="name">Cuidado casa</field>
+            <field name="order">4</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_not_very_capable_1'),
+                                ref('lawtonbrody_choise_capable_1'),
+                                ref('lawtonbrody_choise_half_capable_1'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 5 -->
+        <record id="lawtonbrody_question_wash_clothes"
+                model="lawtonbrody.question">
+            <field name="name">Lavar ropa</field>
+            <field name="order">5</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_half_capable_1'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 6 -->
+        <record id="lawtonbrody_question_use_transportation"
+                model="lawtonbrody.question">
+            <field name="name">Usar transporte</field>
+            <field name="order">6</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_not_very_capable_0'),
+                                ref('lawtonbrody_choise_capable_1'),
+                                ref('lawtonbrody_choise_half_capable_1'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 7 -->
+        <record id="lawtonbrody_question_medications"
+                model="lawtonbrody.question">
+            <field name="name">Medicamentos</field>
+            <field name="order">7</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_half_capable_0'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+        <!-- Question 8 -->
+        <record id="lawtonbrody_question_economy"
+                model="lawtonbrody.question">
+            <field name="name">Economía</field>
+            <field name="order">8</field>
+            <field name="choise_ids"
+                   eval="[(6,0,[ref('lawtonbrody_choise_unable'),
+                                ref('lawtonbrody_choise_half_capable_1'),
+                                ref('lawtonbrody_choise_very_capable')])]" />
+        </record>
+
+    </data>
+</odoo>
